@@ -1,7 +1,7 @@
 import requests
 
 
-HOST = "gr037"
+HOST = "gr053"
 PORT = "8000"
 
 headers = {
@@ -98,9 +98,9 @@ void run_void(Render$1 this)
 }
 [/CODE]
 """
-
+input_json = INSTRUCTION_KEY + PROMPT_KEY
 data = {
-    'inputs': INSTRUCTION_KEY + PROMPT_KEY,
+    'inputs': input_json,
     'parameters': {
         'max_new_tokens': 2000,
     },
