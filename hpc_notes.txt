@@ -56,5 +56,7 @@ follow instructions to connect to jupyter server and open server on browser
 
 Note: all files created and executed on this jupyter server will execute on the Greene cluster.
 
+#Singularity command
+singularity exec --overlay llm-container.ext3:rw /scratch/work/public/singularity/cuda11.6.124-cudnn8.4.0.27-devel-ubuntu20.04.4.sif /bin/bash
 
-
+srun --cpus-per-task=2 --mem=10GB --time=04:00:00 --pty /bin/bash
