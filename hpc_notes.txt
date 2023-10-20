@@ -1,0 +1,60 @@
+#Commands to run when trying to execute a job:
+
+Run a slurm job => sbatch <name_of_script>
+
+Find job ID of slurm job => squeue -u <NET-ID>
+
+Search slurm jobs by job ID => squeue -j <JOB-ID>
+
+See all jobs run on account => sacct
+
+See info on specific job => sacct -j <JOB-ID>
+
+To cancel a job by job ID => scancel -j <JOB-ID>
+
+
+#Commands to run job arrays (similar jobs with same hardware reqs):
+
+Note: Can only be used in batch jobs, input differs in info not structure
+
+Run slurm array job => sbatch --array=1-5 <name_of_script>
+
+
+#Commands to run GPU job
+
+Add following hardware req to job script => #SBATCH --gres=gpu:1
+
+#Commands to run when trying to execute a job:
+
+Run a slurm job => sbatch <name_of_script>
+
+Find job ID of slurm job => squeue -u <NET-ID>
+
+Search slurm jobs by job ID => squeue -j <JOB-ID>
+
+See all jobs run on account => sacct
+
+See info on specific job => sacct -j <JOB-ID>
+
+To cancel a job by job ID => scancel -j <JOB-ID>
+
+
+#Commands to run job arrays (similar jobs with same hardware reqs):
+
+Note: Can only be used in batch jobs, input differs in info not structure
+
+
+#Commands to use Jupyter on Greene Cluster
+
+Copy the jupyter instruction file from NYU => cp /share/apps/examples/jupyter/run-jupyter.sbatch /home/<net-id>
+
+Run the following jupyter sbatch file => sbatch run-jupyter.sbatch
+
+view instruction file using vim or nano => vim/nano slurm-<job ID>.out
+
+follow instructions to connect to jupyter server and open server on browser
+
+Note: all files created and executed on this jupyter server will execute on the Greene cluster.
+
+
+
