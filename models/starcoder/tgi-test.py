@@ -10,9 +10,11 @@ headers = {
 
 inst_json = "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n\n"
 
+# This will be parsed from the apk files, hardcoded for now
 code_json =  """
-Please summarize the following program:
+Instruction: Please analyze the following code and answer the question about the provided code.
 
+Input:
 void run_void(Render$1 this)
 
 {
@@ -96,13 +98,27 @@ void run_void(Render$1 this)
   } while( true );
 }
 """
-input_json = inst_json + code_json
-data = {
-    'inputs': input_json,
-    'parameters': {
-        'max_new_tokens': 2000,
-    },
-}
 
-response = requests.post(f'http://{HOST}:{PORT}/generate', headers=headers, json=data)
-print(response.json())
+# This can also be parsed from our dataset, but hardcoded for testing
+question_dict = {
+        "Is this program susceptible to an exploitation?": False,
+        "Does this program follow best security practices?": False,
+        }
+response_dict = {}
+
+for key in question_dict.keys():
+    input_json = inst_json + code_json + key
+    data = {
+        'inputs': input_json,
+        'parameters': {
+            'max_new_tokens': 2000,
+        },
+    }
+
+    response = requests.post(f'http://{HOST}:{PORT}/generate', headers=headers, json=data)
+    #print(response.json())
+    response_dict[key] = response.json()
+
+# This will be returned to an output json file for analysis
+print(response_dict)
+   

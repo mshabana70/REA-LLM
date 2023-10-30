@@ -8,7 +8,7 @@ headers = {
     "Content-Type": "application/json",
 }
 
-INSTRUCTION_KEY = "[INST]Return a text summary of the following script of code that will be presented to you between [CODE] and [/CODE] tags:[/INST]\n"
+INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
 PROMPT_KEY = """
 [CODE]
 void run_void(Render$1 this)
@@ -99,12 +99,24 @@ void run_void(Render$1 this)
 [/CODE]
 """
 input_json = INSTRUCTION_KEY + PROMPT_KEY
-data = {
-    'inputs': input_json,
-    'parameters': {
-        'max_new_tokens': 2000,
-    },
-}
+question_dict = {
+        "Is this program susceptible to an exploitation?": False,
+        "Does this program follow best security practices?": False,
+        }
+response_dict = {}
 
-response = requests.post(f'http://{HOST}:{PORT}/generate', headers=headers, json=data)
-print(response.json())
+for key in question_dict.keys():
+    input_json = INSTRUCTION_KEY + PROMPT_KEY + key
+    data = {
+        'inputs': input_json,
+        'parameters': {
+            'max_new_tokens': 2000,
+        },
+    }
+
+    response = requests.post(f'http://{HOST}:{PORT}/generate', headers=headers, json=data)
+    #print(response.json())
+    response_dict[key] = response.json()
+
+# This will be returned to an output json file for analysis
+print(response_dict)
