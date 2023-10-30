@@ -1,16 +1,28 @@
-import requests
+import os
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+#cache_dir = os.makedirs("cache")
+os.environ['TRANSFORMERS_CACHE'] = "/scratch/ms9761/rea-llm/cache"
+os.environ['HF_DATASETS_CACHE'] = "cache"
 
 
-HOST = "localhost"
-PORT = "8000"
+access_token = "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"
+checkpoint = "GeorgiaTechResearchInstitute/starcoder-gpteacher-code-instruct"
+device = "cuda" # for GPU usage or "cpu" for CPU usage
 
-headers = {
-    "Content-Type": "application/json",
-}
+tokenizer = AutoTokenizer.from_pretrained(checkpoint, token=access_token, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True)
+model = AutoModelForCausalLM.from_pretrained(checkpoint, token=access_token, trust_remote_code=True, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True).to(device)
 
-INSTRUCTION_KEY = "[INST]Return a text summary of the following script of code that will be presented to you between [CODE] and [/CODE] tags:[/INST]\n"
-PROMPT_KEY = """
-[CODE]
+input_prompt = ("Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n"
+                "### Instruction:\n"
+                "{instruction}\n\n"
+                "### Input:\n"
+                "{input}\n\n"
+                "### Response:")
+
+prompt = "Please explain the following program."
+extra_input = """
 void run_void(Render$1 this)
 
 {
@@ -29,7 +41,7 @@ void run_void(Render$1 this)
   Render pRVar11;
   JLabel pJVar12;
   JSettings objectRef_01;
-
+  
   Thread.sleep(500);
   pRVar11 = this.this$0;
   pBVar3 = new(BufferedImage);
@@ -51,9 +63,6 @@ void run_void(Render$1 this)
   Render.access$2(this.this$0,false);
   pJVar12 = this.val$iv;
   objectRef_00 = new(Cursor);
-  objectRef_00.<init>(0);
-  pJVar12.setCursor(objectRef_00);
-    objectRef_00 = new(Cursor);
   objectRef_00.<init>(0);
   pJVar12.setCursor(objectRef_00);
   do {
@@ -96,15 +105,9 @@ void run_void(Render$1 this)
     Thread.sleep(100);
   } while( true );
 }
-[/CODE]
 """
-input_json = INSTRUCTION_KEY + PROMPT_KEY
-data = {
-    'inputs': input_json,
-    'parameters': {
-        'max_new_tokens': 2000,
-    },
-}
+prompt = input_prompt.format_map({"instruction": prompt, "input": extra_input})
 
-response = requests.post(f'http://{HOST}:{PORT}/generate', headers=headers, json=data)
-print(response.json())
+inputs = tokenizer.encode(prompt, return_tensors="pt").to(device)
+outputs = model.generate(inputs, max_new_tokens=1000)
+print(tokenizer.decode(outputs[0]))

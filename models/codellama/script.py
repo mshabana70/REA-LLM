@@ -1,13 +1,9 @@
-import requests
+# Testing code llama 7B HF
+from transformers import AutoTokenizer
+import transformers
+import torch
 
-
-HOST = "localhost"
-PORT = "8000"
-
-headers = {
-    "Content-Type": "application/json",
-}
-
+MODEL_NAME = "codellama/CodeLlama-7b-Instruct-hf"
 INSTRUCTION_KEY = "[INST]Return a text summary of the following script of code that will be presented to you between [CODE] and [/CODE] tags:[/INST]\n"
 PROMPT_KEY = """
 [CODE]
@@ -53,9 +49,6 @@ void run_void(Render$1 this)
   objectRef_00 = new(Cursor);
   objectRef_00.<init>(0);
   pJVar12.setCursor(objectRef_00);
-    objectRef_00 = new(Cursor);
-  objectRef_00.<init>(0);
-  pJVar12.setCursor(objectRef_00);
   do {
     iVar1 = 0;
     while( true ) {
@@ -98,13 +91,24 @@ void run_void(Render$1 this)
 }
 [/CODE]
 """
-input_json = INSTRUCTION_KEY + PROMPT_KEY
-data = {
-    'inputs': input_json,
-    'parameters': {
-        'max_new_tokens': 2000,
-    },
-}
 
-response = requests.post(f'http://{HOST}:{PORT}/generate', headers=headers, json=data)
-print(response.json())
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=MODEL_NAME,
+    torch_dtype=torch.float16,
+    device_map="auto",
+)
+
+sequences = pipeline(
+    str(INSTRUCTION_KEY + PROMPT_KEY),
+    do_sample=True,
+    top_k=10,
+    temperature=0.4,
+    top_p=0.95,
+    num_return_sequences=3,
+    eos_token_id=tokenizer.eos_token_id,
+    max_length=2000,
+)
+for seq in sequences:
+    print(f"Result: {seq['generated_text']}")

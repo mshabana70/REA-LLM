@@ -1,7 +1,7 @@
 import requests
 
 
-HOST = "gr020"
+HOST = "localhost"
 PORT = "8000"
 
 headers = {
