@@ -11,14 +11,14 @@
 #SBATCH --output=slurm_%j.out
 
 echo "HELLO"
-srun --exclusive --nodes 1 --ntasks 1 run-tgi.sh &
+srun --exclusive --nodes 1 --ntasks 1 /scratch/ms9761/rea-llm/codellama/scripts/run-tgi.sh &
 echo "HELLO2"
 
 while true; do
     status=$(curl -s http://localhost:8000/ -w "%{http_code}")
     if [ "$status" == "200" ]; then
         echo "Server is up!"
-	sh run-test.sh
+	sh /scratch/ms9761/rea-llm/codellama/scripts/run-test.sh
 	echo "running python request script"
         break
     else

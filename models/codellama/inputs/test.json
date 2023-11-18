@@ -1,0 +1,24 @@
+{
+    "apk": {
+        "1": {
+            "code": "void run_void(Render$1 this)\n\n{\n  int iVar1;\n  int iVar2;\n  BufferedImage pBVar3;\n  boolean[] pbVar4;\n  int iVar5;\n  int iVar6;\n  int iVar7;\n  JFrame pJVar8;\n  ImageIcon objectRef;\n  BufferedImage pBVar9;\n  ImageIcon pIVar10;\n  Cursor objectRef_00;\n  Render pRVar11;\n  JLabel pJVar12;\n  JSettings objectRef_01;\n\n  Thread.sleep(500);\n  pRVar11 = this.this$0;\n  pBVar3 = new(BufferedImage);\n  pJVar12 = this.val$iv;\n  pBVar9 = pBVar3;\n  iVar1 = pJVar12.getWidth();\n  pJVar12 = this.val$iv;\n  iVar2 = pJVar12.getHeight();\n  pBVar3.<init>(iVar1,iVar2,1);\n  Render.access$0(pRVar11,pBVar9);\n  pJVar12 = this.val$iv;\n  objectRef = new(ImageIcon);\n  pIVar10 = objectRef;\n  pBVar3 = Render.access$1(this.this$0);\n  objectRef.<init>(pBVar3);\n  pJVar12.setIcon(pIVar10);\n  pJVar12 = this.val$iv;\n  pJVar12.repaint();\n  Render.access$2(this.this$0,false);\n  pJVar12 = this.val$iv;\n  objectRef_00 = new(Cursor);\n  objectRef_00.<init>(0);\n  pJVar12.setCursor(objectRef_00);\n    objectRef_00 = new(Cursor);\n  objectRef_00.<init>(0);\n  pJVar12.setCursor(objectRef_00);\n  do {\n    iVar1 = 0;\n    while( true ) {\n      iVar2 = iVar1;\n      pbVar4 = Render.access$3(this.this$0);\n      if (pbVar4.length <= iVar2) break;\n      pbVar4 = Render.access$3(this.this$0);\n      pbVar4[iVar1] = false;\n      iVar1 = iVar1 + 1;\n    }\n    Render.access$4(this.this$0);\n    pJVar12 = this.val$iv;\n    pJVar12.repaint();\n    pbVar4 = Render.access$3(this.this$0);\n    if (pbVar4[0] != false) {\n      Render.access$2(this.this$0,true);\n      Render.access$5(this.this$0,this.val$f,this.val$iv,this.val$hh);\n    }\n    pbVar4 = Render.access$3(this.this$0);\n    if (pbVar4[1] != false) {\n      System.exit(-1);\n    }\n    pbVar4 = Render.access$3(this.this$0);\n    if (pbVar4[2] != false) {\n      Render.access$6(this.this$0);\n      objectRef_01 = new(JSettings);\n      objectRef_01.<init>(0,0,null,0,0,0);\n      iVar1 = Render.access$7(this.this$0);\n      iVar2 = Render.access$8(this.this$0);\n      pJVar8 = this.val$frame;\n      iVar7 = 0x20;\n      pBVar3 = Render.access$1(this.this$0);\n      iVar5 = pBVar3.getWidth();\n      pBVar3 = Render.access$1(this.this$0);\n      iVar6 = pBVar3.getHeight();\n      objectRef_01.main(iVar1,iVar2,pJVar8,iVar7,iVar5,iVar6);\n    }\n    Thread.sleep(100);\n  } while( true );\n}",
+            "questions": {
+                "1": {
+                    "question": "Is this program susceptible to an exploitation?",
+                    "answers": {
+                        "1": "Yes",
+                        "2": "Buffer Overflow",
+                        "3": "is susceptible"
+                    }
+                },
+                "2": {
+                    "question": "Does this program follow best security practices?",
+                    "answers": {
+                        "1": "does not follow",
+                        "2": "harm the system"
+                    }
+                }
+            }
+        }
+    }
+}
