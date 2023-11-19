@@ -10,13 +10,13 @@
 ##SBATCH --mail-user=ms9761@nyu.edu
 #SBATCH --output=slurm_%j.out
 
-srun --exclusive --nodes 1 --ntasks 1 run-tgi.sh &
+srun --exclusive --nodes 1 --ntasks 1 /scratch/ms9761/rea-llm/starcoder/scripts/run-tgi.sh &
 
 while true; do
     status=$(curl -s http://localhost:8000/ -w "%{http_code}")
     if [ "$status" == "200" ]; then
         echo "Server is up!"
-	sh run-star.sh
+	sh /scratch/ms9761/rea-llm/starcoder/scripts/run-star.sh
 	echo "running python request script"
         break
     else
