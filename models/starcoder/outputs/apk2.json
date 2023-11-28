@@ -1,0 +1,46 @@
+{
+  "Function_1": {
+    "code": "public static Unsafe getUnsafe() {\n    Class<?> caller = Reflection.getCallerClass();\n    /*\n     * Only code on the bootclasspath is allowed to get at the\n     * Unsafe instance.\n     */\n    ClassLoader calling = (caller == null) ? null : caller.getClassLoader();\n    if ((calling != null) && (calling != Unsafe.class.getClassLoader())) {\n        throw new SecurityException(\"Unsafe access denied\");\n    }\n\n    return THE_ONE;\n}\n",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "No. The provided code is not susceptible to an exploitation, as it only allows access to the Unsafe instance if it is on the bootclasspath.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "Yes, this program follows all security best practices. It is not possible to use reflection to gain access to the Unsafe instance unless the calling code is on the bootclasspath, and the bootclasspath is not modified after installation.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public interface IPostMessageService extends IInterface {\n    void onMessageChannelReady(ICustomTabsCallback iCustomTabsCallback, Bundle bundle) throws RemoteException;\n\n    void onPostMessage(ICustomTabsCallback iCustomTabsCallback, String str, Bundle bundle) throws RemoteException;\n\n    /* loaded from: classes2.dex */\n    public static abstract class Stub extends Binder implements IPostMessageService {\n        private static final String DESCRIPTOR = \"android.support.customtabs.IPostMessageService\";\n        static final int TRANSACTION_onMessageChannelReady = 2;\n        static final int TRANSACTION_onPostMessage = 3;\n\n        @Override // android.os.IInterface\n        public IBinder asBinder() {\n            return this;\n        }\n\n        public Stub() {\n            attachInterface(this, DESCRIPTOR);\n        }\n\n        public static IPostMessageService asInterface(IBinder iBinder) {\n            if (iBinder == null) {\n                return null;\n            }\n            IInterface queryLocalInterface = iBinder.queryLocalInterface(DESCRIPTOR);\n            if (queryLocalInterface != null && (queryLocalInterface instanceof IPostMessageService)) {\n                return (IPostMessageService) queryLocalInterface;\n            }\n            return new Proxy(iBinder);\n        }\n\n        @Override // android.os.Binder\n        public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {\n            if (i == 2) {\n                parcel.enforceInterface(DESCRIPTOR);\n                onMessageChannelReady(ICustomTabsCallback.Stub.asInterface(parcel.readStrongBinder()), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);\n                parcel2.writeNoException();\n                return true;\n            } else if (i != 3) {\n                if (i == 1598968902) {\n                    parcel2.writeString(DESCRIPTOR);\n                    return true;\n                }\n                return super.onTransact(i, parcel, parcel2, i2);\n            } else {\n                parcel.enforceInterface(DESCRIPTOR);\n                onPostMessage(ICustomTabsCallback.Stub.asInterface(parcel.readStrongBinder()), parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);\n                parcel2.writeNoException();\n                return true;\n            }\n        }\n\n        /* loaded from: classes2.dex */\n        private static class Proxy implements IPostMessageService {\n            private IBinder mRemote;\n\n            public String getInterfaceDescriptor() {\n                return Stub.DESCRIPTOR;\n            }\n\n            Proxy(IBinder iBinder) {\n                this.mRemote = iBinder;\n            }\n\n            @Override // android.os.IInterface\n            public IBinder asBinder() {\n                return this.mRemote;\n            }\n\n            @Override // android.support.customtabs.IPostMessageService\n            public void onMessageChannelReady(ICustomTabsCallback iCustomTabsCallback, Bundle bundle) throws RemoteException {\n                Parcel obtain = Parcel.obtain();\n                Parcel obtain2 = Parcel.obtain();\n                try {\n                    obtain.writeInterfaceToken(Stub.DESCRIPTOR);\n                    obtain.writeStrongBinder(iCustomTabsCallback != null ? iCustomTabsCallback.asBinder() : null);\n                    if (bundle != null) {\n                        obtain.writeInt(1);\n                        bundle.writeToParcel(obtain, 0);\n                    } else {\n                        obtain.writeInt(0);\n                    }\n                    this.mRemote.transact(2, obtain, obtain2, 0);\n                    obtain2.readException();\n                } finally {\n                    obtain2.recycle();\n                    obtain.recycle();\n                }\n            }\n\n            @Override // android.support.customtabs.IPostMessageService\n            public void onPostMessage(ICustomTabsCallback iCustomTabsCallback, String str, Bundle bundle) throws RemoteException {\n                Parcel obtain = Parcel.obtain();\n                Parcel obtain2 = Parcel.obtain();\n                try {\n                    obtain.writeInterfaceToken(Stub.DESCRIPTOR);\n                    obtain.writeStrongBinder(iCustomTabsCallback != null ? iCustomTabsCallback.asBinder() : null);\n                    obtain.writeString(str);\n                    if (bundle != null) {\n                        obtain.writeInt(1);\n                        bundle.writeToParcel(obtain, 0);\n                    } else {\n                        obtain.writeInt(0);\n                    }\n                    this.mRemote.transact(3, obtain, obtain2, 0);\n                    obtain2.readException();\n                } finally {\n                    obtain2.recycle();\n                    obtain.recycle();\n                }\n            }\n        }\n    }\n}\n",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "No. The provided code is not susceptible to an exploitation.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "Yes, this program follows all the best security practices. It correctly handles all possible exceptions, and it correctly validates the input before using it.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      }
+    }
+  }
+}

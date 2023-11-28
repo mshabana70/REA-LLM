@@ -1,0 +1,17 @@
+{
+  "1": {
+    "question": "Is this program susceptible to an exploitation?",
+    "answers": {
+      "1": "Yes",
+      "2": "Buffer Overflow",
+      "3": "is susceptible"
+    }
+  },
+  "2": {
+    "question": "Does this program follow best security practices?",
+    "answers": {
+      "1": "does not follow",
+      "2": "harm the system"
+    }
+  }
+}

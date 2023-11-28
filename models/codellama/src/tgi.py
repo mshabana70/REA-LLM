@@ -7,13 +7,12 @@ HOST = "localhost"
 PORT = "8000"
 HEADERS = {"Content-Type": "application/json",}
 
-BASE_DIR = "/scratch/ms9761/rea-llm/starcoder/"
+BASE_DIR = "/scratch/ms9761/rea-llm/codellama/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
 DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"  # This would be DJ's scratch folder
 OUTPUT_DIR = BASE_DIR + "outputs/"
 
-INSTRUCTION_KEY = "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n\nInstruction: Please analyze the following code and answer the question about the provided code.\n\n"
-
+INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
     QUESTIONS = json.load(questions_json)
 
@@ -25,7 +24,7 @@ class Func:
     def get_prompt_key(self):
         # TODO: How do we format this?
         code = self.outputs["code"]
-        return f"Input:\n{code}\n"
+        return f"[CODE]\n{code}\n[/CODE]\n\n"
 
     def save_response(self, question_num, question, response):
         self.outputs["results"][question_num] = {"question": question, "response": response, "answers": {}}
@@ -67,7 +66,7 @@ if __name__ == "__main__":
 
             for question_num in QUESTIONS:
                 curr_question = QUESTIONS[question_num]["question"]
-                full_prompt = INSTRUCTION_KEY + prompt_key + "\n" + curr_question + "\nResponse:\n"
+                full_prompt = INSTRUCTION_KEY + prompt_key + curr_question
                 data = {
                     "inputs": full_prompt,
                     "parameters": {
