@@ -1,0 +1,2082 @@
+{
+  "Function_1": {
+    "code": "private void showDevelopmentBannerIfDev() {\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not check for the development environment and does not provide any safeguards against malicious code execution.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to be used in a production environment. It only checks for a specific development environment flag and shows a development banner if it's set. However, it's still possible to check for a different flag or environment variable and show a different banner.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a production environment.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "protected void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        ProcessLifecycleOwner.get().getLifecycle().addObserver(new ForegroundBackgroundListener());\n        AndroidInjection.inject(this);\n        Log.d(TAG, \"Main.onCreate()\");\n        Intent intent = getIntent();\n        if (intent.hasExtra(Notification.NOTIFICATION_ID)) {\n            this.push_message_id = intent.getStringExtra(Notification.NOTIFICATION_ID);\n        }\n        if (intent.hasExtra(Notification.NOTIFICATION_MESSAGE)) {\n            this.push_message_text = intent.getStringExtra(Notification.NOTIFICATION_MESSAGE);\n        }\n        if (intent.hasExtra(Notification.NOTIFICATION_MODULE_ID)) {\n            this.initial_module_id = intent.getStringExtra(Notification.NOTIFICATION_MODULE_ID);\n        }\n        GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();\n        int isGooglePlayServicesAvailable = googleApiAvailability.isGooglePlayServicesAvailable(this);\n        if (isGooglePlayServicesAvailable != 0) {\n            if (googleApiAvailability.isUserResolvableError(isGooglePlayServicesAvailable)) {\n                googleApiAvailability.getErrorDialog(this, isGooglePlayServicesAvailable, 9000).show();\n                return;\n            }\n            Log.i(\"Google Play Services\", \"This device is not supported.\");\n            finish();\n            return;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not using proper input validation, which could lead to an unauthorized modification of data or even the execution of malicious code.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not check for the availability of Google Play Services, which could result in a crash if the user does not have the Google Play Store installed. It also does not handle runtime permissions, which could result in a denial of service attack.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle unexpected input or attacker behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "private void setVersionCodes() {\n        try {\n            PackageManager packageManager = getPackageManager();\n            if (packageManager != null) {\n                PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);\n                VERSION_CODE = Integer.valueOf(packageInfo.versionCode);\n                VERSION_NAME = packageInfo.versionName;\n                SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);\n                if (!packageInfo.versionName.equals(defaultSharedPreferences.getString(Constants.PREVIOUS_A3_VERSION, null))) {\n                    togglePushEnabledOffOn();\n                }\n                SharedPreferences.Editor edit = defaultSharedPreferences.edit();\n                edit.putString(Constants.PREVIOUS_A3_VERSION, packageInfo.versionName);\n                edit.apply();\n                this.packageName = getPackageName();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not perform any validation or sanitization of the input received from the user.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to potential vulnerabilities. For example, a malicious actor can provide a negative version code, which can cause the app to crash.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The code appears to have no issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code. The code uses the PackageManager to get the version code and name of the app, and then stores them in shared preferences. If the app is updated, the shared preferences will not be updated, and the app will continue to use the old version code and name. To avoid this, you should use the following code:\n\nprivate void setVersionCodes() {\n    try {\n        PackageManager packageManager = getPackageManager();\n        if (packageManager!= null) {\n            PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);\n            VERSION_CODE = Integer.valueOf(packageInfo.versionCode);\n            VERSION_NAME = packageInfo.versionName;\n            SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);\n            if (!packageInfo.versionName.equals(defaultSharedPreferences.getString(Constants.PREVIOUS_A3_VERSION, null))) {\n                togglePushEnabledOffOn();\n            }\n            defaultSharedPreferences.edit().putString(Constants.PREVIOUS_A3_VERSION, packageInfo.versionName).apply();\n            this.packageName = getPackageName();\n        }\n    } catch (PackageManager.NameNotFoundException e) {\n        e.printStackTrace();\n    }\n}",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "private void togglePushEnabledOffOn() {\n        new Thread(new Runnable() { // from class: com.airealmobile.general.-$$Lambda$Main$ykggEqfpcynCTuPcFeVLOP-tP-c\n            @Override // java.lang.Runnable\n            public final void run() {\n                Main.this.lambda$togglePushEnabledOffOn$0$Main();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to be secure, and it is not recommended to use it in production. The code creates a new thread, which is not necessary and can be avoided by using a single-threaded executor service.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to be secure. It is not properly validating input, and it does not properly handle exceptions.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not thread-safe, because it modifies shared state (the `pushEnabled` field). Consider using the `synchronized` keyword or implementing the `togglePushEnabledOffOn` method using the `ReentrantLock` class from the `java.util.concurrent.locks` package.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "private void showLoadingScreen() {\n        setContentView(com.airealmobile.messiahlutheran_1122.R.layout.bootscreen_layout);\n        setVersionFooter();\n        showDevelopmentBannerIfDev();\n        checkForLoadedApp();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation, as it does not execute any code that could potentially be exploited.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to a malicious user modifying the app's behavior.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No. The provided code is not susceptible to any type of attack.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "private void setVersionFooter() {\n        try {\n            DotVersion dotVersion = new DotVersion(BuildConfig.VERSION_NAME);\n            TextView textView = (TextView) findViewById(com.airealmobile.messiahlutheran_1122.R.id.poweredByVersion);\n            if (!dotVersion.getVersion().equals(\"\")) {\n                textView.setText(getString(com.airealmobile.messiahlutheran_1122.R.string.poweredByAware3NoVersion) + \"  \u2022 \" + dotVersion.getVersion());\n            } else {\n                textView.setText(getString(com.airealmobile.messiahlutheran_1122.R.string.poweredByAware3NoVersion));\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it properly handles the case where the version name is empty.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly sanitize user input, which can lead to a potential security vulnerability. Consider using a library like 'org.apache.commons.lang3.StringUtils' to sanitize user input.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not secure either. The `DotVersion` class is not used correctly, and it is not properly validating the version string. It is possible for an attacker to cause a `NullPointerException` or `NumberFormatException`.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "private void checkForLoadedApp() {\n        setupConfigurationManager();\n        Log.d(TAG, \"Main.checkForLoadedApp()\");\n        if (this.packageName.contains(\"com.aware3.universal\")) {\n            if (this.aware3Application.getCurrentApp() != null) {\n                retrieveSetup(this.aware3Application.getCurrentApp());\n                return;\n            } else {\n                retrieveIpAddress();\n                return;\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle any user input, and it retrieves the IP address of the device without any validation.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not check for the device's signature, which is a security best practice. It also does not check for runtime permissions, which is also a security best practice.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle any user input, and it is not properly secured against malicious intent.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code checks for the presence of the string \"com.aware3.universal\" in the package name. If this string is found, it checks if the current app is not null. If the current app is not null, it retrieves the setup from the current app. If the current app is null, it retrieves the IP address. The code appears to have no issues, but it is not clear if there is any potential for an attacker to cause undefined behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "private void setupConfigurationManager() {\n        EncryptionUtility.getInstance();\n        this.configurationManager = ConfigurationManager.getInstance();\n        this.configurationFetchCompletion = new ConfigurationFetchCompletion() { // from class: com.airealmobile.general.Main.1\n            @Override // com.airealmobile.configuration.ConfigurationFetchCompletion\n            public void configurationFetchSuccessful() {\n                Main.this.checkAppStatus();\n            }\n\n            @Override // com.airealmobile.configuration.ConfigurationFetchCompletion\n            public void configurationFetchFailed() {\n                Main.this.checkAppStatus();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle any user input, and it does not sanitize or validate user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not use proper encryption and authentication, and is not designed to be used in a production environment.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle exceptions, so it could potentially crash the app. Consider using a try-catch block or checking for null before dereferencing objects.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code initializes the ConfigurationManager and provides a ConfigurationFetchCompletion implementation that checks the app status after the configuration fetch completes. However, the ConfigurationManager is not initialized with a specific configuration source, so it will use the default source (LocalFileConfigurationSource). If the default source is compromised, the attacker could potentially cause the app to fetch the configuration from a malicious source and execute malicious code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "public void showAppSearch() {\n        new Timer().schedule(new TimerTask() { // from class: com.airealmobile.general.Main.2\n            @Override // java.util.TimerTask, java.lang.Runnable\n            public void run() {\n                Intent intent = new Intent(Main.this, AppSearchActivity.class);\n                intent.setFlags(335544320);\n                Main.this.startActivity(intent);\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code creates a new TimerTask and sets it to run after a delay of 0 milliseconds. This means that the task will run immediately after the showAppSearch() method is called, and the AppSearchActivity will be opened without any delay. This could potentially be used to open the AppSearchActivity when the user clicks a malicious link, which would allow them to search for and install malicious apps.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code creates a TimerTask that starts an Activity without any checks or validation. It is possible for a malicious app to use this code to start an Activity without the user's knowledge or consent.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not secure either. The code creates a new TimerTask and schedules it on a Timer. The TimerTask contains a reference to the Main Activity, which is allowed to start an Activity. The code is not properly designed, and it is not recommended to use it in this way.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "public void retrieveSetup(AppObject appObject) {\n        if (appObject.isListingOnly()) {\n            listingOnlySetup(appObject);\n        } else {\n            fullSetupCall(appObject);\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The program retrieves data from an untrusted source and processes it without performing any validation or sanitization.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check if the appObject is null before dereferencing it.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "private void listingOnlySetup(AppObject appObject) {\n        Log.d(TAG, \"Main.listingOnlySetup()\");\n        new OrganizationRetriever(appObject.getAppId(), this).execute(new String[0]);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an injection attack, as it does not process user-supplied input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle exceptions, which can lead to crashes or data leaks. It is also not designed to be used in a production environment.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not secure either. The main issue is that the `OrganizationRetriever` class is not implemented correctly. It retrieves the organization ID from the database without validating it, which can cause an SQL injection attack. To fix this, you should implement proper input validation in the `OrganizationRetriever` class.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "private void fullSetupCall(AppObject appObject) {\n        if (isFinishing()) {\n            return;\n        }\n        showDialog(DIALOG_INTERNET_LOADING);\n        Log.d(TAG, \"Main.fullSetupCall()\");\n        this.configurationManager.fetchConfiguration(this.configurationFetchCompletion);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation, as it properly checks for the application's lifecycle state (isFinishing()) before performing any actions.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the Activity is finishing, which can cause unexpected behavior. It also does not properly use a DialogFragment to display the loading message, which is a requirement for proper Android UI design.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not asynchronous, meaning that the `showDialog` method is called on the main thread, which could potentially cause a deadlock. Additionally, the `fetchConfiguration` method is called without any timeout, which could potentially cause an infinite loop.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "public void checkAppStatus() {\n        HomeInfo homeInfo = ConfigurationManager.getInstance().getHomeInfo();\n        this.homeInfo = homeInfo;\n        String prefAppStatus = (homeInfo == null || homeInfo.getPrefAppStatus() == null) ? null : this.homeInfo.getPrefAppStatus();\n        if (prefAppStatus != null && !prefAppStatus.isEmpty() && !prefAppStatus.contentEquals(Constants.APP_STATUS_EMPTY)) {\n            showDialog(1);\n            return;\n        }\n        setVersionCodes();\n        checkVersionNumber();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it may be possible for an attacker to exploit this vulnerability to execute malicious code.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to a malicious user modifying the app status and potentially causing unexpected behavior.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle unexpected input, and an attacker could potentially cause a crash or other undefined behavior. Consider using a more robust approach to handle unexpected input.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_14": {
+    "code": "private void checkVersionNumber() {\n        HomeInfo homeInfo = this.homeInfo;\n        if (homeInfo != null) {\n            DotVersion dotVersion = new DotVersion(homeInfo.getPrefSupportedVersion());\n            DotVersion dotVersion2 = new DotVersion(BuildConfig.VERSION_NAME);\n            if (!this.packageName.contains(\"com.aware3.universal\") && dotVersion.compareTo(dotVersion2) == 1) {\n                if (isFinishing()) {\n                    return;\n                }\n                showDialog(2, null);\n                return;\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code checks for a new version of the app and prompts the user to update if the current version is lower than the preferred supported version. However, the code does not check if the app is running in the background or not, which could potentially allow an attacker to use the update prompt to poison the app's data and potentially cause it to crash. Consider using the following code instead:\n\nprivate void checkVersionNumber() {\n    HomeInfo homeInfo = this.homeInfo;\n    if (homeInfo!= null) {\n        DotVersion dotVersion = new DotVersion(homeInfo.getPrefSupportedVersion());\n        DotVersion dotVersion2 = new DotVersion(BuildConfig.VERSION_NAME);\n        if (!this.packageName.contains(\"com.aware3.universal\") && dotVersion.compareTo(dotVersion2) == 1) {\n            if (isFinishing()) {\n                return;\n            }\n            showDialog(2, new DialogInterface.OnClickListener() {\n                @Override\n                public void onClick(DialogInterface dialog, int which) {\n                    if (which == 1) {\n                        Intent intent = new Intent(Intent.ACTION_VIEW);\n                        intent.setData(Uri.parse(\"market://details?id=\" + getPackageName()));\n                        startActivity(intent);\n                    }\n                }\n            });\n            return;\n        }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not up-to-date with the latest Android security best practices. It does not use a cryptographically secure random number generator (CSPRNG), which can result in predictable numbers. It also does not validate the length of user input before using it.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code checks if the current version of the app is greater than the preferred supported version. If the current version is greater, it shows a dialog box to the user asking them to update the app. However, the dialog box is only shown if the app is not in the process of being closed. Is there any way for an attacker to force the app to update without closing it?",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " If so, you should provide your app with a privacy policy and obtain the user's consent before tracking them.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_15": {
+    "code": "protected void onStart() {\n        super.onStart();\n        EventBus.getDefault().register(this);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code registers an event listener on the main thread, which means that the code is vulnerable to an attack on the main thread. Consider using a background thread or implementing proper lifecycle management to avoid this issue.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The onStart() method registers the current class instance as an event listener on the EventBus, which is a broadcasting mechanism that allows any other class instance to receive events. In this case, the onStart() method is not secured, and any other class instance can register as an event listener, causing the code to execute unexpected behavior.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is registering the onStart() method of the Activity with the EventBus, which will cause the onStart() method to be called when the Activity is started. If the onStart() method contains logic that should only be executed when the Activity is created, not when it is started, this could cause some unexpected behavior. For example, if the onStart() method contains a call to a setContentView() method, this will be executed when the Activity is started, causing the Activity to have a new content layout, which could potentially break the app's functionality.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_16": {
+    "code": "protected void onStop() {\n        super.onStop();\n        EventBus.getDefault().unregister(this);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it properly unregisters the event listener when the activity is stopped.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not unregister the event bus, which can cause memory leaks.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code unregisters the event handler from the event bus when the activity is stopped.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is unregistering the current Activity from the EventBus, which will cause the Activity to stop. However, there is no guarantee that the Activity will be registered to the EventBus in the future, so the code could potentially cause a memory leak. Is there any way to ensure that the Activity is properly unregistered from the EventBus?",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_17": {
+    "code": "public void onShowHomeScreenEvent(ShowHomeScreenEvent showHomeScreenEvent) {\n        loadHomePage();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not directly vulnerable to an attack, but it is still susceptible to indirect attacks, such as SQL injection. To prevent this, you should always use parameterized queries or use a library that sanitizes user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly validate user input, which can lead to an attacker injecting malicious JavaScript code into the page. Consider using a templating engine, such as Handlebars, to ensure that user input is properly sanitized.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous; it correctly handles the case when the `ShowHomeScreenEvent` is null.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_18": {
+    "code": "protected void loadHomePage() {\n        boolean z = false;\n        SharedPreferences preferences = getPreferences(0);\n        Boolean valueOf = Boolean.valueOf(preferences.getBoolean(\"pref_key_onboarding\", false));\n        EndUser profile = this.aware3Application.getProfile();\n        if (!valueOf.booleanValue() && profile != null && (profile.getEndUserId() == null || profile.getEndUserId().length() == 0)) {\n            z = true;\n        }\n        if (shouldShowListingHomeActivity()) {\n            Log.d(TAG, \"Main - SHOWING ListingHomeActivity\");\n            Intent intent = new Intent(this, ListingHomeActivity.class);\n            intent.setFlags(335544320);\n            if (z) {\n                intent.setFlags(65536 | intent.getFlags());\n            }\n            startActivity(intent);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unauthorized access. It stores the user's credentials in the SharedPreferences, which can be accessed by any app component. Consider using a more secure storage mechanism, such as the Android Keystore system or a secure data storage solution like SQLCipher.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle any user input, and it does not sanitize or validate user input. It directly reads from shared preferences, which is not a secure way to store sensitive data.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a multi-threaded environment, and the shared preferences are not properly synchronized.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_19": {
+    "code": "private boolean shouldShowListingHomeActivity() {\n        return this.aware3Application.getCurrentListing() != null;\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input, and it does not sanitize or validate user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform input validation, which can lead to a malicious user modifying the behavior of the program.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack. The code correctly checks if the current listing is not null before showing the listing home activity.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a multi-threaded environment, and it does not properly guard against potential race conditions. Consider using the following code instead:\n\nprivate boolean shouldShowListingHomeActivity() {\n    synchronized (this) {\n        return this.aware3Application.getCurrentListing()!= null;\n    }\n}",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_20": {
+    "code": "private void retrieveIpAddress() {\n        new IpAddressRetriever(this).execute(new String[0]);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not using proper input validation, which could potentially lead to an exploit. Consider using the following code instead:\n\nprivate void retrieveIpAddress() {\n        new IpAddressRetriever(this).execute(new String[] {});\n    }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The program retrieves the IP address by creating a new thread, which is not a best practice. It is also not secure, as it does not provide any way to stop the thread.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack. It correctly handles all exceptions and provides proper error handling and logging.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not thread-safe, because it creates a new instance of the `IpAddressRetriever` class each time the `retrieveIpAddress` method is called. If multiple threads call this method simultaneously, they could potentially create multiple instances of the `IpAddressRetriever` class, causing unexpected behavior. Consider using the Abstract Factory design pattern or implementing the Singleton design pattern to ensure thread safety.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_21": {
+    "code": "public void checkDeepLinking() {\n        new GraphRetriever(this).execute(new String[0]);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not using a safe deserialization technique, which could potentially lead to an attack.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly validate input or sanitize output, and is therefore not secure.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any deep linking attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle any user input, so it is not possible for an attacker to cause any harm.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_22": {
+    "code": "public Dialog onCreateDialog(int i) {\n        AlertDialog.Builder builder = new AlertDialog.Builder(this);\n        if (i == 1) {\n            builder.setMessage(\"This app has been disabled. Please check back soon!\");\n            builder.setTitle(\"App Disabled\");\n            builder.setCancelable(false);\n            builder.setPositiveButton(\"Ok\", new DialogInterface.OnClickListener() { // from class: com.airealmobile.general.Main.3\n                @Override // android.content.DialogInterface.OnClickListener\n                public void onClick(DialogInterface dialogInterface, int i2) {\n                    System.exit(0);\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not check for null or empty input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code creates an AlertDialog with a message and a title, and it sets the dialog to not cancelable. However, there is no confirmation button, which means that the user could potentially exit the app without clicking the button. Additionally, the code does not set the app to exit on a back button press, which could potentially lead to a security vulnerability.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not very secure, as it does not properly check for null values before using them. It is also not very flexible, as it does not allow for easy customization. It is also not very efficient, as it creates a new instance of the AlertDialog class every time the onCreateDialog() method is called.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not very robust, and an attacker could potentially cause a crash or other undefined behavior by providing a negative value for the 'i' parameter.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " If so, you should provide a privacy policy and let users opt-out of data collection.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_23": {
+    "code": "public void onClick(DialogInterface dialogInterface, int i2) {\n                    System.exit(0);\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not vulnerable to an exploit, as it properly handles all possible user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It allows the user to exit the app without any confirmation or warning.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to exit the app when the user clicks on the dialog's \"OK\" button. However, there is no guarantee that the \"onClick\" method will be called when the user clicks on the \"OK\" button. It is possible that the \"onClick\" method will be called when the user clicks on the \"Cancel\" button, causing the app to continue running in the background.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_24": {
+    "code": "public void onClick(DialogInterface dialogInterface, int i2) {\n                    Intent intent = new Intent(\"android.intent.action.VIEW\");\n                    intent.setData(Uri.parse(\"market://details?id=\" + Main.this.packageName));\n                    Main.this.startActivity(intent);\n                    Main.this.startActivity(intent);\n                    dialogInterface.dismiss();\n                    System.exit(0);\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle potential malicious input, and it opens the Google Play Store with the default browser, which could potentially be used to install malicious apps.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code opens the Play Store app with the current app's package name as the query parameter. This is not a secure way to open the Play Store app. It is better to use a constant string that represents the desired deep link, such as \"market://details?id=com.example.app\".",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code is functional and will open the Google Play Store page for the app when the user clicks the \"Rate this app\" button.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to open the app's page in the Play Store, but it also calls startActivity() twice, which could potentially cause the app to open multiple times. It also dismisses the dialog and exits the app, which could potentially cause the app to crash.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_25": {
+    "code": "public void onClick(DialogInterface dialogInterface, int i2) {\n                    dialogInterface.dismiss();\n                    Main.this.finish();\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it properly dismisses the dialog box and finishes the activity.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code dismisses the dialog box and finishes the activity without checking for a positive user response.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code properly dismisses the dialog box and finishes the activity.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code dismisses the dialog and finishes the activity.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_26": {
+    "code": "public void onCancel(DialogInterface dialogInterface) {\n                    dialogInterface.dismiss();\n                    Main.this.finish();\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it will crash if the user taps the back button.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle cancellation, which can lead to unexpected behavior. For example, if the user clicks the back button, the dialog will be dismissed but the activity will not finish, causing the user to lose their progress. To properly handle cancellation, you should add logic to check for a positive result before dismissing the dialog.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The onCancel() method dismisses the dialog box and finishes the activity.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to dismiss the dialog and finish the activity when the user clicks the Cancel button. However, there is no guarantee that the `DialogInterface` object is not null, which could cause a NullPointerException. Is there any way to avoid this potential issue?",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_27": {
+    "code": "public String doInBackground(String... strArr) {\n            try {\n                DefaultHttpClient defaultHttpClient = new DefaultHttpClient();\n                HttpPost httpPost = new HttpPost(this.url);\n                JSONObject jSONObject = new JSONObject();\n                jSONObject.put(\"query\", \"\");\n                jSONObject.put(\"package_name\", this.packageName);\n                String encryptData = EncryptionUtility.getInstance().encryptData(jSONObject.toString());\n                MultipartEntityBuilder create = MultipartEntityBuilder.create();\n                create.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);\n                create.addTextBody(\"encrypted_payload\", encryptData);\n                httpPost.setEntity(create.build());\n                HttpEntity entity = defaultHttpClient.execute(httpPost).getEntity();\n                this.searchResults = new ArrayList<>();\n                if (entity != null && entity.getContentLength() > 0) {\n                    StringBuilder sb = new StringBuilder();\n                    try {\n                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(entity.getContent()), 65728);\n                        while (true) {\n                            String readLine = bufferedReader.readLine();\n                            if (readLine == null) {\n                                break;\n                            }\n                            sb.append(readLine);\n                        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it may be vulnerable to an SQL injection attack. Consider using a library like Hibernate or JPA to create a DAO layer and move the SQL queries to the DAO classes.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not encrypt the data before sending it to the server. The data is sent in plain text.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not sufficiently secure. It does not perform any input validation, which can lead to a malicious user input causing unexpected behavior. Consider using a library like Apache Commons Validator for input validation.\n                    } catch (IOException e) {\n                        e.printStackTrace();\n                    }\n                }\n                return null;\n            } catch (Exception e) {\n                e.printStackTrace();\n                return null;\n            }\n        }",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No. The provided code is not susceptible to any type of attack. The code is functional and will continue to function as expected if the Android API changes.\n                        bufferedReader.close();\n                    } catch (IOException e) {\n                        e.printStackTrace();\n                    }\n                    String jsonString = sb.toString();\n                    JSONArray jSONArray = new JSONArray(jsonString);\n                    for (int i = 0; i < jSONArray.length(); i++) {\n                        JSONObject jSONObject = jSONArray.getJSONObject(i);\n                        SearchResult searchResult = new SearchResult();\n                        searchResult.setPackageName(jSONObject.getString(\"package_name\"));\n                        searchResult.setVersionName(jSONObject.getString(\"version_name\"));\n                        searchResult.setVersionCode(jSONObject.getInt(\"version_code\"));\n                        searchResult.setDownloadUrl(jSONObject.getString(\"download_url\"));\n                        this.searchResults.add(searchResult);\n                    }\n                }\n                return null;\n            } catch (Exception e) {\n                e.printStackTrace();\n                return e.getMessage();\n            }\n        }",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " The code does not encrypt the user's data and send it to the server.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_28": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((AppSearchRetriever) str);\n            ArrayList<AppObject> arrayList = this.searchResults;\n            if (arrayList == null || arrayList.size() <= 0) {\n                return;\n            }\n            AppObject appObject = null;\n            Iterator<AppObject> it = this.searchResults.iterator();\n            while (true) {\n                if (!it.hasNext()) {\n                    break;\n                }\n                AppObject next = it.next();\n                if (next.getPackageId().equalsIgnoreCase(this.packageName)) {\n                    appObject = next;\n                    break;\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle potential malicious input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to a malicious app retrieving sensitive data from the device.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing it.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_29": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((IpAddressRetriever) str);\n            if (Main.this.ipAddress != null) {\n                Main.this.checkDeepLinking();\n            } else {\n                Main.this.showAppSearch();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly validating the input, which could lead to an exploit. Consider using a safer approach, like this:\n\npublic void onPostExecute(String str) {\n            super.onPostExecute((IpAddressRetriever) str);\n            if (str!= null && ((IpAddressRetriever) str).getIpAddress()!= null) {\n                Main.this.checkDeepLinking();\n            } else {\n                Main.this.showAppSearch();\n            }\n        }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not check for null before dereferencing the 'ipAddress' field. It also does not properly handle exceptions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing the Main.this.ipAddress object. If the onPostExecute method is called with a null argument, it will cause a NullPointerException. To fix this, you should check for null before dereferencing the object.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_30": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((GraphRetriever) str);\n            if (this.linkedApp != null) {\n                Main.this.aware3Application.setCurrentApp(this.linkedApp);\n                Main.this.retrieveSetup(this.linkedApp);\n                return;\n            }\n            Main.this.showAppSearch();\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly validating user input, which could lead to an exploit. Consider using a safer API, like Intent.putExtra() to pass data to an activity.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate the data it receives from the caller. It can be used to execute arbitrary code.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing the 'linkedApp' variable. If the 'linkedApp' variable is null, the program will crash.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_31": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((OrganizationRetriever) str);\n            if (this.listing != null) {\n                Main.this.aware3Application.setCurrentListing(this.listing);\n            }\n            Main.this.retrieveProfile();\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly validating the input, which could potentially lead to an exploit. Consider using a safer approach, like this:\n\npublic void onPostExecute(String str) {\n            super.onPostExecute((OrganizationRetriever) str);\n            if (this.listing!= null) {\n                Main.this.aware3Application.setCurrentListing(this.listing);\n            }\n            Main.this.retrieveProfile();\n        }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not check for null before dereferencing. It also does not properly handle exceptions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing the'str' parameter. If the'str' parameter is null, this could cause a NullPointerException.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_32": {
+    "code": "public void retrieveProfile() {\n        if (this.isRetrievingProfile) {\n            return;\n        }\n        this.isRetrievingProfile = true;\n        final String deviceIdentifier = new SharedPrefsHelperImpl(getApplicationContext()).getDeviceIdentifier();\n        AppObject currentApp = this.aware3Application.getCurrentApp();\n        if (currentApp != null && currentApp.getAppId() != null) {\n            this.identifier = currentApp.getAppId();\n        }\n        this.profileApiService.get().getProfile(deviceIdentifier, new Observer<EndUser>() { // from class: com.airealmobile.general.Main.8\n            @Override // io.reactivex.Observer\n            public void onSubscribe(Disposable disposable) {\n            }\n\n            @Override // io.reactivex.Observer\n            public void onNext(EndUser endUser) {\n                if (endUser == null || endUser.getEndUserId() == null) {\n                    new EndUser().setDeviceId(Main.this.identifier);\n                    Main.this.aware3Application.setProfile(new EndUser());\n                    return;\n                }\n                endUser.setDeviceId(deviceIdentifier);\n                Main.this.aware3Application.setProfile(endUser);\n                if (!Main.this.isRetrievingNotifications) {\n                    Main.this.retrieveNotifications();\n                }\n                if (endUser != null && endUser.getFirebaseToken() != null && Main.this.homeInfo != null && Main.this.homeInfo.isChat_enabled()) {\n                    Main.this.buildFirebaseData(endUser.getFirebaseToken());\n                }\n                Main.this.isRetrievingProfile = false;\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle potential null values. It will crash if it encounters a null value.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not use proper input validation, and it does not prevent SQL injection.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle null values, which could cause a crash. Consider using a proper library or checking for null values before using the data.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle null values. If the profile API service returns null, the app will crash.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " No. The provided code is designed to retrieve the user's profile and store it in the Aware3Application. The user's profile is only retrieved once and stored in the Aware3Application.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_33": {
+    "code": "public void onError(Throwable th) {\n                new EndUser().setDeviceId(Main.this.identifier);\n                Main.this.aware3Application.setProfile(new EndUser());\n                if (!Main.this.isRetrievingNotifications) {\n                    Main.this.retrieveNotifications();\n                }\n                Main.this.isRetrievingProfile = false;\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and it does not check for null pointers before dereferencing them.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not set the device ID or profile in a background thread, which could potentially cause a race condition. It also does not check for errors when setting the profile, which could cause the app to crash.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not directly vulnerable to any attacks, but it does have some inherent issues that can be addressed.\n\n1. The code does not properly handle exceptions. It does not properly catch and handle any exceptions that may occur, which can cause the application to crash. It is recommended to use a try-catch block to properly handle exceptions.\n2. The code does not properly set the device ID of the end user. It is recommended to use a try-catch block to properly handle exceptions.\n3. The code does not properly set the profile of the Aware3 application. It is recommended to use a try-catch block to properly handle exceptions.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle exceptions, so it could potentially cause some unexpected behavior. For example, if the `setDeviceId` method throws an exception, the `onError` method will not be able to set the `isRetrievingProfile` flag to `false`.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_34": {
+    "code": "public void onComplete() {\n                if (!Main.this.isRetrievingNotifications) {\n                    Main.this.retrieveNotifications();\n                }\n                Main.this.isRetrievingProfile = false;\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle potential exceptions, and it does not properly check for null before dereferencing.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly check if the user is authenticated before retrieving the profile.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not protected against malicious input.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_35": {
+    "code": "public void buildFirebaseData(String str) {\n        if (str != null) {\n            final Aware3Application aware3Application = this.aware3Application;\n            final EndUser profile = aware3Application.getProfile();\n            try {\n                FirebaseAuth.getInstance().signInWithCustomToken(str).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() { // from class: com.airealmobile.general.Main.9\n                    @Override // com.google.android.gms.tasks.OnCompleteListener\n                    public void onComplete(Task<AuthResult> task) {\n                        if (task.isSuccessful()) {\n                            final String uid = task.getResult().getUser().getUid();\n                            profile.setFireBaseUser(uid);\n                            final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();\n                            final DatabaseReference reference = firebaseDatabase.getReference(\"users/\" + uid);\n                            final AppObject currentApp = aware3Application.getCurrentApp();\n                            reference.addListenerForSingleValueEvent(new ValueEventListener() { // from class: com.airealmobile.general.Main.9.1\n                                @Override // com.google.firebase.database.ValueEventListener\n                                public void onCancelled(DatabaseError databaseError) {\n                                }\n\n                                @Override // com.google.firebase.database.ValueEventListener\n                                public void onDataChange(DataSnapshot dataSnapshot) {\n                                    HashMap hashMap = new HashMap();\n                                    hashMap.put(\"app_id\", Integer.valueOf(currentApp.getAppId()));\n                                    if (profile.getProfilePhotoUrl() != null && !profile.getProfilePhotoUrl().equalsIgnoreCase(\"\")) {\n                                        hashMap.put(\"avatar\", \"https://aware3.net/api/image/\" + profile.getProfilePhotoUrl());\n                                    }\n                                    hashMap.put(\"first_name\", profile.getFirstName());\n                                    hashMap.put(\"last_name\", profile.getLastName());\n                                    hashMap.put(\"last_seen\", ServerValue.TIMESTAMP);\n                                    if (!dataSnapshot.exists()) {\n                                        hashMap.put(\"joined\", ServerValue.TIMESTAMP);\n                                    } else {\n                                        hashMap.put(\"joined\", ((HashMap) dataSnapshot.getValue()).get(\"joined\"));\n                                    }\n                                    reference.setValue(hashMap);\n                                    DatabaseReference reference2 = firebaseDatabase.getReference(\"apps/\" + currentApp.getAppId() + \"/online/\" + uid);\n                                    reference2.onDisconnect().removeValue();\n                                    reference2.child(\"online_since\").setValue(ServerValue.TIMESTAMP);\n                                    firebaseDatabase.getReference(\"user_history/\" + uid).child(\"last_seen\").setValue(ServerValue.TIMESTAMP);\n                                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle potential malicious input. The program does not check for null or empty strings, and it does not sanitize user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle sensitive data and is not recommended for production use.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to be secure and is not recommended for use in production. It uses a hard-coded Firebase database URL, which means that the database can be accessed by anyone with the URL. It also does not handle potential exceptions, which could result in a crash.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " The provided code is designed to update the user's profile information in the Firebase database when the user logs in. However, it does not remove the user's previous profile information from the database when the user logs in. This could potentially cause a privacy issue if the user's previous profile information is not removed.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_36": {
+    "code": "public void retrieveNotifications() {\n        this.isRetrievingNotifications = true;\n        EndUser profile = this.aware3Application.getProfile();\n        new NotificationRetriever(profile != null ? profile.getEndUserId() : null, this).execute(new String[0]);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input, and it does not properly sanitize the input before using it.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The program retrieves end user profile information without validating the user ID, which could potentially result in a malicious user gaining access to sensitive information.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a multi-threaded environment, and there is no synchronization or proper exception handling. It is also not resistant to SQL injection attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_37": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((NotificationRetriever) str);\n            Set<String> stringSet = Main.this.getSharedPreferences(Aware3Application.NOTIFICATION_SHARED_PREF, 0).getStringSet(Aware3Application.NOTIFICATION_READ_MESSAGES, null);\n            Set<String> stringSet2 = Main.this.getSharedPreferences(Aware3Application.NOTIFICATION_DELETED_PREF, 0).getStringSet(Aware3Application.NOTIFICATION_DELETED_MESSAGES, null);\n            ArrayList<com.airealmobile.modules.notifications.api.model.Notification> arrayList = this.retrievedNotifications;\n            boolean z = true;\n            if (arrayList != null) {\n                if (stringSet != null) {\n                    Iterator<com.airealmobile.modules.notifications.api.model.Notification> it = arrayList.iterator();\n                    while (it.hasNext()) {\n                        com.airealmobile.modules.notifications.api.model.Notification next = it.next();\n                        if (stringSet2 == null || !stringSet2.contains(next.getNotificationId())) {\n                            if (!stringSet.contains(next.getNotificationId())) {\n                                break;\n                            }\n                        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle any potential security issues, and it is not clear how the code could be improved to avoid potential issues.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to prevent the user from reading or deleting notifications.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code appears to have no issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " If so, you should provide a proper opt-out mechanism.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_38": {
+    "code": "public void retrieveAuthToken() {\n        AppObject currentApp = this.aware3Application.getCurrentApp();\n        EndUser profile = this.aware3Application.getProfile();\n        if (profile != null && profile.getEndUserId() != null) {\n            AuthTokenRetriever authTokenRetriever = new AuthTokenRetriever(profile.getEndUserId(), currentApp.getAppId(), profile.getDeviceId());\n            authTokenRetriever.setListener(this);\n            authTokenRetriever.execute(new Void[0]);\n            return;\n        }\n        currentApp.setAuthToken(\"\");\n        loadHomePage();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and it retrieves the end user's profile without performing any validation. It is also not implementing any rate limiting, which could be used to prevent an attacker from overloading the server with requests.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not validate the end user ID, app ID, or device ID, and it does not handle any potential exceptions. It retrieves an auth token from a remote server and stores it in memory, but it does not securely store the token or check for token expiration.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection attack, as it properly validates user input before using it.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle potential exceptions, so an attacker could potentially cause a crash or other undefined behavior. Consider using a try-catch block or checking for null before accessing the profile or auth token.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_39": {
+    "code": "public void didFailToRetrieveAuthToken(AuthTokenRetriever authTokenRetriever) {\n        this.aware3Application.getCurrentApp().setAuthToken(\"\");\n        loadHomePage();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and it will continue to execute the 'loadHomePage()' method regardless of the exception type.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the authentication token retrieval fails. In this case, the user is not notified and the application continues to load the home page without a valid authentication token.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle exceptions, so it could potentially crash the application. Consider using a try-catch block to handle potential exceptions.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to handle the case where the auth token retrieval fails. In this case, the app sets the auth token to an empty string and then reloads the home page. However, it's possible that an attacker could cause the app to reload the home page without setting the auth token to an empty string first, causing the app to potentially use an invalid auth token on future requests.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_40": {
+    "code": "public void didRetrieveAuthToken(AuthTokenRetriever authTokenRetriever, String str) {\n        this.aware3Application.getCurrentApp().setAuthToken(str);\n        loadHomePage();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input. It directly sets the retrieved authentication token in the current app instance, without performing any validation or sanitization.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It stores the retrieved authentication token in memory, which is a security vulnerability. To fix this vulnerability, you should store the retrieved authentication token in a secure storage, such as the SharedPreferences.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection attack, as it properly sanitizes user input before storing it.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a multi-threaded environment, and there is no synchronization or locking mechanism. It is possible for an attacker to retrieve multiple auth tokens and use them in multiple threads, causing unexpected behavior. Consider using the following code instead:\n\npublic void didRetrieveAuthToken(AuthTokenRetriever authTokenRetriever, String str) {\n        synchronized (this) {\n            this.aware3Application.getCurrentApp().setAuthToken(str);\n        }\n        loadHomePage();\n    }",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

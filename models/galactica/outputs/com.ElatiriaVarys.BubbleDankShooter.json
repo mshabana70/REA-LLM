@@ -1,0 +1,54 @@
+{
+  "Function_1": {
+    "code": "protected void onCreate(Bundle bundle) {\n        Log.w(\"Unity\", \"UnityPlayerNativeActivity has been deprecated, please update your AndroidManifest to use UnityPlayerActivity instead\");\n        super.onCreate(bundle);\n        Intent intent = new Intent(this, UnityPlayerActivity.class);\n        intent.addFlags(65536);\n        Bundle extras = getIntent().getExtras();\n        if (extras != null) {\n            intent.putExtras(extras);\n        }\n        startActivity(intent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "Function_1": {
+    "code": "public void onNewIntent(Intent intent) {\n        super.onNewIntent(intent);\n        Bundle extras = intent.getExtras();\n        if (extras == null) {\n            return;\n        }\n        String string = extras.getString(Constants.MessagePayloadKeys.MSGID);\n        String string2 = extras.getString(Constants.MessagePayloadKeys.MSGID);\n        if (string2 == null) {\n            string2 = extras.getString(\"message_id\");\n        }\n        if (string != null && string2 != null) {\n            Intent intent2 = new Intent(this, MessageForwardingService.class);\n            intent2.setAction(MessageForwardingService.ACTION_REMOTE_INTENT);\n            intent2.putExtras(intent);\n            intent2.setData(intent.getData());\n            startService(intent2);\n        }\n        setIntent(intent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onCreate(Bundle bundle) {\n        if (this.mUnityPlayer != null) {\n            this.mUnityPlayer.quit();\n            this.mUnityPlayer = null;\n        }\n        super.onCreate(bundle);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

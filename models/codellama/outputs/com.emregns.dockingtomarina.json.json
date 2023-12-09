@@ -1,0 +1,70 @@
+{
+  "Function_1": {
+    "code": "public boolean dispatchKeyEvent(KeyEvent keyEvent) {\n        return keyEvent.getAction() == 2 ? this.mUnityPlayer.injectEvent(keyEvent) : super.dispatchKeyEvent(keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public void onConfigurationChanged(Configuration configuration) {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "protected void onCreate(Bundle bundle) {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getIntent().putExtra(\"unity\", updateUnityCommandLineArguments(getIntent().getStringExtra(\"unity\")));\n        UnityPlayer unityPlayer = new UnityPlayer(this, this);\n        this.mUnityPlayer = unityPlayer;\n        setContentView(unityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "protected void onDestroy() {\n        this.mUnityPlayer.destroy();\n        super.onDestroy();\n    }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "public boolean onGenericMotionEvent(MotionEvent motionEvent) {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "public boolean onKeyDown(int i, KeyEvent keyEvent) {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "public boolean onKeyUp(int i, KeyEvent keyEvent) {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "public void onLowMemory() {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "protected void onNewIntent(Intent intent) {\n        setIntent(intent);\n        this.mUnityPlayer.newIntent(intent);\n    }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "protected void onPause() {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "protected void onResume() {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "public boolean onTouchEvent(MotionEvent motionEvent) {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "public void onTrimMemory(int i) {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "public void onUnityPlayerQuitted() {\n    }",
+    "results": {}
+  },
+  "Function_15": {
+    "code": "public void onUnityPlayerUnloaded() {\n        moveTaskToBack(true);\n    }",
+    "results": {}
+  },
+  "Function_16": {
+    "code": "public void onWindowFocusChanged(boolean z) {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+    "results": {}
+  },
+  "Function_17": {
+    "code": "protected String updateUnityCommandLineArguments(String str) {\n        return str;\n    }",
+    "results": {}
+  }
+}

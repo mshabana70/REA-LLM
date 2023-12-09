@@ -1,0 +1,18 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n        this.userViewModel = (UserViewModel) ViewModelProviders.of(this).get(UserViewModel.class);\n        getBuildConfig();\n        new Handler().postDelayed(new Runnable() { // from class: com.extremesupervisor.app.tablet.ui.MainActivity.1\n            @Override // java.lang.Runnable\n            public void run() {\n                MainActivity.this.loadDashboard();\n            }\n        }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "private void getBuildConfig() {\n        try {\n            ((TextView) findViewById(R.id.tw_version)).setText(getString(R.string.version_text) + \": \" + BuildConfig.VERSION_NAME);\n        } catch (Exception e) {\n            Log.e(\"MainActivity\", \"getBuildConfig: \" + e.getMessage());\n        }\n    }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "public void onStart() {\n        super.onStart();\n        findViewById(R.id.pg_main).setVisibility(0);\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "public void loadDashboard() {\n        this.userViewModel.get().observe(this, new Observer<User>() { // from class: com.extremesupervisor.app.tablet.ui.MainActivity.2\n            @Override // androidx.lifecycle.Observer\n            public void onChanged(User _user) {\n                if (_user != null) {\n                    MainActivity.this.startActivity(new Intent(MainActivity.this, Dashboard.class));\n                } else {\n                    MainActivity.this.startActivity(new Intent(MainActivity.this, LoginActivity.class));\n                }\n                MainActivity.this.finish();\n            }",
+    "results": {}
+  }
+}

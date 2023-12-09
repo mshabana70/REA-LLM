@@ -1,0 +1,3799 @@
+Processing APK: com.cuteandtinybabygames.littlefarmlife.free.json
+Processing function 1, which looks like this: protected String updateUnityCommandLineArguments(String str) {
+        return str;
+    }
+Processing function 2, which looks like this: public void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getIntent().putExtra("unity", updateUnityCommandLineArguments(getIntent().getStringExtra("unity")));
+        this.mUnityPlayer = new UnityPlayer(this, this);
+        setContentView(this.mUnityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 3, which looks like this: public void onUnityPlayerUnloaded() {
+        moveTaskToBack(true);
+    }
+Processing function 4, which looks like this: public void onUnityPlayerQuitted() {
+        Process.killProcess(Process.myPid());
+    }
+Processing function 5, which looks like this: public void onNewIntent(Intent intent) {
+        setIntent(intent);
+        this.mUnityPlayer.newIntent(intent);
+    }
+Processing function 6, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 7, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 8, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 9, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 10, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 11, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 12, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 13, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 14, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 15, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 16, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 17, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.cuteandtinybabygames.littlefarmlife.free.json!
+Processing APK: com.elvira.ZombieApartment.json
+Processing function 1, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 2, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 3, which looks like this: protected void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getIntent().putExtra("unity", updateUnityCommandLineArguments(getIntent().getStringExtra("unity")));
+        this.mUnityPlayer = new UnityPlayer(this, this);
+        setContentView(this.mUnityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 4, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 5, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 6, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 7, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 8, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 9, which looks like this: protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+        this.mUnityPlayer.newIntent(intent);
+    }
+Processing function 10, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 11, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 12, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 13, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 14, which looks like this: public void onUnityPlayerQuitted() {
+        Process.killProcess(Process.myPid());
+    }
+Processing function 15, which looks like this: public void onUnityPlayerUnloaded() {
+        moveTaskToBack(true);
+    }
+Processing function 16, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 17, which looks like this: protected String updateUnityCommandLineArguments(String str) {
+        return str;
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.elvira.ZombieApartment.json!
+Processing APK: com.deskos.ibot.json
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.deskos.ibot.json!
+Processing APK: com.erikgilburgapps.subway.princess.endless.running.json
+Processing function 1, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        return keyEvent.getAction() == 2 ? this.mUnityPlayer.injectEvent(keyEvent) : super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 2, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 3, which looks like this: protected void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        this.mUnityPlayer = new UnityPlayer(this);
+        setContentView(this.mUnityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 4, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 5, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 6, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 7, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 8, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 9, which looks like this: protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+    }
+Processing function 10, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 11, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 12, which looks like this: protected void onStart() {
+        super.onStart();
+        this.mUnityPlayer.start();
+    }
+Processing function 13, which looks like this: protected void onStop() {
+        super.onStop();
+        this.mUnityPlayer.stop();
+    }
+Processing function 14, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 15, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 16, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.erikgilburgapps.subway.princess.endless.running.json!
+Processing APK: com.yoo.twand.wdxm.json
+Processing function 1, which looks like this: public void SubmitRoleCreate(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6) {
+    }
+Processing function 2, which looks like this: public void SubmitRoleLevel(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, int i5, int i6, String str7) {
+    }
+Processing function 3, which looks like this: public void SubmitRoleLogin(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, String str7) {
+    }
+Processing function 4, which looks like this: public void SubmitRoleLogout(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, String str7) {
+    }
+Processing function 5, which looks like this: public void SubmitRoleYuanbao(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, int i5, int i6, int i7, String str7, String str8) {
+    }
+Processing function 6, which looks like this: protected void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getWindow().setFormat(2);
+        if (this.mUnityPlayer == null) {
+            this.mUnityPlayer = new UnityPlayer(this);
+        }
+        setContentView(this.mUnityPlayer);
+        this.mUnityPlayer.requestFocus();
+        Arrays.asList(Permission.READ_PHONE_STATE);
+        HuChiPlatform.getInstance().init(this, false, null, new HuChiAuthorizeCallback() { // from class: com.youda.xianxia.MainActivity.1
+            @Override // huchi.jedigames.platform.HuChiAuthorizeCallback
+            public void authorize(boolean z) {
+                Log.d(MainActivity.TAG, "authorizeresult =" + z);
+                JSONObject jSONObject = new JSONObject();
+                if (z) {
+                    MainActivity.this.CallBackResults("AUTHORIZATION_SUCCESS", jSONObject);
+                } else {
+                    MainActivity.this.CallBackResults("AUTHORIZATION_FAIL", jSONObject);
+                }
+            }
+Processing function 7, which looks like this: public void callback(int i, HuChiUserInfo huChiUserInfo, Map<String, Object> map) {
+                JSONObject jSONObject = new JSONObject();
+                if (i == 0) {
+                    try {
+                        jSONObject.put("user_id", huChiUserInfo.getUserId());
+                        jSONObject.put(HuChiConst.TOKEN, huChiUserInfo.getUserToken());
+                        jSONObject.put("nickname", huChiUserInfo.getUserNickName());
+                        jSONObject.put("headurl", huChiUserInfo.getHeadurl());
+                        jSONObject.put(HuChiConst.TIMESTAMP, huChiUserInfo.getTime());
+                        jSONObject.put(HuChiConst.SIGN, huChiUserInfo.getSign());
+                        jSONObject.put("is_bind_fb", huChiUserInfo.getIsBindFB());
+                        jSONObject.put("is_bind_google", huChiUserInfo.getIsBindGoogle());
+                        if (map != null) {
+                            for (String str : map.keySet()) {
+                                if (jSONObject.get(str) == null) {
+                                    jSONObject.put(str, map.get(str));
+                                }
+                            }
+Processing function 8, which looks like this: public void CallBackResults(String str, JSONObject jSONObject) {
+        if (jSONObject == null) {
+            return;
+        }
+        String jSONObject2 = jSONObject.toString();
+        Log.d(TAG, "HuichiSDKCallback" + str + jSONObject2);
+        UnityPlayer.UnitySendMessage("CabbageSdkMgr", "_CabbageSDKCallback", str + "#" + jSONObject2);
+    }
+Processing function 9, which looks like this: protected void onStart() {
+        super.onStart();
+        this.mUnityPlayer.resume();
+        onWindowFocusChanged(true);
+    }
+Processing function 10, which looks like this: protected void onRestart() {
+        super.onRestart();
+    }
+Processing function 11, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+        HuChiPlatform.getInstance().onResume();
+        Adjust.onResume();
+    }
+Processing function 12, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+        HuChiPlatform.getInstance().onPause();
+        Adjust.onPause();
+    }
+Processing function 13, which looks like this: protected void onStop() {
+        super.onStop();
+        this.mUnityPlayer.stop();
+    }
+Processing function 14, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.quit();
+        super.onDestroy();
+        HuChiPlatform.getInstance().onDestroy();
+    }
+Processing function 15, which looks like this: protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
+Processing function 16, which looks like this: protected void onActivityResult(int i, int i2, Intent intent) {
+        super.onActivityResult(i, i2, intent);
+        HuChiPlatform.getInstance().onActivityResult(i, i2, intent);
+    }
+Processing function 17, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 18, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 19, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 20, which looks like this: public void onWindowFocusChanged(boolean z) {
+        if (z) {
+            NotchTools.getFullScreenTools().fullScreenUseStatusForOnWindowFocusChanged(this);
+        }
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 21, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 22, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 23, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 24, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 25, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 26, which looks like this: public String GetSdkParam(String str) {
+        char c;
+        switch (str.hashCode()) {
+            case -1613589672:
+                if (str.equals(HuChiConst.LANGUAGE)) {
+                    c = '\f';
+                    break;
+                }
+                c = 65535;
+                break;
+            case -1253236595:
+                if (str.equals("gameID")) {
+                    c = 7;
+                    break;
+                }
+                c = 65535;
+                break;
+            case -982388107:
+                if (str.equals(HuChiConst.DEVICE_SCREEN)) {
+                    c = 5;
+                    break;
+                }
+                c = 65535;
+                break;
+            case -962026440:
+                if (str.equals(HuChiConst.DEVICE_SYSTEM)) {
+                    c = 3;
+                    break;
+                }
+                c = 65535;
+                break;
+            case -430672561:
+                if (str.equals("loginFacebook")) {
+                    c = 15;
+                    break;
+                }
+                c = 65535;
+                break;
+            case -290385993:
+                if (str.equals("thirdChannelID")) {
+                    c = '\b';
+                    break;
+                }
+                c = 65535;
+                break;
+            case 3236040:
+                if (str.equals(HuChiConst.IMEI)) {
+                    c = 0;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 25209965:
+                if (str.equals(HuChiConst.DEVICE_OS)) {
+                    c = 2;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 111887144:
+                if (str.equals("thirdChannelFlag")) {
+                    c = '\t';
+                    break;
+                }
+                c = 65535;
+                break;
+            case 127178275:
+                if (str.equals("bindFacebook")) {
+                    c = 14;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 312707936:
+                if (str.equals("loginPreFacebook")) {
+                    c = 16;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 781508125:
+                if (str.equals(HuChiConst.DEVICE_NUM)) {
+                    c = 1;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 887439393:
+                if (str.equals(HuChiConst.DEVICE_FACTORY)) {
+                    c = 4;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 908759025:
+                if (str.equals("packageName")) {
+                    c = 11;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 1291538547:
+                if (str.equals(HuChiConst.NET_WORK)) {
+                    c = 6;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 1311299344:
+                if (str.equals("isFirstOpen")) {
+                    c = TokenParser.CR;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 1802060801:
+                if (str.equals("packageId")) {
+                    c = '\n';
+                    break;
+                }
+                c = 65535;
+                break;
+            default:
+                c = 65535;
+                break;
+        }
+Processing function 27, which looks like this: public void Login() {
+        Log.d(TAG, "HuichiSDK Login()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.3
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().doLogin();
+            }
+        }
+Processing function 28, which looks like this: public void GuestLogin() {
+        Log.d(TAG, "HuichiSDK GuestLogin()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.4
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().doGuestLogin();
+            }
+        }
+Processing function 29, which looks like this: public void Logout() {
+        Log.d(TAG, "HuichiSDK Logout()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.5
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().doLogout();
+            }
+        }
+Processing function 30, which looks like this: public void ExitApp() {
+        Log.d(TAG, "CabbageSDK ExitApp()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.6
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().doExit(new HuChiExitCallback() { // from class: com.youda.xianxia.MainActivity.6.1
+                    @Override // huchi.jedigames.platform.HuChiExitCallback
+                    public void onExit(int i, String str) {
+                        JSONObject jSONObject = new JSONObject();
+                        try {
+                            jSONObject.put("code", i);
+                            jSONObject.put(NotificationCompat.CATEGORY_MESSAGE, str);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        if (i == 0) {
+                            MainActivity.this.CallBackResults("EXIT_SUCCESS", jSONObject);
+                        } else if (i == 2) {
+                            MainActivity.this.CallBackResults("EXIT_SELF", jSONObject);
+                        } else {
+                            MainActivity.this.CallBackResults("EXIT_FAIL", jSONObject);
+                        }
+                    }
+Processing function 31, which looks like this: public void Pay(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, int i, boolean z, int i2) {
+        Log.d(TAG, "HuichiSDK Pay()");
+        HuChipayInfo huChipayInfo = new HuChipayInfo();
+        huChipayInfo.user_id = str;
+        huChipayInfo.goods_id = str3;
+        huChipayInfo.goods_name = str2;
+        huChipayInfo.amount = Float.parseFloat(str4);
+        huChipayInfo.game_trade_no = str5;
+        huChipayInfo.server_id = str6;
+        huChipayInfo.server_name = str7;
+        huChipayInfo.role_id = str8;
+        huChipayInfo.role_name = str9;
+        huChipayInfo.role_level = i;
+        huChipayInfo.is_first_charge = z;
+        huChipayInfo.exchange_rate = i2;
+        HuChiPlatform.getInstance().doPay(huChipayInfo, new HuChiPayCallback() { // from class: com.youda.xianxia.MainActivity.7
+            @Override // huchi.jedigames.platform.HuChiPayCallback
+            public void callback(int i3, String str10) {
+                JSONObject jSONObject = new JSONObject();
+                try {
+                    jSONObject.put("code", i3);
+                    jSONObject.put(NotificationCompat.CATEGORY_MESSAGE, str10);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if (i3 == 0) {
+                    MainActivity.this.CallBackResults("PAY_SUCCESS", jSONObject);
+                } else {
+                    MainActivity.this.CallBackResults("PAY_FAIL", jSONObject);
+                }
+            }
+Processing function 32, which looks like this: public void Authorize(String str, boolean z) {
+        if (Build.VERSION.SDK_INT < 23) {
+            return;
+        }
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.8
+            @Override // java.lang.Runnable
+            public void run() {
+            }
+        }
+Processing function 33, which looks like this: public void QuitApp() {
+        Log.d(TAG, "HuichiSDK QuitApp()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.9
+            @Override // java.lang.Runnable
+            public void run() {
+                MainActivity.this.finish();
+                Process.killProcess(Process.myPid());
+                System.exit(0);
+            }
+        }
+Processing function 34, which looks like this: public void ApkReinstallActive(String str) {
+        File file = new File(str);
+        if (file.exists()) {
+            Intent intent = new Intent("android.intent.action.VIEW");
+            intent.setDataAndType(Uri.parse("file://" + file.toString()), "application/vnd.android.package-archive");
+            intent.setFlags(268435456);
+            startActivity(intent);
+            finish();
+            Process.killProcess(Process.myPid());
+            System.exit(0);
+        }
+    }
+Processing function 35, which looks like this: public boolean IsInstalled(String str) {
+        boolean z;
+        Iterator<ApplicationInfo> it = getPackageManager().getInstalledApplications(0).iterator();
+        while (true) {
+            if (it.hasNext()) {
+                if (str.equals(it.next().packageName)) {
+                    z = true;
+                    break;
+                }
+            }
+Processing function 36, which looks like this: public String ReadMetaDataFromApplication(String str) {
+        try {
+            String string = getPackageManager().getApplicationInfo(getPackageName(), 128).metaData.getString(str);
+            Log.d(TAG, "readMetaDataFromApplication" + str + string);
+            return string;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+Processing function 37, which looks like this: public void CallPhone(String str) {
+        Intent intent = new Intent();
+        intent.setAction("android.intent.action.CALL");
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+Processing function 38, which looks like this: public void OpenQQ(String str) {
+        if (IsInstalled("com.tencent.qqlite") || IsInstalled("com.tencent.mobileqq")) {
+            try {
+                startActivity(new Intent("android.intent.action.VIEW", Uri.parse(str)));
+                return;
+            } catch (Exception unused) {
+                return;
+            }
+        }
+Processing function 39, which looks like this: public void FaceBookShare(String str, String str2) {
+        HuChiPlatform.getInstance().fbShare(Uri.parse(str), str2, new HuChiShareCallback() { // from class: com.youda.xianxia.MainActivity.10
+            @Override // huchi.jedigames.platform.HuChiShareCallback
+            public void callback(int i) {
+                JSONObject jSONObject = new JSONObject();
+                try {
+                    jSONObject.put("code", i);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if (i == 0) {
+                    MainActivity.this.CallBackResults("SHARE_SUCCESS", jSONObject);
+                } else {
+                    MainActivity.this.CallBackResults("SHARE_FAIL", jSONObject);
+                }
+            }
+Processing function 40, which looks like this: public void FaceBookBind() {
+        Log.d(TAG, "FaceBookBind()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.11
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().showBindOrSwitch();
+            }
+        }
+Processing function 41, which looks like this: public void GoogleBind() {
+        Log.d(TAG, "GoogleBind()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.12
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().showBindOrSwitch();
+            }
+        }
+Processing function 42, which looks like this: public void AccountSetting() {
+        Log.d(TAG, "AccountSetting()");
+        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.13
+            @Override // java.lang.Runnable
+            public void run() {
+                HuChiPlatform.getInstance().showBindOrSwitch();
+            }
+        }
+Processing function 43, which looks like this: public String NotchScreen() {
+        int i;
+        int i2;
+        int i3;
+        boolean isNotchEnable = NotchTools.getFullScreenTools().isNotchEnable(this);
+        int i4 = 0;
+        if (isNotchEnable) {
+            Rect safeArea = NotchTools.getFullScreenTools().getSafeArea(this);
+            int i5 = safeArea.left;
+            i2 = safeArea.top;
+            i3 = safeArea.right;
+            i = safeArea.bottom;
+            i4 = i5;
+        } else {
+            i = 0;
+            i2 = 0;
+            i3 = 0;
+        }
+        String str = isNotchEnable + "#" + i4 + "#" + i2 + "#" + i3 + "#" + i;
+        Log.d(TAG, str);
+        return str;
+    }
+Processing function 44, which looks like this: public void AdjustTrackNormalEvent(String str) {
+        Adjust.trackEvent(new AdjustEvent(str));
+    }
+Processing function 45, which looks like this: public void AdjustTrackPayEvent(String str, float f, String str2) {
+        AdjustEvent adjustEvent = new AdjustEvent(str);
+        adjustEvent.setRevenue(f, str2);
+        Adjust.trackEvent(adjustEvent);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.yoo.twand.wdxm.json!
+Processing APK: com.ESV_GameStudio.CrazyKnifeHit2.json
+Processing function 1, which looks like this: public void onUnityPlayerQuitted() {
+    }
+Processing function 2, which looks like this: protected String updateUnityCommandLineArguments(String str) {
+        return str;
+    }
+Processing function 3, which looks like this: public void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getIntent().putExtra("unity", updateUnityCommandLineArguments(getIntent().getStringExtra("unity")));
+        UnityPlayer unityPlayer = new UnityPlayer(this, this);
+        this.mUnityPlayer = unityPlayer;
+        setContentView(unityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 4, which looks like this: public void onUnityPlayerUnloaded() {
+        moveTaskToBack(true);
+    }
+Processing function 5, which looks like this: protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+        this.mUnityPlayer.newIntent(intent);
+    }
+Processing function 6, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 7, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 8, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 9, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 10, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 11, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 12, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 13, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 14, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 15, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 16, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 17, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.ESV_GameStudio.CrazyKnifeHit2.json!
+Processing APK: com.DungeonCrawler.DungeonKingDos.json
+Processing function 1, which looks like this: public void onUnityPlayerQuitted() {
+    }
+Processing function 2, which looks like this: protected String updateUnityCommandLineArguments(String str) {
+        return str;
+    }
+Processing function 3, which looks like this: protected void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getIntent().putExtra("unity", updateUnityCommandLineArguments(getIntent().getStringExtra("unity")));
+        UnityPlayer unityPlayer = new UnityPlayer(this, this);
+        this.mUnityPlayer = unityPlayer;
+        setContentView(unityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 4, which looks like this: public void onUnityPlayerUnloaded() {
+        moveTaskToBack(true);
+    }
+Processing function 5, which looks like this: protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+        this.mUnityPlayer.newIntent(intent);
+    }
+Processing function 6, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 7, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 8, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 9, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 10, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 11, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 12, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 13, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 14, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 15, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 16, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 17, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.DungeonCrawler.DungeonKingDos.json!
+Processing APK: com.burgerizzr.app.json
+Processing function 1, which looks like this: public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        setContentView(R.layout.splash_screen);
+        this.splash_logo = (GifImageView) findViewById(R.id.splash_logo);
+        startService(new Intent(this, FirebaseService.class));
+        boolean equals = "en".equals(LocaleUtil.getLanguage());
+        Log.e("isenglish", String.valueOf(equals));
+        TextView textView = (TextView) findViewById(R.id.tv_text);
+        if (equals) {
+            textView.setText(getResources().getString(R.string.very_fresh_en));
+            textView.setTypeface(FontUtil.getInstance().getRomanDefault(true));
+        } else {
+            textView.setText(getResources().getString(R.string.very_fresh_ar));
+        }
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ContextCompat.checkSelfPermission(this, "android.permission.READ_PHONE_STATE") == 0) {
+                this.finishing = true;
+                init();
+                return;
+            }
+            requestPermissions(new String[]{"android.permission.READ_PHONE_STATE"}, 100);
+            return;
+        }
+Processing function 2, which looks like this: public void onResume() {
+        super.onResume();
+    }
+Processing function 3, which looks like this: public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
+        super.onRequestPermissionsResult(i, strArr, iArr);
+        if (i != 100) {
+            return;
+        }
+        this.finishing = true;
+        init();
+    }
+Processing function 4, which looks like this: private void init() {
+        McxLogin with = McxLogin.with(this);
+        if (Auth.getInstance().isLoggedIn()) {
+            with.login();
+        } else {
+            with.register();
+        }
+        this.utilApi = UtilitiesApi.call(this, false);
+        this.menuApi = MenuApi.call(this, false);
+        Auth.getInstance().getMenuId();
+        Auth.getInstance().getConcept();
+        callApi();
+    }
+Processing function 5, which looks like this: public void onPause() {
+        super.onPause();
+        CustomDialog customDialog = this.dialog;
+        if (customDialog != null && customDialog.isShowing()) {
+            this.dialog.dismiss();
+        }
+        if (this.finishing) {
+            finish();
+        }
+    }
+Processing function 6, which looks like this: public void onStop() {
+        super.onStop();
+        CustomDialog customDialog = this.dialog;
+        if (customDialog != null && customDialog.isShowing()) {
+            this.dialog.dismiss();
+        }
+        UtilitiesApi utilitiesApi = this.utilApi;
+        if (utilitiesApi != null) {
+            utilitiesApi.forceStop();
+        }
+        MenuApi menuApi = this.menuApi;
+        if (menuApi != null) {
+            menuApi.forceStop();
+        }
+    }
+Processing function 7, which looks like this: public void onBackPressed() {
+        super.onBackPressed();
+        Process.killProcess(Process.myPid());
+    }
+Processing function 8, which looks like this: public void callApi() {
+        this.utilApi.getTranslations(new ApiInterface.TranslationsListener() { // from class: com.burgerizzr.app.SplashScreen.1
+            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener
+            public void onException() {
+            }
+
+            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener
+            public void onSuccess() {
+                SplashScreen.this.callMenu();
+            }
+
+            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener
+            public void onError() {
+                if (SplashScreen.this.doneInForegroung) {
+                    SplashScreen.this.showErrorDialog();
+                }
+            }
+Processing function 9, which looks like this: public void callMenu() {
+        ApplicationsApiCall.getInstance().getApplication(new ApiInterface.ApplicationRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2
+            @Override // com.burgerizzr.app.api.ApiInterface.ApplicationRequestListener
+            public void onSuccess(Object obj) {
+                try {
+                    JSONObject jSONObject = new JSONObject(obj.toString());
+                    JSONObject jSONObject2 = jSONObject.getJSONObject("data");
+                    AppLogger.printJSONObject("app ", jSONObject2);
+                    Auth.getInstance().setApplication((Application) new Gson().fromJson(jSONObject2.toString(), new TypeToken<Application>() { // from class: com.burgerizzr.app.SplashScreen.2.1
+                    }.getType()));
+                    if (jSONObject.has("included") && !jSONObject.isNull("included")) {
+                        JSONArray jSONArray = jSONObject.getJSONArray("included");
+                        if (jSONArray.length() > 0) {
+                            Auth.getInstance().setConcept(Concept.parse(jSONArray.getJSONObject(0)));
+                            SplashScreen.this.menuApi.splashCalls(new ApiInterface.ApiRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2.2
+                                @Override // com.burgerizzr.app.api.ApiInterface.ApiRequestListener
+                                public void onSuccess() {
+                                    if (SplashScreen.this.doneInForegroung) {
+                                        SplashScreen.this.startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                                    }
+                                }
+Processing function 10, which looks like this: public void onError() {
+                                    if (SplashScreen.this.doneInForegroung) {
+                                        SplashScreen.this.showErrorDialog();
+                                    }
+                                }
+Processing function 11, which looks like this: public void onError(Object obj) {
+                AppLogger.printRetrofitError(obj);
+                if (SplashScreen.this.doneInForegroung) {
+                    SplashScreen.this.showErrorDialog();
+                }
+            }
+Processing function 12, which looks like this: public void showErrorDialog() {
+        String string;
+        try {
+            if (!DevUtils.isNetworkAvailable(this)) {
+                string = getString(R.string.no_network_connection);
+            } else {
+                string = getString(R.string.unexpected_error);
+            }
+            CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), string, "", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);
+            CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.3
+                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+                public void onClickButtonOne(Dialog dialog) {
+                    SplashScreen.this.callApi();
+                    dialog.dismiss();
+                }
+
+                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+                public void onClickButtonTwo(Dialog dialog) {
+                    SplashScreen.this.callApi();
+                    dialog.dismiss();
+                }
+            }
+Processing function 13, which looks like this: private void showPermissionDialog() {
+        CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), "A message asking to allow this app to make and manage calls will appear after this one. That is only so the app can obtain this device's id and will not make any calls without you knowing it.", "", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);
+        CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.4
+            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+            public void onClickButtonOne(Dialog dialog) {
+                dialog.dismiss();
+            }
+
+            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+            public void onClickButtonTwo(Dialog dialog) {
+                if (Build.VERSION.SDK_INT >= 23) {
+                    SplashScreen.this.requestPermissions(new String[]{"android.permission.READ_PHONE_STATE"}, 100);
+                }
+Processing function 14, which looks like this: public void attachBaseContext(Context context) {
+        if (context != null) {
+            Locale locale = new Locale(LocaleUtil.getLanguage());
+            Locale.setDefault(locale);
+            context = LocaleUtil.getInstance().wrap(context, locale);
+        }
+        super.attachBaseContext(context);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.burgerizzr.app.json!
+Processing APK: com.DefaultCompany.FlyFlytillYouScore.json
+Processing function 1, which looks like this: public void onUnityPlayerQuitted() {
+    }
+Processing function 2, which looks like this: protected String updateUnityCommandLineArguments(String str) {
+        return str;
+    }
+Processing function 3, which looks like this: protected void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getIntent().putExtra("unity", updateUnityCommandLineArguments(getIntent().getStringExtra("unity")));
+        UnityPlayer unityPlayer = new UnityPlayer(this, this);
+        this.mUnityPlayer = unityPlayer;
+        setContentView(unityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 4, which looks like this: public void onUnityPlayerUnloaded() {
+        moveTaskToBack(true);
+    }
+Processing function 5, which looks like this: protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+        this.mUnityPlayer.newIntent(intent);
+    }
+Processing function 6, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 7, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 8, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 9, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 10, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 11, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 12, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 13, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 14, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 15, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 16, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 17, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/com.DefaultCompany.FlyFlytillYouScore.json!
+Processing APK: com.aqi.data.json
+Processing function 1, which looks like this: public void onPageScrollStateChanged(int i) {
+        }
+Processing function 2, which looks like this: public void onPageScrolled(int i, float f, int i2) {
+        }
+Processing function 3, which looks like this: public void onPageSelected(int i) {
+            WelcomeActivity.this.addBottomDots(i);
+            if (i == WelcomeActivity.this.layouts.length - 1) {
+                WelcomeActivity.this.btnNext.setText("GOT IT");
+                WelcomeActivity.this.btnGetStarted.setVisibility(0);
+                WelcomeActivity.this.btnNext.setVisibility(4);
+                return;
+            }
+            WelcomeActivity.this.btnNext.setText("Next");
+            WelcomeActivity.this.btnGetStarted.setVisibility(8);
+            WelcomeActivity.this.btnNext.setVisibility(0);
+        }
+Processing function 4, which looks like this: protected int setLayout() {
+        return com.aqi.data.R.layout.activity_welcome;
+    }
+Processing function 5, which looks like this: public void attachBaseContext(Context context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(context));
+    }
+Processing function 6, which looks like this: public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        Fabric.with(this, new Crashlytics());
+        ButterKnife.bind(this);
+    }
+Processing function 7, which looks like this: protected void inItViews() {
+        activity = this;
+        this.ll_view_progress = (LinearLayout) findViewById(com.aqi.data.R.id.ll_view_progress);
+        this.viewPager = (ViewPager) findViewById(com.aqi.data.R.id.view_pager);
+        this.dotsLayout = (LinearLayout) findViewById(com.aqi.data.R.id.layoutDots);
+        this.btnSkip = (TextView) findViewById(com.aqi.data.R.id.btn_skip);
+        this.btnNext = (TextView) findViewById(com.aqi.data.R.id.btn_next);
+        this.btnGetStarted = (TextView) findViewById(com.aqi.data.R.id.btnGetStarted);
+        if (Global.isNetworkConnected(activity)) {
+            callApiCheckVersionsNew();
+        } else {
+            Global.showOkAlertWithFinishMessage(activity, getString(com.aqi.data.R.string.app_name), "No Internet Connection");
+        }
+    }
+Processing function 8, which looks like this: private void callApiCheckVersionsNew() {
+        Global.showProgressDialog(this);
+        ApiClient.getClient().callApiCheckVersionNew("1", BuildConfig.VERSION_NAME, "application/json").enqueue(new Callback<JsonObject>() { // from class: com.app.aqi.WelcomeActivity.1
+            @Override // retrofit2.Callback
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                Global.dismisLoderDialog();
+                if (response.isSuccessful()) {
+                    String jsonObject = response.body().toString();
+                    try {
+                        JSONObject jSONObject = new JSONObject(jsonObject);
+                        Global.printLog("VersionRes>>", jsonObject);
+                        if (jSONObject.getInt("status") != 0) {
+                            WelcomeActivity.this.loadContinueData();
+                        } else {
+                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString("message"));
+                        }
+                        return;
+                    }
+Processing function 9, which looks like this: public void onFailure(Call<JsonObject> call, Throwable th) {
+                Global.dismisLoderDialog();
+                Global.showOkAlertWithMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.network_failed), "");
+                call.cancel();
+                th.printStackTrace();
+            }
+Processing function 10, which looks like this: private void callApiCheckVersions() {
+        Global.showProgressDialog(activity);
+        ApiClient.getClient().callApiCheckVersion("1", BuildConfig.VERSION_NAME, "application/json").enqueue(new Callback<JsonObject>() { // from class: com.app.aqi.WelcomeActivity.2
+            @Override // retrofit2.Callback
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                Global.dismisLoderDialog();
+                if (response.isSuccessful()) {
+                    String jsonObject = response.body().toString();
+                    try {
+                        JSONObject jSONObject = new JSONObject(jsonObject);
+                        Global.printLog("VersionRes>>", jsonObject);
+                        if (jSONObject.getInt("status") != 0) {
+                            WelcomeActivity.this.loadContinueData();
+                        } else {
+                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString("message"));
+                        }
+                        return;
+                    }
+Processing function 11, which looks like this: public void onFailure(Call<JsonObject> call, Throwable th) {
+                Global.dismisLoderDialog();
+                Global.showOkAlertWithMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.network_failed), "");
+                call.cancel();
+                th.printStackTrace();
+            }
+Processing function 12, which looks like this: public void loadContinueData() {
+        if (PreferenceManager.getBooleanPref(this, PreferenceManager.IS_BOARDING_VIEW).booleanValue()) {
+            this.ll_view_progress.setVisibility(0);
+            runOnUiThread(new Runnable() { // from class: com.app.aqi.WelcomeActivity.3
+                @Override // java.lang.Runnable
+                public void run() {
+                    WelcomeActivity welcomeActivity = WelcomeActivity.this;
+                    welcomeActivity.startActivity(new Intent(welcomeActivity, SlidingDrawerActivity.class));
+                }
+            }
+Processing function 13, which looks like this: public void onClick(View view) {
+                WelcomeActivity.this.launchHomeScreen();
+            }
+Processing function 14, which looks like this: public void onClick(View view) {
+                int item = WelcomeActivity.this.getItem(1);
+                if (item < WelcomeActivity.this.layouts.length) {
+                    WelcomeActivity.this.viewPager.setCurrentItem(item);
+                } else {
+                    WelcomeActivity.this.launchHomeScreen();
+                }
+            }
+Processing function 15, which looks like this: public void onClick(View view) {
+                WelcomeActivity.this.launchHomeScreen();
+            }
+Processing function 16, which looks like this: public void addBottomDots(int i) {
+        TextView[] textViewArr;
+        this.dots = new TextView[this.layouts.length];
+        int[] intArray = getResources().getIntArray(com.aqi.data.R.array.array_dot_active_new);
+        int[] intArray2 = getResources().getIntArray(com.aqi.data.R.array.array_dot_inactive);
+        this.dotsLayout.removeAllViews();
+        int i2 = 0;
+        while (true) {
+            textViewArr = this.dots;
+            if (i2 >= textViewArr.length) {
+                break;
+            }
+            textViewArr[i2] = new TextView(this);
+            this.dots[i2].setText(Html.fromHtml("&#8226;"));
+            this.dots[i2].setTextSize(40.0f);
+            this.dots[i2].setTextColor(intArray2[i]);
+            this.dotsLayout.addView(this.dots[i2]);
+            i2++;
+        }
+Processing function 17, which looks like this: public int getItem(int i) {
+        return this.viewPager.getCurrentItem() + i;
+    }
+Processing function 18, which looks like this: public void launchHomeScreen() {
+        this.ll_view_progress.setVisibility(0);
+        runOnUiThread(new Runnable() { // from class: com.app.aqi.WelcomeActivity.7
+            @Override // java.lang.Runnable
+            public void run() {
+                WelcomeActivity welcomeActivity = WelcomeActivity.this;
+                welcomeActivity.startActivity(new Intent(welcomeActivity, SlidingDrawerActivity.class));
+            }
+        }
+Processing function 19, which looks like this: private void changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = getWindow();
+            window.addFlags(Integer.MIN_VALUE);
+            window.setStatusBarColor(0);
+        }
+    }
+Processing function 20, which looks like this: public boolean isViewFromObject(View view, Object obj) {
+            return view == obj;
+        }
+Processing function 21, which looks like this: public Object instantiateItem(ViewGroup viewGroup, int i) {
+            this.layoutInflater = (LayoutInflater) WelcomeActivity.this.getSystemService("layout_inflater");
+            View inflate = this.layoutInflater.inflate(WelcomeActivity.this.layouts[i], viewGroup, false);
+            viewGroup.addView(inflate);
+            return inflate;
+        }
+Processing function 22, which looks like this: public int getCount() {
+            return WelcomeActivity.this.layouts.length;
+        }
+Processing function 23, which looks like this: public void destroyItem(ViewGroup viewGroup, int i, Object obj) {
+            viewGroup.removeView((View) obj);
+        }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...

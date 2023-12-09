@@ -1,0 +1,6 @@
+{
+  "Function_1": {
+    "code": "protected void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        startActivity(new Intent(this, ChoosePatientActivity.class));\n        finish();\n    }",
+    "results": {}
+  }
+}

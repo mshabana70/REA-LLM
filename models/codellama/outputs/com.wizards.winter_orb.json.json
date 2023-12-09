@@ -1,0 +1,18 @@
+{
+  "Function_1": {
+    "code": "public void run() {\n                GrantDto d2 = LoadingActivity.this.w.d();\n                if (d2 != null) {\n                    n.a.a.a(d2.toString(), new Object[0]);\n                }\n                m.b().a().a((r<String>) \"START_APP\");\n            }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public void a(String str) {\n            char c2;\n            int hashCode = str.hashCode();\n            if (hashCode != -1557588930) {\n                if (hashCode == 658573444 && str.equals(\"START_APP\")) {\n                    c2 = 1;\n                }\n                c2 = 65535;\n            }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "public void w() {\n        startActivity(new Intent(this, HomeViewActivity.class));\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        if (!isTaskRoot() && getIntent().hasCategory(\"android.intent.category.LAUNCHER\") && getIntent().getAction() != null && getIntent().getAction().equals(\"android.intent.action.MAIN\")) {\n            finish();\n            return;\n        }\n        j.a.a.a.a.a(this);\n        setContentView(R.layout.activity_loading);\n        ((DaggerBaseApplication) getApplication()).a().a(this);\n        this.z.a();\n        Uri data = getIntent().getData();\n        if (data != null) {\n            this.y.a(data.getQueryParameter(\"refresh_token\"));\n            this.w.a((GrantDto) null, (Boolean) false);\n        }\n        m.b().a().a(this, new a());\n    }",
+    "results": {}
+  }
+}

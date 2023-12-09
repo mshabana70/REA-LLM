@@ -1,0 +1,210 @@
+{
+  "Function_1": {
+    "code": "public void onCheckedChanged(RadioGroup radioGroup, int i3) {\n            StockMainActivity stockMainActivity;\n            int i4;\n            switch (i3) {\n                case R.id.rbDataSource1 /* 2131296488 */:\n                    stockMainActivity = StockMainActivity.this;\n                    i4 = 0;\n                    break;\n                case R.id.rbDataSource2 /* 2131296489 */:\n                    stockMainActivity = StockMainActivity.this;\n                    i4 = 1;\n                    break;\n                default:\n                    return;\n            }\n            stockMainActivity.V = i4;\n        }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public boolean onMenuItemClick(MenuItem menuItem) {\n            switch (menuItem.getItemId()) {\n                case R.id.menu_blog /* 2131296460 */:\n                    StockMainActivity.this.c1();\n                    return true;\n                case R.id.menu_bloomberg_finance /* 2131296461 */:\n                case R.id.menu_stock_cnn_business /* 2131296464 */:\n                case R.id.menu_stock_google_finance /* 2131296465 */:\n                default:\n                    return true;\n                case R.id.menu_exchange_rate /* 2131296462 */:\n                    StockMainActivity.this.b1();\n                    return true;\n                case R.id.menu_revision_settings /* 2131296463 */:\n                    StockMainActivity.this.Y0();\n                    return true;\n                case R.id.menu_stock_indices /* 2131296466 */:\n                    StockMainActivity.this.d1();\n                    return true;\n                case R.id.menu_theme_settings /* 2131296467 */:\n                    StockMainActivity.this.Z0();\n                    return true;\n            }\n        }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "public void onCheckedChanged(RadioGroup radioGroup, int i3) {\n            StockMainActivity stockMainActivity;\n            int i4;\n            switch (i3) {\n                case R.id.rbSysLanguage /* 2131296491 */:\n                    stockMainActivity = StockMainActivity.this;\n                    i4 = 0;\n                    break;\n                case R.id.rbUsEnglish /* 2131296492 */:\n                    stockMainActivity = StockMainActivity.this;\n                    i4 = 1;\n                    break;\n                default:\n                    return;\n            }\n            stockMainActivity.Y = i4;\n        }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "public void onClick(View view) {\n            if (StockMainActivity.this.Q != StockMainActivity.this.O.t()) {\n                StockMainActivity.this.O.O(StockMainActivity.this.Q);\n                StockMainActivity stockMainActivity = StockMainActivity.this;\n                stockMainActivity.U0(stockMainActivity.Q);\n                if (StockMainActivity.this.E != null) {\n                    StockMainActivity.this.E.b(StockMainActivity.this.Q);\n                    StockMainActivity.this.E.notifyDataSetChanged();\n                }\n            }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "public void onClick(View view) {\n            StockMainActivity stockMainActivity = StockMainActivity.this;\n            stockMainActivity.Q = stockMainActivity.O.t();\n            StockMainActivity.this.U.dismiss();\n            StockMainActivity.this.U = null;\n        }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "public void a(h2.b bVar) {\n        }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "public void onItemClick(AdapterView<?> adapterView, View view, int i3, long j3) {\n            if (StockMainActivity.this.K || i3 >= StockMainActivity.this.I) {\n                return;\n            }\n            StockMainActivity.this.K0();\n            StockMainActivity.this.V(i3);\n        }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "public void onCheckedChanged(RadioGroup radioGroup, int i3) {\n            StockMainActivity stockMainActivity;\n            int i4;\n            switch (i3) {\n                case R.id.rbWhiteBlack /* 2131296493 */:\n                    stockMainActivity = StockMainActivity.this;\n                    i4 = m1.d.X;\n                    break;\n                case R.id.rbWhiteTheme /* 2131296494 */:\n                    stockMainActivity = StockMainActivity.this;\n                    i4 = m1.d.W;\n                    break;\n                default:\n                    return;\n            }\n            stockMainActivity.Q = i4;\n        }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "public void handleMessage(Message message) {\n            StockMainActivity stockMainActivity;\n            String F0;\n            int i3 = message.what;\n            if (i3 == 1) {\n                Bundle data = message.getData();\n                int i4 = data.getInt(\"QueryType\");\n                if (i4 == m1.d.S) {\n                    StockMainActivity.this.L0(data, true, true);\n                    return;\n                } else if (i4 == m1.d.Q) {\n                    StockMainActivity.this.Q0(data);\n                    return;\n                } else if (i4 == m1.d.R) {\n                    StockMainActivity.this.P0(data);\n                    return;\n                } else {\n                    return;\n                }\n            }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "public void A0() {\n        try {\n            ProgressDialog progressDialog = this.H;\n            if (progressDialog != null && progressDialog.isShowing()) {\n                this.H.dismiss();\n            }\n            this.H = null;\n        }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "private void B0() {\n        this.f2019s.setEnabled(true);\n        this.f2019s.setBackgroundResource(R.drawable.img_refresh_selector);\n        this.f2020t.setEnabled(true);\n        this.f2020t.setBackgroundResource(R.drawable.img_editor_selector);\n        this.f2021u.setEnabled(true);\n        this.f2021u.setBackgroundResource(R.drawable.img_portfolio_selector);\n        this.f2023w.setEnabled(true);\n        this.f2023w.setBackgroundResource(R.drawable.ic_page_1_up);\n        this.f2024x.setEnabled(true);\n        this.f2024x.setBackgroundResource(R.drawable.ic_page_2_up);\n        this.f2025y.setEnabled(true);\n        this.f2025y.setBackgroundResource(R.drawable.ic_page_3_up);\n    }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "private void C0() {\n        Long valueOf = Long.valueOf(System.currentTimeMillis());\n        if (valueOf.longValue() - this.R <= 2500) {\n            Toast toast = this.S;\n            if (toast != null) {\n                toast.cancel();\n            }\n            super.onBackPressed();\n            return;\n        }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "public void D0(Bundle bundle) {\n        if (bundle == null) {\n            f1();\n            A0();\n            return;\n        }\n        int i3 = bundle.getInt(\"CidSize\");\n        if (i3 <= 0) {\n            f1();\n            A0();\n            return;\n        }\n        String str = \"\";\n        for (int i4 = 0; i4 < i3; i4++) {\n            str = str + bundle.getString(String.valueOf(i4)) + \",\";\n        }\n        new h1.b(this.B, F0(R.string.str_new_google_stock_quote_head) + str, bundle.getBoolean(\"ending\")).start();\n    }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "private int E0(Bundle bundle, String str, String str2) {\n        int i3 = bundle.getInt(\"StockSize\");\n        int i4 = m1.d.M;\n        for (int i5 = 0; i5 < i3; i5++) {\n            if (bundle.getString((i5 + \"_\") + m1.d.f15258b[m1.d.F][i4]).equals(str)) {\n                return i5;\n            }\n        }",
+    "results": {}
+  },
+  "Function_15": {
+    "code": "private void G0() {\n        char c4;\n        int i3;\n        int d4 = this.O.d(this.M);\n        char c5 = 0;\n        int i4 = 0;\n        while (true) {\n            c4 = 1;\n            if (i4 >= m1.d.T) {\n                break;\n            }\n            String[][] strArr = this.F;\n            strArr[i4][0] = \"\";\n            strArr[i4][1] = \"\";\n            this.G[i4] = \"\";\n            i4++;\n        }",
+    "results": {}
+  },
+  "Function_16": {
+    "code": "private void I0() {\n        this.K = true;\n        z0();\n        for (int i3 = 0; i3 < m1.d.T && i3 < this.A.size(); i3++) {\n            this.A.get(i3).put(\"uiChange\", \"1\");\n        }\n        j1.a aVar = this.E;\n        if (aVar != null) {\n            aVar.notifyDataSetChanged();\n        }\n    }",
+    "results": {}
+  },
+  "Function_17": {
+    "code": "private void J0() {\n        I0();\n        G0();\n        h1();\n    }",
+    "results": {}
+  },
+  "Function_18": {
+    "code": "public void K0() {\n        int size = this.A.size();\n        if (size == 0) {\n            return;\n        }\n        String str = \"\";\n        for (int i3 = 0; i3 < size; i3++) {\n            Map<String, Object> map = this.A.get(i3);\n            String str2 = this.F[i3][0];\n            String str3 = (String) map.get(\"tvStockName\");\n            String str4 = (String) map.get(\"tvStrikePrice\");\n            String str5 = (String) map.get(\"tvChange\");\n            String str6 = this.G[i3];\n            if (!str2.equals(\"\")) {\n                if (str4.equals(\"\")) {\n                    str4 = \"-\";\n                }\n                if (str5.equals(\"\")) {\n                    str5 = \"-\";\n                }\n                str = str + str6 + \";\" + str2 + \";\" + str3 + \";\" + str4 + \";\" + str5 + \"@@\";\n            }",
+    "results": {}
+  },
+  "Function_19": {
+    "code": "public void L0(Bundle bundle, boolean z3, boolean z4) {\n        char c4 = 0;\n        try {\n            int length = m1.d.f15256a.length;\n            int i3 = m1.d.M;\n            NumberFormat.getInstance().setMinimumFractionDigits(2);\n            bundle.getInt(\"StockSize\");\n            int size = this.A.size();\n            int i4 = 0;\n            while (i4 < size) {\n                int E0 = E0(bundle, this.F[i4][c4], this.G[i4]);\n                Map<String, Object> map = this.A.get(i4);\n                map.put(\"tvStockNumber\", m1.e.a(this.F[i4][c4], this.G[i4]));\n                map.put(\"tvStockName\", this.F[i4][1]);\n                if (E0 != 100) {\n                    String str = E0 + \"_\";\n                    map = this.A.get(i4);\n                    map.put(\"uiChange\", \"2\");\n                    String[][] strArr = m1.d.f15258b;\n                    String str2 = strArr[m1.d.J][i3];\n                    if (!bundle.getString(str + str2).equals(\"\")) {\n                        map.put(\"tvTime\", bundle.getString(str + str2));\n                    } else if (m1.d.f15287t) {\n                        map.put(\"tvTime\", \"\");\n                    } else {\n                        map.put(\"tvTime\", \"-\");\n                    }\n                    String str3 = strArr[m1.d.G][i3];\n                    if (bundle.getString(str + str3).equals(\"\")) {\n                        map.put(\"tvStrikePrice\", \"-\");\n                    } else {\n                        map.put(\"tvStrikePrice\", bundle.getString(str + str3));\n                    }\n                    bundle.getString(str + strArr[m1.d.K][i3]);\n                    String str4 = strArr[m1.d.I][i3];\n                    if (bundle.getString(str + str4).equals(\"\")) {\n                        map.put(\"tvChangePercent\", \"-\");\n                    } else {\n                        map.put(\"tvChangePercent\", bundle.getString(str + str4));\n                    }\n                    String str5 = strArr[m1.d.H][i3];\n                    if (bundle.getString(str + str5).equals(\"\")) {\n                        map.put(\"tvChange\", \"-\");\n                        i4++;\n                        c4 = 0;\n                    } else {\n                        map.put(\"tvChange\", bundle.getString(str + str5));\n                        i4++;\n                        c4 = 0;\n                    }\n                }",
+    "results": {}
+  },
+  "Function_20": {
+    "code": "private void M0() {\n        e1.a aVar = new e1.a(this, this.B, this.J);\n        this.D = aVar;\n        aVar.start();\n    }",
+    "results": {}
+  },
+  "Function_21": {
+    "code": "public void N0() {\n        int length = m1.d.f15256a.length;\n        int i3 = m1.d.M;\n        NumberFormat.getInstance().setMinimumFractionDigits(2);\n        int size = this.A.size();\n        for (int i4 = 0; i4 < size; i4++) {\n            Map<String, Object> map = this.A.get(i4);\n            if (!this.F[i4][0].equals(\"\")) {\n                map.put(\"tvStockNumber\", m1.e.a(this.F[i4][0], this.G[i4]));\n                map.put(\"tvStockName\", this.F[i4][1]);\n                map.put(\"uiChange\", \"2\");\n                map.put(\"tvStrikePrice\", \"-\");\n                map.put(\"tvChange\", \"-\");\n            }\n        }",
+    "results": {}
+  },
+  "Function_22": {
+    "code": "private void O0(String str, int i3) {\n        Thread thread;\n        if (str.length() > 0) {\n            if (m1.d.f15287t) {\n                String str2 = F0(R.string.str_new_google_get_cid) + str + \"&output=json\";\n                a1(F0(R.string.str_us_stock_info), F0(R.string.str_read_stock_quote));\n                new h1.a(this.B, str2, i3, i3 <= m1.d.V).start();\n                return;\n            }\n            if (m1.d.f15286s) {\n                a1(F0(R.string.str_us_stock_info), F0(R.string.str_read_stock_quote));\n                thread = new n1.a(this.B, m1.d.f15288u + str, m1.d.O, m1.d.S);\n            } else {\n                a1(F0(R.string.str_us_stock_info), F0(R.string.str_read_stock_quote));\n                e1.b bVar = new e1.b(this.B, F0(R.string.str_google_stock_quote_head) + \"&q=\" + str, m1.d.O, m1.d.S);\n                this.C = bVar;\n                thread = bVar;\n            }\n            thread.start();\n        }",
+    "results": {}
+  },
+  "Function_23": {
+    "code": "public void P0(Bundle bundle) {\n        String[] strArr = m1.d.L;\n        float parseFloat = Float.parseFloat(bundle.getString(strArr[1]));\n        bundle.getString(strArr[2]);\n        String string = bundle.getString(strArr[3]);\n        String string2 = bundle.getString(strArr[4]);\n        NumberFormat numberFormat = NumberFormat.getInstance();\n        numberFormat.setMinimumFractionDigits(2);\n        if (!string2.equals(\"-\")) {\n            float parseFloat2 = Float.parseFloat(bundle.getString(strArr[0]));\n            numberFormat.format(parseFloat2 > parseFloat ? parseFloat2 - parseFloat : parseFloat2 < parseFloat ? parseFloat - parseFloat2 : 0.0f);\n        }\n        String j3 = this.O.j();\n        this.J = string;\n        if (string.equals(j3)) {\n            if (this.O.d(this.M) > 0) {\n                h1();\n                return;\n            }\n            A0();\n            f1();\n            return;\n        }",
+    "results": {}
+  },
+  "Function_24": {
+    "code": "public void Q0(Bundle bundle) {\n        String[] strArr = m1.d.L;\n        float parseFloat = Float.parseFloat(bundle.getString(strArr[1]));\n        bundle.getString(strArr[2]);\n        bundle.getString(strArr[3]);\n        String string = bundle.getString(strArr[4]);\n        NumberFormat numberFormat = NumberFormat.getInstance();\n        numberFormat.setMinimumFractionDigits(2);\n        if (!\"-\".equals(string)) {\n            float parseFloat2 = Float.parseFloat(bundle.getString(strArr[0]));\n            numberFormat.format(parseFloat2 > parseFloat ? parseFloat2 - parseFloat : parseFloat2 < parseFloat ? parseFloat - parseFloat2 : 0.0f);\n        }\n        if (this.O.d(this.M) > 0 && !this.L) {\n            h1();\n            return;\n        }\n        f1();\n        A0();\n    }",
+    "results": {}
+  },
+  "Function_25": {
+    "code": "private void R0() {\n        char c4;\n        String[] strArr;\n        int d4 = this.O.d(this.M);\n        this.A = new ArrayList();\n        char c5 = 0;\n        int i3 = 0;\n        while (true) {\n            c4 = 1;\n            if (i3 >= m1.d.T) {\n                break;\n            }\n            String[][] strArr2 = this.F;\n            strArr2[i3][0] = \"\";\n            strArr2[i3][1] = \"\";\n            this.G[i3] = \"\";\n            i3++;\n        }",
+    "results": {}
+  },
+  "Function_26": {
+    "code": "private void S0() {\n        this.f2026z.setOnItemClickListener(new g());\n    }",
+    "results": {}
+  },
+  "Function_27": {
+    "code": "private void T0() {\n        if (this.M.equals(\"1\")) {\n            this.f2023w.setBackgroundResource(R.drawable.ic_page_1_down);\n            this.f2023w.setEnabled(false);\n        } else {\n            this.f2023w.setBackgroundResource(R.drawable.ic_page_1_up);\n            this.f2023w.setEnabled(true);\n        }\n        if (this.M.equals(\"2\")) {\n            this.f2024x.setBackgroundResource(R.drawable.ic_page_2_down);\n            this.f2024x.setEnabled(false);\n        } else {\n            this.f2024x.setBackgroundResource(R.drawable.ic_page_2_up);\n            this.f2024x.setEnabled(true);\n        }\n        if (this.M.equals(\"3\")) {\n            this.f2025y.setBackgroundResource(R.drawable.ic_page_3_down);\n            this.f2025y.setEnabled(false);\n            return;\n        }\n        this.f2025y.setBackgroundResource(R.drawable.ic_page_3_up);\n        this.f2025y.setEnabled(true);\n    }",
+    "results": {}
+  },
+  "Function_28": {
+    "code": "public void V(int i3) {\n        Intent intent = new Intent();\n        Bundle bundle = new Bundle();\n        bundle.putString(\"stockNumber\", this.F[i3][m1.d.M]);\n        bundle.putString(\"stockName\", this.F[i3][m1.d.N]);\n        bundle.putString(\"stockType\", this.G[i3]);\n        bundle.putString(\"page\", this.M);\n        intent.putExtras(bundle);\n        intent.setClass(this, SingleStockActivity.class);\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_29": {
+    "code": "public void V0(String str) {\n        if (this.T == null) {\n            this.T = Toast.makeText(this, str, 0);\n        }\n        this.T.setText(str);\n        this.T.show();\n    }",
+    "results": {}
+  },
+  "Function_30": {
+    "code": "private void W() {\n        Intent intent = new Intent();\n        Bundle bundle = new Bundle();\n        bundle.putString(\"page\", this.M);\n        intent.putExtras(bundle);\n        intent.setClass(this, StockEditActivity.class);\n        this.f2017a0.a(intent);\n    }",
+    "results": {}
+  },
+  "Function_31": {
+    "code": "private void W0(View view) {\n        PopupMenu popupMenu = new PopupMenu(this, view);\n        popupMenu.getMenuInflater().inflate(R.menu.menu_settings, popupMenu.getMenu());\n        popupMenu.setOnMenuItemClickListener(new b());\n        popupMenu.show();\n    }",
+    "results": {}
+  },
+  "Function_32": {
+    "code": "private void X() {\n        Intent intent = new Intent();\n        intent.setClass(this, StockPortfoliosActivity.class);\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_33": {
+    "code": "public void Z0() {\n        LayoutInflater layoutInflater;\n        int i3;\n        PopupWindow popupWindow = this.U;\n        if (popupWindow == null || !popupWindow.isShowing()) {\n            int t3 = this.O.t();\n            if (t3 == m1.d.W) {\n                layoutInflater = getLayoutInflater();\n                i3 = R.layout.theme_settings_dialog;\n            } else {\n                layoutInflater = getLayoutInflater();\n                i3 = R.layout.theme_settings_dialog_black;\n            }\n            View inflate = layoutInflater.inflate(i3, (ViewGroup) null);\n            Button button = (Button) inflate.findViewById(R.id.btnOK);\n            Button button2 = (Button) inflate.findViewById(R.id.btnCancel);\n            ((RadioGroup) inflate.findViewById(R.id.rgroup)).setOnCheckedChangeListener(this.f2018b0);\n            RadioButton radioButton = (RadioButton) inflate.findViewById(R.id.rbWhiteTheme);\n            RadioButton radioButton2 = (RadioButton) inflate.findViewById(R.id.rbWhiteBlack);\n            if (t3 == m1.d.W) {\n                radioButton.setChecked(true);\n            } else {\n                radioButton2.setChecked(true);\n            }\n            button.setOnClickListener(new d());\n            button2.setOnClickListener(new e());\n            PopupWindow popupWindow2 = new PopupWindow(inflate, -2, -2, false);\n            this.U = popupWindow2;\n            popupWindow2.showAtLocation(inflate, 17, 0, 0);\n            this.U.setFocusable(true);\n            this.U.setOutsideTouchable(false);\n            this.U.update();\n        }",
+    "results": {}
+  },
+  "Function_34": {
+    "code": "private void a1(String str, String str2) {\n        ProgressDialog progressDialog = this.H;\n        if (progressDialog != null) {\n            progressDialog.setMessage(str2);\n            return;\n        }\n        ProgressDialog progressDialog2 = new ProgressDialog(this, 1);\n        this.H = progressDialog2;\n        progressDialog2.setMessage(str2);\n        this.H.setCanceledOnTouchOutside(false);\n        this.H.setCancelable(false);\n        this.H.show();\n    }",
+    "results": {}
+  },
+  "Function_35": {
+    "code": "public void b1() {\n        Intent intent = new Intent();\n        intent.setClass(this, ExchangeRateActivity.class);\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_36": {
+    "code": "public void c1() {\n        Intent intent = new Intent();\n        intent.setClass(this, BlogActivity.class);\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_37": {
+    "code": "public void d1() {\n        Intent intent = new Intent();\n        intent.setClass(this, StockIndicesMainActivity.class);\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_38": {
+    "code": "private void e1(String str) {\n        int d4 = this.O.d(str);\n        this.O.F(str);\n        this.M = str;\n        if (d4 > 0) {\n            J0();\n            return;\n        }\n        G0();\n        T0();\n    }",
+    "results": {}
+  },
+  "Function_39": {
+    "code": "public void f1() {\n        this.K = false;\n        B0();\n        T0();\n        for (int i3 = 0; i3 < m1.d.T && i3 < this.A.size(); i3++) {\n            this.A.get(i3).put(\"uiChange\", \"0\");\n        }\n        j1.a aVar = this.E;\n        if (aVar != null) {\n            aVar.notifyDataSetChanged();\n        }\n    }",
+    "results": {}
+  },
+  "Function_40": {
+    "code": "public void g1() {\n        int d4 = this.O.d(this.M);\n        int i3 = m1.d.V;\n        if (d4 - i3 <= 0) {\n            A0();\n            f1();\n            return;\n        }\n        String str = \"\";\n        while (i3 < d4 && i3 < m1.d.T) {\n            String str2 = this.F[i3][0];\n            String str3 = this.G[i3];\n            int indexOf = str2.indexOf(\"/WS\");\n            if (indexOf > 0) {\n                str2 = str2.substring(0, indexOf);\n            }\n            int indexOf2 = str2.indexOf(\"~\");\n            if (indexOf2 > 0) {\n                str2 = str2.substring(0, indexOf2);\n            }\n            str = str + str3 + \":\" + str2.replace(\"^\", \"-\").replace(\"/\", \".\");\n            if (i3 < d4 - 1) {\n                str = str + \",\";\n            }\n            i3++;\n        }",
+    "results": {}
+  },
+  "Function_41": {
+    "code": "private void h1() {\n        StringBuilder sb;\n        int d4 = this.O.d(this.M);\n        G0();\n        if (d4 <= 0) {\n            f1();\n            return;\n        }\n        I0();\n        String str = \"\";\n        for (int i3 = 0; i3 < d4 && ((!m1.d.f15287t || i3 < m1.d.V) && i3 < m1.d.T); i3++) {\n            String str2 = this.F[i3][0];\n            String str3 = this.G[i3];\n            if (m1.d.f15286s) {\n                str = str + str2;\n                if (i3 < d4 - 1) {\n                    sb = new StringBuilder();\n                    sb.append(str);\n                    sb.append(\",\");\n                    str = sb.toString();\n                }\n            }",
+    "results": {}
+  },
+  "Function_42": {
+    "code": "private void z0() {\n        this.f2019s.setEnabled(false);\n        this.f2019s.setBackgroundResource(R.drawable.img_refresh_down);\n        this.f2020t.setEnabled(false);\n        this.f2020t.setBackgroundResource(R.drawable.img_editor_down);\n        this.f2021u.setEnabled(false);\n        this.f2021u.setBackgroundResource(R.drawable.img_portfolio_down);\n        this.f2023w.setEnabled(false);\n        this.f2023w.setBackgroundResource(R.drawable.ic_page_1_down);\n        this.f2024x.setEnabled(false);\n        this.f2024x.setBackgroundResource(R.drawable.ic_page_2_down);\n        this.f2025y.setEnabled(false);\n        this.f2025y.setBackgroundResource(R.drawable.ic_page_3_down);\n    }",
+    "results": {}
+  },
+  "Function_43": {
+    "code": "public String F0(int i3) {\n        return getString(i3);\n    }",
+    "results": {}
+  },
+  "Function_44": {
+    "code": "public void U0(int i3) {\n        int i4;\n        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.llMain);\n        LinearLayout linearLayout2 = (LinearLayout) findViewById(R.id.llHeadTitle);\n        LinearLayout linearLayout3 = (LinearLayout) findViewById(R.id.llButton);\n        LinearLayout linearLayout4 = (LinearLayout) findViewById(R.id.llAdView);\n        TextView textView = (TextView) findViewById(R.id.tvT00Title);\n        if (i3 == m1.d.W) {\n            linearLayout.setBackgroundColor(-1);\n            linearLayout2.setBackgroundColor(-14774017);\n            linearLayout3.setBackgroundResource(R.color.button_bar_background);\n            textView.setTextColor(-1);\n            this.f2026z.setDivider(new ColorDrawable(Color.parseColor(\"#FFFFCC00\")));\n            this.f2026z.setDividerHeight(2);\n            this.f2026z.setSelector(R.drawable.listview_highlight_white_theme);\n            i4 = R.color.white_theme_ad_background;\n        } else {\n            linearLayout.setBackgroundColor(-16777216);\n            linearLayout2.setBackgroundResource(R.color.black_theme_title_background);\n            textView.setTextColor(-1);\n            linearLayout3.setBackgroundResource(R.color.black_theme_bar_background);\n            this.f2026z.setDivider(new ColorDrawable(Color.parseColor(\"#FFBDBDBD\")));\n            this.f2026z.setDividerHeight(2);\n            this.f2026z.setSelector(R.drawable.listview_highlight_balck_theme);\n            i4 = R.color.black_theme_ad_background;\n        }\n        linearLayout4.setBackgroundResource(i4);\n    }",
+    "results": {}
+  },
+  "Function_45": {
+    "code": "public void X0() {\n        m1.a aVar = this.O;\n        if (aVar == null || !aVar.a()) {\n            return;\n        }\n        Intent intent = new Intent();\n        intent.setClass(this, RateActivity.class);\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_46": {
+    "code": "public void Y0() {\n        this.W = 93;\n        m1.a aVar = this.O;\n        if (aVar != null) {\n            aVar.E(93);\n            Intent intent = new Intent();\n            intent.setClass(this, RemindingActivity.class);\n            startActivity(intent);\n        }\n    }",
+    "results": {}
+  },
+  "Function_47": {
+    "code": "public void onBackPressed() {\n        C0();\n    }",
+    "results": {}
+  },
+  "Function_48": {
+    "code": "public void onClick(View view) {\n        String str;\n        if (view.getId() == R.id.btnGetStockInfo) {\n            I0();\n            h1();\n        } else if (view.getId() == R.id.btnPortfolios) {\n            X();\n        } else if (view.getId() == R.id.btnEditStock) {\n            K0();\n            W();\n        } else {\n            if (view.getId() == R.id.btnPage1) {\n                K0();\n                str = \"1\";\n            } else if (view.getId() == R.id.btnPage2) {\n                K0();\n                str = \"2\";\n            } else if (view.getId() != R.id.btnPage3) {\n                if (view.getId() == R.id.btnMainSetting) {\n                    W0(view);\n                    return;\n                }\n                return;\n            }",
+    "results": {}
+  },
+  "Function_49": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        setContentView(R.layout.activity_main);\n        m.a(this, new f(this));\n        this.X = true;\n        this.L = false;\n        this.B = new i();\n        Button button = (Button) findViewById(R.id.btnGetStockInfo);\n        this.f2019s = button;\n        button.setOnClickListener(this);\n        Button button2 = (Button) findViewById(R.id.btnEditStock);\n        this.f2020t = button2;\n        button2.setOnClickListener(this);\n        Button button3 = (Button) findViewById(R.id.btnPortfolios);\n        this.f2021u = button3;\n        button3.setOnClickListener(this);\n        Button button4 = (Button) findViewById(R.id.btnMainSetting);\n        this.f2022v = button4;\n        button4.setOnClickListener(this);\n        Button button5 = (Button) findViewById(R.id.btnPage1);\n        this.f2023w = button5;\n        button5.setOnClickListener(this);\n        Button button6 = (Button) findViewById(R.id.btnPage2);\n        this.f2024x = button6;\n        button6.setOnClickListener(this);\n        Button button7 = (Button) findViewById(R.id.btnPage3);\n        this.f2025y = button7;\n        button7.setOnClickListener(this);\n        m1.a aVar = new m1.a(this);\n        this.O = aVar;\n        this.W = aVar.l();\n        this.Q = this.O.t();\n        this.M = this.O.n();\n        this.f2026z = (ListView) findViewById(R.id.stockList);\n        this.O.m();\n        this.O.g();\n        ((TextView) findViewById(R.id.tvT00Title)).setText(R.string.app_name);\n        U0(this.Q);\n        R0();\n        S0();\n        h1();\n        if (this.P) {\n            b1.a aVar2 = new b1.a(this);\n            this.Z = aVar2;\n            aVar2.i();\n        }\n    }",
+    "results": {}
+  },
+  "Function_50": {
+    "code": "public void onDestroy() {\n        if (this.P) {\n            this.Z.f();\n        }\n        super.onDestroy();\n        A0();\n        e1.a aVar = this.D;\n        if (aVar != null) {\n            aVar.e();\n            boolean z3 = true;\n            while (z3) {\n                try {\n                    this.D.join();\n                    z3 = false;\n                } catch (InterruptedException unused) {\n                }\n            }",
+    "results": {}
+  },
+  "Function_51": {
+    "code": "public void onPause() {\n        if (this.P) {\n            this.Z.g();\n        }\n        super.onPause();\n        this.L = true;\n    }",
+    "results": {}
+  },
+  "Function_52": {
+    "code": "public void onResume() {\n        super.onResume();\n        if (this.P) {\n            this.Z.h();\n        }\n        if (this.K) {\n            return;\n        }\n        this.L = false;\n    }",
+    "results": {}
+  }
+}

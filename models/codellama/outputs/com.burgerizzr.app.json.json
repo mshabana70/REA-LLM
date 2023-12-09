@@ -1,0 +1,58 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        setContentView(R.layout.splash_screen);\n        this.splash_logo = (GifImageView) findViewById(R.id.splash_logo);\n        startService(new Intent(this, FirebaseService.class));\n        boolean equals = \"en\".equals(LocaleUtil.getLanguage());\n        Log.e(\"isenglish\", String.valueOf(equals));\n        TextView textView = (TextView) findViewById(R.id.tv_text);\n        if (equals) {\n            textView.setText(getResources().getString(R.string.very_fresh_en));\n            textView.setTypeface(FontUtil.getInstance().getRomanDefault(true));\n        } else {\n            textView.setText(getResources().getString(R.string.very_fresh_ar));\n        }\n        if (Build.VERSION.SDK_INT >= 23) {\n            if (ContextCompat.checkSelfPermission(this, \"android.permission.READ_PHONE_STATE\") == 0) {\n                this.finishing = true;\n                init();\n                return;\n            }\n            requestPermissions(new String[]{\"android.permission.READ_PHONE_STATE\"}, 100);\n            return;\n        }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public void onResume() {\n        super.onResume();\n    }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {\n        super.onRequestPermissionsResult(i, strArr, iArr);\n        if (i != 100) {\n            return;\n        }\n        this.finishing = true;\n        init();\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "private void init() {\n        McxLogin with = McxLogin.with(this);\n        if (Auth.getInstance().isLoggedIn()) {\n            with.login();\n        } else {\n            with.register();\n        }\n        this.utilApi = UtilitiesApi.call(this, false);\n        this.menuApi = MenuApi.call(this, false);\n        Auth.getInstance().getMenuId();\n        Auth.getInstance().getConcept();\n        callApi();\n    }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "public void onPause() {\n        super.onPause();\n        CustomDialog customDialog = this.dialog;\n        if (customDialog != null && customDialog.isShowing()) {\n            this.dialog.dismiss();\n        }\n        if (this.finishing) {\n            finish();\n        }\n    }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "public void onStop() {\n        super.onStop();\n        CustomDialog customDialog = this.dialog;\n        if (customDialog != null && customDialog.isShowing()) {\n            this.dialog.dismiss();\n        }\n        UtilitiesApi utilitiesApi = this.utilApi;\n        if (utilitiesApi != null) {\n            utilitiesApi.forceStop();\n        }\n        MenuApi menuApi = this.menuApi;\n        if (menuApi != null) {\n            menuApi.forceStop();\n        }\n    }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "public void onBackPressed() {\n        super.onBackPressed();\n        Process.killProcess(Process.myPid());\n    }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "public void callApi() {\n        this.utilApi.getTranslations(new ApiInterface.TranslationsListener() { // from class: com.burgerizzr.app.SplashScreen.1\n            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener\n            public void onException() {\n            }\n\n            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener\n            public void onSuccess() {\n                SplashScreen.this.callMenu();\n            }\n\n            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener\n            public void onError() {\n                if (SplashScreen.this.doneInForegroung) {\n                    SplashScreen.this.showErrorDialog();\n                }\n            }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "public void callMenu() {\n        ApplicationsApiCall.getInstance().getApplication(new ApiInterface.ApplicationRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2\n            @Override // com.burgerizzr.app.api.ApiInterface.ApplicationRequestListener\n            public void onSuccess(Object obj) {\n                try {\n                    JSONObject jSONObject = new JSONObject(obj.toString());\n                    JSONObject jSONObject2 = jSONObject.getJSONObject(\"data\");\n                    AppLogger.printJSONObject(\"app \", jSONObject2);\n                    Auth.getInstance().setApplication((Application) new Gson().fromJson(jSONObject2.toString(), new TypeToken<Application>() { // from class: com.burgerizzr.app.SplashScreen.2.1\n                    }.getType()));\n                    if (jSONObject.has(\"included\") && !jSONObject.isNull(\"included\")) {\n                        JSONArray jSONArray = jSONObject.getJSONArray(\"included\");\n                        if (jSONArray.length() > 0) {\n                            Auth.getInstance().setConcept(Concept.parse(jSONArray.getJSONObject(0)));\n                            SplashScreen.this.menuApi.splashCalls(new ApiInterface.ApiRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2.2\n                                @Override // com.burgerizzr.app.api.ApiInterface.ApiRequestListener\n                                public void onSuccess() {\n                                    if (SplashScreen.this.doneInForegroung) {\n                                        SplashScreen.this.startActivity(new Intent(SplashScreen.this, MainActivity.class));\n                                    }\n                                }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "public void onError() {\n                                    if (SplashScreen.this.doneInForegroung) {\n                                        SplashScreen.this.showErrorDialog();\n                                    }\n                                }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "public void onError(Object obj) {\n                AppLogger.printRetrofitError(obj);\n                if (SplashScreen.this.doneInForegroung) {\n                    SplashScreen.this.showErrorDialog();\n                }\n            }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "public void showErrorDialog() {\n        String string;\n        try {\n            if (!DevUtils.isNetworkAvailable(this)) {\n                string = getString(R.string.no_network_connection);\n            } else {\n                string = getString(R.string.unexpected_error);\n            }\n            CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), string, \"\", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);\n            CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.3\n                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n                public void onClickButtonOne(Dialog dialog) {\n                    SplashScreen.this.callApi();\n                    dialog.dismiss();\n                }\n\n                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n                public void onClickButtonTwo(Dialog dialog) {\n                    SplashScreen.this.callApi();\n                    dialog.dismiss();\n                }\n            }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "private void showPermissionDialog() {\n        CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), \"A message asking to allow this app to make and manage calls will appear after this one. That is only so the app can obtain this device's id and will not make any calls without you knowing it.\", \"\", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);\n        CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.4\n            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n            public void onClickButtonOne(Dialog dialog) {\n                dialog.dismiss();\n            }\n\n            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n            public void onClickButtonTwo(Dialog dialog) {\n                if (Build.VERSION.SDK_INT >= 23) {\n                    SplashScreen.this.requestPermissions(new String[]{\"android.permission.READ_PHONE_STATE\"}, 100);\n                }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "public void attachBaseContext(Context context) {\n        if (context != null) {\n            Locale locale = new Locale(LocaleUtil.getLanguage());\n            Locale.setDefault(locale);\n            context = LocaleUtil.getInstance().wrap(context, locale);\n        }\n        super.attachBaseContext(context);\n    }",
+    "results": {}
+  }
+}

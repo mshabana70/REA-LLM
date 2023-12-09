@@ -1,0 +1,198 @@
+{
+  "Function_1": {
+    "code": "public String getMyUUID() {\n        try {\n            TelephonyManager tm = (TelephonyManager) getSystemService(\"phone\");\n            String tmDevice = tm.getDeviceId();\n            String tmSerial = tm.getSimSerialNumber();\n            String androidId = Settings.Secure.getString(getContentResolver(), TapjoyConstants.TJC_ANDROID_ID);\n            UUID deviceUuid = new UUID(androidId.hashCode(), (tmDevice.hashCode() << 32) | tmSerial.hashCode());\n            String uniqueId = deviceUuid.toString();\n            Log.d(\"debug\", \"uuid=\" + uniqueId);\n            if (uniqueId == null || uniqueId == BuildConfig.FLAVOR) {\n                return getMyUUID2();\n            }\n            return uniqueId;\n        }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "private String getMyUUID2() {\n        UUID uuid = UUID.randomUUID();\n        String uniqueId = uuid.toString();\n        Log.d(\"debug\", \"----->UUID\" + uuid);\n        return uniqueId;\n    }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "private void test() {\n        requestWindowFeature(1);\n        getWindow().setFlags(1024, 1024);\n        setContentView(R.layout.activity_main);\n        setRequestedOrientation(0);\n        this.downlaodTxtButton = (Button) findViewById(R.id.downloadTxt);\n        this.downlaodTxtButton.setOnClickListener(new DownloadTextListener());\n        this.downlaodMP3Button = (Button) findViewById(R.id.downloadMp3);\n        this.downlaodMP3Button.setOnClickListener(new DownloadMP3Listener());\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        getWindow().setFlags(128, 128);\n        iDoing3d.serviceStartFromBootBroadcastReceiver = false;\n        Intent show = new Intent(this, SrService.class);\n        startService(show);\n        IDoing3dClient iD3dClient = new IDoing3dClient(this);\n        iD3dClient.getAds(false);\n        CoinsTmp.getCoinsTmp(this);\n        CreateGoogleApiClient();\n    }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "public void resetCoinsTmp() {\n        CoinsTmp.resetCoinsTmp(this);\n    }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "public void onClick(View v) {\n            SrMainActivity.this.ShowAchievementsRequested(\"3\");\n        }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "public void showDlg() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.1\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Cancel\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.1.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }\n                }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "public void exitGameDlg() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.2\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Exit\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.2.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.exitGame();\n                    }\n                }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "public void openRate() {\n        try {\n            Uri uri = Uri.parse(\"market://details?id=\" + getPackageName());\n            Intent intent = new Intent(\"android.intent.action.VIEW\", uri);\n            startActivity(intent);\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "public void openRateDirect() {\n        try {\n            if (checkApkExist(this, \"com.android.vending\")) {\n                Intent browserIntent = new Intent(\"android.intent.action.VIEW\", Uri.parse(\"market://details?id=\" + getPackageName()));\n                browserIntent.setClassName(\"com.android.vending\", \"com.android.vending.AssetBrowserActivity\");\n                browserIntent.setFlags(DriveFile.MODE_READ_ONLY);\n                startActivity(browserIntent);\n            } else {\n                Uri uri = Uri.parse(\"market://details?id=\" + getPackageName());\n                Intent intent = new Intent(\"android.intent.action.VIEW\", uri);\n                startActivity(intent);\n            }\n        }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "public void rateGame() {\n        openRate();\n    }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "public void exitGame() {\n        finish();\n    }",
+    "results": {}
+  },
+  "Function_15": {
+    "code": "public void showExitDlg() {\n        exitGameDlg();\n    }",
+    "results": {}
+  },
+  "Function_16": {
+    "code": "public void OpenExitAds() {\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.3\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.OpenExitAdsEx();\n            }\n        }",
+    "results": {}
+  },
+  "Function_17": {
+    "code": "public void OpenExitAdsEx() {\n        iDoingExitListDialog dialog = new iDoingExitListDialog(this, R.style.customized_dialog, this);\n        dialog.show();\n    }",
+    "results": {}
+  },
+  "Function_18": {
+    "code": "public void ShowMoreGames() {\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.4\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.ShowMoreGamesEx();\n            }\n        }",
+    "results": {}
+  },
+  "Function_19": {
+    "code": "public void ShowMoreGamesEx() {\n        iDoingListDialog dialog = new iDoingListDialog(this, R.style.customized_dialog, this);\n        dialog.show();\n    }",
+    "results": {}
+  },
+  "Function_20": {
+    "code": "public void ShareOther() {\n        Intent intent = new Intent(\"android.intent.action.SEND\");\n        intent.setType(\"text/plain\");\n        intent.putExtra(\"android.intent.extra.SUBJECT\", getString(R.string.app_name));\n        intent.putExtra(\"android.intent.extra.TEXT\", String.valueOf(getString(R.string.app_name)) + \" great game. Download Url:https://play.google.com/store/apps/details?id=\" + getPackageName());\n        intent.setFlags(DriveFile.MODE_READ_ONLY);\n        startActivity(Intent.createChooser(intent, getTitle()));\n    }",
+    "results": {}
+  },
+  "Function_21": {
+    "code": "public void showRateGame() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        this.builder.setMessage(\"If you like the game, please help me rate 5 stars, Thanks for your support\");\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.5\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Cancel\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.5.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }\n                }",
+    "results": {}
+  },
+  "Function_22": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.openRateDirect();\n                    }",
+    "results": {}
+  },
+  "Function_23": {
+    "code": "public void showRateGameExit() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        this.builder.setMessage(\"If you like the game, please help me rate 5 stars, Thanks for your support\");\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.6\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Exit\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.6.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.exitGame();\n                    }\n                }",
+    "results": {}
+  },
+  "Function_24": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.openRate();\n                    }",
+    "results": {}
+  },
+  "Function_25": {
+    "code": "public String getSign() {\n        PackageManager pm = getPackageManager();\n        try {\n            PackageInfo pInfo = pm.getPackageInfo(getPackageName(), 64);\n            Log.i(\"sign\", pInfo.signatures[0].toString());\n            return pInfo.signatures[0].toString();\n        } catch (PackageManager.NameNotFoundException e) {\n            e.printStackTrace();\n            return null;\n        }\n    }",
+    "results": {}
+  },
+  "Function_26": {
+    "code": "public String getLandC() {\n        Locale l = Locale.getDefault();\n        return String.format(\"%s-%s\", l.getLanguage(), l.getCountry());\n    }",
+    "results": {}
+  },
+  "Function_27": {
+    "code": "public void onClick(View v) {\n            SrMainActivity.this.ShowLeaderboardsRequested(\"3\", \"1\");\n        }",
+    "results": {}
+  },
+  "Function_28": {
+    "code": "public void OpenDownload(String pName) {\n        this.downloadUrl = \"market://details?id=\" + pName;\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.7\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.OpenMarket();\n            }\n        }",
+    "results": {}
+  },
+  "Function_29": {
+    "code": "public void OpenMarket() {\n        try {\n            if (checkApkExist(this, \"com.android.vending\")) {\n                Intent browserIntent = new Intent(\"android.intent.action.VIEW\", Uri.parse(this.downloadUrl));\n                browserIntent.setClassName(\"com.android.vending\", \"com.android.vending.AssetBrowserActivity\");\n                browserIntent.setFlags(DriveFile.MODE_READ_ONLY);\n                startActivity(browserIntent);\n            } else {\n                Uri uri = Uri.parse(this.downloadUrl);\n                Intent intent = new Intent(\"android.intent.action.VIEW\", uri);\n                startActivity(intent);\n            }\n        }",
+    "results": {}
+  },
+  "Function_30": {
+    "code": "private boolean checkApkExist(Context context, String packageName) {\n        if (packageName == null || BuildConfig.FLAVOR.equals(packageName)) {\n            return false;\n        }\n        try {\n            context.getPackageManager().getApplicationInfo(packageName, 8192);\n            return true;\n        } catch (PackageManager.NameNotFoundException e) {\n            return false;\n        }\n    }",
+    "results": {}
+  },
+  "Function_31": {
+    "code": "public void CreateGoogleApiClient() {\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this).addOnConnectionFailedListener(this).addApi(Plus.API).addScope(Plus.SCOPE_PLUS_LOGIN).addApi(Games.API).addScope(Games.SCOPE_GAMES).build();\n        ec = new EventCallback(this);\n        qc = new QuestCallback(this);\n        this.mClaimMilestoneResultCallback = new ResultCallback<Quests.ClaimMilestoneResult>() { // from class: com.d3.game.SrMainActivity.8\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(Quests.ClaimMilestoneResult result) {\n                SrMainActivity.this.onMilestoneClaimed(result);\n            }\n        }",
+    "results": {}
+  },
+  "Function_32": {
+    "code": "private boolean isSignedIn() {\n        return this.mGoogleApiClient != null && this.mGoogleApiClient.isConnected();\n    }",
+    "results": {}
+  },
+  "Function_33": {
+    "code": "public void ShowAchievementsRequested(String maxLevel) {\n        showType = 1;\n        SubmitAchievement(Integer.parseInt(maxLevel));\n        if (isSignedIn()) {\n            startActivityForResult(Games.Achievements.getAchievementsIntent(this.mGoogleApiClient), 5001);\n        } else {\n            runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.9\n                @Override // java.lang.Runnable\n                public void run() {\n                    SrMainActivity.this.mGoogleApiClient.connect();\n                }\n            }",
+    "results": {}
+  },
+  "Function_34": {
+    "code": "public void SubmitAchievement(int maxLevel) {\n        cjmaxLevel = maxLevel;\n        if (isSignedIn()) {\n            SubmitAchievementE();\n        }\n    }",
+    "results": {}
+  },
+  "Function_35": {
+    "code": "public void SubmitAchievementE() {\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.10\n            @Override // java.lang.Runnable\n            public void run() {\n                if (SrMainActivity.cjmaxLevel > 5) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_primary_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 10) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_senior_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 20) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_advanced_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 30) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_assassin_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 50) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_elite_shooter));\n                }\n            }",
+    "results": {}
+  },
+  "Function_36": {
+    "code": "public void ShowLeaderboardsRequested(String maxlevel, String type) {\n        showType = 0;\n        submitScore(Integer.parseInt(maxlevel), Integer.parseInt(type));\n        if (isSignedIn()) {\n            runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.11\n                @Override // java.lang.Runnable\n                public void run() {\n                    SrMainActivity.this.startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(SrMainActivity.this.mGoogleApiClient), 5001);\n                }\n            }",
+    "results": {}
+  },
+  "Function_37": {
+    "code": "public void run() {\n                    SrMainActivity.this.mGoogleApiClient.connect();\n                }",
+    "results": {}
+  },
+  "Function_38": {
+    "code": "public void submitScore(int maxlevel, int type) {\n        ml = maxlevel;\n        ty = type;\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.13\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.submitScorex();\n            }\n        }",
+    "results": {}
+  },
+  "Function_39": {
+    "code": "public void submitScorex() {\n        if (isSignedIn()) {\n            switch (ty) {\n                case 1:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_ice_level_mode_rank), ml);\n                    return;\n                case 2:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_desert_level_mode_rank), ml);\n                    return;\n                case 3:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_tower_level_mode_rank), ml);\n                    return;\n                case 4:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_temple_level_mode_rank), ml);\n                    return;\n                case 5:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_ice_custom_mode_rank), ml);\n                    return;\n                case 6:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_desert_custom_mode_rank), ml);\n                    return;\n                case 7:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_tower_custom_mode_rank), ml);\n                    return;\n                case 8:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_temple_custom_mode_rank), ml);\n                    return;\n                default:\n                    return;\n            }\n        }",
+    "results": {}
+  },
+  "Function_40": {
+    "code": "public void onConnectionFailed(ConnectionResult connectionResult) {\n        BaseGameUtils.resolveConnectionFailure(this, this.mGoogleApiClient, connectionResult, 9001, getString(R.string.signin_other_error));\n    }",
+    "results": {}
+  },
+  "Function_41": {
+    "code": "public void onConnected(Bundle arg0) {\n        Player p = Games.Players.getCurrentPlayer(this.mGoogleApiClient);\n        if (p == null) {\n            Log.w(TAG, \"mGamesClient.getCurrentPlayer() is NULL!\");\n        } else {\n            p.getDisplayName();\n        }\n        if (showType == 0) {\n            submitScore(ml, ty);\n            startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(this.mGoogleApiClient), 5001);\n        } else if (showType == 1) {\n            SubmitAchievement(cjmaxLevel);\n            startActivityForResult(Games.Achievements.getAchievementsIntent(this.mGoogleApiClient), 5001);\n        } else if (showType == 2) {\n            Games.Quests.registerQuestUpdateListener(this.mGoogleApiClient, this);\n            Games.Events.increment(this.mGoogleApiClient, \"1\", increment);\n            int[] selection = {2, 101, 3};\n            Intent questsIntent = Games.Quests.getQuestsIntent(this.mGoogleApiClient, selection);\n            startActivityForResult(questsIntent, 0);\n        }",
+    "results": {}
+  },
+  "Function_42": {
+    "code": "public void onConnectionSuspended(int arg0) {\n        this.mGoogleApiClient.connect();\n    }",
+    "results": {}
+  },
+  "Function_43": {
+    "code": "protected void onActivityResult(int requestCode, int resultCode, Intent intent) {\n        super.onActivityResult(requestCode, resultCode, intent);\n        if (requestCode == 9001) {\n            if (resultCode == -1) {\n                this.mGoogleApiClient.connect();\n            } else {\n                BaseGameUtils.showActivityResultError(this, requestCode, resultCode, R.string.signin_other_error);\n            }\n        }",
+    "results": {}
+  },
+  "Function_44": {
+    "code": "public void showQuests(String incStr) {\n        int inc = Integer.parseInt(incStr);\n        showType = 2;\n        if (isSignedIn()) {\n            increment = inc;\n            Games.Events.increment(this.mGoogleApiClient, getString(R.string.event_kill_enemies_count), increment);\n            int[] selection = {2, 101, 3};\n            Intent questsIntent = Games.Quests.getQuestsIntent(this.mGoogleApiClient, selection);\n            startActivityForResult(questsIntent, 0);\n            return;\n        }",
+    "results": {}
+  },
+  "Function_45": {
+    "code": "public void run() {\n                SrMainActivity.this.mGoogleApiClient.connect();\n            }",
+    "results": {}
+  },
+  "Function_46": {
+    "code": "public void onMilestoneClaimed(Quests.ClaimMilestoneResult result) {\n        try {\n            if (result.getStatus().isSuccess()) {\n                String reward = new String(result.getQuest().getCurrentMilestone().getCompletionRewardData(), HTTP.UTF_8);\n                Toast.makeText(this, \"Congratulations, you got a \" + reward, 1).show();\n                PaySuccessSendToU3D.SendCoinsToU3dByPay(\"30000\", this);\n            } else {\n                Log.e(TAG, \"Reward was not claimed due to error.\");\n                Toast.makeText(this, \"Reward was not claimed due to error.\", 1).show();\n            }\n        }",
+    "results": {}
+  },
+  "Function_47": {
+    "code": "public void onResult(Result result) {\n            Events.LoadEventsResult r = (Events.LoadEventsResult) result;\n            EventBuffer eb = r.getEvents();\n            String message = \"Current stats: \\n\";\n            Log.i(SrMainActivity.TAG, \"number of events: \" + eb.getCount());\n            for (int i = 0; i < eb.getCount(); i++) {\n                message = String.valueOf(message) + \"event: \" + eb.get(i).getName() + \" \" + eb.get(i).getEventId() + \" \" + eb.get(i).getValue() + \"\\n\";\n            }\n            eb.close();\n            Toast.makeText(this.m_parent, message, 1).show();\n        }",
+    "results": {}
+  },
+  "Function_48": {
+    "code": "public void onResult(Result result) {\n            Quests.LoadQuestsResult r = (Quests.LoadQuestsResult) result;\n            QuestBuffer qb = r.getQuests();\n            String message = \"Current quest details: \\n\";\n            Log.i(SrMainActivity.TAG, \"Number of quests: \" + qb.getCount());\n            for (int i = 0; i < qb.getCount(); i++) {\n                message = String.valueOf(message) + \"Quest: \" + qb.get(i).getName() + \" id: \" + qb.get(i).getQuestId();\n            }\n            qb.close();\n            Toast.makeText(this.m_parent, message, 1).show();\n        }",
+    "results": {}
+  },
+  "Function_49": {
+    "code": "public void onQuestCompleted(Quest quest) {\n        String message = \"You successfully completed quest \" + quest.getName();\n        Log.i(TAG, message);\n        Toast.makeText(this, message, 1).show();\n        Games.Quests.claim(this.mGoogleApiClient, quest.getQuestId(), quest.getCurrentMilestone().getMilestoneId()).setResultCallback(this.mClaimMilestoneResultCallback);\n    }",
+    "results": {}
+  }
+}

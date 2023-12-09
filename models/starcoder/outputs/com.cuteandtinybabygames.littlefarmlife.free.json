@@ -1,0 +1,886 @@
+{
+  "Function_1": {
+    "code": "protected String updateUnityCommandLineArguments(String str) {\n        return str;\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not sanitize user input and could potentially be used to execute malicious code on the user's system.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a security context. It simply returns the provided string without modification.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onCreate(Bundle bundle) {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getIntent().putExtra(\"unity\", updateUnityCommandLineArguments(getIntent().getStringExtra(\"unity\")));\n        this.mUnityPlayer = new UnityPlayer(this, this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it is possible to provide malicious input that will execute arbitrary code on the device. Consider using the following code instead:\n\npublic void onCreate(Bundle bundle) {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        String unity = getIntent().getStringExtra(\"unity\");\n        if (unity!= null) {\n            unity = updateUnityCommandLineArguments(unity);\n        }\n        this.mUnityPlayer = new UnityPlayer(this, this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not sanitize input, which can lead to potential security issues.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not susceptible to any type of attack.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void onUnityPlayerUnloaded() {\n        moveTaskToBack(true);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code moves the current task to the back of the queue, which means that the task will be executed last and can potentially exploit the application.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code moves the current thread to the background without performing any security checks. This can cause unexpected behavior, including potential denial of service attacks. Consider using the following code instead:\n\npublic void onUnityPlayerUnloaded() {\n        if (Thread.CurrentThread.IsBackground) {\n            moveTaskToBack(true);\n        }\n    }",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code moves the current task to the back of the queue, which is a potential vulnerability if the current task is a non-daemon thread. Non-daemon threads are allowed to keep the application running even after the main thread has finished. If a non-daemon thread is used to load a new scene, the new scene will be loaded after the current scene has finished, potentially causing unexpected behavior. To fix this vulnerability, you should use the'moveTaskToFront' method instead of'moveTaskToBack'.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code moves the current task to the back of the queue, which means that the task will be executed last and potentially cause undefined behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "public void onUnityPlayerQuitted() {\n        Process.killProcess(Process.myPid());\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is designed to kill the current process, which is not a recommended practice. Consider using the following code instead:\n\npublic void onUnityPlayerQuitted() {\n        Runtime.getRuntime().exit(0);\n    }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It kills the current process without any warning or prompting.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to be secure and will kill the current process if the Unity player quits. There are no other issues with the provided code.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to kill the current process when the Unity player is closed. However, there is no guarantee that this will actually work, as the 'killProcess' function is a static method in the 'Process' class, which can be called from any Java code. It is possible for an attacker to create a malicious plugin that uses this method, causing the current process to be killed.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void onNewIntent(Intent intent) {\n        setIntent(intent);\n        this.mUnityPlayer.newIntent(intent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not validating the Intent before setting it, which could potentially allow an attacker to spoof the Intent and redirect the user to a malicious activity.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly sanitize input, which can lead to potential vulnerabilities. For example, a malicious intent could contain a reference to a local file on the device, which would then be accessed by the application.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous; it correctly handles the case where the current Activity is not the main Activity.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "protected void onDestroy() {\n        this.mUnityPlayer.destroy();\n        super.onDestroy();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable. The `onDestroy()` method is called when the Activity is destroyed, which is not a time when the app is vulnerable to attacks.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not destroy the UnityPlayer instance properly, which can lead to memory leaks. To properly destroy the UnityPlayer instance, you need to call 'UnityPlayer.currentActivity.finish()' in addition to 'UnityPlayer.destroy()'.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code properly destroys the UnityPlayer object, which is necessary for proper memory cleanup.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to destroy the Unity player when the Activity is destroyed. However, there is no guarantee that the `onDestroy()` method will be called when the Activity is destroyed. For example, if the Activity is destroyed due to a configuration change, the `onDestroy()` method may not be called. In this case, the Unity player will not be destroyed, which can cause memory leaks or other issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "protected void onPause() {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable. The `onPause()` method is called when the app is paused, which is a normal behavior. The `pause()` method is called on the `mUnityPlayer` object, which is a reference to the Unity player instance. Since the `mUnityPlayer` reference is saved in the activity, it can be used to access the player instance from other classes, potentially leading to an exploit.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle potential security issues, and it is not recommended to use it in production apps.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attacks, as it does not directly interact with the Unity Player.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in a production environment. The `onPause()` method is called when the app is paused, which is usually when the user switches to another app or to the home screen. In this case, the `pause()` method is called, which pauses the Unity player. However, the Unity player is not actually paused; it is still running and rendering the scene. This can cause performance issues and even potential crashes if the app is not designed with this behavior in mind. It is recommended to use the `onUnityPlayerPaused()` method instead, which is called when the Unity player actually pauses.\n\nprotected void onUnityPlayerPaused() {\n        // Your code here\n    }",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "protected void onResume() {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it properly handles the lifecycle of the UnityPlayer instance.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle potential malicious input, and it does not check for null pointers before dereferencing them. It is also not designed to be resistant to runtime manipulation of the Activity context, which is a common attack vector on Android.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attacks, as it does not directly interact with the Unity Engine.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code. The code is designed to work correctly when the Activity is resumed after being paused. However, if the Activity is not resumed after being paused, the behavior is undefined.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "public void onLowMemory() {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code calls the lowMemory() method of the UnityPlayer instance, which is a native Android Java object. It's not clear whether this method is part of the public API or is subject to change in future versions of Unity.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the low memory warning. It does not call the superclass' onLowMemory() method, and it does not forward the low memory warning to the Unity player.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any memory leaks or crashes.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code calls the `lowMemory` method on the `mUnityPlayer` object, which is an instance of the `UnityPlayer` class. The `lowMemory` method is defined in the `UnityPlayer` class and is empty by default. It's unlikely that an attacker could override this method and cause any issues, but it's still worth analyzing the code to ensure that it will not cause any issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "public void onTrimMemory(int i) {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle low memory conditions, and it will crash the app if it receives the TRIM_MEMORY_RUNNING_LOW notification.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not check for a specific value of 'i' before calling 'lowMemory()' on the UnityPlayer instance. It is possible for a malicious app to pass in a non-15 value, causing the app to crash.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any memory-related vulnerabilities, as it does not have any references to the Android SDK.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle unexpected input.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "public void onConfigurationChanged(Configuration configuration) {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not check for null before dereferencing it. It is also not using a try-catch block to handle potential exceptions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any Android configuration changes, as it correctly handles the change by calling the superclass method and then calling the Unity player's `configurationChanged` method with the new configuration.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle any potential attacker behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "public void onWindowFocusChanged(boolean z) {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle potential malicious input, and as such it does not have any known security issues.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attack, as it does not directly interact with the Unity player.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in a production environment. The `onWindowFocusChanged` method is called when the window focus changes, and the `mUnityPlayer.windowFocusChanged` method is called with the same parameter. It is possible for an attacker to create a subclass of `UnityPlayerActivity` and override the `windowFocusChanged` method with a malicious implementation. In this case, the `onWindowFocusChanged` method will also call the malicious `windowFocusChanged` method, causing unexpected behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "public boolean dispatchKeyEvent(KeyEvent keyEvent) {\n        if (keyEvent.getAction() == 2) {\n            return this.mUnityPlayer.injectEvent(keyEvent);\n        }\n        return super.dispatchKeyEvent(keyEvent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it allows for arbitrary key events to be dispatched to the Unity player.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to be secure, and it may be vulnerable to attack. Consider using a more secure method of key injection, such as the Android Keystore system.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection attack, as it properly checks for the action type of the KeyEvent.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle key injection events from arbitrary sources, and it does not check for null pointers or empty strings. It is also not thread-safe.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_14": {
+    "code": "public boolean onKeyUp(int i, KeyEvent keyEvent) {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not filtering out malicious input, which could potentially cause the application to crash or execute arbitrary code.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to be secure, and it does not prevent malicious actors from injecting key events into the application. Consider using a more secure alternative, such as the KeyDispatcher class in the Android SDK.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attack, as it does not process user input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not check for null or empty input.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_15": {
+    "code": "public boolean onKeyDown(int i, KeyEvent keyEvent) {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it is possible to inject malicious code into the UnityPlayer object using the injectEvent method.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to be secure, and it may be vulnerable to attack. Consider using a more secure approach, such as the one described in this article: https://developer.android.com/training/articles/security-key-attestation.html",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection, as it does not process user input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not check for null or empty input.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_16": {
+    "code": "public boolean onTouchEvent(MotionEvent motionEvent) {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any security checks, which can lead to potential vulnerabilities. For example, a malicious actor can send a specially crafted touch event to trigger a memory leak or crash the app.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection, as it does not process user input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous; it correctly handles the touch event and forwards it to the Unity player.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_17": {
+    "code": "public boolean onGenericMotionEvent(MotionEvent motionEvent) {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it will execute arbitrary Java code if the user inputs malicious data.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly sanitize input, which can lead to potential vulnerabilities. For example, a malicious app could send a MotionEvent with modified position and/or action fields to cause unexpected behavior.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in a production environment. The code is designed to work with the UnityPlayer instance, which is a singleton in the Android activity. If the attacker replaces the UnityPlayer instance with a malicious one, the code will cause unexpected behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

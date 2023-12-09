@@ -1,0 +1,106 @@
+{
+  "Function_1": {
+    "code": "protected String getMainComponentName() {\n        return \"whiteLabelApplication\";\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onCreate(Bundle bundle) {\n        SplashScreen.show(this);\n        super.onCreate(bundle);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

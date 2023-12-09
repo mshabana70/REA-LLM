@@ -1,0 +1,10 @@
+{
+  "Function_1": {
+    "code": "protected String getMainComponentName() {\n        return \"whiteLabelApplication\";\n    }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public void onCreate(Bundle bundle) {\n        SplashScreen.show(this);\n        super.onCreate(bundle);\n    }",
+    "results": {}
+  }
+}

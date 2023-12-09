@@ -1,0 +1,6 @@
+{
+  "Function_1": {
+    "code": "protected void onCreate(Bundle bundle) {\n        Log.w(\"Unity\", \"UnityPlayerNativeActivity has been deprecated, please update your AndroidManifest to use UnityPlayerActivity instead\");\n        super.onCreate(bundle);\n        Intent intent = new Intent(this, UnityPlayerActivity.class);\n        intent.addFlags(65536);\n        Bundle extras = getIntent().getExtras();\n        if (extras != null) {\n            intent.putExtras(extras);\n        }\n        startActivity(intent);\n    }",
+    "results": {}
+  }
+}

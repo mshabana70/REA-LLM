@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:rtx8000:2
-#SBATCH --time=1:00:00
+#SBATCH --time=2:00:00
 #SBATCH --mem=256GB
 #SBATCH --job-name=starcoder-test
 #SBATCH --mail-type=END

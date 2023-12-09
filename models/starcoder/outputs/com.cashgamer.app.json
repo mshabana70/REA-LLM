@@ -1,0 +1,678 @@
+{
+  "Function_1": {
+    "code": "public void onClick(View view) {\n            try {\n                LoginActivity.this.startActivity(new Intent(\"android.intent.action.VIEW\", Uri.parse(\"https://cashgamer.netlify.app/privacypolicy.html\")));\n            } catch (Exception unused) {\n                LoginActivity loginActivity = LoginActivity.this;\n                Toast.makeText(loginActivity, loginActivity.getString(R.string.profilefrag_str5), 1).show();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly validating the Intent URL, which could potentially lead to an exploit. Consider using a proper Intent validation method to avoid potential exploits.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not following best security practices. It does not perform any validation on the URL, which can lead to potential vulnerabilities. Consider using a validation library like [URLValidator](https://github.com/perfectus/URLValidator) or implementing your own validation logic.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code is functional and will open the Privacy Policy in the browser when the user clicks on the link.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code tries to open a webpage in the user's default browser, but it doesn't properly handle exceptions. If the user has no default browser set up, the app will crash. To fix this, you should add a `catch` block that handles `ActivityNotFoundException`.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void updateDrawState(TextPaint textPaint) {\n            super.updateDrawState(textPaint);\n            textPaint.setUnderlineText(true);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly sanitizing user input, and it may be vulnerable to an attack. Consider using a safer alternative, such as the following:\n\npublic void updateDrawState(TextPaint textPaint) {\n            super.updateDrawState(textPaint);\n            textPaint.setUnderlineText(false);\n        }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly validate input, which can lead to malicious code execution.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not secure either. It is not recommended to use it in production code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void onClick(View view) {\n            try {\n                LoginActivity.this.startActivity(new Intent(\"android.intent.action.VIEW\", Uri.parse(\"https://cashgamer.netlify.app/tos.html\")));\n            } catch (Exception unused) {\n                LoginActivity loginActivity = LoginActivity.this;\n                Toast.makeText(loginActivity, loginActivity.getString(R.string.profilefrag_str5), 1).show();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly validating the Intent URL, which could potentially lead to an exploit. Consider using a proper Intent validation method to avoid potential exploits.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly validate the Intent URL before starting the activity. It is possible for a malicious user to craft a URL that would redirect the user to a malicious website, which may steal user data or cause other security issues.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code opens the Terms of Service in the default browser when the user clicks on the link.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code tries to open a webpage in the default browser, but it does not properly handle exceptions. If the user does not have a default browser set up on their device, the app will crash. To fix this, you should add a `catch` block that handles `ActivityNotFoundException`.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "public void updateDrawState(TextPaint textPaint) {\n            super.updateDrawState(textPaint);\n            textPaint.setUnderlineText(true);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly sanitizing user input, and it may be vulnerable to an attack. Consider using a safer alternative, such as the following:\n\npublic void updateDrawState(TextPaint textPaint) {\n            super.updateDrawState(textPaint);\n            textPaint.setUnderlineText(false);\n        }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly validate input, which can lead to malicious code execution.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not secure either. It is not recommended to use it in production code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void onClick(View view) {\n            ((ApplicationInitialise) LoginActivity.this.getApplication()).b();\n            LoginActivity loginActivity = LoginActivity.this;\n            loginActivity.startActivityForResult(loginActivity.p.getSignInIntent(), loginActivity.q);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle potential malicious input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It directly exposes the Application class instance and calls its b() method without checking for permissions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a production environment. It is only provided as an example of how to use the Firebase Authentication API in an Android app.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "public void a(JSONObject jSONObject) {\n            JSONObject jSONObject2 = jSONObject;\n            LoginActivity.this.e.hide();\n            try {\n                JSONObject jSONObject3 = new JSONObject(jSONObject2.toString());\n                String string = jSONObject3.getString(\"countryCode\");\n                String string2 = jSONObject3.getString(SearchIntents.EXTRA_QUERY);\n                SharedPreferences.Editor edit = LoginActivity.this.f.edit();\n                edit.putString(\"cc\", string);\n                edit.commit();\n                LoginActivity.this.a(string2, this.f2725a);\n            } catch (JSONException e) {\n                e.printStackTrace();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly sanitizing user input, which could lead to an exploit. Consider using a JSON library like Gson or Jackson to parse JSON data.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate the input before using it. It is also not using a constant time algorithm for string comparison.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not check for null or empty input.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "public void a(u uVar) {\n            LoginActivity.this.e.hide();\n            SharedPreferences.Editor edit = LoginActivity.this.f.edit();\n            edit.putString(\"cc\", \"NA\");\n            edit.commit();\n            LoginActivity.this.a(\"NA\", this.f2727a);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input, and it directly modifies shared preferences.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to be secure, and it uses cleartext storage for sensitive data. Consider using a more secure storage mechanism, like Android's KeyStore or encryptedSharedPreferences.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not secure, as it does not properly handle the case where the user cancels the login prompt. In this case, the app will continue to execute the 'hide()' method, which will cause the app to crash. To fix this, you should check if the user cancelled the login prompt before hiding the keyboard.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "public void a(JSONObject jSONObject) {\n            JSONObject jSONObject2 = jSONObject;\n            LoginActivity.this.e.hide();\n            try {\n                if (jSONObject2.getInt(\"success\") == 1) {\n                    JSONObject jSONObject3 = jSONObject2.getJSONObject(\"data\");\n                    String string = jSONObject3.getString(\"uniquecode\");\n                    String string2 = jSONObject3.getString(\"referred_by\");\n                    SharedPreferences.Editor edit = LoginActivity.this.f.edit();\n                    edit.putString(\"uniquecode\", string);\n                    edit.putString(\"referred_by\", string2);\n                    edit.putInt(\"setting_1\", 1);\n                    edit.commit();\n                    ((ApplicationInitialise) LoginActivity.this.getApplication()).a(this.f2729a);\n                    String string3 = jSONObject2.getString(\"already_existed\");\n                    Intent intent = new Intent(LoginActivity.this, Home_exp1.class);\n                    if (string3.equals(\"yes\")) {\n                        edit.putInt(\"credref\", 1);\n                        edit.commit();\n                        intent.putExtra(\"greet\", \"Welcome Back \" + this.f2729a.f2377b);\n                    }\n                    intent.setFlags(268468224);\n                    LoginActivity.this.startActivity(intent);\n                    return;\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it is not clear how the program could be exploited.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate the input data (e.g., the uniquecode and referred_by fields). It also does not set the appropriate flags when starting an Activity.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle exceptions, which could potentially cause a crash. Consider using a try-catch block to handle potential exceptions.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not secure, and an attacker could potentially cause a crash or execute malicious code. Consider using a secure library or code that you can trust.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " If so, how can we prevent this?",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "public void a(u uVar) {\n            LoginActivity.this.e.hide();\n            if (uVar.getCause() != null) {\n                Toast.makeText(LoginActivity.this, \"\", 1).show();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not directly vulnerable to an attack, but it is still susceptible to indirect attacks. The code creates a Toast message without specifying the message content, which means that the message will be displayed as \"null\". If the user clicks on this message, it will open the app's settings, allowing the attacker to change the app's behavior.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not check for null before attempting to use the value of 'cause'.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not directly vulnerable to a code injection attack, but it is not recommended to use the 'hide()' method of an EditText view to display sensitive data. It is recommended to use the'setTransformationMethod(null)' method to remove the input transformation, and then display the transformed input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not directly accessible to the user, so an attacker would need to find a way to call the method.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "public void a(String str, c.c.a.r.f fVar) {\n        Random random = d.a.a.a.a.f2767a;\n        int i = 9;\n        char[] cArr = new char[9];\n        while (true) {\n            int i2 = i - 1;\n            if (i == 0) {\n                String lowerCase = new String(cArr).toLowerCase();\n                String str2 = fVar.f2376a;\n                this.e.setMessage(\"Loading\");\n                this.e.show();\n                c.a.b.w.l lVar = new c.a.b.w.l(0, \"https://a0ips78uba.execute-api.us-east-2.amazonaws.com/default/lottery_useraccounts?option=2&email=\" + str2 + \"&uniquecode=\" + lowerCase + \"&ip=\" + str, null, new f(fVar), new g());\n                lVar.n = new c.a.b.f(this.g.f2369b, 1, 1.0f);\n                m.a(this).a().a(lVar);\n                return;\n            }\n            char nextInt = (char) (random.nextInt(91) + 32);\n            if (Character.isLetter(nextInt) || Character.isDigit(nextInt)) {\n                if (nextInt < 56320 || nextInt > 57343) {\n                    if (nextInt < 55296 || nextInt > 56191) {\n                        if (nextInt < 56192 || nextInt > 56319) {\n                            cArr[i2] = nextInt;\n                            i = i2;\n                        }\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to sanitize user input, and it is possible for a malicious user to execute arbitrary code. Consider using a library like Apache Commons Lang for proper input validation.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not random enough and could potentially be used to generate predictable account numbers. Consider using a cryptographically secure random number generator (e.g., `java.security.SecureRandom`) or implementing additional checks to ensure the randomness of the account number.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle user-supplied input, and there are no checks for proper string encoding.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No. The provided code is not malicious.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " No. The program is not unknowningly tracking the user. The program is properly implementing the random number generation algorithm to generate a random string of characters.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "public void onActivityResult(int i, int i2, Intent intent) {\n        super.onActivityResult(i, i2, intent);\n        if (i == this.q) {\n            try {\n                GoogleSignInAccount result = GoogleSignIn.getSignedInAccountFromIntent(intent).getResult(ApiException.class);\n                if (result != null) {\n                    String displayName = result.getDisplayName();\n                    String email = result.getEmail();\n                    Uri photoUrl = result.getPhotoUrl();\n                    a(new c.c.a.r.f(email, displayName, \"\" + photoUrl));\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not validating the received data before using it.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to a malicious user gaining access to sensitive data or causing a crash. It is also not using a secure storage mechanism, which can result in data leaks or other security issues.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe because it does not check for null before dereferencing the result.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " No. The provided code is not tracking the user. It is simply using the Google Sign-In API to retrieve the user's information, which is then used to create a new user profile.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        setContentView(R.layout.activity_main);\n        this.i = (Button) findViewById(R.id.login);\n        this.f = getSharedPreferences(this.g.f2368a, 0);\n        this.e = new ProgressDialog(this);\n        this.e.setIndeterminate(true);\n        this.e.setMessage(getString(R.string.common_msg1));\n        this.e.setProgressStyle(0);\n        this.e.setCancelable(false);\n        this.j = (TextView) findViewById(R.id.textView1);\n        this.k = (TextView) findViewById(R.id.textView2);\n        this.l = (TextView) findViewById(R.id.textView3);\n        this.m = (TextView) findViewById(R.id.textView4);\n        this.n = (TextView) findViewById(R.id.textView5);\n        this.h = this.f.getString(\"uniquecode\", \"noexist\");\n        SpannableString spannableString = new SpannableString(getString(R.string.loginactivity_str5));\n        a aVar = new a();\n        b bVar = new b();\n        if (Locale.getDefault().getLanguage().equals(\"pt\")) {\n            spannableString.setSpan(aVar, 0, 23, 0);\n            spannableString.setSpan(bVar, 26, spannableString.length(), 0);\n        } else if (Locale.getDefault().getLanguage().equals(\"de\")) {\n            spannableString.setSpan(aVar, 0, 21, 0);\n            spannableString.setSpan(bVar, 26, spannableString.length(), 0);\n        } else if (Locale.getDefault().getLanguage().equals(\"es\")) {\n            spannableString.setSpan(aVar, 0, 22, 0);\n            spannableString.setSpan(bVar, 25, spannableString.length(), 0);\n        } else if (Locale.getDefault().getLanguage().equals(\"fr\")) {\n            spannableString.setSpan(aVar, 0, 29, 0);\n            spannableString.setSpan(bVar, 32, spannableString.length(), 0);\n        } else {\n            spannableString.setSpan(aVar, 0, 14, 0);\n            spannableString.setSpan(bVar, 17, 33, 0);\n        }\n        this.m.setText(spannableString);\n        this.m.setMovementMethod(LinkMovementMethod.getInstance());\n        this.m.setHighlightColor(0);\n        Typeface createFromAsset = Typeface.createFromAsset(getAssets(), \"blbold.ttf\");\n        Typeface createFromAsset2 = Typeface.createFromAsset(getAssets(), \"blmedium.ttf\");\n        Typeface createFromAsset3 = Typeface.createFromAsset(getAssets(), \"blregular.ttf\");\n        this.j.setTypeface(createFromAsset);\n        this.k.setTypeface(createFromAsset2);\n        this.l.setTypeface(createFromAsset3);\n        this.m.setTypeface(createFromAsset3);\n        this.n.setTypeface(createFromAsset3);\n        this.o = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();\n        this.p = GoogleSignIn.getClient((Activity) this, this.o);\n        c.c.a.r.f g2 = g();\n        if (!this.h.equals(\"noexist\") && g2 != null) {\n            ((ApplicationInitialise) getApplication()).b();\n            ((ApplicationInitialise) getApplication()).a(g2);\n            Intent intent = new Intent(this, Home_exp1.class);\n            intent.setFlags(268468224);\n            startActivity(intent);\n        }\n        this.i.setOnClickListener(new c());\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not properly validate input before using it.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to handle sensitive data, and it does not use any encryption or hashing algorithms. It is not a good practice to store user credentials in an unencrypted format or use an insecure hashing algorithm.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a malicious way, but it is possible that an attacker could cause some undefined behavior by modifying it.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "public void a(c.c.a.r.f fVar) {\n        this.e.show();\n        c.a.b.w.l lVar = new c.a.b.w.l(0, \"https://urlshortner-152005.appspot.com/getCountry\", null, new d(fVar), new e(fVar));\n        lVar.n = new c.a.b.f(this.g.f2369b, 1, 1.0f);\n        m.a(this).a().a(lVar);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly secured against malicious input. The program accepts an instance of the 'f' class as an argument, which can be used to execute arbitrary code.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate input or sanitize output.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

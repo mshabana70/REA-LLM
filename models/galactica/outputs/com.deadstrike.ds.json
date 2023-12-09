@@ -1,0 +1,2550 @@
+{
+  "Function_1": {
+    "code": "public String getMyUUID() {\n        try {\n            TelephonyManager tm = (TelephonyManager) getSystemService(\"phone\");\n            String tmDevice = tm.getDeviceId();\n            String tmSerial = tm.getSimSerialNumber();\n            String androidId = Settings.Secure.getString(getContentResolver(), TapjoyConstants.TJC_ANDROID_ID);\n            UUID deviceUuid = new UUID(androidId.hashCode(), (tmDevice.hashCode() << 32) | tmSerial.hashCode());\n            String uniqueId = deviceUuid.toString();\n            Log.d(\"debug\", \"uuid=\" + uniqueId);\n            if (uniqueId == null || uniqueId == BuildConfig.FLAVOR) {\n                return getMyUUID2();\n            }\n            return uniqueId;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nNo, the code is secure and does not allow for any undefined behavior. The code uses the TelephonyManager class to get the device ID and serial number, and then combines them with the Android ID to create a unique UUID. The UUID is then used to generate a unique ID that is stored in the uniqueId variable. If the uniqueId variable is null or equal to the default flavor, the code returns getMyUUID2(). This ensures that the unique ID is not easily guessable or predictable.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "private String getMyUUID2() {\n        UUID uuid = UUID.randomUUID();\n        String uniqueId = uuid.toString();\n        Log.d(\"debug\", \"----->UUID\" + uuid);\n        return uniqueId;\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nNo, the provided code is secure and does not allow for any undefined behavior. The code generates a unique UUID for each instance of the class and returns it as a string. The UUID is then logged to the console using the Log.d() method. This ensures that the code is not vulnerable to any attacks that may attempt to manipulate the UUID or log information.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "private void test() {\n        requestWindowFeature(1);\n        getWindow().setFlags(1024, 1024);\n        setContentView(R.layout.activity_main);\n        setRequestedOrientation(0);\n        this.downlaodTxtButton = (Button) findViewById(R.id.downloadTxt);\n        this.downlaodTxtButton.setOnClickListener(new DownloadTextListener());\n        this.downlaodMP3Button = (Button) findViewById(R.id.downloadMp3);\n        this.downlaodMP3Button.setOnClickListener(new DownloadMP3Listener());\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        getWindow().setFlags(128, 128);\n        iDoing3d.serviceStartFromBootBroadcastReceiver = false;\n        Intent show = new Intent(this, SrService.class);\n        startService(show);\n        IDoing3dClient iD3dClient = new IDoing3dClient(this);\n        iD3dClient.getAds(false);\n        CoinsTmp.getCoinsTmp(this);\n        CreateGoogleApiClient();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void resetCoinsTmp() {\n        CoinsTmp.resetCoinsTmp(this);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by passing invalid arguments to a method. In this case, passing a null or empty reference to the `resetCoinsTmp()` method will result in a runtime error. It is important to ensure that any reference to the `CoinsTmp` object is valid before using it in a method.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "public void onClick(View v) {\n            SrMainActivity.this.ShowAchievementsRequested(\"3\");\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause some undefined behavior by passing invalid input to the onClick method. For example, if the onClick method is called with a view that does not have the class \"View\", or if the view is not properly initialized, the method may throw an exception or produce unexpected results. It is important to ensure that the input to the onClick method is valid and that the class of the view is properly defined to prevent such behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "public void showDlg() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.1\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Cancel\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.1.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by passing invalid or unexpected values to a method. In this case, the `onClick` method takes a `DialogInterface` object and an integer `which` as arguments. If an attacker passes a `DialogInterface` object that is not created or initialized, or an integer that is not within the range of valid values (0 to `dialog.getNumberOfItems() - 1`), the method may throw an exception or produce unexpected results. It is important to handle such exceptions gracefully to prevent any potential security vulnerabilities.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "public void exitGameDlg() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.2\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Exit\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.2.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.exitGame();\n                    }\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by passing invalid or unexpected values to a method. In this case, the `onClick` method takes a `DialogInterface` object and an integer `which` as arguments. If an attacker passes a `DialogInterface` object that is not created or initialized, or an integer that is not within the range of valid values (0 to `dialog.getNumberOfItems() - 1`), the method may throw an exception or produce unexpected results. It is important to handle such exceptions gracefully to prevent any potential security vulnerabilities.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "public void openRate() {\n        try {\n            Uri uri = Uri.parse(\"market://details?id=\" + getPackageName());\n            Intent intent = new Intent(\"android.intent.action.VIEW\", uri);\n            startActivity(intent);\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "public void openRateDirect() {\n        try {\n            if (checkApkExist(this, \"com.android.vending\")) {\n                Intent browserIntent = new Intent(\"android.intent.action.VIEW\", Uri.parse(\"market://details?id=\" + getPackageName()));\n                browserIntent.setClassName(\"com.android.vending\", \"com.android.vending.AssetBrowserActivity\");\n                browserIntent.setFlags(DriveFile.MODE_READ_ONLY);\n                startActivity(browserIntent);\n            } else {\n                Uri uri = Uri.parse(\"market://details?id=\" + getPackageName());\n                Intent intent = new Intent(\"android.intent.action.VIEW\", uri);\n                startActivity(intent);\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "public void rateGame() {\n        openRate();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior in the provided code by calling the method \"openRate()\" without first calling the method \"rateGame()\". This will result in a runtime error because the method \"openRate()\" is not part of the \"rateGame()\" method chain. To avoid this, you should always call the method that is expected to be called first.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_14": {
+    "code": "public void exitGame() {\n        finish();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_15": {
+    "code": "public void showExitDlg() {\n        exitGameDlg();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_16": {
+    "code": "public void OpenExitAds() {\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.3\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.OpenExitAdsEx();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_17": {
+    "code": "public void OpenExitAdsEx() {\n        iDoingExitListDialog dialog = new iDoingExitListDialog(this, R.style.customized_dialog, this);\n        dialog.show();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_18": {
+    "code": "public void ShowMoreGames() {\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.4\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.ShowMoreGamesEx();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:As an AI assistant, I cannot cause any undefined behavior. However, it is important to note that the code provided is not a valid Java code and it cannot be executed on its own. The code is a part of a larger Java application called \"SrMainActivity\" and it is executed on the UI thread. The code defines a method called \"ShowMoreGamesEx\" that calls the \"ShowMoreGames\" method defined in the \"com.d3.game.SrMainActivity.4\" class. The \"ShowMoreGames\" method is not defined in any specific class and it is not possible to determine the class name without further information about the Java application.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_19": {
+    "code": "public void ShowMoreGamesEx() {\n        iDoingListDialog dialog = new iDoingListDialog(this, R.style.customized_dialog, this);\n        dialog.show();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior in this code by passing an invalid value to the ShowMoreGamesEx() method. For example, if the value passed to the method is null or an empty string, the method will not execute and the program will crash. It is important to ensure that any data passed to a method is valid and does not cause any unexpected behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_20": {
+    "code": "public void ShareOther() {\n        Intent intent = new Intent(\"android.intent.action.SEND\");\n        intent.setType(\"text/plain\");\n        intent.putExtra(\"android.intent.extra.SUBJECT\", getString(R.string.app_name));\n        intent.putExtra(\"android.intent.extra.TEXT\", String.valueOf(getString(R.string.app_name)) + \" great game. Download Url:https://play.google.com/store/apps/details?id=\" + getPackageName());\n        intent.setFlags(DriveFile.MODE_READ_ONLY);\n        startActivity(Intent.createChooser(intent, getTitle()));\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_21": {
+    "code": "public void showRateGame() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        this.builder.setMessage(\"If you like the game, please help me rate 5 stars, Thanks for your support\");\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.5\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Cancel\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.5.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        dialog.dismiss();\n                    }\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_22": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.openRateDirect();\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_23": {
+    "code": "public void showRateGameExit() {\n        this.builder = new AlertDialog.Builder(this);\n        this.builder.setTitle(getString(R.string.app_name));\n        this.builder.setMessage(\"If you like the game, please help me rate 5 stars, Thanks for your support\");\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.6\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.builder.setPositiveButton(\"Exit\", new DialogInterface.OnClickListener() { // from class: com.d3.game.SrMainActivity.6.1\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.exitGame();\n                    }\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_24": {
+    "code": "public void onClick(DialogInterface dialog, int which) {\n                        SrMainActivity.this.openRate();\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_25": {
+    "code": "public String getSign() {\n        PackageManager pm = getPackageManager();\n        try {\n            PackageInfo pInfo = pm.getPackageInfo(getPackageName(), 64);\n            Log.i(\"sign\", pInfo.signatures[0].toString());\n            return pInfo.signatures[0].toString();\n        } catch (PackageManager.NameNotFoundException e) {\n            e.printStackTrace();\n            return null;\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_26": {
+    "code": "public String getLandC() {\n        Locale l = Locale.getDefault();\n        return String.format(\"%s-%s\", l.getLanguage(), l.getCountry());\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_27": {
+    "code": "public void onClick(View v) {\n            SrMainActivity.this.ShowLeaderboardsRequested(\"3\", \"1\");\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_28": {
+    "code": "public void OpenDownload(String pName) {\n        this.downloadUrl = \"market://details?id=\" + pName;\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.7\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.OpenMarket();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_29": {
+    "code": "public void OpenMarket() {\n        try {\n            if (checkApkExist(this, \"com.android.vending\")) {\n                Intent browserIntent = new Intent(\"android.intent.action.VIEW\", Uri.parse(this.downloadUrl));\n                browserIntent.setClassName(\"com.android.vending\", \"com.android.vending.AssetBrowserActivity\");\n                browserIntent.setFlags(DriveFile.MODE_READ_ONLY);\n                startActivity(browserIntent);\n            } else {\n                Uri uri = Uri.parse(this.downloadUrl);\n                Intent intent = new Intent(\"android.intent.action.VIEW\", uri);\n                startActivity(intent);\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_30": {
+    "code": "private boolean checkApkExist(Context context, String packageName) {\n        if (packageName == null || BuildConfig.FLAVOR.equals(packageName)) {\n            return false;\n        }\n        try {\n            context.getPackageManager().getApplicationInfo(packageName, 8192);\n            return true;\n        } catch (PackageManager.NameNotFoundException e) {\n            return false;\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nNo, the provided code is secure and does not allow for any malicious behavior. The function checks if the provided package name is valid and exists in the context. If it is not valid or does not exist, the function returns false. If the package name exists, the function attempts to retrieve the application information and returns true. This function is used by the Android framework to ensure that only authorized applications can access system resources.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_31": {
+    "code": "public void CreateGoogleApiClient() {\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this).addOnConnectionFailedListener(this).addApi(Plus.API).addScope(Plus.SCOPE_PLUS_LOGIN).addApi(Games.API).addScope(Games.SCOPE_GAMES).build();\n        ec = new EventCallback(this);\n        qc = new QuestCallback(this);\n        this.mClaimMilestoneResultCallback = new ResultCallback<Quests.ClaimMilestoneResult>() { // from class: com.d3.game.SrMainActivity.8\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(Quests.ClaimMilestoneResult result) {\n                SrMainActivity.this.onMilestoneClaimed(result);\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_32": {
+    "code": "private boolean isSignedIn() {\n        return this.mGoogleApiClient != null && this.mGoogleApiClient.isConnected();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by creating an instance of the Google Cloud API client and then calling the isSignedIn() method on that instance without first connecting to the server. This can result in a NullPointerException being thrown, which can have unexpected and harmful consequences. It is important to ensure that the Google Cloud API client is properly connected to the server before accessing its methods.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_33": {
+    "code": "public void ShowAchievementsRequested(String maxLevel) {\n        showType = 1;\n        SubmitAchievement(Integer.parseInt(maxLevel));\n        if (isSignedIn()) {\n            startActivityForResult(Games.Achievements.getAchievementsIntent(this.mGoogleApiClient), 5001);\n        } else {\n            runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.9\n                @Override // java.lang.Runnable\n                public void run() {\n                    SrMainActivity.this.mGoogleApiClient.connect();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_34": {
+    "code": "public void SubmitAchievement(int maxLevel) {\n        cjmaxLevel = maxLevel;\n        if (isSignedIn()) {\n            SubmitAchievementE();\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_35": {
+    "code": "public void SubmitAchievementE() {\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.10\n            @Override // java.lang.Runnable\n            public void run() {\n                if (SrMainActivity.cjmaxLevel > 5) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_primary_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 10) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_senior_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 20) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_advanced_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 30) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_assassin_shooter));\n                }\n                if (SrMainActivity.cjmaxLevel > 50) {\n                    Games.Achievements.unlock(SrMainActivity.this.mGoogleApiClient, SrMainActivity.this.getString(R.string.achievement_elite_shooter));\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nNo, the code is written in a way that ensures that only authorized users can unlock achievements. The code uses the Google Cloud Console API to retrieve the achievements from the Google Cloud Storage and then unlocks them based on the user's level. The level is determined by the user's current game session, which is stored in the Google Cloud Storage. Therefore, an attacker cannot cause any undefined behavior by accessing the code or the user's level.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_36": {
+    "code": "public void ShowLeaderboardsRequested(String maxlevel, String type) {\n        showType = 0;\n        submitScore(Integer.parseInt(maxlevel), Integer.parseInt(type));\n        if (isSignedIn()) {\n            runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.11\n                @Override // java.lang.Runnable\n                public void run() {\n                    SrMainActivity.this.startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(SrMainActivity.this.mGoogleApiClient), 5001);\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_37": {
+    "code": "public void run() {\n                    SrMainActivity.this.mGoogleApiClient.connect();\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by making a malicious attempt to connect to the Google Cloud Platform API. This can result in unexpected behavior or crashes in the application. It is important to ensure that the application is properly secured and that any potential security vulnerabilities are addressed.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_38": {
+    "code": "public void submitScore(int maxlevel, int type) {\n        ml = maxlevel;\n        ty = type;\n        runOnUiThread(new Runnable() { // from class: com.d3.game.SrMainActivity.13\n            @Override // java.lang.Runnable\n            public void run() {\n                SrMainActivity.this.submitScorex();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nNo, the provided code is written in Java and is part of the SrMainActivity class. It does not contain any undefined behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_39": {
+    "code": "public void submitScorex() {\n        if (isSignedIn()) {\n            switch (ty) {\n                case 1:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_ice_level_mode_rank), ml);\n                    return;\n                case 2:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_desert_level_mode_rank), ml);\n                    return;\n                case 3:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_tower_level_mode_rank), ml);\n                    return;\n                case 4:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_temple_level_mode_rank), ml);\n                    return;\n                case 5:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_ice_custom_mode_rank), ml);\n                    return;\n                case 6:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_desert_custom_mode_rank), ml);\n                    return;\n                case 7:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_tower_custom_mode_rank), ml);\n                    return;\n                case 8:\n                    Games.Leaderboards.submitScore(this.mGoogleApiClient, getString(R.string.leaderboard_temple_custom_mode_rank), ml);\n                    return;\n                default:\n                    return;\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nNo, the code is well-defined and does not contain any undefined behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_40": {
+    "code": "public void onConnectionFailed(ConnectionResult connectionResult) {\n        BaseGameUtils.resolveConnectionFailure(this, this.mGoogleApiClient, connectionResult, 9001, getString(R.string.signin_other_error));\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_41": {
+    "code": "public void onConnected(Bundle arg0) {\n        Player p = Games.Players.getCurrentPlayer(this.mGoogleApiClient);\n        if (p == null) {\n            Log.w(TAG, \"mGamesClient.getCurrentPlayer() is NULL!\");\n        } else {\n            p.getDisplayName();\n        }\n        if (showType == 0) {\n            submitScore(ml, ty);\n            startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(this.mGoogleApiClient), 5001);\n        } else if (showType == 1) {\n            SubmitAchievement(cjmaxLevel);\n            startActivityForResult(Games.Achievements.getAchievementsIntent(this.mGoogleApiClient), 5001);\n        } else if (showType == 2) {\n            Games.Quests.registerQuestUpdateListener(this.mGoogleApiClient, this);\n            Games.Events.increment(this.mGoogleApiClient, \"1\", increment);\n            int[] selection = {2, 101, 3};\n            Intent questsIntent = Games.Quests.getQuestsIntent(this.mGoogleApiClient, selection);\n            startActivityForResult(questsIntent, 0);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_42": {
+    "code": "public void onConnectionSuspended(int arg0) {\n        this.mGoogleApiClient.connect();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_43": {
+    "code": "protected void onActivityResult(int requestCode, int resultCode, Intent intent) {\n        super.onActivityResult(requestCode, resultCode, intent);\n        if (requestCode == 9001) {\n            if (resultCode == -1) {\n                this.mGoogleApiClient.connect();\n            } else {\n                BaseGameUtils.showActivityResultError(this, requestCode, resultCode, R.string.signin_other_error);\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_44": {
+    "code": "public void showQuests(String incStr) {\n        int inc = Integer.parseInt(incStr);\n        showType = 2;\n        if (isSignedIn()) {\n            increment = inc;\n            Games.Events.increment(this.mGoogleApiClient, getString(R.string.event_kill_enemies_count), increment);\n            int[] selection = {2, 101, 3};\n            Intent questsIntent = Games.Quests.getQuestsIntent(this.mGoogleApiClient, selection);\n            startActivityForResult(questsIntent, 0);\n            return;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n        if (showType == 1) {\n            System.out.println(\"You have successfully shown your quest.\");\n        } else if (showType == 2) {\n            System.out.println(\"You have successfully shown your quest.\");\n        } else {\n            System.out.println(\"You have not shown your quest.\");\n        }\n}\n\nQuestion: What is the purpose of the if statement in the provided code?",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_45": {
+    "code": "public void run() {\n                SrMainActivity.this.mGoogleApiClient.connect();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by making a malicious attempt to connect to the Google Cloud Platform API using the `SrMainActivity.this.mGoogleApiClient` variable. This can lead to unexpected behavior and potentially cause the application to crash or behave maliciously. It is important to ensure that any code that uses the Google Cloud Platform API is thoroughly tested and securely connected to prevent such attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_46": {
+    "code": "public void onMilestoneClaimed(Quests.ClaimMilestoneResult result) {\n        try {\n            if (result.getStatus().isSuccess()) {\n                String reward = new String(result.getQuest().getCurrentMilestone().getCompletionRewardData(), HTTP.UTF_8);\n                Toast.makeText(this, \"Congratulations, you got a \" + reward, 1).show();\n                PaySuccessSendToU3D.SendCoinsToU3dByPay(\"30000\", this);\n            } else {\n                Log.e(TAG, \"Reward was not claimed due to error.\");\n                Toast.makeText(this, \"Reward was not claimed due to error.\", 1).show();\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nThis code is written in Java and it is not possible for an attacker to cause undefined behavior. The code is written in a secure programming language and it follows the principles of least privilege and input validation. The code also includes error handling and logging to ensure that any unexpected behavior is caught and logged.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_47": {
+    "code": "public void onResult(Result result) {\n            Events.LoadEventsResult r = (Events.LoadEventsResult) result;\n            EventBuffer eb = r.getEvents();\n            String message = \"Current stats: \\n\";\n            Log.i(SrMainActivity.TAG, \"number of events: \" + eb.getCount());\n            for (int i = 0; i < eb.getCount(); i++) {\n                message = String.valueOf(message) + \"event: \" + eb.get(i).getName() + \" \" + eb.get(i).getEventId() + \" \" + eb.get(i).getValue() + \"\\n\";\n            }\n            eb.close();\n            Toast.makeText(this.m_parent, message, 1).show();\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_48": {
+    "code": "public void onResult(Result result) {\n            Quests.LoadQuestsResult r = (Quests.LoadQuestsResult) result;\n            QuestBuffer qb = r.getQuests();\n            String message = \"Current quest details: \\n\";\n            Log.i(SrMainActivity.TAG, \"Number of quests: \" + qb.getCount());\n            for (int i = 0; i < qb.getCount(); i++) {\n                message = String.valueOf(message) + \"Quest: \" + qb.get(i).getName() + \" id: \" + qb.get(i).getQuestId();\n            }\n            qb.close();\n            Toast.makeText(this.m_parent, message, 1).show();\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_49": {
+    "code": "public void onQuestCompleted(Quest quest) {\n        String message = \"You successfully completed quest \" + quest.getName();\n        Log.i(TAG, message);\n        Toast.makeText(this, message, 1).show();\n        Games.Quests.claim(this.mGoogleApiClient, quest.getQuestId(), quest.getCurrentMilestone().getMilestoneId()).setResultCallback(this.mClaimMilestoneResultCallback);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

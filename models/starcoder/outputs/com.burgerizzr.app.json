@@ -1,0 +1,730 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        setContentView(R.layout.splash_screen);\n        this.splash_logo = (GifImageView) findViewById(R.id.splash_logo);\n        startService(new Intent(this, FirebaseService.class));\n        boolean equals = \"en\".equals(LocaleUtil.getLanguage());\n        Log.e(\"isenglish\", String.valueOf(equals));\n        TextView textView = (TextView) findViewById(R.id.tv_text);\n        if (equals) {\n            textView.setText(getResources().getString(R.string.very_fresh_en));\n            textView.setTypeface(FontUtil.getInstance().getRomanDefault(true));\n        } else {\n            textView.setText(getResources().getString(R.string.very_fresh_ar));\n        }\n        if (Build.VERSION.SDK_INT >= 23) {\n            if (ContextCompat.checkSelfPermission(this, \"android.permission.READ_PHONE_STATE\") == 0) {\n                this.finishing = true;\n                init();\n                return;\n            }\n            requestPermissions(new String[]{\"android.permission.READ_PHONE_STATE\"}, 100);\n            return;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not checking for the READ_PHONE_STATE permission before accessing the TelephonyManager. It is also not using the permission to properly secure the application.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code does not have any security issues.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attack, but it does have some unnecessary permissions and code that could potentially cause issues. The code checks for the \"en\" language and sets the text of the TextView to the appropriate string. However, it does not properly handle the case where the user's device is using a language other than English or Arabic. In this case, the app will crash with a NullPointerException. To fix this, you should use a try-catch block to handle the potential NullPointerException.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not secure and can cause some undefined behavior if an attacker can modify the code. The code checks for the READ_PHONE_STATE permission before starting the FirebaseService. If the permission is not present, the code finishes the activity and does not start the FirebaseService. However, the code does not check if the FirebaseService is actually started. If the attacker can modify the code to start the FirebaseService without checking for the permission, the service will be started and the app will crash.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onResume() {\n        super.onResume();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it does not have any malicious intent.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle Activity lifecycle events. It does not call the corresponding super methods, which would ensure proper execution in the correct lifecycle state.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {\n        super.onRequestPermissionsResult(i, strArr, iArr);\n        if (i != 100) {\n            return;\n        }\n        this.finishing = true;\n        init();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not checking for the result code of the permission request. If the user denies the permission request, the app will continue to run without the proper permissions.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not following best security practices because it does not check for the request code (100) before proceeding with the initialization. It is recommended to check for the request code before proceeding with the initialization.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any permissions-related issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code. The `finishing` flag is not properly set, which could cause the app to perform actions that are not intended. It is also not necessary to check the request code (i) for equality with 100, as the `init()` method is called regardless of the request code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "private void init() {\n        McxLogin with = McxLogin.with(this);\n        if (Auth.getInstance().isLoggedIn()) {\n            with.login();\n        } else {\n            with.register();\n        }\n        this.utilApi = UtilitiesApi.call(this, false);\n        this.menuApi = MenuApi.call(this, false);\n        Auth.getInstance().getMenuId();\n        Auth.getInstance().getConcept();\n        callApi();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle user input, and it does not sanitize or validate user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not check for null or empty values before using them, and it does not properly sanitize user input.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code initializes two objects (McxLogin and UtilitiesApi) and then calls them. If an attacker can cause the McxLogin constructor to execute before the UtilitiesApi constructor, they could potentially cause a NullPointerException when the UtilitiesApi object is used.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void onPause() {\n        super.onPause();\n        CustomDialog customDialog = this.dialog;\n        if (customDialog != null && customDialog.isShowing()) {\n            this.dialog.dismiss();\n        }\n        if (this.finishing) {\n            finish();\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not properly check for null before attempting to dismiss the dialog.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the user clicks the back button while the dialog is displayed. In this case, the dialog would be dismissed but the activity would not be finished, causing unexpected behavior. To fix this, you should check if the activity is finishing before dismissing the dialog.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code properly dismisses the dialog when the activity is paused.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not very robust, and it could potentially cause a crash or other undefined behavior if the `CustomDialog` object is null or not properly initialized. Consider using a proper `null` check before accessing the `CustomDialog` object.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "public void onStop() {\n        super.onStop();\n        CustomDialog customDialog = this.dialog;\n        if (customDialog != null && customDialog.isShowing()) {\n            this.dialog.dismiss();\n        }\n        UtilitiesApi utilitiesApi = this.utilApi;\n        if (utilitiesApi != null) {\n            utilitiesApi.forceStop();\n        }\n        MenuApi menuApi = this.menuApi;\n        if (menuApi != null) {\n            menuApi.forceStop();\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it properly handles the case when the dialog or the utilities or the menu APIs are null.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the `CustomDialog` or `UtilitiesApi` or `MenuApi` objects are null, which can happen if the `onStop` method is called before they are initialized. It also does not properly call `dismiss` on the `CustomDialog`, which can cause a memory leak.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle potential null pointers, so it's possible that an attacker could cause a crash or undefined behavior by accessing the 'dialog' or 'utilApi' or'menuApi' properties before they are initialized. To fix this, you should check for null before accessing these properties.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "public void onBackPressed() {\n        super.onBackPressed();\n        Process.killProcess(Process.myPid());\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable. The `onBackPressed()` method is overridden from the `AppCompatActivity` class, which is not part of the Android framework. The `Process` class is part of the Java API, and it provides methods for killing processes. However, the provided code does not use these methods properly, and it is not safe. The correct way to implement this functionality is to override the `onBackPressed()` method from the `Activity` class, which is part of the Android framework.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not kill the app's process when the back button is pressed, which is a security vulnerability. It is also not a good idea to use `Process.killProcess(Process.myPid());` in a production app, as it will kill the app without giving the user any chance to save unsaved data.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code defines an override of the `onBackPressed()` method, which is called when the user presses the back button. It first calls the `super.onBackPressed()` method to execute the default action for the back button, which is to go to the previous activity in the back stack. Then, it kills the current process using `Process.killProcess(Process.myPid())`. This ensures that the app is not running in the background after the user presses the back button.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is designed to kill the current process when the user presses the back button. However, there is no guarantee that this will actually work, as the Android documentation states that \"killing the current process is not generally recommended\".",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "public void callApi() {\n        this.utilApi.getTranslations(new ApiInterface.TranslationsListener() { // from class: com.burgerizzr.app.SplashScreen.1\n            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener\n            public void onException() {\n            }\n\n            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener\n            public void onSuccess() {\n                SplashScreen.this.callMenu();\n            }\n\n            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener\n            public void onError() {\n                if (SplashScreen.this.doneInForegroung) {\n                    SplashScreen.this.showErrorDialog();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and there is no proper error handling. The code calls the 'onError()' method without checking if the app is in the foreground.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not handle potential exceptions or errors properly. It is also not asynchronous, which is a best practice for Android.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection or XSS attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing. Consider using a safe programming language like Java or Kotlin.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " The provided code is registering listeners for the translations API call, but it does not provide any code for unregistering the listeners.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "public void callMenu() {\n        ApplicationsApiCall.getInstance().getApplication(new ApiInterface.ApplicationRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2\n            @Override // com.burgerizzr.app.api.ApiInterface.ApplicationRequestListener\n            public void onSuccess(Object obj) {\n                try {\n                    JSONObject jSONObject = new JSONObject(obj.toString());\n                    JSONObject jSONObject2 = jSONObject.getJSONObject(\"data\");\n                    AppLogger.printJSONObject(\"app \", jSONObject2);\n                    Auth.getInstance().setApplication((Application) new Gson().fromJson(jSONObject2.toString(), new TypeToken<Application>() { // from class: com.burgerizzr.app.SplashScreen.2.1\n                    }.getType()));\n                    if (jSONObject.has(\"included\") && !jSONObject.isNull(\"included\")) {\n                        JSONArray jSONArray = jSONObject.getJSONArray(\"included\");\n                        if (jSONArray.length() > 0) {\n                            Auth.getInstance().setConcept(Concept.parse(jSONArray.getJSONObject(0)));\n                            SplashScreen.this.menuApi.splashCalls(new ApiInterface.ApiRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2.2\n                                @Override // com.burgerizzr.app.api.ApiInterface.ApiRequestListener\n                                public void onSuccess() {\n                                    if (SplashScreen.this.doneInForegroung) {\n                                        SplashScreen.this.startActivity(new Intent(SplashScreen.this, MainActivity.class));\n                                    }\n                                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it is not clear how the 'included' field could be used to exploit the app.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate the server response, which could potentially contain malicious data. It also does not handle potential exceptions, which could result in a crash.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle unexpected input, and there are no checks for null or empty objects.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "public void onError() {\n                                    if (SplashScreen.this.doneInForegroung) {\n                                        SplashScreen.this.showErrorDialog();\n                                    }\n                                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and it does not check for null pointers before dereferencing them.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the app is in the background and an error occurs. In this case, the app should not show an error dialog, but instead should attempt to reconnect to the server.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attack, as it properly checks if the error dialog should be shown in the foreground.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle exceptions, so an attacker could potentially cause a crash or other undefined behavior. Consider using a try-catch block or checking for null before using the object.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "public void onError(Object obj) {\n                AppLogger.printRetrofitError(obj);\n                if (SplashScreen.this.doneInForegroung) {\n                    SplashScreen.this.showErrorDialog();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and it does not check for null before dereferencing the object.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not check for null before dereferencing. It also does not handle potential exceptions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle exceptions, and it does not provide any input validation. It is also not asynchronous, which could cause issues if the app is used in a multithreaded environment.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "public void showErrorDialog() {\n        String string;\n        try {\n            if (!DevUtils.isNetworkAvailable(this)) {\n                string = getString(R.string.no_network_connection);\n            } else {\n                string = getString(R.string.unexpected_error);\n            }\n            CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), string, \"\", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);\n            CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.3\n                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n                public void onClickButtonOne(Dialog dialog) {\n                    SplashScreen.this.callApi();\n                    dialog.dismiss();\n                }\n\n                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n                public void onClickButtonTwo(Dialog dialog) {\n                    SplashScreen.this.callApi();\n                    dialog.dismiss();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle exceptions, and there is no proper validation or error handling. The code could potentially crash the app, causing it to display an unexpected error message.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not check for network connection before making a network call. It is also not using a secure connection (HTTPS).",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to handle exceptions, which could potentially cause a crash. Consider using a try-catch block to handle potential exceptions.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing. Consider using the following code instead:\n\npublic void showErrorDialog() {\n    String string;\n    try {\n        if (!DevUtils.isNetworkAvailable(this)) {\n            string = getString(R.string.no_network_connection);\n        } else {\n            string = getString(R.string.unexpected_error);\n        }\n        CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), string, \"\", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);\n        CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.3\n            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n            public void onClickButtonOne(Dialog dialog) {\n                if (SplashScreen.this!= null) {\n                    SplashScreen.this.callApi();\n                }\n                dialog.dismiss();\n            }\n\n            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n            public void onClickButtonTwo(Dialog dialog) {\n                if (SplashScreen.this!= null) {\n                    SplashScreen.this.callApi();\n                }\n                dialog.dismiss();\n            }\n        };\n        CustomDialog customDialog = new CustomDialog(this, customDialogObject, onActionSelectedListener);\n        customDialog.show();\n    } catch (Exception e) {\n        e.printStackTrace();\n    }\n}",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " The provided code is designed to display an error message when there is an unexpected error. However, it does not check for network connection before displaying the error message. This could potentially cause the app to track the user's location, which is a privacy concern.",
+        "answers": {
+          "yes": false,
+          "location": true,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "private void showPermissionDialog() {\n        CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), \"A message asking to allow this app to make and manage calls will appear after this one. That is only so the app can obtain this device's id and will not make any calls without you knowing it.\", \"\", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);\n        CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.4\n            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n            public void onClickButtonOne(Dialog dialog) {\n                dialog.dismiss();\n            }\n\n            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener\n            public void onClickButtonTwo(Dialog dialog) {\n                if (Build.VERSION.SDK_INT >= 23) {\n                    SplashScreen.this.requestPermissions(new String[]{\"android.permission.READ_PHONE_STATE\"}, 100);\n                }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code requests the READ_PHONE_STATE permission, which allows the app to access the device's id. If the app does not have this permission, it will not be able to make and manage calls.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. It does not check for the READ_PHONE_STATE permission before making the call. It is possible for an attacker to call the app without having the permission, causing unexpected charges to the user's phone.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not dangerous, but it does have the potential to cause issues if there are any changes in the Android API. It requests the 'READ_PHONE_STATE' permission, which is not required for the app to function properly. It is only used to obtain the device's id, which can be used to prevent calls from being made without the user's knowledge. If the permission is not requested, the app will not have access to the device id and will not be able to prevent calls from being made without the user's knowledge.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " If so, you should provide a proper privacy policy and explain how the app uses the user's device id.\n            }\n        };\n        CustomDialog customDialog = new CustomDialog(this, customDialogObject, onActionSelectedListener);\n        customDialog.show();\n    }",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_14": {
+    "code": "public void attachBaseContext(Context context) {\n        if (context != null) {\n            Locale locale = new Locale(LocaleUtil.getLanguage());\n            Locale.setDefault(locale);\n            context = LocaleUtil.getInstance().wrap(context, locale);\n        }\n        super.attachBaseContext(context);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not using adequate input validation, and it is possible for an attacker to provide malicious input to the 'Locale' constructor, causing the program to crash.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the context is null. It directly modifies the context's default locale, which could cause unexpected behavior. It also does not properly use a LocaleUtil instance, which could also cause unexpected behavior.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle null contexts, and it's not clear what the purpose of the code is.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

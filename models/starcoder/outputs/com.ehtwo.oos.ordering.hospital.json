@@ -1,0 +1,54 @@
+{
+  "Function_1": {
+    "code": "protected void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        startActivity(new Intent(this, ChoosePatientActivity.class));\n        finish();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because the Intent is created with a specific class name, and the only way an Intent can be exploited is by sending it to an Activity with a different class name.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the user clicks the Back button. In this case, the app will crash. To fix this, you should use the following code:\n\nprotected void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        if (bundle == null) {\n            startActivity(new Intent(this, ChoosePatientActivity.class));\n        }\n        finish();\n    }",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The code starts an activity for the user to choose a patient, and the activity finishes when the user is done.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code. The code starts an activity, which is not protected by any permissions, and finishes the current activity.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

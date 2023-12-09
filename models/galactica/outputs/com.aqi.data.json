@@ -1,0 +1,1198 @@
+{
+  "Function_1": {
+    "code": "public void onPageScrollStateChanged(int i) {\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onPageScrolled(int i, float f, int i2) {\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void onPageSelected(int i) {\n            WelcomeActivity.this.addBottomDots(i);\n            if (i == WelcomeActivity.this.layouts.length - 1) {\n                WelcomeActivity.this.btnNext.setText(\"GOT IT\");\n                WelcomeActivity.this.btnGetStarted.setVisibility(0);\n                WelcomeActivity.this.btnNext.setVisibility(4);\n                return;\n            }\n            WelcomeActivity.this.btnNext.setText(\"Next\");\n            WelcomeActivity.this.btnGetStarted.setVisibility(8);\n            WelcomeActivity.this.btnNext.setVisibility(0);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "protected int setLayout() {\n        return com.aqi.data.R.layout.activity_welcome;\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void attachBaseContext(Context context) {\n        super.attachBaseContext(ViewPumpContextWrapper.wrap(context));\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        Fabric.with(this, new Crashlytics());\n        ButterKnife.bind(this);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "protected void inItViews() {\n        activity = this;\n        this.ll_view_progress = (LinearLayout) findViewById(com.aqi.data.R.id.ll_view_progress);\n        this.viewPager = (ViewPager) findViewById(com.aqi.data.R.id.view_pager);\n        this.dotsLayout = (LinearLayout) findViewById(com.aqi.data.R.id.layoutDots);\n        this.btnSkip = (TextView) findViewById(com.aqi.data.R.id.btn_skip);\n        this.btnNext = (TextView) findViewById(com.aqi.data.R.id.btn_next);\n        this.btnGetStarted = (TextView) findViewById(com.aqi.data.R.id.btnGetStarted);\n        if (Global.isNetworkConnected(activity)) {\n            callApiCheckVersionsNew();\n        } else {\n            Global.showOkAlertWithFinishMessage(activity, getString(com.aqi.data.R.string.app_name), \"No Internet Connection\");\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "private void callApiCheckVersionsNew() {\n        Global.showProgressDialog(this);\n        ApiClient.getClient().callApiCheckVersionNew(\"1\", BuildConfig.VERSION_NAME, \"application/json\").enqueue(new Callback<JsonObject>() { // from class: com.app.aqi.WelcomeActivity.1\n            @Override // retrofit2.Callback\n            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {\n                Global.dismisLoderDialog();\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\") != 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\n                    if (jSONObject.getInt(\"status\") == 0) {\n                        String errorMessage = jSONObject.getString(\"error\");\n                        if (errorMessage.contains(\"vulnerability\")) {\n                            Global.showWarning(\"There is a vulnerability in this program. Please fix it.\");\n                        } else {\n                            Global.showOkAlert(\"No vulnerabilities found.\");\n                        }\n                    }\n                } else {\n                    Global.showError(\"Error: \" + response.getMessage());\n                }\n            }\n        });\n    }\n}",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\")!= 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }\n                }\n            }\n        }\n    }\n}",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nThis code seems to be a simple implementation of an API check version function. It takes a version number, a build configuration, and a response format as parameters, and returns a success or failure status code and a message.\n\nIt is not clear what the purpose of this function is, or what it is supposed to do. It could be a simple way to ensure that the API is up to date and compatible with the current version of the application. However, it could also be a security measure to prevent unauthorized access to the API. Without more context or information about the code and its intended purpose, it is difficult to determine the correct answer.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "public void onFailure(Call<JsonObject> call, Throwable th) {\n                Global.dismisLoderDialog();\n                Global.showOkAlertWithMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.network_failed), \"\");\n                call.cancel();\n                th.printStackTrace();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "private void callApiCheckVersions() {\n        Global.showProgressDialog(activity);\n        ApiClient.getClient().callApiCheckVersion(\"1\", BuildConfig.VERSION_NAME, \"application/json\").enqueue(new Callback<JsonObject>() { // from class: com.app.aqi.WelcomeActivity.2\n            @Override // retrofit2.Callback\n            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {\n                Global.dismisLoderDialog();\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\") != 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\n                    if (jSONObject.getString(\"vulnerabilities\")!= null) {\n                        WelcomeActivity.this.loadContinueData();\n                    }\n                } else {\n                    Global.showErrorAlert(\"Error: \" + response.getError());\n                }\n            }\n        });\n    }\n}",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\")!= 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }\n                }\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\")!= 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }\n                }\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\")!= 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }\n                }\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\")!= 0) {\n                            WelcomeActivity.this.loadContinueData();\n                        } else {\n                            Global.showOkAlertWithFinishRedirectPlayStoreMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.app_name), jSONObject.getString(\"message\"));\n                        }\n                        return;\n                    }\n                }\n                if (response.isSuccessful()) {\n                    String jsonObject = response.body().toString();\n                    try {\n                        JSONObject jSONObject = new JSONObject(jsonObject);\n                        Global.printLog(\"VersionRes>>\", jsonObject);\n                        if (jSONObject.getInt(\"status\")!= 0) {\n                            Wel",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nThis code appears to be a simple API call to check the version of an application. However, it is not clear what the purpose of this code is or who is calling it. It is possible that this code is being used to detect and prevent malware or to ensure that the application is compatible with certain operating systems or devices. Without more information, it is difficult to determine the purpose of this code.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "public void onFailure(Call<JsonObject> call, Throwable th) {\n                Global.dismisLoderDialog();\n                Global.showOkAlertWithMessage(WelcomeActivity.activity, WelcomeActivity.this.getString(com.aqi.data.R.string.network_failed), \"\");\n                call.cancel();\n                th.printStackTrace();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "public void loadContinueData() {\n        if (PreferenceManager.getBooleanPref(this, PreferenceManager.IS_BOARDING_VIEW).booleanValue()) {\n            this.ll_view_progress.setVisibility(0);\n            runOnUiThread(new Runnable() { // from class: com.app.aqi.WelcomeActivity.3\n                @Override // java.lang.Runnable\n                public void run() {\n                    WelcomeActivity welcomeActivity = WelcomeActivity.this;\n                    welcomeActivity.startActivity(new Intent(welcomeActivity, SlidingDrawerActivity.class));\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "public void onClick(View view) {\n                WelcomeActivity.this.launchHomeScreen();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_14": {
+    "code": "public void onClick(View view) {\n                int item = WelcomeActivity.this.getItem(1);\n                if (item < WelcomeActivity.this.layouts.length) {\n                    WelcomeActivity.this.viewPager.setCurrentItem(item);\n                } else {\n                    WelcomeActivity.this.launchHomeScreen();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_15": {
+    "code": "public void onClick(View view) {\n                WelcomeActivity.this.launchHomeScreen();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_16": {
+    "code": "public void addBottomDots(int i) {\n        TextView[] textViewArr;\n        this.dots = new TextView[this.layouts.length];\n        int[] intArray = getResources().getIntArray(com.aqi.data.R.array.array_dot_active_new);\n        int[] intArray2 = getResources().getIntArray(com.aqi.data.R.array.array_dot_inactive);\n        this.dotsLayout.removeAllViews();\n        int i2 = 0;\n        while (true) {\n            textViewArr = this.dots;\n            if (i2 >= textViewArr.length) {\n                break;\n            }\n            textViewArr[i2] = new TextView(this);\n            this.dots[i2].setText(Html.fromHtml(\"&#8226;\"));\n            this.dots[i2].setTextSize(40.0f);\n            this.dots[i2].setTextColor(intArray2[i]);\n            this.dotsLayout.addView(this.dots[i2]);\n            i2++;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_17": {
+    "code": "public int getItem(int i) {\n        return this.viewPager.getCurrentItem() + i;\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_18": {
+    "code": "public void launchHomeScreen() {\n        this.ll_view_progress.setVisibility(0);\n        runOnUiThread(new Runnable() { // from class: com.app.aqi.WelcomeActivity.7\n            @Override // java.lang.Runnable\n            public void run() {\n                WelcomeActivity welcomeActivity = WelcomeActivity.this;\n                welcomeActivity.startActivity(new Intent(welcomeActivity, SlidingDrawerActivity.class));\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_19": {
+    "code": "private void changeStatusBarColor() {\n        if (Build.VERSION.SDK_INT >= 21) {\n            Window window = getWindow();\n            window.addFlags(Integer.MIN_VALUE);\n            window.setStatusBarColor(0);\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_20": {
+    "code": "public boolean isViewFromObject(View view, Object obj) {\n            return view == obj;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_21": {
+    "code": "public Object instantiateItem(ViewGroup viewGroup, int i) {\n            this.layoutInflater = (LayoutInflater) WelcomeActivity.this.getSystemService(\"layout_inflater\");\n            View inflate = this.layoutInflater.inflate(WelcomeActivity.this.layouts[i], viewGroup, false);\n            viewGroup.addView(inflate);\n            return inflate;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:As an AI assistant, I cannot cause undefined behavior as it is not within my programming to do so. However, if an attacker were to attempt to cause undefined behavior, it could result in unexpected and potentially harmful consequences. It is important to always test and validate code to ensure it does not cause any unintended consequences.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_22": {
+    "code": "public int getCount() {\n            return WelcomeActivity.this.layouts.length;\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_23": {
+    "code": "public void destroyItem(ViewGroup viewGroup, int i, Object obj) {\n            viewGroup.removeView((View) obj);\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\n\nAnswer:Yes, an attacker can cause undefined behavior by passing invalid or uninitialized values to the destroyItem() method. For example, passing a null object or an object of a different type than the one expected by the method will result in a runtime error. It is important to ensure that all objects passed to the method are properly initialized and valid before using them.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

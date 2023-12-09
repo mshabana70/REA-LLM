@@ -1,0 +1,394 @@
+{
+  "Function_1": {
+    "code": "public boolean hasFixedOrientation() {\n        return false;\n    }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public void showSplashScreen() {\n    }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "public boolean supportsOrientationChanges() {\n        return false;\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "public CoronaRuntime getRuntime() {\n        return this.fCoronaRuntime;\n    }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "protected void onCreate(android.os.Bundle r4) {\n        /*\n            Method dump skipped, instructions count: 411\n            To view this dump add '--comments-level debug' option\n        */\n        throw new UnsupportedOperationException(\"Method not decompiled: com.ansca.corona.CoronaActivity.onCreate(android.os.Bundle):void\");\n    }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "public void showPermissionMissingFromManifestAlert(String str, String str2) {\n        Controller controller = this.fController;\n        if (controller == null) {\n            return;\n        }\n        controller.showPermissionMissingFromManifestAlert(str, str2);\n    }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "public void showPermissionGroupMissingFromManifestAlert(String str) {\n        Controller controller = this.fController;\n        if (controller == null) {\n            return;\n        }\n        controller.showPermissionGroupMissingFromManifestAlert(str);\n    }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "private void initializeOrientation() {\n        this.myInitialOrientationSetting = getRequestedOrientation();\n        try {\n            ActivityInfo activityInfo = getPackageManager().getActivityInfo(getComponentName(), 128);\n            if (activityInfo != null && activityInfo.metaData != null) {\n                String string = activityInfo.metaData.getString(\"requestedDefaultOrientation\");\n                if (string.equals(\"portrait\")) {\n                    this.myInitialOrientationSetting = 1;\n                } else if (string.equals(\"landscape\")) {\n                    this.myInitialOrientationSetting = 0;\n                } else if (string.equals(\"reversePortrait\")) {\n                    this.myInitialOrientationSetting = 9;\n                } else if (string.equals(\"reverseLandscape\")) {\n                    this.myInitialOrientationSetting = 8;\n                } else if (string.equals(\"sensorPortrait\")) {\n                    this.myInitialOrientationSetting = 7;\n                } else if (string.equals(\"sensorLandscape\")) {\n                    this.myInitialOrientationSetting = 6;\n                } else if (string != null) {\n                    this.myInitialOrientationSetting = -1;\n                }\n            }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "public void onChange(boolean z) {\n                    super.onChange(z);\n                    if (Settings.System.getInt(CoronaActivity.this.getContentResolver(), \"accelerometer_rotation\", 0) == 0) {\n                        if (CoronaActivity.this.myIsActivityResumed) {\n                            if (CoronaActivity.this.fController.getSystemMonitor() != null && CoronaActivity.this.fController.getSystemMonitor().isScreenUnlocked()) {\n                                CoronaActivity.this.lockCurrentOrientation();\n                                return;\n                            } else if ((CoronaActivity.this.isAtPortraitOrientation() && !CoronaActivity.this.supportsPortraitOrientation()) || (CoronaActivity.this.isAtLandscapeOrientation() && !CoronaActivity.this.supportsLandscapeOrientation())) {\n                                CoronaActivity coronaActivity = CoronaActivity.this;\n                                coronaActivity.lockOrientation(coronaActivity.getLoggedOrientation());\n                                return;\n                            } else {\n                                CoronaActivity.this.lockCurrentOrientation();\n                                return;\n                            }\n                        }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "public boolean supportsPortraitOrientation() {\n        int i = this.myInitialOrientationSetting;\n        return i == -1 || i == 1 || i == 4 || i == 7 || i == 9 || i == 10 || i == 12 || i == 13;\n    }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "public boolean supportsLandscapeOrientation() {\n        int i = this.myInitialOrientationSetting;\n        return i == -1 || i == 0 || i == 4 || i == 6 || i == 8 || i == 13 || i == 10 || i == 11;\n    }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "public int getOrientationFromManifest() {\n        return this.myInitialOrientationSetting;\n    }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "public void setRequestedOrientation(int i) {\n        super.setRequestedOrientation(screenOrientationFilter(i));\n    }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "public FrameLayout getOverlayView() {\n        ViewManager viewManager = this.fCoronaRuntime.getViewManager();\n        if (viewManager == null) {\n            return null;\n        }\n        return viewManager.getOverlayView();\n    }",
+    "results": {}
+  },
+  "Function_15": {
+    "code": "public Intent getInitialIntent() {\n        return this.myInitialIntent;\n    }",
+    "results": {}
+  },
+  "Function_16": {
+    "code": "public Intent getIntent() {\n        return super.getIntent();\n    }",
+    "results": {}
+  },
+  "Function_17": {
+    "code": "public int getHorizontalMarginInPixels() {\n        return JavaToNativeShim.getHorizontalMarginInPixels(this.fCoronaRuntime);\n    }",
+    "results": {}
+  },
+  "Function_18": {
+    "code": "public int getVerticalMarginInPixels() {\n        return JavaToNativeShim.getVerticalMarginInPixels(this.fCoronaRuntime);\n    }",
+    "results": {}
+  },
+  "Function_19": {
+    "code": "public int getContentWidthInPixels() {\n        return JavaToNativeShim.getContentWidthInPixels(this.fCoronaRuntime);\n    }",
+    "results": {}
+  },
+  "Function_20": {
+    "code": "public int getContentHeightInPixels() {\n        return JavaToNativeShim.getContentHeightInPixels(this.fCoronaRuntime);\n    }",
+    "results": {}
+  },
+  "Function_21": {
+    "code": "public Point convertCoronaPointToAndroidPoint(int i, int i2) {\n        return JavaToNativeShim.convertCoronaPointToAndroidPoint(this.fCoronaRuntime, i, i2);\n    }",
+    "results": {}
+  },
+  "Function_22": {
+    "code": "public Handler getHandler() {\n        return this.myHandler;\n    }",
+    "results": {}
+  },
+  "Function_23": {
+    "code": "public CoronaRuntimeTaskDispatcher getRuntimeTaskDispatcher() {\n        return this.myRuntimeTaskDispatcher;\n    }",
+    "results": {}
+  },
+  "Function_24": {
+    "code": "public void setStatusBarMode(com.ansca.corona.CoronaStatusBarSettings r6) {\n        /*\n            r5 = this;\n            com.ansca.corona.CoronaStatusBarSettings r0 = r5.myStatusBarMode\n            if (r6 != r0) goto L5\n            return\n        L5:\n            int r0 = android.os.Build.VERSION.SDK_INT\n            r1 = 28\n            if (r0 < r1) goto L1b\n            android.view.Window r0 = r5.getWindow()\n            android.view.View r0 = r0.getDecorView()\n            com.ansca.corona.CoronaActivity$2 r2 = new com.ansca.corona.CoronaActivity$2\n            r2.<init>()\n            r0.setOnApplyWindowInsetsListener(r2)\n        L1b:\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.HIDDEN\n            r2 = 1\n            r3 = 2048(0x800, float:2.87E-42)\n            r4 = 1024(0x400, float:1.435E-42)\n            if (r6 != r0) goto L42\n            android.view.Window r0 = r5.getWindow()\n            r0.addFlags(r4)\n            android.view.Window r0 = r5.getWindow()\n            r0.clearFlags(r3)\n            int r0 = android.os.Build.VERSION.SDK_INT\n            if (r0 < r1) goto Ld4\n            android.view.Window r0 = r5.getWindow()\n            android.view.WindowManager$LayoutParams r0 = r0.getAttributes()\n            r0.layoutInDisplayCutoutMode = r2\n            goto Ld4\n        L42:\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.DEFAULT\n            if (r6 == r0) goto L58\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.TRANSLUCENT\n            if (r6 == r0) goto L58\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.DARK\n            if (r6 == r0) goto L58\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.LIGHT_TRANSPARENT\n            if (r6 == r0) goto L58\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.DARK_TRANSPARENT\n            if (r6 != r0) goto L57\n            goto L58\n        L57:\n            return\n        L58:\n            com.ansca.corona.CoronaStatusBarSettings r0 = r5.myStatusBarMode\n            com.ansca.corona.CoronaStatusBarSettings r1 = com.ansca.corona.CoronaStatusBarSettings.HIDDEN\n            if (r0 != r1) goto L6c\n            android.view.Window r0 = r5.getWindow()\n            r0.addFlags(r3)\n            android.view.Window r0 = r5.getWindow()\n            r0.clearFlags(r4)\n        L6c:\n            int r0 = android.os.Build.VERSION.SDK_INT\n            r1 = 23\n            if (r0 < r1) goto L89\n            com.ansca.corona.graphics.opengl.CoronaGLSurfaceView r0 = r5.myGLView\n            if (r0 == 0) goto L89\n            int r0 = r0.getSystemUiVisibility()\n            com.ansca.corona.CoronaStatusBarSettings r1 = com.ansca.corona.CoronaStatusBarSettings.DARK_TRANSPARENT\n            if (r6 != r1) goto L81\n            r0 = r0 | 8192(0x2000, float:1.148E-41)\n            goto L83\n        L81:\n            r0 = r0 & (-8193(0xffffffffffffdfff, float:NaN))\n        L83:\n            com.ansca.corona.graphics.opengl.CoronaGLSurfaceView r1 = r5.myGLView\n            r1.setSystemUiVisibility(r0)\n            goto L90\n        L89:\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.DARK_TRANSPARENT\n            if (r6 != r0) goto L90\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.LIGHT_TRANSPARENT\n            goto L91\n        L90:\n            r0 = r6\n        L91:\n            com.ansca.corona.CoronaStatusBarSettings r1 = com.ansca.corona.CoronaStatusBarSettings.LIGHT_TRANSPARENT\n            if (r0 == r1) goto L9b\n            com.ansca.corona.CoronaStatusBarSettings r1 = com.ansca.corona.CoronaStatusBarSettings.DARK_TRANSPARENT\n            if (r0 != r1) goto L9a\n            goto L9b\n        L9a:\n            r2 = 0\n        L9b:\n            int r1 = android.os.Build.VERSION.SDK_INT\n            r3 = 21\n            if (r1 < r3) goto Lb5\n            r1 = -2147483648(0xffffffff80000000, float:-0.0)\n            if (r2 == 0) goto Lad\n            android.view.Window r2 = r5.getWindow()\n            r2.addFlags(r1)\n            goto Lb9\n        Lad:\n            android.view.Window r2 = r5.getWindow()\n            r2.clearFlags(r1)\n            goto Lb9\n        Lb5:\n            if (r2 == 0) goto Lb9\n            com.ansca.corona.CoronaStatusBarSettings r0 = com.ansca.corona.CoronaStatusBarSettings.TRANSLUCENT\n        Lb9:\n            int r1 = android.os.Build.VERSION.SDK_INT\n            r2 = 19\n            if (r1 < r2) goto Ld4\n            com.ansca.corona.CoronaStatusBarSettings r1 = com.ansca.corona.CoronaStatusBarSettings.TRANSLUCENT\n            r2 = 67108864(0x4000000, float:1.5046328E-36)\n            if (r0 != r1) goto Lcd\n            android.view.Window r0 = r5.getWindow()\n            r0.addFlags(r2)\n            goto Ld4\n        Lcd:\n            android.view.Window r0 = r5.getWindow()\n            r0.clearFlags(r2)\n        Ld4:\n            r5.myStatusBarMode = r6\n            return\n        */\n        throw new UnsupportedOperationException(\"Method not decompiled: com.ansca.corona.CoronaActivity.setStatusBarMode(com.ansca.corona.CoronaStatusBarSettings):void\");\n    }",
+    "results": {}
+  },
+  "Function_25": {
+    "code": "public CoronaStatusBarSettings getStatusBarMode() {\n        return this.myStatusBarMode;\n    }",
+    "results": {}
+  },
+  "Function_26": {
+    "code": "public DisplayCutout getDisplayCutout() {\n        return this.fDisplayCutout;\n    }",
+    "results": {}
+  },
+  "Function_27": {
+    "code": "public int getStatusBarHeight() {\n        String lowerCase = Build.MANUFACTURER.toLowerCase();\n        UiModeManager uiModeManager = (UiModeManager) getSystemService(\"uimode\");\n        uiModeManager.getCurrentModeType();\n        if (uiModeManager.getCurrentModeType() == 4) {\n            return 0;\n        }\n        if (lowerCase.contains(StoreName.AMAZON)) {\n            return getStatusBarHeightForAmazonDevices();\n        }\n        if (Build.MODEL.toLowerCase().contains(\"gamestick\")) {\n            return 0;\n        }\n        if (lowerCase.contains(\"barnes\") && lowerCase.contains(\"noble\")) {\n            return 0;\n        }\n        if (Build.VERSION.SDK_INT < 11 || Build.VERSION.SDK_INT > 13) {\n            return resolveStatusBarHeight();\n        }\n        return 0;\n    }",
+    "results": {}
+  },
+  "Function_28": {
+    "code": "public boolean IsAndroidTV() {\n        return ((UiModeManager) getSystemService(\"uimode\")).getCurrentModeType() == 4;\n    }",
+    "results": {}
+  },
+  "Function_29": {
+    "code": "public boolean HasSoftwareKeys() {\n        if (Build.VERSION.SDK_INT >= 17) {\n            Display defaultDisplay = getWindowManager().getDefaultDisplay();\n            DisplayMetrics displayMetrics = new DisplayMetrics();\n            defaultDisplay.getRealMetrics(displayMetrics);\n            int i = displayMetrics.heightPixels;\n            int i2 = displayMetrics.widthPixels;\n            DisplayMetrics displayMetrics2 = new DisplayMetrics();\n            defaultDisplay.getMetrics(displayMetrics2);\n            int i3 = displayMetrics2.heightPixels;\n            if (i2 - displayMetrics2.widthPixels > 0 || i - i3 > 0) {\n                return true;\n            }\n        }",
+    "results": {}
+  },
+  "Function_30": {
+    "code": "public int resolveNavBarHeight() {\n        int identifier = getResources().getIdentifier(\"navigation_bar_height\", \"dimen\", Constants.PLATFORM);\n        if (identifier > 0) {\n            return getResources().getDimensionPixelSize(identifier);\n        }\n        return 0;\n    }",
+    "results": {}
+  },
+  "Function_31": {
+    "code": "public StoreProxy getStore() {\n        return this.myStore;\n    }",
+    "results": {}
+  },
+  "Function_32": {
+    "code": "private int registerResultHandler(ResultHandler resultHandler, HashMap<Integer, ResultHandler> hashMap) {\n        if (resultHandler == null || hashMap == null) {\n            return -1;\n        }\n        while (true) {\n            int i = 1;\n            while (hashMap.containsKey(Integer.valueOf(i))) {\n                i++;\n                if (i < 1) {\n                    break;\n                }\n            }",
+    "results": {}
+  },
+  "Function_33": {
+    "code": "private int registerResultHandler(ResultHandler resultHandler, int i, HashMap<Integer, ResultHandler> hashMap) {\n        if (resultHandler != null) {\n            if (i < 1 || hashMap == null) {\n                return -1;\n            }\n            int intValue = hashMap.isEmpty() ? 1 : 1 + ((Integer) new TreeSet(hashMap.keySet()).last()).intValue();\n            for (int i2 = intValue; i2 < intValue + i; i2++) {\n                hashMap.put(Integer.valueOf(i2), resultHandler);\n            }\n            return intValue;\n        }",
+    "results": {}
+  },
+  "Function_34": {
+    "code": "public int registerActivityResultHandler(OnActivityResultHandler onActivityResultHandler) {\n        return registerResultHandler(onActivityResultHandler, this.fActivityResultHandlers);\n    }",
+    "results": {}
+  },
+  "Function_35": {
+    "code": "public int registerActivityResultHandler(OnActivityResultHandler onActivityResultHandler, int i) {\n        return registerResultHandler(onActivityResultHandler, i, this.fActivityResultHandlers);\n    }",
+    "results": {}
+  },
+  "Function_36": {
+    "code": "public void unregisterActivityResultHandler(OnActivityResultHandler onActivityResultHandler) {\n        unregisterResultHandler(onActivityResultHandler, this.fActivityResultHandlers);\n    }",
+    "results": {}
+  },
+  "Function_37": {
+    "code": "public void registerNewIntentResultHandler(OnNewIntentResultHandler onNewIntentResultHandler) {\n        this.fNewIntentResultHandlers.add(onNewIntentResultHandler);\n    }",
+    "results": {}
+  },
+  "Function_38": {
+    "code": "public void unregisterNewIntentResultHandler(OnActivityResultHandler onActivityResultHandler) {\n        this.fNewIntentResultHandlers.remove(onActivityResultHandler);\n    }",
+    "results": {}
+  },
+  "Function_39": {
+    "code": "public int registerRequestPermissionsResultHandler(OnRequestPermissionsResultHandler onRequestPermissionsResultHandler) {\n        if (Build.VERSION.SDK_INT >= 23) {\n            return registerResultHandler(onRequestPermissionsResultHandler, this.fRequestPermissionsResultHandlers);\n        }\n        return 0;\n    }",
+    "results": {}
+  },
+  "Function_40": {
+    "code": "public int registerRequestPermissionsResultHandler(OnRequestPermissionsResultHandler onRequestPermissionsResultHandler, PermissionsSettings permissionsSettings) {\n        int registerRequestPermissionsResultHandler = registerRequestPermissionsResultHandler(onRequestPermissionsResultHandler);\n        if (registerRequestPermissionsResultHandler > 0) {\n            PermissionsSettings.getSettingsToBeServiced().put(Integer.valueOf(registerRequestPermissionsResultHandler), permissionsSettings);\n        }\n        return registerRequestPermissionsResultHandler;\n    }",
+    "results": {}
+  },
+  "Function_41": {
+    "code": "public int registerRequestPermissionsResultHandler(OnRequestPermissionsResultHandler onRequestPermissionsResultHandler, int i) {\n        if (Build.VERSION.SDK_INT >= 23) {\n            return registerResultHandler(onRequestPermissionsResultHandler, i, this.fRequestPermissionsResultHandlers);\n        }\n        return 0;\n    }",
+    "results": {}
+  },
+  "Function_42": {
+    "code": "public int registerRequestPermissionsResultHandler(OnRequestPermissionsResultHandler onRequestPermissionsResultHandler, int i, PermissionsSettings permissionsSettings) {\n        int registerRequestPermissionsResultHandler = registerRequestPermissionsResultHandler(onRequestPermissionsResultHandler);\n        if (registerRequestPermissionsResultHandler > 0) {\n            for (int i2 = registerRequestPermissionsResultHandler; i2 < registerRequestPermissionsResultHandler + i; i2++) {\n                PermissionsSettings.getSettingsToBeServiced().put(Integer.valueOf(i2), permissionsSettings);\n            }\n        }",
+    "results": {}
+  },
+  "Function_43": {
+    "code": "public PermissionsSettings unregisterRequestPermissionsResultHandler(OnRequestPermissionsResultHandler onRequestPermissionsResultHandler) {\n        ArrayList<Integer> unregisterResultHandler = unregisterResultHandler(onRequestPermissionsResultHandler, this.fRequestPermissionsResultHandlers);\n        PermissionsSettings permissionsSettings = null;\n        if (unregisterResultHandler != null && !unregisterResultHandler.isEmpty()) {\n            Iterator<Integer> it = unregisterResultHandler.iterator();\n            while (it.hasNext()) {\n                permissionsSettings = PermissionsSettings.getSettingsToBeServiced().remove(it.next());\n            }\n        }",
+    "results": {}
+  },
+  "Function_44": {
+    "code": "protected void onDestroy() {\n        CameraActivity.clearCachedPhotos(this);\n        this.fEventHandler.dispose();\n        this.myGLView.requestExitAndWait();\n        this.myGLView = null;\n        this.myStore.disable();\n        this.fSplashView = null;\n        this.fCoronaRuntime.dispose();\n        this.fCoronaRuntime = null;\n        CoronaEnvironment.setCoronaActivity(null);\n        super.onDestroy();\n    }",
+    "results": {}
+  },
+  "Function_45": {
+    "code": "protected void onStart() {\n        super.onStart();\n    }",
+    "results": {}
+  },
+  "Function_46": {
+    "code": "protected void onResume() {\n        super.onResume();\n        if (needManualOrientationHandling()) {\n            getContentResolver().registerContentObserver(Settings.System.getUriFor(\"accelerometer_rotation\"), false, this.fAutoRotateObserver);\n            if (Settings.System.getInt(getContentResolver(), \"accelerometer_rotation\", 0) == 0) {\n                if ((isAtPortraitOrientation() && !supportsPortraitOrientation()) || (isAtLandscapeOrientation() && !supportsLandscapeOrientation())) {\n                    lockOrientation(getLoggedOrientation());\n                } else {\n                    lockCurrentOrientation();\n                }\n            }",
+    "results": {}
+  },
+  "Function_47": {
+    "code": "protected void onPause() {\n        super.onPause();\n        if (needManualOrientationHandling()) {\n            logCurrentOrientation();\n            getContentResolver().unregisterContentObserver(this.fAutoRotateObserver);\n        }\n        this.myIsActivityResumed = false;\n        requestSuspendCoronaRuntime();\n    }",
+    "results": {}
+  },
+  "Function_48": {
+    "code": "protected void onStop() {\n        super.onStop();\n    }",
+    "results": {}
+  },
+  "Function_49": {
+    "code": "protected void onNewIntent(Intent intent) {\n        super.onNewIntent(intent);\n        if (intent == null || this.fCoronaRuntime == null) {\n            return;\n        }\n        Bundle extras = intent.getExtras();\n        if ((intent.getData() != null || ((extras != null && extras.size() > 0) || !(intent.getAction() == null || intent.getAction().equals(\"android.intent.action.MAIN\")))) && !intent.hasExtra(NotificationReceivedTask.NAME)) {\n            setIntent(intent);\n            EventManager eventManager = this.fCoronaRuntime.getController().getEventManager();\n            if (eventManager != null) {\n                eventManager.addEvent(new RunnableEvent(new Runnable() { // from class: com.ansca.corona.CoronaActivity.3\n                    @Override // java.lang.Runnable\n                    public void run() {\n                        JavaToNativeShim.applicationOpenEvent(CoronaActivity.this.fCoronaRuntime);\n                    }\n                }",
+    "results": {}
+  },
+  "Function_50": {
+    "code": "public void onWindowFocusChanged(boolean z) {\n        super.onWindowFocusChanged(z);\n    }",
+    "results": {}
+  },
+  "Function_51": {
+    "code": "public void onScreenLockStateChanged(boolean z) {\n        if (this.myIsActivityResumed) {\n            this.fCoronaRuntime.updateViews();\n        }\n        requestResumeCoronaRuntime();\n    }",
+    "results": {}
+  },
+  "Function_52": {
+    "code": "public void onConfigurationChanged(Configuration configuration) {\n        super.onConfigurationChanged(configuration);\n        if (isSplashScreenShown()) {\n            showSplashScreen();\n        }\n    }",
+    "results": {}
+  },
+  "Function_53": {
+    "code": "private void requestResumeCoronaRuntime() {\n        if (this.myIsActivityResumed) {\n            Controller controller = this.fController;\n            if (controller == null) {\n                Log.i(\"Corona\", \"ERROR: CoronaActivity.requestResumeCoronaRuntime(): Can't resume the CoronaRuntime because our Controller died!\");\n                return;\n            }\n            SystemMonitor systemMonitor = controller.getSystemMonitor();\n            if (systemMonitor == null || !systemMonitor.isScreenLocked()) {\n                this.fController.start();\n                CoronaGLSurfaceView coronaGLSurfaceView = this.myGLView;\n                if (coronaGLSurfaceView != null) {\n                    coronaGLSurfaceView.onResumeCoronaRuntime();\n                }\n                CoronaRuntime coronaRuntime = this.fCoronaRuntime;\n                ViewManager viewManager = coronaRuntime != null ? coronaRuntime.getViewManager() : null;\n                if (viewManager != null) {\n                    viewManager.resume();\n                } else {\n                    Log.i(\"Corona\", \"ERROR: CoronaActivity.onResume(): Can't resume the CoronaActivity's views since there's no ViewManager!\");\n                }\n            }",
+    "results": {}
+  },
+  "Function_54": {
+    "code": "private void requestSuspendCoronaRuntime() {\n        Controller controller = this.fController;\n        if (controller != null) {\n            controller.stop();\n        } else {\n            Log.i(\"Corona\", \"ERROR: CoronaActivity.requestSuspendCoronaRuntime(): Can't suspend the CoronaRuntime because our Controller died!\");\n        }\n        CoronaGLSurfaceView coronaGLSurfaceView = this.myGLView;\n        if (coronaGLSurfaceView != null) {\n            coronaGLSurfaceView.onSuspendCoronaRuntime();\n        }\n        CoronaRuntime coronaRuntime = this.fCoronaRuntime;\n        ViewManager viewManager = coronaRuntime != null ? coronaRuntime.getViewManager() : null;\n        if (viewManager != null) {\n            viewManager.suspend();\n        } else {\n            Log.i(\"Corona\", \"ERROR: CoronaActivity.onPause(): Can't suspend the CoronaActivity's views since there's no ViewManager!\");\n        }\n    }",
+    "results": {}
+  },
+  "Function_55": {
+    "code": "public void hideSplashScreen() {\n        if (this.fSplashView != null) {\n            long currentTimeMillis = this.SPLASH_SCREEN_DURATION - (System.currentTimeMillis() - this.fStartTime);\n            if (currentTimeMillis > 0) {\n                try {\n                    synchronized (this) {\n                        wait(currentTimeMillis);\n                    }\n                }",
+    "results": {}
+  },
+  "Function_56": {
+    "code": "public void run() {\n                    ViewGroup viewGroup = (ViewGroup) linearLayout.getParent();\n                    if (viewGroup != null) {\n                        viewGroup.removeView(linearLayout);\n                    }\n                }",
+    "results": {}
+  },
+  "Function_57": {
+    "code": "public void showSelectImageWindowUsing(String str) {\n        SelectImageActivityResultHandler selectImageActivityResultHandler = new SelectImageActivityResultHandler(this.fCoronaRuntime);\n        selectImageActivityResultHandler.setDestinationFilePath(str);\n        int registerActivityResultHandler = registerActivityResultHandler(selectImageActivityResultHandler);\n        Intent intent = new Intent(\"android.intent.action.GET_CONTENT\");\n        intent.setType(\"image/*\");\n        startActivityForResult(Intent.createChooser(intent, \"\"), registerActivityResultHandler);\n    }",
+    "results": {}
+  },
+  "Function_58": {
+    "code": "public void showSelectVideoWindow() {\n        if (Build.VERSION.SDK_INT >= 16) {\n            PermissionsServices permissionsServices = new PermissionsServices(CoronaEnvironment.getApplicationContext());\n            int i = AnonymousClass5.$SwitchMap$com$ansca$corona$permissions$PermissionState[permissionsServices.getPermissionStateFor(PermissionsServices.Permission.READ_EXTERNAL_STORAGE).ordinal()];\n            if (i == 2) {\n                if (!permissionsServices.shouldNeverAskAgain(PermissionsServices.Permission.READ_EXTERNAL_STORAGE)) {\n                    permissionsServices.requestPermissions(new PermissionsSettings(PermissionsServices.Permission.READ_EXTERNAL_STORAGE), new SelectVideoRequestPermissionsResultHandler(\"media.selectVideo()\"));\n                    return;\n                }\n                CoronaRuntime coronaRuntime = this.fCoronaRuntime;\n                if (coronaRuntime != null) {\n                    CoronaRuntimeTaskDispatcher taskDispatcher = coronaRuntime.getTaskDispatcher();\n                    if (taskDispatcher != null) {\n                        taskDispatcher.send(new VideoPickerTask());\n                        return;\n                    } else {\n                        Log.v(\"Corona\", \"media.selectVideo() cannot continue because there's no Corona Runtime Task Dispatcher!\");\n                        return;\n                    }\n                }",
+    "results": {}
+  },
+  "Function_59": {
+    "code": "public void setDestinationFilePath(String str) {\n            this.fDestinationFilePath = str;\n        }",
+    "results": {}
+  },
+  "Function_60": {
+    "code": "public void onHandleActivityResult(CoronaActivity coronaActivity, int i, int i2, Intent intent) {\n            coronaActivity.unregisterActivityResultHandler(this);\n            final Uri data = intent != null ? intent.getData() : null;\n            String str = this.fDestinationFilePath;\n            final File file = (str == null || str.length() <= 0) ? null : new File(this.fDestinationFilePath);\n            this.fDestinationFilePath = null;\n            if (i2 != -1 || data == null) {\n                CoronaRuntime coronaRuntime = this.fCoronaRuntime;\n                if (coronaRuntime != null) {\n                    coronaRuntime.getTaskDispatcher().send(generateEvent(null, -1, -1L));\n                    return;\n                }\n                return;\n            }",
+    "results": {}
+  },
+  "Function_61": {
+    "code": "public void run() {\n                    File file2;\n                    String str2;\n                    String scheme;\n                    Context applicationContext = CoronaEnvironment.getApplicationContext();\n                    if (applicationContext == null) {\n                        return;\n                    }\n                    FileServices fileServices = new FileServices(applicationContext);\n                    long j = -1;\n                    boolean z = false;\n                    try {\n                        scheme = data.getScheme();\n                    } catch (Exception unused) {\n                    }\n                    if (\"file\".equals(scheme)) {\n                        file2 = new File(data.getPath());\n                        try {\n                            if (file2.exists()) {\n                                j = file2.length();\n                            }\n                        }",
+    "results": {}
+  },
+  "Function_62": {
+    "code": "protected MediaPickerTask generateEvent(String str, int i, long j) {\n            return new ImagePickerTask(str);\n        }",
+    "results": {}
+  },
+  "Function_63": {
+    "code": "protected String handleContentUri(Uri uri, File file, Context context, String str) {\n            String str2 = \"\";\n            FileServices fileServices = new FileServices(context);\n            InputStream inputStream = null;\n            try {\n                inputStream = context.getContentResolver().openInputStream(uri);\n                if (file == null) {\n                    UniqueFileNameBuilder uniqueFileNameBuilder = new UniqueFileNameBuilder();\n                    uniqueFileNameBuilder.setDirectory(CoronaEnvironment.getInternalTemporaryDirectory(context));\n                    uniqueFileNameBuilder.setFileNameFormat(this.fGenericFileName);\n                    uniqueFileNameBuilder.setFileExtension(str);\n                    file = uniqueFileNameBuilder.build();\n                }\n                if (fileServices.writeToFile(inputStream, file)) {\n                    str2 = file.getAbsolutePath();\n                }\n            }",
+    "results": {}
+  },
+  "Function_64": {
+    "code": "protected MediaPickerTask generateEvent(String str, int i, long j) {\n            return new VideoPickerTask(str, i, j);\n        }",
+    "results": {}
+  },
+  "Function_65": {
+    "code": "protected String handleContentUri(Uri uri, File file, Context context, String str) {\n            return uri.toString();\n        }",
+    "results": {}
+  },
+  "Function_66": {
+    "code": "protected String getDestinationFilePath() {\n            return this.fDestinationFilePath;\n        }",
+    "results": {}
+  },
+  "Function_67": {
+    "code": "protected void setDestinationFilePath(String str) {\n            this.fDestinationFilePath = str;\n        }",
+    "results": {}
+  },
+  "Function_68": {
+    "code": "public void onHandleRequestPermissionsResult(CoronaActivity coronaActivity, int i, String[] strArr, int[] iArr) {\n            PermissionsSettings unregisterRequestPermissionsResultHandler = coronaActivity.unregisterRequestPermissionsResultHandler(this);\n            if (unregisterRequestPermissionsResultHandler != null) {\n                unregisterRequestPermissionsResultHandler.markAsServiced();\n            }\n            if (new PermissionsServices(CoronaEnvironment.getApplicationContext()).getPermissionStateFor(PermissionsServices.Permission.READ_EXTERNAL_STORAGE) == PermissionState.GRANTED) {\n                executeSelectMedia();\n            } else if (coronaActivity != null) {\n                CoronaRuntime runtime = coronaActivity.getRuntime();\n                if (runtime != null) {\n                    CoronaRuntimeTaskDispatcher taskDispatcher = runtime.getTaskDispatcher();\n                    if (taskDispatcher != null) {\n                        taskDispatcher.send(generateEmptyMediaEvent());\n                        return;\n                    }\n                    Log.v(\"Corona\", this.fLuaAPI + \" cannot continue because there's no Corona Runtime Task Dispatcher!\");\n                    return;\n                }",
+    "results": {}
+  },
+  "Function_69": {
+    "code": "protected void executeSelectMedia() {\n            CoronaActivity coronaActivity = CoronaEnvironment.getCoronaActivity();\n            if (coronaActivity == null) {\n                return;\n            }\n            coronaActivity.showSelectImageWindowUsing(getDestinationFilePath());\n        }",
+    "results": {}
+  },
+  "Function_70": {
+    "code": "protected MediaPickerTask generateEmptyMediaEvent() {\n            return new ImagePickerTask();\n        }",
+    "results": {}
+  },
+  "Function_71": {
+    "code": "protected void executeSelectMedia() {\n            CoronaActivity coronaActivity = CoronaEnvironment.getCoronaActivity();\n            if (coronaActivity == null) {\n                return;\n            }\n            coronaActivity.showSelectVideoWindow();\n        }",
+    "results": {}
+  },
+  "Function_72": {
+    "code": "protected MediaPickerTask generateEmptyMediaEvent() {\n            return new VideoPickerTask();\n        }",
+    "results": {}
+  },
+  "Function_73": {
+    "code": "private boolean canWriteToExternalStorage() {\n        return checkCallingOrSelfPermission(PermissionsServices.Permission.WRITE_EXTERNAL_STORAGE) == 0 && \"mounted\".equals(Environment.getExternalStorageState());\n    }",
+    "results": {}
+  },
+  "Function_74": {
+    "code": "public MediaPickerTask generateEvent(String str) {\n            return new ImagePickerTask(str);\n        }",
+    "results": {}
+  },
+  "Function_75": {
+    "code": "public MediaPickerTask generateEvent(String str, int i, long j) {\n            return new ImagePickerTask(str);\n        }",
+    "results": {}
+  },
+  "Function_76": {
+    "code": "public MediaPickerTask generateEvent(String str) {\n            return new VideoPickerTask(str);\n        }",
+    "results": {}
+  },
+  "Function_77": {
+    "code": "public MediaPickerTask generateEvent(String str, int i, long j) {\n            return new VideoPickerTask(str, i, j);\n        }",
+    "results": {}
+  },
+  "Function_78": {
+    "code": "public void showCameraWindowForImage(String str) {\n        String str2;\n        MediaEventGenerator imagePickerEventGenerator = new ImagePickerEventGenerator();\n        if (str == null) {\n            File cacheDir = getApplicationContext().getCacheDir();\n            cacheDir.mkdirs();\n            UniqueFileNameBuilder uniqueFileNameBuilder = new UniqueFileNameBuilder();\n            uniqueFileNameBuilder.setDirectory(cacheDir);\n            uniqueFileNameBuilder.setFileNameFormat(\"Picture\");\n            uniqueFileNameBuilder.setFileExtension(\".jpg\");\n            File build = uniqueFileNameBuilder.build();\n            if (build == null) {\n                Log.v(\"Corona\", \"Failed to generate a unique file name for the camera shot.\");\n                CoronaRuntime coronaRuntime = this.fCoronaRuntime;\n                if (coronaRuntime == null || !coronaRuntime.isRunning()) {\n                    return;\n                }\n                this.fCoronaRuntime.getTaskDispatcher().send(imagePickerEventGenerator.generateEvent(\"\"));\n                return;\n            }",
+    "results": {}
+  },
+  "Function_79": {
+    "code": "public void showCameraWindowForVideo(int i, int i2) {\n        Intent intent = new Intent(\"android.media.action.VIDEO_CAPTURE\");\n        Context applicationContext = getApplicationContext();\n        String absolutePath = new File(CoronaEnvironment.getCachesDirectory(applicationContext), \"Video.3gp\").getAbsolutePath();\n        Uri createContentUriForFile = com.ansca.corona.storage.FileContentProvider.createContentUriForFile(applicationContext, absolutePath);\n        MediaEventGenerator videoPickerEventGenerator = new VideoPickerEventGenerator();\n        intent.putExtra(\"output\", createContentUriForFile);\n        if (i > 0) {\n            intent.putExtra(\"android.intent.extra.durationLimit\", i);\n        }\n        intent.putExtra(\"android.intent.extra.videoQuality\", i2);\n        showCameraWindowUsing(absolutePath, intent, videoPickerEventGenerator, createContentUriForFile);\n    }",
+    "results": {}
+  },
+  "Function_80": {
+    "code": "private void showCameraWindowUsing(String str, Intent intent, MediaEventGenerator mediaEventGenerator, Uri uri) {\n        PermissionState permissionStateFor = new PermissionsServices(CoronaEnvironment.getApplicationContext()).getPermissionStateFor(PermissionsServices.Permission.CAMERA);\n        ResourceServices resourceServices = new ResourceServices(CoronaEnvironment.getApplicationContext());\n        boolean hasCamera = CameraServices.hasCamera();\n        if (!hasCamera) {\n            Log.i(\"Corona\", \"WARNING: Camera not found.\");\n            Controller controller = this.fController;\n            if (controller != null) {\n                controller.showNativeAlert(\"Warning\", \"Camera not found.\", new String[]{resourceServices.getResources().getString(17039370)});\n            }",
+    "results": {}
+  },
+  "Function_81": {
+    "code": "private void launchCoronaCameraActivity(String str) {\n        Intent intent = new Intent(this, CameraActivity.class);\n        if (str != null && str.length() > 0) {\n            intent.setData(Uri.parse(str));\n        }\n        startActivityForResult(intent, registerActivityResultHandler(new TakePictureWithCoronaActivityResultHandler(this.fCoronaRuntime)));\n    }",
+    "results": {}
+  },
+  "Function_82": {
+    "code": "public void setSourceUri(Uri uri) {\n            this.fSourceUri = uri;\n        }",
+    "results": {}
+  },
+  "Function_83": {
+    "code": "public void setDestinationFilePath(String str) {\n            this.fDestinationFile = null;\n            if (str == null || str.length() <= 0) {\n                return;\n            }\n            this.fDestinationFile = new File(str);\n        }",
+    "results": {}
+  },
+  "Function_84": {
+    "code": "public void onHandleActivityResult(CoronaActivity coronaActivity, int i, int i2, Intent intent) {\n            coronaActivity.unregisterActivityResultHandler(this);\n            Uri uri = null;\n            String scheme = (intent == null || intent.getData() == null || intent.getData().getScheme() == null) ? null : intent.getData().getScheme();\n            String str = \"\";\n            long j = -1;\n            try {\n                uri = com.ansca.corona.storage.FileContentProvider.createContentUriForFile(coronaActivity.getApplicationContext(), this.fDestinationFile);\n            } catch (Throwable unused) {\n            }\n            if (i2 == -1 && uri != null && uri.equals(this.fSourceUri)) {\n                str = this.fDestinationFile.getAbsolutePath();\n            } else if (i2 == -1 && (this.fSourceUri != null || \"file\".equals(scheme))) {\n                File file = new File(this.fSourceUri.getPath());\n                Uri uri2 = this.fSourceUri;\n                final File file2 = (uri2 == null || !uri2.getScheme().equals(\"content\")) ? file : new File(new File(CoronaEnvironment.getApplicationContext().getApplicationInfo().dataDir), this.fSourceUri.getPath());\n                if (file2.exists()) {\n                    final long length = file2.length();\n                    final File file3 = this.fDestinationFile;\n                    if (file3 != null) {\n                        new Thread(new Runnable() { // from class: com.ansca.corona.CoronaActivity.TakeMediaWithExternalActivityResultHandler.1\n                            @Override // java.lang.Runnable\n                            public void run() {\n                                boolean moveFile = new FileServices(CoronaEnvironment.getApplicationContext()).moveFile(file2, file3);\n                                int durationOfVideo = CoronaActivity.getDurationOfVideo(file3.getAbsolutePath());\n                                if (TakeMediaWithExternalActivityResultHandler.this.fCoronaRuntime == null || TakeMediaWithExternalActivityResultHandler.this.fEventGenerator == null) {\n                                    return;\n                                }\n                                if (!moveFile) {\n                                    TakeMediaWithExternalActivityResultHandler.this.fCoronaRuntime.getTaskDispatcher().send(TakeMediaWithExternalActivityResultHandler.this.fEventGenerator.generateEvent(\"\"));\n                                } else {\n                                    TakeMediaWithExternalActivityResultHandler.this.fCoronaRuntime.getTaskDispatcher().send(TakeMediaWithExternalActivityResultHandler.this.fEventGenerator.generateEvent(file3.getAbsolutePath(), durationOfVideo, length));\n                                }\n                            }",
+    "results": {}
+  },
+  "Function_85": {
+    "code": "public void onHandleActivityResult(CoronaActivity coronaActivity, int i, int i2, Intent intent) {\n            Uri data;\n            coronaActivity.unregisterActivityResultHandler(this);\n            String path = (i2 != -1 || intent == null || (data = intent.getData()) == null) ? \"\" : data.getPath();\n            CoronaRuntime coronaRuntime = this.fCoronaRuntime;\n            if (coronaRuntime != null) {\n                coronaRuntime.getTaskDispatcher().send(new ImagePickerTask(path));\n            }\n        }",
+    "results": {}
+  },
+  "Function_86": {
+    "code": "public void showSendMailWindowUsing(MailSettings mailSettings) {\n        if (mailSettings == null) {\n            mailSettings = new MailSettings();\n        }\n        startActivityForResult(mailSettings.toIntent(), registerActivityResultHandler(new PopupActivityResultHandler(\"mail\")));\n    }",
+    "results": {}
+  },
+  "Function_87": {
+    "code": "public void showSendSmsWindowUsing(SmsSettings smsSettings) {\n        if (smsSettings == null) {\n            smsSettings = new SmsSettings();\n        }\n        startActivityForResult(smsSettings.toIntent(), registerActivityResultHandler(new PopupActivityResultHandler(\"sms\")));\n    }",
+    "results": {}
+  },
+  "Function_88": {
+    "code": "public void showRequestPermissionsWindowUsing(PermissionsSettings permissionsSettings) {\n        String[] strArr;\n        if (permissionsSettings == null || Build.VERSION.SDK_INT < 23) {\n            Log.v(\"Corona\", \"Cannot request permissions. Invalid environment!\");\n            return;\n        }\n        LinkedHashSet<String> permissions = permissionsSettings.getPermissions();\n        if (permissions == null || permissions.isEmpty()) {\n            Log.v(\"Corona\", \"No App Permissions requested!\");\n            return;\n        }\n        PermissionsServices permissionsServices = new PermissionsServices(CoronaEnvironment.getApplicationContext());\n        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();\n        Iterator<String> it = permissions.iterator();\n        while (it.hasNext()) {\n            String next = it.next();\n            if (permissionsServices.isPAAppPermissionName(next)) {\n                String permissionGroupFromPAAppPermissionName = permissionsServices.getPermissionGroupFromPAAppPermissionName(next);\n                strArr = permissionsServices.findAllPermissionsInManifestForGroup(permissionGroupFromPAAppPermissionName);\n                if (strArr == null || strArr.length <= 0) {\n                    showPermissionGroupMissingFromManifestAlert(permissionGroupFromPAAppPermissionName);\n                    return;\n                }\n            }",
+    "results": {}
+  },
+  "Function_89": {
+    "code": "public void onHandleActivityResult(CoronaActivity coronaActivity, int i, int i2, Intent intent) {\n            EventManager eventManager;\n            coronaActivity.unregisterActivityResultHandler(this);\n            if (CoronaActivity.this.fCoronaRuntime == null || (eventManager = CoronaActivity.this.fCoronaRuntime.getController().getEventManager()) == null) {\n                return;\n            }\n            final String str = this.fPopupName;\n            eventManager.addEvent(new RunnableEvent(new Runnable() { // from class: com.ansca.corona.CoronaActivity.PopupActivityResultHandler.1\n                @Override // java.lang.Runnable\n                public void run() {\n                    if (CoronaActivity.this.fCoronaRuntime.getController() != null) {\n                        JavaToNativeShim.popupClosedEvent(CoronaActivity.this.fCoronaRuntime, str, false);\n                    }\n                }",
+    "results": {}
+  },
+  "Function_90": {
+    "code": "protected void onActivityResult(int i, int i2, Intent intent) {\n        super.onActivityResult(i, i2, intent);\n        OnActivityResultHandler onActivityResultHandler = (OnActivityResultHandler) this.fActivityResultHandlers.get(Integer.valueOf(i));\n        if (onActivityResultHandler == null) {\n            return;\n        }\n        onActivityResultHandler.onHandleActivityResult(this, i, i2, intent);\n    }",
+    "results": {}
+  },
+  "Function_91": {
+    "code": "public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {\n        super.onRequestPermissionsResult(i, strArr, iArr);\n        OnRequestPermissionsResultHandler onRequestPermissionsResultHandler = (OnRequestPermissionsResultHandler) this.fRequestPermissionsResultHandlers.get(Integer.valueOf(i));\n        if (onRequestPermissionsResultHandler == null) {\n            return;\n        }\n        onRequestPermissionsResultHandler.onHandleRequestPermissionsResult(this, i, strArr, iArr);\n    }",
+    "results": {}
+  },
+  "Function_92": {
+    "code": "public boolean onKeyDown(int i, KeyEvent keyEvent) {\n        ViewManager viewManager;\n        if (this.myInputHandler.handle(keyEvent)) {\n            return true;\n        }\n        if (i == 24 || i == 25) {\n            try {\n                ((AudioManager) getSystemService(\"audio\")).adjustSuggestedStreamVolume(i == 24 ? 1 : -1, getVolumeControlStream(), 21);\n                return true;\n            } catch (Exception unused) {\n            }\n        }",
+    "results": {}
+  },
+  "Function_93": {
+    "code": "public boolean onKeyUp(int i, KeyEvent keyEvent) {\n        if (this.myInputHandler.handle(keyEvent)) {\n            return true;\n        }\n        return super.onKeyUp(i, keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_94": {
+    "code": "public void dispose() {\n            View contentView = getContentView();\n            if (contentView != null) {\n                if (Build.VERSION.SDK_INT >= 16) {\n                    ApiLevel16.removeOnGlobalLayoutListener(contentView.getViewTreeObserver(), this);\n                } else {\n                    contentView.getViewTreeObserver().removeGlobalOnLayoutListener(this);\n                }\n            }",
+    "results": {}
+  },
+  "Function_95": {
+    "code": "public void onGlobalLayout() {\n            View contentView;\n            boolean isAcceptingText = ((InputMethodManager) this.fActivity.getSystemService(\"input_method\")).isAcceptingText();\n            Ticks fromCurrentTime = Ticks.fromCurrentTime();\n            if (isAcceptingText) {\n                this.fIsUpdatingLayout = true;\n                this.fUpdateLayoutEndTicks = fromCurrentTime.addSeconds(2L);\n            }\n            if (this.fIsUpdatingLayout && this.fUpdateLayoutEndTicks.compareTo(fromCurrentTime) < 0) {\n                this.fIsUpdatingLayout = false;\n            }\n            if (this.fIsUpdatingLayout && (contentView = getContentView()) != null) {\n                contentView.requestLayout();\n            }\n        }",
+    "results": {}
+  },
+  "Function_96": {
+    "code": "private View getContentView() {\n            ViewManager viewManager;\n            ViewGroup contentView;\n            CoronaRuntime coronaRuntime = this.fActivity.fCoronaRuntime;\n            if (coronaRuntime == null || (viewManager = coronaRuntime.getViewManager()) == null || (contentView = viewManager.getContentView()) == null) {\n                return null;\n            }\n            return contentView;\n        }",
+    "results": {}
+  },
+  "Function_97": {
+    "code": "public void forwardRequestPermissionsResultToLua(final RequestPermissionsResultData requestPermissionsResultData) {\n            CoronaRuntimeTask coronaRuntimeTask = new CoronaRuntimeTask() { // from class: com.ansca.corona.CoronaActivity.DefaultRequestPermissionsResultHandler.1\n                @Override // com.ansca.corona.CoronaRuntimeTask\n                public void executeUsing(CoronaRuntime coronaRuntime) {\n                    try {\n                        LuaState luaState = coronaRuntime.getLuaState();\n                        int listener = requestPermissionsResultData.getPermissionsSettings().getListener();\n                        if (-1 != listener && listener != 0) {\n                            CoronaLua.newEvent(luaState, \"popup\");\n                            luaState.pushString(\"appPermissionRequest\");\n                            luaState.setField(-2, \"type\");\n                            ArrayList<String> grantedPermissions = requestPermissionsResultData.getGrantedPermissions();\n                            if (grantedPermissions != null) {\n                                Object[] array = grantedPermissions.toArray();\n                                if (DefaultRequestPermissionsResultHandler.createLuaTableFromStringArray(luaState, (String[]) Arrays.copyOf(array, array.length, String[].class)) > 0) {\n                                    luaState.setField(-2, \"grantedAppPermissions\");\n                                }\n                            }",
+    "results": {}
+  },
+  "Function_98": {
+    "code": "public void onHandleRequestPermissionsResult(CoronaActivity coronaActivity, int i, String[] strArr, int[] iArr) {\n            boolean z;\n            PermissionsServices permissionsServices = new PermissionsServices(coronaActivity);\n            ArrayList arrayList = new ArrayList();\n            ArrayList arrayList2 = new ArrayList();\n            ArrayList arrayList3 = new ArrayList();\n            ArrayList arrayList4 = new ArrayList();\n            boolean z2 = false;\n            for (int i2 = 0; i2 < strArr.length; i2++) {\n                String str = strArr[i2];\n                if (permissionsServices.isPartOfPAAppPermission(str)) {\n                    str = permissionsServices.getPAAppPermissionNameFromAndroidPermission(str);\n                }\n                if (iArr[i2] == 0) {\n                    arrayList.add(strArr[i2]);\n                    if (!arrayList2.contains(str) && !arrayList4.contains(str)) {\n                        arrayList2.add(str);\n                    }\n                }",
+    "results": {}
+  }
+}

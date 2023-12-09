@@ -1,0 +1,59 @@
+name: /scratch/ms9761/rea-llm/codellama/llama-env
+channels:
+  - anaconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - blas=1.0=mkl
+  - bottleneck=1.3.5=py38h7deecbd_0
+  - ca-certificates=2023.08.22=h06a4308_0
+  - intel-openmp=2021.4.0=h06a4308_3561
+  - ld_impl_linux-64=2.38=h1181459_1
+  - libffi=3.4.4=h6a678d5_0
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - mkl=2021.4.0=h06a4308_640
+  - mkl-service=2.4.0=py38h7f8727e_0
+  - mkl_fft=1.3.1=py38hd3c417c_0
+  - mkl_random=1.2.2=py38h51133e4_0
+  - ncurses=6.4=h6a678d5_0
+  - numexpr=2.8.4=py38he184ba9_0
+  - numpy=1.23.5=py38h14f4228_0
+  - numpy-base=1.23.5=py38h31eccc5_0
+  - openssl=3.0.10=h7f8727e_2
+  - packaging=22.0=py38h06a4308_0
+  - pandas=1.5.2=py38h417a72b_0
+  - pip=23.2.1=py38h06a4308_0
+  - python=3.8.18=h955ad1f_0
+  - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - pytz=2022.7=py38h06a4308_0
+  - readline=8.2=h5eee18b_0
+  - setuptools=68.0.0=py38h06a4308_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.41.2=h5eee18b_0
+  - tk=8.6.12=h1ccaba5_0
+  - wheel=0.38.4=py38h06a4308_0
+  - xz=5.4.2=h5eee18b_0
+  - zlib=1.2.13=h5eee18b_0
+  - pip:
+    - accelerate==0.23.0
+    - certifi==2023.7.22
+    - charset-normalizer==3.2.0
+    - idna==3.4
+    - jinja2==3.1.2
+    - markupsafe==2.1.3
+    - networkx==3.1
+    - peft==0.6.0.dev0
+    - psutil==5.9.5
+    - pyyaml==6.0.1
+    - regex==2023.8.8
+    - requests==2.31.0
+    - torch==2.0.1
+    - tqdm==4.66.1
+    - transformers==4.34.0.dev0
+    - typing-extensions==4.7.1
+    - urllib3==2.0.4
+prefix: /scratch/ms9761/rea-llm/codellama/llama-env
+

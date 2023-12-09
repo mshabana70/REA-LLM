@@ -1,0 +1,162 @@
+{
+  "Function_1": {
+    "code": "private void showDevelopmentBannerIfDev() {\n    }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "protected void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        ProcessLifecycleOwner.get().getLifecycle().addObserver(new ForegroundBackgroundListener());\n        AndroidInjection.inject(this);\n        Log.d(TAG, \"Main.onCreate()\");\n        Intent intent = getIntent();\n        if (intent.hasExtra(Notification.NOTIFICATION_ID)) {\n            this.push_message_id = intent.getStringExtra(Notification.NOTIFICATION_ID);\n        }\n        if (intent.hasExtra(Notification.NOTIFICATION_MESSAGE)) {\n            this.push_message_text = intent.getStringExtra(Notification.NOTIFICATION_MESSAGE);\n        }\n        if (intent.hasExtra(Notification.NOTIFICATION_MODULE_ID)) {\n            this.initial_module_id = intent.getStringExtra(Notification.NOTIFICATION_MODULE_ID);\n        }\n        GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();\n        int isGooglePlayServicesAvailable = googleApiAvailability.isGooglePlayServicesAvailable(this);\n        if (isGooglePlayServicesAvailable != 0) {\n            if (googleApiAvailability.isUserResolvableError(isGooglePlayServicesAvailable)) {\n                googleApiAvailability.getErrorDialog(this, isGooglePlayServicesAvailable, 9000).show();\n                return;\n            }\n            Log.i(\"Google Play Services\", \"This device is not supported.\");\n            finish();\n            return;\n        }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "private void setVersionCodes() {\n        try {\n            PackageManager packageManager = getPackageManager();\n            if (packageManager != null) {\n                PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);\n                VERSION_CODE = Integer.valueOf(packageInfo.versionCode);\n                VERSION_NAME = packageInfo.versionName;\n                SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);\n                if (!packageInfo.versionName.equals(defaultSharedPreferences.getString(Constants.PREVIOUS_A3_VERSION, null))) {\n                    togglePushEnabledOffOn();\n                }\n                SharedPreferences.Editor edit = defaultSharedPreferences.edit();\n                edit.putString(Constants.PREVIOUS_A3_VERSION, packageInfo.versionName);\n                edit.apply();\n                this.packageName = getPackageName();\n            }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "private void togglePushEnabledOffOn() {\n        new Thread(new Runnable() { // from class: com.airealmobile.general.-$$Lambda$Main$ykggEqfpcynCTuPcFeVLOP-tP-c\n            @Override // java.lang.Runnable\n            public final void run() {\n                Main.this.lambda$togglePushEnabledOffOn$0$Main();\n            }\n        }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "private void showLoadingScreen() {\n        setContentView(com.airealmobile.messiahlutheran_1122.R.layout.bootscreen_layout);\n        setVersionFooter();\n        showDevelopmentBannerIfDev();\n        checkForLoadedApp();\n    }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "private void setVersionFooter() {\n        try {\n            DotVersion dotVersion = new DotVersion(BuildConfig.VERSION_NAME);\n            TextView textView = (TextView) findViewById(com.airealmobile.messiahlutheran_1122.R.id.poweredByVersion);\n            if (!dotVersion.getVersion().equals(\"\")) {\n                textView.setText(getString(com.airealmobile.messiahlutheran_1122.R.string.poweredByAware3NoVersion) + \"  \u2022 \" + dotVersion.getVersion());\n            } else {\n                textView.setText(getString(com.airealmobile.messiahlutheran_1122.R.string.poweredByAware3NoVersion));\n            }\n        }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "private void checkForLoadedApp() {\n        setupConfigurationManager();\n        Log.d(TAG, \"Main.checkForLoadedApp()\");\n        if (this.packageName.contains(\"com.aware3.universal\")) {\n            if (this.aware3Application.getCurrentApp() != null) {\n                retrieveSetup(this.aware3Application.getCurrentApp());\n                return;\n            } else {\n                retrieveIpAddress();\n                return;\n            }\n        }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "private void setupConfigurationManager() {\n        EncryptionUtility.getInstance();\n        this.configurationManager = ConfigurationManager.getInstance();\n        this.configurationFetchCompletion = new ConfigurationFetchCompletion() { // from class: com.airealmobile.general.Main.1\n            @Override // com.airealmobile.configuration.ConfigurationFetchCompletion\n            public void configurationFetchSuccessful() {\n                Main.this.checkAppStatus();\n            }\n\n            @Override // com.airealmobile.configuration.ConfigurationFetchCompletion\n            public void configurationFetchFailed() {\n                Main.this.checkAppStatus();\n            }\n        }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "public void showAppSearch() {\n        new Timer().schedule(new TimerTask() { // from class: com.airealmobile.general.Main.2\n            @Override // java.util.TimerTask, java.lang.Runnable\n            public void run() {\n                Intent intent = new Intent(Main.this, AppSearchActivity.class);\n                intent.setFlags(335544320);\n                Main.this.startActivity(intent);\n            }\n        }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "public void retrieveSetup(AppObject appObject) {\n        if (appObject.isListingOnly()) {\n            listingOnlySetup(appObject);\n        } else {\n            fullSetupCall(appObject);\n        }\n    }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "private void listingOnlySetup(AppObject appObject) {\n        Log.d(TAG, \"Main.listingOnlySetup()\");\n        new OrganizationRetriever(appObject.getAppId(), this).execute(new String[0]);\n    }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "private void fullSetupCall(AppObject appObject) {\n        if (isFinishing()) {\n            return;\n        }\n        showDialog(DIALOG_INTERNET_LOADING);\n        Log.d(TAG, \"Main.fullSetupCall()\");\n        this.configurationManager.fetchConfiguration(this.configurationFetchCompletion);\n    }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "public void checkAppStatus() {\n        HomeInfo homeInfo = ConfigurationManager.getInstance().getHomeInfo();\n        this.homeInfo = homeInfo;\n        String prefAppStatus = (homeInfo == null || homeInfo.getPrefAppStatus() == null) ? null : this.homeInfo.getPrefAppStatus();\n        if (prefAppStatus != null && !prefAppStatus.isEmpty() && !prefAppStatus.contentEquals(Constants.APP_STATUS_EMPTY)) {\n            showDialog(1);\n            return;\n        }\n        setVersionCodes();\n        checkVersionNumber();\n    }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "private void checkVersionNumber() {\n        HomeInfo homeInfo = this.homeInfo;\n        if (homeInfo != null) {\n            DotVersion dotVersion = new DotVersion(homeInfo.getPrefSupportedVersion());\n            DotVersion dotVersion2 = new DotVersion(BuildConfig.VERSION_NAME);\n            if (!this.packageName.contains(\"com.aware3.universal\") && dotVersion.compareTo(dotVersion2) == 1) {\n                if (isFinishing()) {\n                    return;\n                }\n                showDialog(2, null);\n                return;\n            }",
+    "results": {}
+  },
+  "Function_15": {
+    "code": "protected void onStart() {\n        super.onStart();\n        EventBus.getDefault().register(this);\n    }",
+    "results": {}
+  },
+  "Function_16": {
+    "code": "protected void onStop() {\n        super.onStop();\n        EventBus.getDefault().unregister(this);\n    }",
+    "results": {}
+  },
+  "Function_17": {
+    "code": "public void onShowHomeScreenEvent(ShowHomeScreenEvent showHomeScreenEvent) {\n        loadHomePage();\n    }",
+    "results": {}
+  },
+  "Function_18": {
+    "code": "protected void loadHomePage() {\n        boolean z = false;\n        SharedPreferences preferences = getPreferences(0);\n        Boolean valueOf = Boolean.valueOf(preferences.getBoolean(\"pref_key_onboarding\", false));\n        EndUser profile = this.aware3Application.getProfile();\n        if (!valueOf.booleanValue() && profile != null && (profile.getEndUserId() == null || profile.getEndUserId().length() == 0)) {\n            z = true;\n        }\n        if (shouldShowListingHomeActivity()) {\n            Log.d(TAG, \"Main - SHOWING ListingHomeActivity\");\n            Intent intent = new Intent(this, ListingHomeActivity.class);\n            intent.setFlags(335544320);\n            if (z) {\n                intent.setFlags(65536 | intent.getFlags());\n            }\n            startActivity(intent);\n        }",
+    "results": {}
+  },
+  "Function_19": {
+    "code": "private boolean shouldShowListingHomeActivity() {\n        return this.aware3Application.getCurrentListing() != null;\n    }",
+    "results": {}
+  },
+  "Function_20": {
+    "code": "private void retrieveIpAddress() {\n        new IpAddressRetriever(this).execute(new String[0]);\n    }",
+    "results": {}
+  },
+  "Function_21": {
+    "code": "public void checkDeepLinking() {\n        new GraphRetriever(this).execute(new String[0]);\n    }",
+    "results": {}
+  },
+  "Function_22": {
+    "code": "public Dialog onCreateDialog(int i) {\n        AlertDialog.Builder builder = new AlertDialog.Builder(this);\n        if (i == 1) {\n            builder.setMessage(\"This app has been disabled. Please check back soon!\");\n            builder.setTitle(\"App Disabled\");\n            builder.setCancelable(false);\n            builder.setPositiveButton(\"Ok\", new DialogInterface.OnClickListener() { // from class: com.airealmobile.general.Main.3\n                @Override // android.content.DialogInterface.OnClickListener\n                public void onClick(DialogInterface dialogInterface, int i2) {\n                    System.exit(0);\n                }\n            }",
+    "results": {}
+  },
+  "Function_23": {
+    "code": "public void onClick(DialogInterface dialogInterface, int i2) {\n                    System.exit(0);\n                }",
+    "results": {}
+  },
+  "Function_24": {
+    "code": "public void onClick(DialogInterface dialogInterface, int i2) {\n                    Intent intent = new Intent(\"android.intent.action.VIEW\");\n                    intent.setData(Uri.parse(\"market://details?id=\" + Main.this.packageName));\n                    Main.this.startActivity(intent);\n                    Main.this.startActivity(intent);\n                    dialogInterface.dismiss();\n                    System.exit(0);\n                }",
+    "results": {}
+  },
+  "Function_25": {
+    "code": "public void onClick(DialogInterface dialogInterface, int i2) {\n                    dialogInterface.dismiss();\n                    Main.this.finish();\n                }",
+    "results": {}
+  },
+  "Function_26": {
+    "code": "public void onCancel(DialogInterface dialogInterface) {\n                    dialogInterface.dismiss();\n                    Main.this.finish();\n                }",
+    "results": {}
+  },
+  "Function_27": {
+    "code": "public String doInBackground(String... strArr) {\n            try {\n                DefaultHttpClient defaultHttpClient = new DefaultHttpClient();\n                HttpPost httpPost = new HttpPost(this.url);\n                JSONObject jSONObject = new JSONObject();\n                jSONObject.put(\"query\", \"\");\n                jSONObject.put(\"package_name\", this.packageName);\n                String encryptData = EncryptionUtility.getInstance().encryptData(jSONObject.toString());\n                MultipartEntityBuilder create = MultipartEntityBuilder.create();\n                create.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);\n                create.addTextBody(\"encrypted_payload\", encryptData);\n                httpPost.setEntity(create.build());\n                HttpEntity entity = defaultHttpClient.execute(httpPost).getEntity();\n                this.searchResults = new ArrayList<>();\n                if (entity != null && entity.getContentLength() > 0) {\n                    StringBuilder sb = new StringBuilder();\n                    try {\n                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(entity.getContent()), 65728);\n                        while (true) {\n                            String readLine = bufferedReader.readLine();\n                            if (readLine == null) {\n                                break;\n                            }\n                            sb.append(readLine);\n                        }",
+    "results": {}
+  },
+  "Function_28": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((AppSearchRetriever) str);\n            ArrayList<AppObject> arrayList = this.searchResults;\n            if (arrayList == null || arrayList.size() <= 0) {\n                return;\n            }\n            AppObject appObject = null;\n            Iterator<AppObject> it = this.searchResults.iterator();\n            while (true) {\n                if (!it.hasNext()) {\n                    break;\n                }\n                AppObject next = it.next();\n                if (next.getPackageId().equalsIgnoreCase(this.packageName)) {\n                    appObject = next;\n                    break;\n                }\n            }",
+    "results": {}
+  },
+  "Function_29": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((IpAddressRetriever) str);\n            if (Main.this.ipAddress != null) {\n                Main.this.checkDeepLinking();\n            } else {\n                Main.this.showAppSearch();\n            }\n        }",
+    "results": {}
+  },
+  "Function_30": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((GraphRetriever) str);\n            if (this.linkedApp != null) {\n                Main.this.aware3Application.setCurrentApp(this.linkedApp);\n                Main.this.retrieveSetup(this.linkedApp);\n                return;\n            }\n            Main.this.showAppSearch();\n        }",
+    "results": {}
+  },
+  "Function_31": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((OrganizationRetriever) str);\n            if (this.listing != null) {\n                Main.this.aware3Application.setCurrentListing(this.listing);\n            }\n            Main.this.retrieveProfile();\n        }",
+    "results": {}
+  },
+  "Function_32": {
+    "code": "public void retrieveProfile() {\n        if (this.isRetrievingProfile) {\n            return;\n        }\n        this.isRetrievingProfile = true;\n        final String deviceIdentifier = new SharedPrefsHelperImpl(getApplicationContext()).getDeviceIdentifier();\n        AppObject currentApp = this.aware3Application.getCurrentApp();\n        if (currentApp != null && currentApp.getAppId() != null) {\n            this.identifier = currentApp.getAppId();\n        }\n        this.profileApiService.get().getProfile(deviceIdentifier, new Observer<EndUser>() { // from class: com.airealmobile.general.Main.8\n            @Override // io.reactivex.Observer\n            public void onSubscribe(Disposable disposable) {\n            }\n\n            @Override // io.reactivex.Observer\n            public void onNext(EndUser endUser) {\n                if (endUser == null || endUser.getEndUserId() == null) {\n                    new EndUser().setDeviceId(Main.this.identifier);\n                    Main.this.aware3Application.setProfile(new EndUser());\n                    return;\n                }\n                endUser.setDeviceId(deviceIdentifier);\n                Main.this.aware3Application.setProfile(endUser);\n                if (!Main.this.isRetrievingNotifications) {\n                    Main.this.retrieveNotifications();\n                }\n                if (endUser != null && endUser.getFirebaseToken() != null && Main.this.homeInfo != null && Main.this.homeInfo.isChat_enabled()) {\n                    Main.this.buildFirebaseData(endUser.getFirebaseToken());\n                }\n                Main.this.isRetrievingProfile = false;\n            }",
+    "results": {}
+  },
+  "Function_33": {
+    "code": "public void onError(Throwable th) {\n                new EndUser().setDeviceId(Main.this.identifier);\n                Main.this.aware3Application.setProfile(new EndUser());\n                if (!Main.this.isRetrievingNotifications) {\n                    Main.this.retrieveNotifications();\n                }\n                Main.this.isRetrievingProfile = false;\n            }",
+    "results": {}
+  },
+  "Function_34": {
+    "code": "public void onComplete() {\n                if (!Main.this.isRetrievingNotifications) {\n                    Main.this.retrieveNotifications();\n                }\n                Main.this.isRetrievingProfile = false;\n            }",
+    "results": {}
+  },
+  "Function_35": {
+    "code": "public void buildFirebaseData(String str) {\n        if (str != null) {\n            final Aware3Application aware3Application = this.aware3Application;\n            final EndUser profile = aware3Application.getProfile();\n            try {\n                FirebaseAuth.getInstance().signInWithCustomToken(str).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() { // from class: com.airealmobile.general.Main.9\n                    @Override // com.google.android.gms.tasks.OnCompleteListener\n                    public void onComplete(Task<AuthResult> task) {\n                        if (task.isSuccessful()) {\n                            final String uid = task.getResult().getUser().getUid();\n                            profile.setFireBaseUser(uid);\n                            final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();\n                            final DatabaseReference reference = firebaseDatabase.getReference(\"users/\" + uid);\n                            final AppObject currentApp = aware3Application.getCurrentApp();\n                            reference.addListenerForSingleValueEvent(new ValueEventListener() { // from class: com.airealmobile.general.Main.9.1\n                                @Override // com.google.firebase.database.ValueEventListener\n                                public void onCancelled(DatabaseError databaseError) {\n                                }\n\n                                @Override // com.google.firebase.database.ValueEventListener\n                                public void onDataChange(DataSnapshot dataSnapshot) {\n                                    HashMap hashMap = new HashMap();\n                                    hashMap.put(\"app_id\", Integer.valueOf(currentApp.getAppId()));\n                                    if (profile.getProfilePhotoUrl() != null && !profile.getProfilePhotoUrl().equalsIgnoreCase(\"\")) {\n                                        hashMap.put(\"avatar\", \"https://aware3.net/api/image/\" + profile.getProfilePhotoUrl());\n                                    }\n                                    hashMap.put(\"first_name\", profile.getFirstName());\n                                    hashMap.put(\"last_name\", profile.getLastName());\n                                    hashMap.put(\"last_seen\", ServerValue.TIMESTAMP);\n                                    if (!dataSnapshot.exists()) {\n                                        hashMap.put(\"joined\", ServerValue.TIMESTAMP);\n                                    } else {\n                                        hashMap.put(\"joined\", ((HashMap) dataSnapshot.getValue()).get(\"joined\"));\n                                    }\n                                    reference.setValue(hashMap);\n                                    DatabaseReference reference2 = firebaseDatabase.getReference(\"apps/\" + currentApp.getAppId() + \"/online/\" + uid);\n                                    reference2.onDisconnect().removeValue();\n                                    reference2.child(\"online_since\").setValue(ServerValue.TIMESTAMP);\n                                    firebaseDatabase.getReference(\"user_history/\" + uid).child(\"last_seen\").setValue(ServerValue.TIMESTAMP);\n                                }",
+    "results": {}
+  },
+  "Function_36": {
+    "code": "public void retrieveNotifications() {\n        this.isRetrievingNotifications = true;\n        EndUser profile = this.aware3Application.getProfile();\n        new NotificationRetriever(profile != null ? profile.getEndUserId() : null, this).execute(new String[0]);\n    }",
+    "results": {}
+  },
+  "Function_37": {
+    "code": "public void onPostExecute(String str) {\n            super.onPostExecute((NotificationRetriever) str);\n            Set<String> stringSet = Main.this.getSharedPreferences(Aware3Application.NOTIFICATION_SHARED_PREF, 0).getStringSet(Aware3Application.NOTIFICATION_READ_MESSAGES, null);\n            Set<String> stringSet2 = Main.this.getSharedPreferences(Aware3Application.NOTIFICATION_DELETED_PREF, 0).getStringSet(Aware3Application.NOTIFICATION_DELETED_MESSAGES, null);\n            ArrayList<com.airealmobile.modules.notifications.api.model.Notification> arrayList = this.retrievedNotifications;\n            boolean z = true;\n            if (arrayList != null) {\n                if (stringSet != null) {\n                    Iterator<com.airealmobile.modules.notifications.api.model.Notification> it = arrayList.iterator();\n                    while (it.hasNext()) {\n                        com.airealmobile.modules.notifications.api.model.Notification next = it.next();\n                        if (stringSet2 == null || !stringSet2.contains(next.getNotificationId())) {\n                            if (!stringSet.contains(next.getNotificationId())) {\n                                break;\n                            }\n                        }",
+    "results": {}
+  },
+  "Function_38": {
+    "code": "public void retrieveAuthToken() {\n        AppObject currentApp = this.aware3Application.getCurrentApp();\n        EndUser profile = this.aware3Application.getProfile();\n        if (profile != null && profile.getEndUserId() != null) {\n            AuthTokenRetriever authTokenRetriever = new AuthTokenRetriever(profile.getEndUserId(), currentApp.getAppId(), profile.getDeviceId());\n            authTokenRetriever.setListener(this);\n            authTokenRetriever.execute(new Void[0]);\n            return;\n        }\n        currentApp.setAuthToken(\"\");\n        loadHomePage();\n    }",
+    "results": {}
+  },
+  "Function_39": {
+    "code": "public void didFailToRetrieveAuthToken(AuthTokenRetriever authTokenRetriever) {\n        this.aware3Application.getCurrentApp().setAuthToken(\"\");\n        loadHomePage();\n    }",
+    "results": {}
+  },
+  "Function_40": {
+    "code": "public void didRetrieveAuthToken(AuthTokenRetriever authTokenRetriever, String str) {\n        this.aware3Application.getCurrentApp().setAuthToken(str);\n        loadHomePage();\n    }",
+    "results": {}
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "Function_1": {
+    "code": "public void SubmitRoleCreate(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6) {\n    }",
+    "results": {}
+  },
+  "Function_2": {
+    "code": "public void SubmitRoleLevel(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, int i5, int i6, String str7) {\n    }",
+    "results": {}
+  },
+  "Function_3": {
+    "code": "public void SubmitRoleLogin(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, String str7) {\n    }",
+    "results": {}
+  },
+  "Function_4": {
+    "code": "public void SubmitRoleLogout(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, String str7) {\n    }",
+    "results": {}
+  },
+  "Function_5": {
+    "code": "public void SubmitRoleYuanbao(String str, int i, String str2, String str3, int i2, String str4, String str5, int i3, int i4, String str6, int i5, int i6, int i7, String str7, String str8) {\n    }",
+    "results": {}
+  },
+  "Function_6": {
+    "code": "protected void onCreate(Bundle bundle) {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getWindow().setFormat(2);\n        if (this.mUnityPlayer == null) {\n            this.mUnityPlayer = new UnityPlayer(this);\n        }\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n        Arrays.asList(Permission.READ_PHONE_STATE);\n        HuChiPlatform.getInstance().init(this, false, null, new HuChiAuthorizeCallback() { // from class: com.youda.xianxia.MainActivity.1\n            @Override // huchi.jedigames.platform.HuChiAuthorizeCallback\n            public void authorize(boolean z) {\n                Log.d(MainActivity.TAG, \"authorizeresult =\" + z);\n                JSONObject jSONObject = new JSONObject();\n                if (z) {\n                    MainActivity.this.CallBackResults(\"AUTHORIZATION_SUCCESS\", jSONObject);\n                } else {\n                    MainActivity.this.CallBackResults(\"AUTHORIZATION_FAIL\", jSONObject);\n                }\n            }",
+    "results": {}
+  },
+  "Function_7": {
+    "code": "public void callback(int i, HuChiUserInfo huChiUserInfo, Map<String, Object> map) {\n                JSONObject jSONObject = new JSONObject();\n                if (i == 0) {\n                    try {\n                        jSONObject.put(\"user_id\", huChiUserInfo.getUserId());\n                        jSONObject.put(HuChiConst.TOKEN, huChiUserInfo.getUserToken());\n                        jSONObject.put(\"nickname\", huChiUserInfo.getUserNickName());\n                        jSONObject.put(\"headurl\", huChiUserInfo.getHeadurl());\n                        jSONObject.put(HuChiConst.TIMESTAMP, huChiUserInfo.getTime());\n                        jSONObject.put(HuChiConst.SIGN, huChiUserInfo.getSign());\n                        jSONObject.put(\"is_bind_fb\", huChiUserInfo.getIsBindFB());\n                        jSONObject.put(\"is_bind_google\", huChiUserInfo.getIsBindGoogle());\n                        if (map != null) {\n                            for (String str : map.keySet()) {\n                                if (jSONObject.get(str) == null) {\n                                    jSONObject.put(str, map.get(str));\n                                }\n                            }",
+    "results": {}
+  },
+  "Function_8": {
+    "code": "public void CallBackResults(String str, JSONObject jSONObject) {\n        if (jSONObject == null) {\n            return;\n        }\n        String jSONObject2 = jSONObject.toString();\n        Log.d(TAG, \"HuichiSDKCallback\" + str + jSONObject2);\n        UnityPlayer.UnitySendMessage(\"CabbageSdkMgr\", \"_CabbageSDKCallback\", str + \"#\" + jSONObject2);\n    }",
+    "results": {}
+  },
+  "Function_9": {
+    "code": "protected void onStart() {\n        super.onStart();\n        this.mUnityPlayer.resume();\n        onWindowFocusChanged(true);\n    }",
+    "results": {}
+  },
+  "Function_10": {
+    "code": "protected void onRestart() {\n        super.onRestart();\n    }",
+    "results": {}
+  },
+  "Function_11": {
+    "code": "protected void onResume() {\n        super.onResume();\n        this.mUnityPlayer.resume();\n        HuChiPlatform.getInstance().onResume();\n        Adjust.onResume();\n    }",
+    "results": {}
+  },
+  "Function_12": {
+    "code": "protected void onPause() {\n        super.onPause();\n        this.mUnityPlayer.pause();\n        HuChiPlatform.getInstance().onPause();\n        Adjust.onPause();\n    }",
+    "results": {}
+  },
+  "Function_13": {
+    "code": "protected void onStop() {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+    "results": {}
+  },
+  "Function_14": {
+    "code": "protected void onDestroy() {\n        this.mUnityPlayer.quit();\n        super.onDestroy();\n        HuChiPlatform.getInstance().onDestroy();\n    }",
+    "results": {}
+  },
+  "Function_15": {
+    "code": "protected void onNewIntent(Intent intent) {\n        super.onNewIntent(intent);\n    }",
+    "results": {}
+  },
+  "Function_16": {
+    "code": "protected void onActivityResult(int i, int i2, Intent intent) {\n        super.onActivityResult(i, i2, intent);\n        HuChiPlatform.getInstance().onActivityResult(i, i2, intent);\n    }",
+    "results": {}
+  },
+  "Function_17": {
+    "code": "public void onLowMemory() {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+    "results": {}
+  },
+  "Function_18": {
+    "code": "public void onTrimMemory(int i) {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+    "results": {}
+  },
+  "Function_19": {
+    "code": "public void onConfigurationChanged(Configuration configuration) {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+    "results": {}
+  },
+  "Function_20": {
+    "code": "public void onWindowFocusChanged(boolean z) {\n        if (z) {\n            NotchTools.getFullScreenTools().fullScreenUseStatusForOnWindowFocusChanged(this);\n        }\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+    "results": {}
+  },
+  "Function_21": {
+    "code": "public boolean dispatchKeyEvent(KeyEvent keyEvent) {\n        if (keyEvent.getAction() == 2) {\n            return this.mUnityPlayer.injectEvent(keyEvent);\n        }\n        return super.dispatchKeyEvent(keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_22": {
+    "code": "public boolean onKeyUp(int i, KeyEvent keyEvent) {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_23": {
+    "code": "public boolean onKeyDown(int i, KeyEvent keyEvent) {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+    "results": {}
+  },
+  "Function_24": {
+    "code": "public boolean onTouchEvent(MotionEvent motionEvent) {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+    "results": {}
+  },
+  "Function_25": {
+    "code": "public boolean onGenericMotionEvent(MotionEvent motionEvent) {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+    "results": {}
+  },
+  "Function_26": {
+    "code": "public String GetSdkParam(String str) {\n        char c;\n        switch (str.hashCode()) {\n            case -1613589672:\n                if (str.equals(HuChiConst.LANGUAGE)) {\n                    c = '\\f';\n                    break;\n                }\n                c = 65535;\n                break;\n            case -1253236595:\n                if (str.equals(\"gameID\")) {\n                    c = 7;\n                    break;\n                }\n                c = 65535;\n                break;\n            case -982388107:\n                if (str.equals(HuChiConst.DEVICE_SCREEN)) {\n                    c = 5;\n                    break;\n                }\n                c = 65535;\n                break;\n            case -962026440:\n                if (str.equals(HuChiConst.DEVICE_SYSTEM)) {\n                    c = 3;\n                    break;\n                }\n                c = 65535;\n                break;\n            case -430672561:\n                if (str.equals(\"loginFacebook\")) {\n                    c = 15;\n                    break;\n                }\n                c = 65535;\n                break;\n            case -290385993:\n                if (str.equals(\"thirdChannelID\")) {\n                    c = '\\b';\n                    break;\n                }\n                c = 65535;\n                break;\n            case 3236040:\n                if (str.equals(HuChiConst.IMEI)) {\n                    c = 0;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 25209965:\n                if (str.equals(HuChiConst.DEVICE_OS)) {\n                    c = 2;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 111887144:\n                if (str.equals(\"thirdChannelFlag\")) {\n                    c = '\\t';\n                    break;\n                }\n                c = 65535;\n                break;\n            case 127178275:\n                if (str.equals(\"bindFacebook\")) {\n                    c = 14;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 312707936:\n                if (str.equals(\"loginPreFacebook\")) {\n                    c = 16;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 781508125:\n                if (str.equals(HuChiConst.DEVICE_NUM)) {\n                    c = 1;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 887439393:\n                if (str.equals(HuChiConst.DEVICE_FACTORY)) {\n                    c = 4;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 908759025:\n                if (str.equals(\"packageName\")) {\n                    c = 11;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 1291538547:\n                if (str.equals(HuChiConst.NET_WORK)) {\n                    c = 6;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 1311299344:\n                if (str.equals(\"isFirstOpen\")) {\n                    c = TokenParser.CR;\n                    break;\n                }\n                c = 65535;\n                break;\n            case 1802060801:\n                if (str.equals(\"packageId\")) {\n                    c = '\\n';\n                    break;\n                }\n                c = 65535;\n                break;\n            default:\n                c = 65535;\n                break;\n        }",
+    "results": {}
+  },
+  "Function_27": {
+    "code": "public void Login() {\n        Log.d(TAG, \"HuichiSDK Login()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.3\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().doLogin();\n            }\n        }",
+    "results": {}
+  },
+  "Function_28": {
+    "code": "public void GuestLogin() {\n        Log.d(TAG, \"HuichiSDK GuestLogin()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.4\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().doGuestLogin();\n            }\n        }",
+    "results": {}
+  },
+  "Function_29": {
+    "code": "public void Logout() {\n        Log.d(TAG, \"HuichiSDK Logout()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.5\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().doLogout();\n            }\n        }",
+    "results": {}
+  },
+  "Function_30": {
+    "code": "public void ExitApp() {\n        Log.d(TAG, \"CabbageSDK ExitApp()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.6\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().doExit(new HuChiExitCallback() { // from class: com.youda.xianxia.MainActivity.6.1\n                    @Override // huchi.jedigames.platform.HuChiExitCallback\n                    public void onExit(int i, String str) {\n                        JSONObject jSONObject = new JSONObject();\n                        try {\n                            jSONObject.put(\"code\", i);\n                            jSONObject.put(NotificationCompat.CATEGORY_MESSAGE, str);\n                        } catch (JSONException e) {\n                            e.printStackTrace();\n                        }\n                        if (i == 0) {\n                            MainActivity.this.CallBackResults(\"EXIT_SUCCESS\", jSONObject);\n                        } else if (i == 2) {\n                            MainActivity.this.CallBackResults(\"EXIT_SELF\", jSONObject);\n                        } else {\n                            MainActivity.this.CallBackResults(\"EXIT_FAIL\", jSONObject);\n                        }\n                    }",
+    "results": {}
+  },
+  "Function_31": {
+    "code": "public void Pay(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, int i, boolean z, int i2) {\n        Log.d(TAG, \"HuichiSDK Pay()\");\n        HuChipayInfo huChipayInfo = new HuChipayInfo();\n        huChipayInfo.user_id = str;\n        huChipayInfo.goods_id = str3;\n        huChipayInfo.goods_name = str2;\n        huChipayInfo.amount = Float.parseFloat(str4);\n        huChipayInfo.game_trade_no = str5;\n        huChipayInfo.server_id = str6;\n        huChipayInfo.server_name = str7;\n        huChipayInfo.role_id = str8;\n        huChipayInfo.role_name = str9;\n        huChipayInfo.role_level = i;\n        huChipayInfo.is_first_charge = z;\n        huChipayInfo.exchange_rate = i2;\n        HuChiPlatform.getInstance().doPay(huChipayInfo, new HuChiPayCallback() { // from class: com.youda.xianxia.MainActivity.7\n            @Override // huchi.jedigames.platform.HuChiPayCallback\n            public void callback(int i3, String str10) {\n                JSONObject jSONObject = new JSONObject();\n                try {\n                    jSONObject.put(\"code\", i3);\n                    jSONObject.put(NotificationCompat.CATEGORY_MESSAGE, str10);\n                } catch (JSONException e) {\n                    e.printStackTrace();\n                }\n                if (i3 == 0) {\n                    MainActivity.this.CallBackResults(\"PAY_SUCCESS\", jSONObject);\n                } else {\n                    MainActivity.this.CallBackResults(\"PAY_FAIL\", jSONObject);\n                }\n            }",
+    "results": {}
+  },
+  "Function_32": {
+    "code": "public void Authorize(String str, boolean z) {\n        if (Build.VERSION.SDK_INT < 23) {\n            return;\n        }\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.8\n            @Override // java.lang.Runnable\n            public void run() {\n            }\n        }",
+    "results": {}
+  },
+  "Function_33": {
+    "code": "public void QuitApp() {\n        Log.d(TAG, \"HuichiSDK QuitApp()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.9\n            @Override // java.lang.Runnable\n            public void run() {\n                MainActivity.this.finish();\n                Process.killProcess(Process.myPid());\n                System.exit(0);\n            }\n        }",
+    "results": {}
+  },
+  "Function_34": {
+    "code": "public void ApkReinstallActive(String str) {\n        File file = new File(str);\n        if (file.exists()) {\n            Intent intent = new Intent(\"android.intent.action.VIEW\");\n            intent.setDataAndType(Uri.parse(\"file://\" + file.toString()), \"application/vnd.android.package-archive\");\n            intent.setFlags(268435456);\n            startActivity(intent);\n            finish();\n            Process.killProcess(Process.myPid());\n            System.exit(0);\n        }\n    }",
+    "results": {}
+  },
+  "Function_35": {
+    "code": "public boolean IsInstalled(String str) {\n        boolean z;\n        Iterator<ApplicationInfo> it = getPackageManager().getInstalledApplications(0).iterator();\n        while (true) {\n            if (it.hasNext()) {\n                if (str.equals(it.next().packageName)) {\n                    z = true;\n                    break;\n                }\n            }",
+    "results": {}
+  },
+  "Function_36": {
+    "code": "public String ReadMetaDataFromApplication(String str) {\n        try {\n            String string = getPackageManager().getApplicationInfo(getPackageName(), 128).metaData.getString(str);\n            Log.d(TAG, \"readMetaDataFromApplication\" + str + string);\n            return string;\n        } catch (PackageManager.NameNotFoundException e) {\n            e.printStackTrace();\n            return \"\";\n        }\n    }",
+    "results": {}
+  },
+  "Function_37": {
+    "code": "public void CallPhone(String str) {\n        Intent intent = new Intent();\n        intent.setAction(\"android.intent.action.CALL\");\n        intent.setData(Uri.parse(str));\n        startActivity(intent);\n    }",
+    "results": {}
+  },
+  "Function_38": {
+    "code": "public void OpenQQ(String str) {\n        if (IsInstalled(\"com.tencent.qqlite\") || IsInstalled(\"com.tencent.mobileqq\")) {\n            try {\n                startActivity(new Intent(\"android.intent.action.VIEW\", Uri.parse(str)));\n                return;\n            } catch (Exception unused) {\n                return;\n            }\n        }",
+    "results": {}
+  },
+  "Function_39": {
+    "code": "public void FaceBookShare(String str, String str2) {\n        HuChiPlatform.getInstance().fbShare(Uri.parse(str), str2, new HuChiShareCallback() { // from class: com.youda.xianxia.MainActivity.10\n            @Override // huchi.jedigames.platform.HuChiShareCallback\n            public void callback(int i) {\n                JSONObject jSONObject = new JSONObject();\n                try {\n                    jSONObject.put(\"code\", i);\n                } catch (JSONException e) {\n                    e.printStackTrace();\n                }\n                if (i == 0) {\n                    MainActivity.this.CallBackResults(\"SHARE_SUCCESS\", jSONObject);\n                } else {\n                    MainActivity.this.CallBackResults(\"SHARE_FAIL\", jSONObject);\n                }\n            }",
+    "results": {}
+  },
+  "Function_40": {
+    "code": "public void FaceBookBind() {\n        Log.d(TAG, \"FaceBookBind()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.11\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().showBindOrSwitch();\n            }\n        }",
+    "results": {}
+  },
+  "Function_41": {
+    "code": "public void GoogleBind() {\n        Log.d(TAG, \"GoogleBind()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.12\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().showBindOrSwitch();\n            }\n        }",
+    "results": {}
+  },
+  "Function_42": {
+    "code": "public void AccountSetting() {\n        Log.d(TAG, \"AccountSetting()\");\n        runOnUiThread(new Runnable() { // from class: com.youda.xianxia.MainActivity.13\n            @Override // java.lang.Runnable\n            public void run() {\n                HuChiPlatform.getInstance().showBindOrSwitch();\n            }\n        }",
+    "results": {}
+  },
+  "Function_43": {
+    "code": "public String NotchScreen() {\n        int i;\n        int i2;\n        int i3;\n        boolean isNotchEnable = NotchTools.getFullScreenTools().isNotchEnable(this);\n        int i4 = 0;\n        if (isNotchEnable) {\n            Rect safeArea = NotchTools.getFullScreenTools().getSafeArea(this);\n            int i5 = safeArea.left;\n            i2 = safeArea.top;\n            i3 = safeArea.right;\n            i = safeArea.bottom;\n            i4 = i5;\n        } else {\n            i = 0;\n            i2 = 0;\n            i3 = 0;\n        }\n        String str = isNotchEnable + \"#\" + i4 + \"#\" + i2 + \"#\" + i3 + \"#\" + i;\n        Log.d(TAG, str);\n        return str;\n    }",
+    "results": {}
+  },
+  "Function_44": {
+    "code": "public void AdjustTrackNormalEvent(String str) {\n        Adjust.trackEvent(new AdjustEvent(str));\n    }",
+    "results": {}
+  },
+  "Function_45": {
+    "code": "public void AdjustTrackPayEvent(String str, float f, String str2) {\n        AdjustEvent adjustEvent = new AdjustEvent(str);\n        adjustEvent.setRevenue(f, str2);\n        Adjust.trackEvent(adjustEvent);\n    }",
+    "results": {}
+  }
+}
