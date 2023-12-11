@@ -17,58 +17,90 @@ INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be prese
 with open(QUESTIONS_PATH, "r") as questions_json:
     QUESTIONS = json.load(questions_json)
 
+MAX_TOKEN_SIZE = 2000
+
 
 class Func:
-    def __init__(self, code):
-        self.outputs = {"code": code, "results": {}}
+    def __init__(self, name, code):
+        self.name = name
+        self.code = code
+        self.results = {}
+        self.length = len(code)
 
     def get_prompt_key(self):
-        # TODO: How do we format this?
-        code = self.outputs["code"]
-        return f"[CODE]\n{code}\n[/CODE]\n\n"
+        return f"[CODE]\n{self.code}\n[/CODE]\n\n"
 
     def save_response(self, question_num, question, response):
-        self.outputs["results"][question_num] = {"question": question, "response": response, "answers": {}}
+        self.results[question_num] = {"question": question, "response": response, "answers": {}}
     
     def analyze_response(self, question_num, answers):
-        response = self.outputs["results"][question_num]["response"]
+        response = self.results[question_num]["response"]
         for idx in range(1, len(answers) + 1):
-            self.outputs["results"][question_num]["answers"][answers[str(idx)]] = answers[str(idx)].lower() in response
+            self.results[question_num]["answers"][answers[str(idx)]] = answers[str(idx)].lower() in response.lower()
+    
+    def format_for_output(self):
+        return {"code": self.code, "results": self.results}
 
 
 class APK:
     def __init__(self):
-        self.funcs = {}
+        self.funcs = []
         self.raw = None
 
-    def get_func_name(self, func_num):
-        return f"Function_{func_num}"
+    def get_func_name(self, func_num_start, func_num_end=None):
+        if func_num_end is None:
+            return f"Function_{func_num_start}"
+        return f"Function_{func_num_start}-{func_num_end}"
 
-    def read_data_from_file(self, apk_dir):
-        # TODO: Need to work on processing data from DJ's directory
-        with open(apk_dir, "r") as infile:
+    def read_data_from_json(self, input_path):
+        with open(input_path, "r") as infile:
             apk_data = json.load(infile)
-            self.raw = apk_data['raw'] # This is the raw code from each apk json (too large for input)
-            apk_functions = apk_data['functions'] # This is a list of the functions from each apk json
-            for func_num, function in enumerate(apk_functions):
-                print(f"Processing function {func_num + 1}, which looks like this: {function}")
-                func_name = self.get_func_name(func_num + 1)
-                self.funcs[func_name] = Func(function)
 
-    def save_as_json(self, json_dir):
-        output = {func_name: func_obj.outputs for func_name, func_obj in self.funcs.items()}
+        self.raw = apk_data['raw']  # This is the raw code from each apk json (too large for input)
+        apk_functions = apk_data['functions']  # This is a list of the functions from each apk json
 
-        with open(json_dir, "w") as outfile:
+        for func_num, code in enumerate(apk_functions):
+            self.funcs.append(Func(name=self.get_func_name(func_num), code=code))
+        
+        # Sliding window
+        num_funcs = len(self.funcs)
+        start, end = 0, 0
+        total_length = 0
+        code = ""
+
+        while end < num_funcs:
+            total_length += self.funcs[end].length
+            code += self.funcs[end].code
+
+            while total_length > MAX_TOKEN_SIZE and start < end:
+                total_length -= self.funcs[start].length
+                code = code[self.funcs[start].length:]
+                start += 1
+
+            while end < num_funcs - 1 and total_length + self.funcs[end + 1].length <= MAX_TOKEN_SIZE:
+                end += 1
+                total_length += self.funcs[end].length
+                code += self.funcs[end].code
+
+            if total_length <= MAX_TOKEN_SIZE and start != end:
+                self.funcs.append(Func(name=self.get_func_name(start, end), code=code))
+
+            end += 1
+
+    def save_as_json(self, output_path):
+        output = {func_obj.name: func_obj.format_for_output() for func_obj in self.funcs}
+
+        with open(output_path, "w+") as outfile:
             json.dump(output, outfile, indent=2)
 
 
 if __name__ == "__main__":
-    for apk in os.listdir(DECOMPILED_CODE_DIR):
-        print("Processing APK:", apk)
+    for apk_name in os.listdir(DECOMPILED_CODE_DIR):
+        print("Processing APK:", apk_name)
         curr_apk = APK()
-        curr_apk.read_data_from_file(DECOMPILED_CODE_DIR + apk)
+        curr_apk.read_data_from_json(input_path=DECOMPILED_CODE_DIR + apk_name)
 
-        for curr_func in curr_apk.funcs.values():
+        for curr_func in curr_apk.funcs:
             prompt_key = curr_func.get_prompt_key()
 
             for question_num in QUESTIONS:
@@ -82,7 +114,6 @@ if __name__ == "__main__":
                 }
 
                 print("Sending request to server...")
-
                 response = requests.post(f"http://{HOST}:{PORT}/generate", headers=HEADERS, json=data)
                 curr_func.save_response(question_num, curr_question, response.json()["generated_text"])
                 print("Response received!")
@@ -91,8 +122,5 @@ if __name__ == "__main__":
                 print("Response analyzed!")
 
         print("Saving output...")
-        curr_apk.save_as_json(OUTPUT_DIR + apk)
-        print(f"Output saved at {OUTPUT_DIR + apk}!")
-
-
-
+        curr_apk.save_as_json(output_path=OUTPUT_DIR + apk_name)
+        print(f"Output saved at {OUTPUT_DIR + apk_name}!")
