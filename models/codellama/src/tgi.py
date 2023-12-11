@@ -67,20 +67,21 @@ class APK:
         start, end = 0, 0
         total_length = 0
         code = ""
+        num_newlines = 2
 
         while end < num_funcs:
-            total_length += self.funcs[end].length
-            code += self.funcs[end].code
+            total_length += self.funcs[end].length + num_newlines
+            code += self.funcs[end].code + "\n" * num_newlines
 
             while total_length > MAX_TOKEN_SIZE and start < end:
-                total_length -= self.funcs[start].length
-                code = code[self.funcs[start].length:]
+                total_length -= self.funcs[start].length + num_newlines
+                code = code[self.funcs[start].length + num_newlines:]
                 start += 1
 
-            while end < num_funcs - 1 and total_length + self.funcs[end + 1].length <= MAX_TOKEN_SIZE:
+            while end < num_funcs - 1 and total_length + self.funcs[end + 1].length + num_newlines <= MAX_TOKEN_SIZE:
                 end += 1
-                total_length += self.funcs[end].length
-                code += self.funcs[end].code
+                total_length += self.funcs[end].length + num_newlines
+                code += self.funcs[end].code + "\n" * num_newlines
 
             if total_length <= MAX_TOKEN_SIZE and start != end:
                 self.funcs.append(Func(name=self.get_func_name(start, end), code=code))
