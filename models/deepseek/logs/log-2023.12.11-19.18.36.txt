@@ -1,0 +1,71 @@
+Processing APK: com.cuteandtinybabygames.littlefarmlife.free.json
+Processing function 1, which looks like this: protected String updateUnityCommandLineArguments(String str) {
+        return str;
+    }
+Processing function 2, which looks like this: public void onCreate(Bundle bundle) {
+        requestWindowFeature(1);
+        super.onCreate(bundle);
+        getIntent().putExtra("unity", updateUnityCommandLineArguments(getIntent().getStringExtra("unity")));
+        this.mUnityPlayer = new UnityPlayer(this, this);
+        setContentView(this.mUnityPlayer);
+        this.mUnityPlayer.requestFocus();
+    }
+Processing function 3, which looks like this: public void onUnityPlayerUnloaded() {
+        moveTaskToBack(true);
+    }
+Processing function 4, which looks like this: public void onUnityPlayerQuitted() {
+        Process.killProcess(Process.myPid());
+    }
+Processing function 5, which looks like this: public void onNewIntent(Intent intent) {
+        setIntent(intent);
+        this.mUnityPlayer.newIntent(intent);
+    }
+Processing function 6, which looks like this: protected void onDestroy() {
+        this.mUnityPlayer.destroy();
+        super.onDestroy();
+    }
+Processing function 7, which looks like this: protected void onPause() {
+        super.onPause();
+        this.mUnityPlayer.pause();
+    }
+Processing function 8, which looks like this: protected void onResume() {
+        super.onResume();
+        this.mUnityPlayer.resume();
+    }
+Processing function 9, which looks like this: public void onLowMemory() {
+        super.onLowMemory();
+        this.mUnityPlayer.lowMemory();
+    }
+Processing function 10, which looks like this: public void onTrimMemory(int i) {
+        super.onTrimMemory(i);
+        if (i == 15) {
+            this.mUnityPlayer.lowMemory();
+        }
+    }
+Processing function 11, which looks like this: public void onConfigurationChanged(Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.mUnityPlayer.configurationChanged(configuration);
+    }
+Processing function 12, which looks like this: public void onWindowFocusChanged(boolean z) {
+        super.onWindowFocusChanged(z);
+        this.mUnityPlayer.windowFocusChanged(z);
+    }
+Processing function 13, which looks like this: public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 2) {
+            return this.mUnityPlayer.injectEvent(keyEvent);
+        }
+        return super.dispatchKeyEvent(keyEvent);
+    }
+Processing function 14, which looks like this: public boolean onKeyUp(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 15, which looks like this: public boolean onKeyDown(int i, KeyEvent keyEvent) {
+        return this.mUnityPlayer.injectEvent(keyEvent);
+    }
+Processing function 16, which looks like this: public boolean onTouchEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Processing function 17, which looks like this: public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        return this.mUnityPlayer.injectEvent(motionEvent);
+    }
+Sending request to server...
