@@ -1,0 +1,54 @@
+{
+  "Function_1": {
+    "code": "protected void onCreate(Bundle bundle) {\n        iIiOi11OIOOl01O();\n        super.onCreate(bundle);\n        iIiOi11OIOOl01O();\n        Context applicationContext = getApplicationContext();\n        iIiOi11OIOOl01O();\n        Init.init(applicationContext, null, this);\n        iIiOi11OIOOl01O();\n        finish();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, this program is susceptible to an exploitation. The code contains a buffer overflow in the 'onCreate' method, which can be used to execute arbitrary code and potentially gain unauthorized access to the device. It is recommended to fix the issue and ensure proper security measures are in place.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": true,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. It is vulnerable to SQL injection attacks and does not properly validate user input. It is recommended to use parameterized queries and input validation techniques to improve security.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The code is using the deprecated'super' keyword, which can lead to runtime errors if used incorrectly. Additionally, the code is using the 'iIiOi11OIOOl01O()' method, which is not a valid method name and could potentially cause unexpected behavior. It is recommended to update the code to use modern programming practices and avoid using deprecated methods.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker can potentially cause undefined behavior by manipulating the variables and functions used in the code. This can lead to unpredictable results and may result in crashes or other unexpected behavior. It is important to implement proper security measures and validation checks to prevent such attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nYes, the program is unknowingly tracking the user. The code uses the `iIiOi11OIOOl01O()` method which is a built-in method of the Android operating system that is used to track the user's location. This method is used to determine the user's location and is often used by apps to provide location-based services.",
+        "answers": {
+          "yes": false,
+          "location": true,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  }
+}

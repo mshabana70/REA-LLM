@@ -1,0 +1,4 @@
+{
+    "raw": "package com.deskos.ibot;\n\nimport io.flutter.embedding.android.e;\n/* loaded from: classes.dex */\npublic final class MainActivity extends e {\n}\n",
+    "functions": []
+}

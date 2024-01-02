@@ -1,0 +1,314 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        setContentView(R.layout.activity_main);\n        if (!haveNetworkConnection()) {\n            AlertDialog.Builder builder = new AlertDialog.Builder(this);\n            builder.setCancelable(false);\n            builder.setTitle(\"No Internet Connection\");\n            builder.setMessage(\"You are offline please check your internet connection\");\n            builder.setPositiveButton(\"Ok\", new DialogInterface.OnClickListener() { // from class: com.wcurrencyworlds.worldcurrency.MainActivity.1\n                @Override // android.content.DialogInterface.OnClickListener\n                public void onClick(DialogInterface dialogInterface, int i) {\n                    MainActivity.this.finishAffinity();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, the program is susceptible to an exploitation. The code is checking for network connectivity and displaying a message if it is offline. However, it does not handle any potential malicious input from the user, which could be used to gain unauthorized access to the device or its data. Therefore, it is recommended to implement additional security measures to protect the program from potential attacks.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. It is vulnerable to SQL injection attacks as it is directly accessing the database without proper authentication. It is recommended to use a secure connection and implement authentication mechanisms to prevent unauthorized access to the database.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The code is checking for network connectivity, but it does not handle cases where the device is offline or the network connection is disrupted. This could lead to the program crashing or displaying incorrect information. Additionally, the code does not validate user input, which could allow malicious actors to manipulate the program and gain access to sensitive data or system resources. It is recommended to implement proper security measures and validation checks to prevent these types of vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker can potentially cause undefined behavior by manipulating the code in the `onCreate` method. This could include injecting malicious code or modifying the behavior of the application. It is important to ensure proper validation and sanitization of user input to prevent such attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nNo, this program is not unknowingly tracking the user. The code is simply checking if the device has an internet connection and displaying a message accordingly.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onPageScrollStateChanged(int i) {\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, this program is susceptible to an exploitation because it does not validate user input and can potentially lead to a security vulnerability.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. The onPageScrollStateChanged method is a security risk as it allows an attacker to potentially execute arbitrary code on the device. It is recommended to use more secure methods for handling user input and to validate user input to prevent potential security vulnerabilities.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The onPageScrollStateChanged method is used to detect when the user has scrolled the page, but it does not validate user input, which could lead to injection attacks. It is recommended to use more secure methods for handling user input and to validate user input to prevent potential security risks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker can potentially cause undefined behavior by exploiting the onPageScrollStateChanged method to manipulate the behavior of the web page. This could lead to security vulnerabilities such as XSS attacks or unauthorized access to sensitive data. It is important to ensure that the code is properly sanitized and validated to prevent such attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": true,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nYes, this program is unknowingly tracking the user. The onPageScrollStateChanged method is a built-in method of the Android framework that is used to detect when the user has scrolled the page. It is not a custom method created by the developer. Therefore, it is possible that the program is unknowingly tracking the user's activity on the website.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void onPageScrolled(int i, float f, int i2) {\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, this program is susceptible to an exploitation because it does not validate user input and can potentially lead to a buffer overflow.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": true,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. The onPageScrolled method is vulnerable to injection attacks as it accepts two parameters, i and f, which could potentially be maliciously crafted by an attacker. To improve security, the onPageScrolled method should be modified to only accept one parameter, i, and the code should be sanitized to prevent injection attacks.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The onPageScrolled method is being used to calculate the distance between the top of the page and the bottom of the page. However, if an attacker were to manipulate the value of i or i2, they could potentially cause the program to behave unexpectedly or even crash. To prevent this, it is recommended to validate the input values and ensure they are within a safe range before performing any calculations.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker can potentially cause undefined behavior by manipulating the value of the variable 'f' within the onPageScrolled method. This could lead to incorrect calculations or unexpected behavior in the application.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nYes, this program is unknowingly tracking the user. The onPageScrolled() method is being called by the Android system to measure the scrolling speed of the page, and it is being used to track the user's scrolling behavior.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "public void onPageSelected(int i) {\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, this program is susceptible to an exploitation because it does not validate user input and can potentially lead to a security vulnerability.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. The onPageSelected method is vulnerable to SQL injection attacks as it directly executes SQL queries without proper input validation. It is recommended to use parameterized queries or stored procedures to prevent SQL injection attacks.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The onPageSelected method is not properly sanitized, which could allow an attacker to inject malicious code and gain unauthorized access to the website. Additionally, the code does not validate user input, which could lead to SQL injection attacks. It is recommended to implement proper security measures to protect against these potential vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker can potentially cause undefined behavior by manipulating the variable 'i' within the onPageSelected method. This could result in unpredictable behavior and potentially lead to security vulnerabilities.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nYes, this program is unknowingly tracking the user. The onPageSelected() method is being called when a page is selected, which means that the program is keeping track of which page the user is currently on. This could potentially be used to track the user's browsing behavior, although it is likely not being done intentionally.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void onClick(View view) {\n        if (view == this.navopone) {\n            this.viewPager.setCurrentItem(0);\n        }\n        if (view == this.navoptwo) {\n            this.viewPager.setCurrentItem(1);\n        }\n        if (view == this.navopthree) {\n            this.viewPager.setCurrentItem(2);\n        }\n        if (view == this.navopfour) {\n            this.viewPager.setCurrentItem(3);\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, this program is susceptible to an exploitation. The code is vulnerable to a buffer overflow attack, which can potentially allow an attacker to execute arbitrary code and gain unauthorized access to the device. To fix this, the code should be updated to properly validate user input and prevent buffer overflows.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": true,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. It is vulnerable to a potential security exploit where an attacker could manipulate the current item index and potentially access sensitive user data. To improve security, the program should use a secure data structure to store the current item index and retrieve it from there instead of hard-coding it. Additionally, the program should use a secure authentication mechanism to ensure that only authorized users can access the viewPager.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The code is checking the current item of the viewPager and setting it to a specific index, which could potentially lead to an out-of-bounds array access or a null pointer exception if the index is invalid. Additionally, the code is not checking if the viewPager is empty before attempting to access it, which could result in a NullPointerException if the viewPager is not properly initialized.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker can potentially cause undefined behavior by manipulating the viewPager's current item index. If the attacker sets the current item index to an invalid index, it can cause the app to crash or behave unpredictably. It is important to validate the input and ensure that the viewPager's current item index is within the valid range to prevent such attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nNo, this program is not unknowingly tracking the user. The code is simply changing the current item of the view pager based on which button was clicked. It is not tracking the user's location or any other personal information.",
+        "answers": {
+          "yes": false,
+          "location": true,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "private boolean haveNetworkConnection() {\n        NetworkInfo[] allNetworkInfo;\n        boolean z = false;\n        boolean z2 = false;\n        for (NetworkInfo networkInfo : ((ConnectivityManager) getSystemService(\"connectivity\")).getAllNetworkInfo()) {\n            if (networkInfo.getTypeName().equalsIgnoreCase(\"WIFI\") && networkInfo.isConnected()) {\n                z = true;\n            }\n            if (networkInfo.getTypeName().equalsIgnoreCase(\"MOBILE\") && networkInfo.isConnected()) {\n                z2 = true;\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": "\nYes, this program is susceptible to an exploitation. The code checks for network connectivity and sets the variables 'z' and 'z2' to true if the network is available. However, it does not check if the network is secure or if the device is connected to a trusted network. An attacker could exploit this vulnerability by tricking the user into connecting to a malicious network or intercepting network traffic to gain sensitive information.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": true
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": "\nNo, this program does not follow best security practices. It is possible for an attacker to intercept the network traffic and gain access to sensitive information. The program should include additional security measures such as implementing encryption and authentication protocols to protect user data.",
+        "answers": {
+          "does not follow": true,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": "\nYes, there are potential vulnerabilities in this program. The code is checking for network connectivity by using the `ConnectivityManager` class, which can be vulnerable to attacks if an attacker gains access to the device. Additionally, the code is using the `isConnected()` method to determine if a network is available, which can be spoofed by an attacker. To mitigate these risks, it is recommended to use more secure methods for checking network connectivity, such as using the `NetworkCapabilities` class or implementing a custom `ConnectivityManager`.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": "\nYes, an attacker could potentially cause undefined behavior by manipulating the network connection to gain access to sensitive information or by injecting malicious code into the application. It is important to implement proper security measures to prevent such attacks.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": true
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "\nNo, this program is not unknowingly tracking the user. It is simply checking if the device is connected to either a WiFi or mobile network, and setting the variables 'z' and 'z2' accordingly.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  }
+}
