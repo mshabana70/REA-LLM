@@ -60,3 +60,18 @@ Note: all files created and executed on this jupyter server will execute on the 
 singularity exec --overlay llm-container.ext3:rw /scratch/work/public/singularity/cuda11.6.124-cudnn8.4.0.27-devel-ubuntu20.04.4.sif /bin/bash
 
 srun --cpus-per-task=2 --mem=10GB --time=04:00:00 --pty /bin/bash
+
+source /ext3/env.sh
+
+#vLLM setup:
+
+singularity exec --nv --bind /home/ms9761/tmp/ld.so.cache:/etc/ld.so.cache:ro --overlay /scratch/ms9761/rea-llm/llm-container.ext3:rw /scratch/work/public/singularity/cuda12.2.2-cudnn8.9.4-devel-ubuntu22.04.3.sif source /ext3/env.sh; conda activate llama-env; export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.2/compat; python3 -u -m vllm.entrypoints.api_server --host 0.0.0.0 --port 8000 --model mistralai/Mixtral-8x7B-Instruct-v0.1 --dtype float16 --download-dir /scratch/ms9761/rea-llm/data --tensor-parallel-size 4 --load-format safetensors
+
+source /ext3/env.sh
+
+conda activate llama-env
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.2/compat
+
+python3 -u -m vllm.entrypoints.api_server --host 0.0.0.0 --port 8000 --model mistralai/Mixtral-8x7B-Instruct-v0.1 --dtype float16 --download-dir /scratch/ms9761/rea-llm/data --tensor-parallel-size 4 --load-format safetensors
+
