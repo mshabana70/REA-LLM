@@ -1,0 +1,23 @@
+interactive job and then debug the container.
+
+add path libcuda.so ld_library_path
+
+Server is running but not able to access the server endpoint on hpc
+
+Able to run inference from local machine but fails to return response when run from HPC
+
+Possibly talk with HPC on getting it running
+
+using gpt-4 to generate training data for fine tuning
+
+decompiled output that's broken and have the LLM generate source code thats better at being decompiled and comparing the results to the original source code.
+
+Can recompile and do some fuzzing to see how similar it is to the original
+
+Recompile a decompiled android app 
+
+Give the LLM guidance on what was wrong, give it debugging symbols to target the wrong areas
+
+During the training procedure you have access to the source code but the model doesn't see it. Use reinforcement learning to iteratively get it closer to the original source code
+
+

@@ -1,0 +1,26 @@
+====================com.ehtwo.oos.ordering.hospital.json====================
+
+--------------------Function_1--------------------
+protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        startActivity(new Intent(this, ChoosePatientActivity.class));
+        finish();
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not susceptible to an exploitation because the Intent is created with a specific class name, and the only way an Intent can be exploited is by sending it to a malicious app with the same or similar permissions.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not properly handle the Intent, which could potentially lead to an unintended launch of an activity. It is also not using a secure flag when starting the activity.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any attacks.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not dangerous; it correctly starts the ChoosePatientActivity and finishes the current activity.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+

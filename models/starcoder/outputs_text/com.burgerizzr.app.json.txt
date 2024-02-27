@@ -1,0 +1,468 @@
+====================com.burgerizzr.app.json====================
+
+--------------------Function_1--------------------
+public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        setContentView(R.layout.splash_screen);
+        this.splash_logo = (GifImageView) findViewById(R.id.splash_logo);
+        startService(new Intent(this, FirebaseService.class));
+        boolean equals = "en".equals(LocaleUtil.getLanguage());
+        Log.e("isenglish", String.valueOf(equals));
+        TextView textView = (TextView) findViewById(R.id.tv_text);
+        if (equals) {
+            textView.setText(getResources().getString(R.string.very_fresh_en));
+            textView.setTypeface(FontUtil.getInstance().getRomanDefault(true));
+        } else {
+            textView.setText(getResources().getString(R.string.very_fresh_ar));
+        }
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ContextCompat.checkSelfPermission(this, "android.permission.READ_PHONE_STATE") == 0) {
+                this.finishing = true;
+                init();
+                return;
+            }
+            requestPermissions(new String[]{"android.permission.READ_PHONE_STATE"}, 100);
+            return;
+        }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not checking for the READ_PHONE_STATE permission before accessing the TelephonyManager. It is also not using the permission to properly secure the application.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not have proper input validation and does not prevent potential malicious intent.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not susceptible to any type of attack, but it does have some unnecessary permissions and code that could potentially cause issues. Please see the following code review for more information:
+
+https://www.securecoding.cert.org/confluence/display/java/DRD11-J.+Ensure+that+all+Android+Manifest+elements+are+properly+configured
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not secure and can cause some undefined behavior if an attacker can modify the code. The code checks for the READ_PHONE_STATE permission before starting the FirebaseService. If the permission is not present, the code finishes the activity and does not start the FirebaseService. However, the code does not check if the FirebaseService is actually started. If the attacker can modify the code to start the FirebaseService without checking for the permission, the service will be started and the app will crash.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_2--------------------
+public void onResume() {
+        super.onResume();
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not susceptible to an exploitation because it does not have any malicious intent.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not properly handle Activity lifecycle events. It does not call `super.onResume()` in `onResume()`.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any attacks.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not dangerous, but it is not recommended to use it in production code.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_3--------------------
+public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
+        super.onRequestPermissionsResult(i, strArr, iArr);
+        if (i != 100) {
+            return;
+        }
+        this.finishing = true;
+        init();
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not checking for the result code of the permission request. If the user denies the permission request, the app will continue to run without the proper permissions.
+
+Question 2: Does this program follow best security practices?
+Response:  The provided code is not following best security practices because it does not check for the request code (100) before proceeding with the initialization.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any permissions-related issues.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not protected against malicious behavior. If an attacker can cause the app to crash or execute arbitrary code, they can potentially do so by requesting permissions.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_4--------------------
+private void init() {
+        McxLogin with = McxLogin.with(this);
+        if (Auth.getInstance().isLoggedIn()) {
+            with.login();
+        } else {
+            with.register();
+        }
+        this.utilApi = UtilitiesApi.call(this, false);
+        this.menuApi = MenuApi.call(this, false);
+        Auth.getInstance().getMenuId();
+        Auth.getInstance().getConcept();
+        callApi();
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle user input, and it does not sanitize or validate user input.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code is not secure. It does not check for null or empty values before using them, and it does not properly handle exceptions.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not designed to handle user input, and there are no checks for empty or null input.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code initializes two objects (McxLogin and UtilitiesApi) and then calls them. If an attacker can cause the McxLogin constructor to execute before the UtilitiesApi constructor, they could potentially cause a NullPointerException when the UtilitiesApi object is used.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_5--------------------
+public void onPause() {
+        super.onPause();
+        CustomDialog customDialog = this.dialog;
+        if (customDialog != null && customDialog.isShowing()) {
+            this.dialog.dismiss();
+        }
+        if (this.finishing) {
+            finish();
+        }
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle unexpected input, and it does not properly validate input before using it.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not properly handle the case where the user clicks the back button while the dialog is displayed. In this case, the dialog will be dismissed but the activity will not be finished, causing unexpected behavior. To properly handle this case, you should check if the activity is finishing before dismissing the dialog.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any attacks. The code properly dismisses the dialog when the activity is paused.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not very robust, and it could potentially cause a crash or other undefined behavior if the `CustomDialog` object is null or not properly initialized. Consider using a proper `null` check before accessing the `CustomDialog` object.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_6--------------------
+public void onStop() {
+        super.onStop();
+        CustomDialog customDialog = this.dialog;
+        if (customDialog != null && customDialog.isShowing()) {
+            this.dialog.dismiss();
+        }
+        UtilitiesApi utilitiesApi = this.utilApi;
+        if (utilitiesApi != null) {
+            utilitiesApi.forceStop();
+        }
+        MenuApi menuApi = this.menuApi;
+        if (menuApi != null) {
+            menuApi.forceStop();
+        }
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not susceptible to an exploitation because it properly handles the case when the dialog is null or not showing.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not properly handle the case where the `CustomDialog` or `UtilitiesApi` or `MenuApi` objects are null, which can happen if the `onStop` method is called before they are initialized. It also does not properly call `dismiss` on the `CustomDialog`, which can cause a memory leak.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any known security issues.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not designed to handle potential null pointers, so it's possible that an attacker could cause a crash or undefined behavior by accessing the 'dialog' or 'utilApi' or'menuApi' properties before they are initialized. To fix this, you should check for null before accessing these properties.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_7--------------------
+public void onBackPressed() {
+        super.onBackPressed();
+        Process.killProcess(Process.myPid());
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to be exploitable. The `onBackPressed()` method is overridden from the `AppCompatActivity` class, which is not part of the Android framework. The `Process` class is part of the Java API, and it is not designed to be exploited.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not kill the app's process when the back button is pressed. Instead, it uses the Process.killProcess(Process.myPid()) method, which is not recommended for security reasons.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any attacks. The code defines an override of the `onBackPressed()` method in the `Activity` class. It first calls the `super.onBackPressed()` method, which is the default implementation of this method in the `AppCompatActivity` class. Then, it kills the current process using the `Process.killProcess()` method. This ensures that the app is closed properly and any resources that are being used are freed up.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is designed to kill the current process when the user presses the back button. However, there is no guarantee that this will actually work, as the `onBackPressed()` method is not part of the Android framework. It is up to the developer to ensure that this code properly handles the case where the current activity is not the main activity.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_8--------------------
+public void callApi() {
+        this.utilApi.getTranslations(new ApiInterface.TranslationsListener() { // from class: com.burgerizzr.app.SplashScreen.1
+            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener
+            public void onException() {
+            }
+
+            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener
+            public void onSuccess() {
+                SplashScreen.this.callMenu();
+            }
+
+            @Override // com.burgerizzr.app.api.ApiInterface.TranslationsListener
+            public void onError() {
+                if (SplashScreen.this.doneInForegroung) {
+                    SplashScreen.this.showErrorDialog();
+                }
+            }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle exceptions, and the error handling is not implemented correctly. The program could potentially crash if there is an unexpected error.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code is not secure. It does not handle potential exceptions or errors properly. It is also not asynchronous, which is a best practice for Android.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any known security issues.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not safe, because it does not handle exceptions properly. If an attacker causes the app to crash, it could potentially cause unexpected behavior in the app. Consider using a try-catch block or checking for null before accessing the object's methods or fields.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_9--------------------
+public void callMenu() {
+        ApplicationsApiCall.getInstance().getApplication(new ApiInterface.ApplicationRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2
+            @Override // com.burgerizzr.app.api.ApiInterface.ApplicationRequestListener
+            public void onSuccess(Object obj) {
+                try {
+                    JSONObject jSONObject = new JSONObject(obj.toString());
+                    JSONObject jSONObject2 = jSONObject.getJSONObject("data");
+                    AppLogger.printJSONObject("app ", jSONObject2);
+                    Auth.getInstance().setApplication((Application) new Gson().fromJson(jSONObject2.toString(), new TypeToken<Application>() { // from class: com.burgerizzr.app.SplashScreen.2.1
+                    }.getType()));
+                    if (jSONObject.has("included") && !jSONObject.isNull("included")) {
+                        JSONArray jSONArray = jSONObject.getJSONArray("included");
+                        if (jSONArray.length() > 0) {
+                            Auth.getInstance().setConcept(Concept.parse(jSONArray.getJSONObject(0)));
+                            SplashScreen.this.menuApi.splashCalls(new ApiInterface.ApiRequestListener() { // from class: com.burgerizzr.app.SplashScreen.2.2
+                                @Override // com.burgerizzr.app.api.ApiInterface.ApiRequestListener
+                                public void onSuccess() {
+                                    if (SplashScreen.this.doneInForegroung) {
+                                        SplashScreen.this.startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                                    }
+                                }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle unexpected input, and it does not perform any validation on the received JSON data.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code is not secure. It does not validate the server response, and it does not encrypt the application data.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not designed to handle user input, and there are no checks for proper input.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  No. The provided code is functional and will not cause any issues.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_10--------------------
+public void onError() {
+                                    if (SplashScreen.this.doneInForegroung) {
+                                        SplashScreen.this.showErrorDialog();
+                                    }
+                                }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle exceptions, and it does not check for null pointers before dereferencing them.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not properly handle the case where the app is in the background and an error occurs. In this case, the app should not show an error dialog, but instead should attempt to reconnect to the server.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any type of attack. The code checks if the app has been put in the foreground, and if so, it shows the error dialog.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not designed to handle exceptions, so an attacker could potentially cause a crash or other undefined behavior. Consider using a try-catch block or checking for null before using the object.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_11--------------------
+public void onError(Object obj) {
+                AppLogger.printRetrofitError(obj);
+                if (SplashScreen.this.doneInForegroung) {
+                    SplashScreen.this.showErrorDialog();
+                }
+            }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle exceptions, and it does not check for null before dereferencing the object.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code is not secure. It does not check for null before dereferencing. It also does not handle potential exceptions.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any known security issues.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not designed to handle exceptions, and it does not provide any protection against malicious input. It is recommended to redesign the code to properly handle exceptions and provide proper protection against malicious input.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+
+--------------------Function_12--------------------
+public void showErrorDialog() {
+        String string;
+        try {
+            if (!DevUtils.isNetworkAvailable(this)) {
+                string = getString(R.string.no_network_connection);
+            } else {
+                string = getString(R.string.unexpected_error);
+            }
+            CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), string, "", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);
+            CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.3
+                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+                public void onClickButtonOne(Dialog dialog) {
+                    SplashScreen.this.callApi();
+                    dialog.dismiss();
+                }
+
+                @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+                public void onClickButtonTwo(Dialog dialog) {
+                    SplashScreen.this.callApi();
+                    dialog.dismiss();
+                }
+            }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not designed to handle exceptions, and there is no proper validation or error handling. The code could potentially crash the app, causing it to display an unexpected error message.
+
+Question 2: Does this program follow best security practices?
+Response:  No. The provided code does not check for network connection before making a network call. It is also not using a secure connection (HTTPS).
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not designed to handle exceptions, which could potentially cause a crash. Consider using a try-catch block to handle potential exceptions.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not designed to handle unexpected exceptions, so an attacker could potentially cause a crash or other undefined behavior. Consider using a try-catch block to handle potential exceptions.
+
+Question 5: Is this program unknowningly tracking the user?
+Response:  The provided code is designed to display an error message when there is an unexpected error. However, it does not check for network connection before displaying the error message. This could potentially cause the app to track the user's location, which is a privacy concern.
+
+
+
+--------------------Function_13--------------------
+private void showPermissionDialog() {
+        CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), "A message asking to allow this app to make and manage calls will appear after this one. That is only so the app can obtain this device's id and will not make any calls without you knowing it.", "", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);
+        CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.4
+            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+            public void onClickButtonOne(Dialog dialog) {
+                dialog.dismiss();
+            }
+
+            @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+            public void onClickButtonTwo(Dialog dialog) {
+                if (Build.VERSION.SDK_INT >= 23) {
+                    SplashScreen.this.requestPermissions(new String[]{"android.permission.READ_PHONE_STATE"}, 100);
+                }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code requests the READ_PHONE_STATE permission, which allows the app to access the device's unique id. However, this permission is not used in the app, and the app does not make any calls without the permission. The code is therefore not vulnerable to an attack.
+
+Question 2: Does this program follow best security practices?
+Response:  No. It does not check for the READ_PHONE_STATE permission before making the call. It is possible for an attacker to call the app without having the permission, causing unexpected charges to the user's phone.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not dangerous, but it does have the potential to cause issues if there are any changes in the Android API. For example, if the READ_PHONE_STATE permission is not available in the target API version, the app will crash. To avoid this, you can use the following code:
+
+private void showPermissionDialog() {
+    CustomDialogObject customDialogObject = new CustomDialogObject(false, getString(17039380), "A message asking to allow this app to make and manage calls will appear after this one. That is only so the app can obtain this device's id and will not make any calls without you knowing it.", "", DBHandler.getInstance().getTranslation(TEXT.OK), true, false);
+    CustomDialog.OnActionSelectedListener onActionSelectedListener = new CustomDialog.OnActionSelectedListener() { // from class: com.burgerizzr.app.SplashScreen.4
+        @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+        public void onClickButtonOne(Dialog dialog) {
+            dialog.dismiss();
+        }
+
+        @Override // com.burgerizzr.app.dialog.CustomDialog.OnActionSelectedListener
+        public void onClickButtonTwo(Dialog dialog) {
+            if (Build.VERSION.SDK_INT >= 23) {
+                if (ContextCompat.checkSelfPermission(SplashScreen.this, "android.permission.READ_PHONE_STATE")!= PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(SplashScreen.this, new String[]{"android.permission.READ_PHONE_STATE"}, 100);
+                }
+            }
+
+This code checks for the READ_PHONE_STATE permission before requesting it. If the permission is not available, it will not be requested, and the app will not crash.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  No.
+
+Question 5: Is this program unknowningly tracking the user?
+Response:  If so, you should provide a proper privacy policy and explain how the app uses the user's device id.
+
+
+
+--------------------Function_14--------------------
+public void attachBaseContext(Context context) {
+        if (context != null) {
+            Locale locale = new Locale(LocaleUtil.getLanguage());
+            Locale.setDefault(locale);
+            context = LocaleUtil.getInstance().wrap(context, locale);
+        }
+        super.attachBaseContext(context);
+    }
+
+Question 1: Is this program susceptible to an exploitation?
+Response:  The provided code is not using adequate input validation, which could potentially lead to an attacker providing malicious input to the `Locale` constructor, causing the application to crash. Consider using the following code instead:
+
+public void attachBaseContext(Context context) {
+    if (context!= null) {
+        String language = LocaleUtil.getLanguage();
+        if (TextUtils.isDigitsOnly(language)) {
+            Locale locale = new Locale(language);
+            Locale.setDefault(locale);
+            context = LocaleUtil.getInstance().wrap(context, locale);
+        }
+    }
+    super.attachBaseContext(context);
+}
+
+Question 2: Does this program follow best security practices?
+Response:  The provided code sets the default locale to the user's preferred language, which is retrieved using the LocaleUtil class. However, this code does not provide any protection against malicious attacks, as the Locale object is created without any validation. It is also not guaranteed to work in all cases, as the Locale.setDefault method is not thread-safe.
+
+Question 3: Are there any vulnerabilities in this program?
+Response:  The provided code is not vulnerable to any known security issues.
+
+Question 4: Can an attacker cause some undefined behavior?
+Response:  The provided code is not designed to handle null contexts, and it's not clear what the purpose of the code is.
+
+Question 5: Is this program unknowningly tracking the user?
+Response: 
+
+
+

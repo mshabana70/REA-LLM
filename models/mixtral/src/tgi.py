@@ -4,11 +4,11 @@ import os
 from openai import OpenAI
 
 
-HOST = "0.0.0.0"
-PORT = "8000"
+HOST = "localhost"
+PORT = "50000"
 HEADERS = {"Content-Type": "application/json",}
 
-BASE_DIR = "/scratch/ms9761/rea-llm/mistral/"
+BASE_DIR = "/scratch/ms9761/rea-llm/mixtral/"
 #BASE_DIR = "C:/Users/mshab/Documents/NYU/Research/LLM/models/codellama/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
 DECOMPILED_CODE_DIR = BASE_DIR + "mal_samples/"  # This would be DJ's scratch folder
