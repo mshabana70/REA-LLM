@@ -21,3 +21,30 @@ Give the LLM guidance on what was wrong, give it debugging symbols to target the
 During the training procedure you have access to the source code but the model doesn't see it. Use reinforcement learning to iteratively get it closer to the original source code
 
 
+03/04/2024 Notes:
+
+Expand question to summarize focused question "summarize this function in one paragraph noting any security relevant features"
+
+Pick two or three applications, reverse them and have questions for those specific applications to see how well the responnse matches our predefined answers.
+
+Make sure the decompiled json has more functions and classes then before. (get rid of intent-filter search to expand number of functions/classes in input jsons)
+
+Look into tree-sitter for parsing the decompilation side. 
+
+Unpack one tarball -> takes call graph json -> produce prompt -> inference
+
+
+GET THIS DONE!!!! 03/11/2024
+4 rounds of summary, keep going up until you reach the context window minus however big the input prompt.
+
+What to do with cyclic dependencies? Find an example of a call graph that uses loops.
+
+	- What do you want the model to output for the top function?
+	- Which function is the model interested?
+	- Stick with the bottom up approach for recursive summarization.
+	- Some experiments on starting the language model at main, and ask it to keep going to see what happens next.
+	- Get a report and compare with app summary page (apkmirror, kaggle, google-playstore-dataset, apkpure) or malware writeup and use the evaluation metric "BLEU" (could be good) (might not work since we are looking for functionality that does not match the description)
+		- Compute the embeddings of the two documents and see how close they are. (number between zero and 1)
+		- Once we have the model generated summary and beam them to GPT 4 and ask the model how closely related these two things are and give a score (could introduce GPT 4's inabilities to the test.) look for related work in this 
+
+

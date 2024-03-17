@@ -56,6 +56,24 @@ class APK:
                 func_name = self.get_func_name(func_num + 1)
                 self.funcs[func_name] = Func(function)
 
+    def save_as_text(self, text_dir, apk_name):
+        app_title = f"===================={apk_name}===================="
+        text = f"{app_title}\n\n"
+        for func_name, func_obj in self.funcs.items():
+            header = f"--------------------{func_name}--------------------"
+            code = func_obj.outputs["code"]
+            response = ""
+            for question_num in QUESTIONS:
+                results = func_obj.outputs["results"][question_num]
+                print(results)
+                response += f"Question {question_num}: {results['question']}\nResponse: {results['response']}\n\n"
+                print(response)
+            text += f"{header}\n{code}\n\n{response}\n\n"
+
+        with open(text_dir + ".txt", "w") as outfile:
+            outfile.write(text)
+            outfile.close()
+
     def save_as_json(self, json_dir):
         output = {func_name: func_obj.outputs for func_name, func_obj in self.funcs.items()}
 
@@ -98,7 +116,7 @@ if __name__ == "__main__":
                 print("Response analyzed!")
 
         print("Saving output...")
-        curr_apk.save_as_json(OUTPUT_DIR + apk)
+        curr_apk.save_as_text(OUTPUT_DIR + apk, apk)
         print(f"Output saved at {OUTPUT_DIR + apk}!")
 
 
