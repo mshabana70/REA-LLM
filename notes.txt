@@ -47,4 +47,15 @@ What to do with cyclic dependencies? Find an example of a call graph that uses l
 		- Compute the embeddings of the two documents and see how close they are. (number between zero and 1)
 		- Once we have the model generated summary and beam them to GPT 4 and ask the model how closely related these two things are and give a score (could introduce GPT 4's inabilities to the test.) look for related work in this 
 
+03/25/2024
+
+- No need to include anonymous functions in our summary
+- Find a reasonably large open-source android app, compile and then jadx decompile
+	- run this test to pinpoint what the real answer is and check all of the tools are agreeing on what that answer is.
+	- signal (start with this), telegram, crypto-apps, android games, https://fossdroid.com/ 
+- Anonymous function called from a non-anonymous function
+- Jadx is ignoring some files
+- RTX8000, try to get this working with mixtral instad of the A100's
+
+
 

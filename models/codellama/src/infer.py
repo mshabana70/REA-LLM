@@ -10,8 +10,8 @@ HEADERS = {"Content-Type": "application/json",}
 BASE_DIR = "/scratch/ms9761/rea-llm/codellama/"
 #BASE_DIR = "C:/Users/mshab/Documents/NYU/Research/LLM/models/codellama/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
-DECOMPILED_CODE_DIR = BASE_DIR + "mal_samples/"  # This would be DJ's scratch folder
-OUTPUT_DIR = BASE_DIR + "outputs/"
+DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"  # This would be DJ's scratch folder
+OUTPUT_DIR = BASE_DIR + "outputs_text/"
 
 INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
@@ -55,12 +55,31 @@ class APK:
                 func_name = self.get_func_name(func_num + 1)
                 self.funcs[func_name] = Func(function)
 
+    def save_as_text(self, text_dir, apk_name):
+        app_title = f"===================={apk_name}===================="
+        text = f"{app_title}\n\n"
+        for func_name, func_obj in self.funcs.items():
+            header = f"--------------------{func_name}--------------------"
+            code = func_obj.outputs["code"]
+            response = ""
+            for question_num in QUESTIONS:
+                results = func_obj.outputs["results"][question_num]
+                print(results)
+                response += f"Question {question_num}: {results['question']}\nResponse: {results['response']}\n\n"
+                print(response)
+            text += f"{header}\n{code}\n\n{response}\n\n"
+        
+        with open(text_dir + ".txt", "w") as outfile:
+            outfile.write(text)
+            outfile.close()
+
+
+
     def save_as_json(self, json_dir):
         output = {func_name: func_obj.outputs for func_name, func_obj in self.funcs.items()}
 
         with open(json_dir, "w") as outfile:
             json.dump(output, outfile, indent=2)
-
 
 if __name__ == "__main__":
     for apk in os.listdir(DECOMPILED_CODE_DIR):
@@ -77,7 +96,7 @@ if __name__ == "__main__":
                 data = {
                     "inputs": full_prompt,
                     "parameters": {
-                        "max_new_tokens": 2000,
+                        "max_new_tokens": 1000,
                     },
                 }
 
@@ -91,7 +110,7 @@ if __name__ == "__main__":
                 print("Response analyzed!")
 
         print("Saving output...")
-        curr_apk.save_as_json(OUTPUT_DIR + apk)
+        curr_apk.save_as_text(OUTPUT_DIR + apk, apk)
         print(f"Output saved at {OUTPUT_DIR + apk}!")
 
 
