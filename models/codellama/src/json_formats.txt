@@ -1,0 +1,44 @@
+# Questions input files
+{
+    "1": {
+        "question": "...",
+        "answers": {
+            "1": "...",
+            "2": "..."
+        }
+    }
+}
+
+# Recursive input files
+{
+    "raw": [
+        {
+            "entry-point": "...",
+            "children": [
+                "...",
+                "..."
+            ]
+        },
+        {
+            "entry-point": "...",
+            "children": [
+                "...",
+                "..."
+            ]
+        }
+    ],
+    "functions": {
+        "function name...": {
+            "code": "...",
+            "parent": "..."
+        },
+        "function name...": {
+            "code": "...",
+            "parent": "...",
+            "children": [
+                "...",
+                "..."
+            ]
+        }
+    }
+}
