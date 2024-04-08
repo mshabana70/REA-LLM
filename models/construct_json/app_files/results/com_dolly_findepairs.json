@@ -1,0 +1,158 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <com.unity.purchasing.googleplay.VRPurchaseActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void onActivityResult(int,int,android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.unity.purchasing.googleplay.GooglePlayPurchasing: boolean ContinuePurchase(android.app.Activity,java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>"
+        }
+    ],
+    "functions": {
+        "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        super.onActivityResult(i, i2, intent);\n        processActivityResult(i, i2, intent);\n        this.receivedResult = true;\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        Log.i(TAG, \"Creating purchase activity\");\n        Bundle extras = getIntent().getExtras();\n        if (extras != null && extras.getBoolean(\"vr\", false)) {\n            View decorView = getWindow().getDecorView();\n            if (Build.VERSION.SDK_INT >= 11) {\n                decorView.setSystemUiVisibility(6);\n            }\n        }\n        String string = getIntent().getExtras().getString(\"productId\");\n        String string2 = getIntent().getExtras().getString(\"developerPayload\");\n        String string3 = getIntent().getExtras().getString(\"type\");\n        String string4 = getIntent().getExtras().getString(\"oldSkuMetadata\");\n        String string5 = getIntent().getExtras().getString(\"newSku\");\n        if (string3 != null && string3.equals(\"subscription_update\")) {\n            if (GooglePlayPurchasing.ContinueSubscriptionUpdate(this, string4, string5)) {\n                return;\n            }\n            setResult(0);\n            finish();\n        } else if (GooglePlayPurchasing.ContinuePurchase(this, string, string2)) {\n        } else {\n            setResult(0);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.unity.purchasing.googleplay.GooglePlayPurchasing: boolean ContinuePurchase(android.app.Activity,java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.unity.purchasing.googleplay.PurchaseActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (this.receivedResult) {\n            return;\n        }\n        processActivityResult(GooglePlayPurchasing.ACTIVITY_REQUEST_CODE, 0, null);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        return keyEvent.getAction() == 2 ? this.mUnityPlayer.injectEvent(keyEvent) : super.dispatchKeyEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getIntent().putExtra(\"unity\", updateUnityCommandLineArguments(getIntent().getStringExtra(\"unity\")));\n        this.mUnityPlayer = new UnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.mUnityPlayer.destroy();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onGenericMotionEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyUp(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        setIntent(intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mUnityPlayer.start();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onTouchEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>": {
+            "code": "void  onTrimMemory(int)  {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>": {
+            "code": "void  onWindowFocusChanged(boolean)  {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+            "children": []
+        }
+    }
+}

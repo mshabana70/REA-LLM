@@ -1,0 +1,1091 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.internal.ipc.RemoteANActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void <init>()>",
+            "children": [
+                "<com.facebook.ads.AudienceNetworkActivity$1: void <init>(com.facebook.ads.AudienceNetworkActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void finish()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onBackPressed()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.facebook.ads.internal.dynamicloading.DynamicLoaderFactory: com.facebook.ads.internal.dynamicloading.DynamicLoader makeLoader(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.facebook.ads.AudienceNetworkActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void closeOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onContentChanged()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void openOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setTheme(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void <init>()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity$HostCallbacks: void <init>(android.support.v4.app.FragmentActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                "<android.support.v4.app.LoaderManager: android.support.v4.app.LoaderManager getInstance(android.arch.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<android.support.v4.app.ActivityCompat: android.support.v4.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onBackPressed()>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity$NonConfigurationInstances: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStateNotSaved()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void <init>()>",
+            "children": [
+                "<android.support.v4.util.SimpleArrayMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchKeyEvent(android.support.v4.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.arch.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<android.arch.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj$1: void <init>(com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj,long,long)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void find(int,int,android.content.Intent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void place(java.lang.String,android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onResume()>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void place(java.lang.String,android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void find(int,int,android.content.Intent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onDestroy()>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void superior(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onRequestPermissionsResult(int,java.lang.String[],int[])>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onResume()>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void place(java.lang.String,android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void find(int,int,android.content.Intent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void quickbooks(java.lang.String,android.app.Activity,java.lang.Long,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.common.api.internal.GoogleApiManager: com.google.android.gms.common.api.internal.GoogleApiManager zab(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitSoftwareActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitTransparentActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitTransparentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.graphics.drawable.ColorDrawable: void <init>(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onDestroy()>",
+            "children": [
+                "<com.unity3d.services.core.api.Intent: void removeActiveActivity(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: boolean onKeyDown(int,android.view.KeyEvent)>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onPause()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<com.unity3d.services.core.webview.WebViewApp: com.unity3d.services.core.webview.WebViewApp getCurrentApp()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onResume()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onStart()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onStop()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onWindowFocusChanged(boolean)>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        }
+    ],
+    "functions": {
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void finish()>": {
+            "code": "void  finish()  {\n            AudienceNetworkActivity.super.finish();\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n            AudienceNetworkActivity.super.onBackPressed();\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n            AudienceNetworkActivity.super.onConfigurationChanged(configuration);\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n            AudienceNetworkActivity.super.onCreate(bundle);\n        }",
+            "children": [
+                "<com.facebook.ads.internal.dynamicloading.DynamicLoaderFactory: com.facebook.ads.internal.dynamicloading.DynamicLoader makeLoader(android.content.Context)>"
+            ]
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n            AudienceNetworkActivity.super.onDestroy();\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onPause()>": {
+            "code": "void  onPause()  {\n            AudienceNetworkActivity.super.onPause();\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onResume()>": {
+            "code": "void  onResume()  {\n            AudienceNetworkActivity.super.onResume();\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n            AudienceNetworkActivity.super.onSaveInstanceState(bundle);\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: void onStart()>": {
+            "code": "void  onStart()  {\n            AudienceNetworkActivity.super.onStart();\n        }",
+            "children": []
+        },
+        "Entry-point: <com.facebook.ads.AudienceNetworkActivity: boolean onTouchEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onTouchEvent(android.view.MotionEvent)  {\n            return AudienceNetworkActivity.super.onTouchEvent(motionEvent);\n        }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  addContentView(android.view.View,android.view.ViewGroup$LayoutParams)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void closeOptionsMenu()>": {
+            "code": "void  closeOptionsMenu()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>": {
+            "code": "void  invalidateOptionsMenu()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onContentChanged()>": {
+            "code": "void  onContentChanged()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>": {
+            "code": "boolean  onMenuOpened(int,android.view.Menu)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>": {
+            "code": "void  onPostCreate(android.os.Bundle)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onStart()>": {
+            "code": "void  onStart()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onStop()>": {
+            "code": "void  onStop()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>": {
+            "code": "void  onTitleChanged(java.lang.CharSequence,int)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void openOptionsMenu()>": {
+            "code": "void  openOptionsMenu()  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setTheme(int)>": {
+            "code": "void  setTheme(int)  None",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>": {
+            "code": "void  dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])  {\n        super.dump(str, fileDescriptor, printWriter, strArr);\n        printWriter.print(str);\n        printWriter.print(\"Local FragmentActivity \");\n        printWriter.print(Integer.toHexString(System.identityHashCode(this)));\n        printWriter.println(\" State:\");\n        String str2 = str + \"  \";\n        printWriter.print(str2);\n        printWriter.print(\"mCreated=\");\n        printWriter.print(this.mCreated);\n        printWriter.print(\" mResumed=\");\n        printWriter.print(this.mResumed);\n        printWriter.print(\" mStopped=\");\n        printWriter.print(this.mStopped);\n        if (getApplication() != null) {\n            LoaderManager.getInstance(this).dump(str2, fileDescriptor, printWriter, strArr);\n        }\n        this.mFragments.getSupportFragmentManager().dump(str, fileDescriptor, printWriter, strArr);\n    }",
+            "children": [
+                "<android.support.v4.app.LoaderManager: android.support.v4.app.LoaderManager getInstance(android.arch.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        int i3 = i >> 16;\n        if (i3 != 0) {\n            int i4 = i3 - 1;\n            String str = this.mPendingFragmentActivityResults.get(i4);\n            this.mPendingFragmentActivityResults.remove(i4);\n            if (str == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment findFragmentByWho = this.mFragments.findFragmentByWho(str);\n            if (findFragmentByWho == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + str);\n                return;\n            }\n            findFragmentByWho.onActivityResult(i & SupportMenu.USER_MASK, i2, intent);\n            return;\n        }\n        ActivityCompat.PermissionCompatDelegate permissionCompatDelegate = ActivityCompat.getPermissionCompatDelegate();\n        if (permissionCompatDelegate == null || !permissionCompatDelegate.onActivityResult(this, i, i2, intent)) {\n            super.onActivityResult(i, i2, intent);\n        }\n    }",
+            "children": [
+                "<android.support.v4.app.ActivityCompat: android.support.v4.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        FragmentManager supportFragmentManager = this.mFragments.getSupportFragmentManager();\n        boolean isStateSaved = supportFragmentManager.isStateSaved();\n        if (!isStateSaved || Build.VERSION.SDK_INT > 25) {\n            if (isStateSaved || !supportFragmentManager.popBackStackImmediate()) {\n                super.onBackPressed();\n            }\n        }\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.dispatchConfigurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        this.mFragments.attachHost(null);\n        super.onCreate(bundle);\n        NonConfigurationInstances nonConfigurationInstances = (NonConfigurationInstances) getLastNonConfigurationInstance();\n        if (nonConfigurationInstances != null && nonConfigurationInstances.viewModelStore != null && this.mViewModelStore == null) {\n            this.mViewModelStore = nonConfigurationInstances.viewModelStore;\n        }\n        if (bundle != null) {\n            this.mFragments.restoreAllState(bundle.getParcelable(FRAGMENTS_TAG), nonConfigurationInstances != null ? nonConfigurationInstances.fragments : null);\n            if (bundle.containsKey(NEXT_CANDIDATE_REQUEST_INDEX_TAG)) {\n                this.mNextCandidateRequestIndex = bundle.getInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG);\n                int[] intArray = bundle.getIntArray(ALLOCATED_REQUEST_INDICIES_TAG);\n                String[] stringArray = bundle.getStringArray(REQUEST_FRAGMENT_WHO_TAG);\n                if (intArray == null || stringArray == null || intArray.length != stringArray.length) {\n                    Log.w(TAG, \"Invalid requestCode mapping in savedInstanceState.\");\n                } else {\n                    this.mPendingFragmentActivityResults = new SparseArrayCompat<>(intArray.length);\n                    for (int i = 0; i < intArray.length; i++) {\n                        this.mPendingFragmentActivityResults.put(intArray[i], stringArray[i]);\n                    }\n                }\n            }\n        }\n        if (this.mPendingFragmentActivityResults == null) {\n            this.mPendingFragmentActivityResults = new SparseArrayCompat<>();\n            this.mNextCandidateRequestIndex = 0;\n        }\n        this.mFragments.dispatchCreate();\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>": {
+            "code": "boolean  onCreatePanelMenu(int,android.view.Menu)  {\n        if (i == 0) {\n            return super.onCreatePanelMenu(i, menu) | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n        }\n        return super.onCreatePanelMenu(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (this.mViewModelStore != null && !isChangingConfigurations()) {\n            this.mViewModelStore.clear();\n        }\n        this.mFragments.dispatchDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(i, menuItem)) {\n            return true;\n        }\n        if (i != 0) {\n            if (i != 6) {\n                return false;\n            }\n            return this.mFragments.dispatchContextItemSelected(menuItem);\n        }\n        return this.mFragments.dispatchOptionsItemSelected(menuItem);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>": {
+            "code": "void  onMultiWindowModeChanged(boolean)  {\n        this.mFragments.dispatchMultiWindowModeChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        if (i == 0) {\n            this.mFragments.dispatchOptionsMenuClosed(menu);\n        }\n        super.onPanelClosed(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mResumed = false;\n        if (this.mHandler.hasMessages(2)) {\n            this.mHandler.removeMessages(2);\n            onResumeFragments();\n        }\n        this.mFragments.dispatchPause();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>": {
+            "code": "void  onPictureInPictureModeChanged(boolean)  {\n        this.mFragments.dispatchPictureInPictureModeChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        this.mHandler.removeMessages(2);\n        onResumeFragments();\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>": {
+            "code": "boolean  onPreparePanel(int,android.view.View,android.view.Menu)  {\n        if (i == 0 && menu != null) {\n            return onPrepareOptionsPanel(view, menu) | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        return super.onPreparePanel(i, view, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        this.mFragments.noteStateNotSaved();\n        int i2 = (i >> 16) & SupportMenu.USER_MASK;\n        if (i2 != 0) {\n            int i3 = i2 - 1;\n            String str = this.mPendingFragmentActivityResults.get(i3);\n            this.mPendingFragmentActivityResults.remove(i3);\n            if (str == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment findFragmentByWho = this.mFragments.findFragmentByWho(str);\n            if (findFragmentByWho == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + str);\n                return;\n            }\n            findFragmentByWho.onRequestPermissionsResult(i & SupportMenu.USER_MASK, strArr, iArr);\n        }\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mHandler.sendEmptyMessage(2);\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(bundle);\n        markFragmentsCreated();\n        Parcelable saveAllState = this.mFragments.saveAllState();\n        if (saveAllState != null) {\n            bundle.putParcelable(FRAGMENTS_TAG, saveAllState);\n        }\n        if (this.mPendingFragmentActivityResults.size() > 0) {\n            bundle.putInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG, this.mNextCandidateRequestIndex);\n            int[] iArr = new int[this.mPendingFragmentActivityResults.size()];\n            String[] strArr = new String[this.mPendingFragmentActivityResults.size()];\n            for (int i = 0; i < this.mPendingFragmentActivityResults.size(); i++) {\n                iArr[i] = this.mPendingFragmentActivityResults.keyAt(i);\n                strArr[i] = this.mPendingFragmentActivityResults.valueAt(i);\n            }\n            bundle.putIntArray(ALLOCATED_REQUEST_INDICIES_TAG, iArr);\n            bundle.putStringArray(REQUEST_FRAGMENT_WHO_TAG, strArr);\n        }\n    }",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mStopped = false;\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.execPendingActions();\n        this.mFragments.dispatchStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStateNotSaved()>": {
+            "code": "void  onStateNotSaved()  {\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mStopped = true;\n        markFragmentsCreated();\n        this.mFragments.dispatchStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int)  {\n        if (!this.mStartedActivityFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startActivityForResult(intent, i);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        if (!this.mStartedActivityFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startActivityForResult(intent, i);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        if (!this.mStartedIntentSenderFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        if (!this.mStartedIntentSenderFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        View decorView = getWindow().getDecorView();\n        if (decorView == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decorView, keyEvent)) {\n            return KeyEventDispatcher.dispatchKeyEvent(this, decorView, this, keyEvent);\n        }\n        return true;\n    }",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchKeyEvent(android.support.v4.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyShortcutEvent(android.view.KeyEvent)  {\n        View decorView = getWindow().getDecorView();\n        if (decorView == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decorView, keyEvent)) {\n            return super.dispatchKeyShortcutEvent(keyEvent);\n        }\n        return true;\n    }",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        ReportFragment.injectIfNeededIn(this);\n    }",
+            "children": [
+                "<android.arch.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        this.mLifecycleRegistry.markState(Lifecycle.State.CREATED);\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": [
+                "<android.arch.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        this.rinse = getIntent().getExtras();\n        if (this.rinse == null) {\n            this.exchanged = 0L;\n            this.frontpage = \"\";\n        } else {\n            this.exchanged = this.rinse.getLong(\"raising\");\n            this.frontpage = this.rinse.getString(\"falkland\");\n        }\n        this.tenth = getSharedPreferences(\"separate\", 0);\n        this.enthusiasm = this.tenth.getString(\"hack\", \"\");\n        this.tenth.edit().putString(\"lawsuits\", this.tenth.getString(\"pravar\", \"\")).apply();\n        requestWindowFeature(1);\n        getWindow().setFlags(1024, 1024);\n        RelativeLayout relativeLayout = new RelativeLayout(this);\n        TextView textView = new TextView(this);\n        relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(-1, -1));\n        textView.setText(this.frontpage);\n        textView.setTextSize(2, 20.0f);\n        textView.setTextColor(-1);\n        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-2, -2);\n        layoutParams.addRule(13, -1);\n        relativeLayout.addView(textView, layoutParams);\n        setContentView(relativeLayout);\n        if (this.exchanged > 0) {\n            new CountDownTimer(this.exchanged, this.exchanged) { // from class: com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj.1\n                @Override // android.os.CountDownTimer\n                public void onTick(long j) {\n                }\n\n                @Override // android.os.CountDownTimer\n                public void onFinish() {\n                    Intent intent = new Intent();\n                    intent.putExtra(chaturbhuj.this.enthusiasm, \"\");\n                    chaturbhuj.this.setResult(-1, intent);\n                    chaturbhuj.this.finish();\n                }\n            }.start();\n        }\n    }",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj$1: void <init>(com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj,long,long)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.chaturbhuj: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void find(int,int,android.content.Intent)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void place(java.lang.String,android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onDestroy()>": {
+            "code": "void  onDestroy()  None",
+            "children": []
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.crowds: void onResume()>": {
+            "code": "void  onResume()  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void place(java.lang.String,android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void find(int,int,android.content.Intent)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onDestroy()>": {
+            "code": "void  onDestroy()  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void superior(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  None",
+            "children": []
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.devil: void onResume()>": {
+            "code": "void  onResume()  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void place(java.lang.String,android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void find(int,int,android.content.Intent)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.wales: void quickbooks(java.lang.String,android.app.Activity,java.lang.Long,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  None",
+            "children": []
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  None",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onPause()>": {
+            "code": "void  onPause()  None",
+            "children": []
+        },
+        "Entry-point: <com.awesomeflower.wallpaper.awesomeflowerbestwallpaper.lowest: void onResume()>": {
+            "code": "void  onResume()  None",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>": {
+            "code": "void  onPause()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>": {
+            "code": "void  onRestart()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>": {
+            "code": "void  onResume()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>": {
+            "code": "void  onStart()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>": {
+            "code": "void  onStop()  None",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzane: void zzd(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  None",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  None",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  None",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  None",
+            "children": [
+                "<com.google.android.gms.common.api.internal.GoogleApiManager: com.google.android.gms.common.api.internal.GoogleApiManager zab(android.content.Context)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  None",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitTransparentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        ViewUtilities.setBackground(this._layout, new ColorDrawable(0));\n    }",
+            "children": [
+                "<android.graphics.drawable.ColorDrawable: void <init>(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        AdUnitEvent adUnitEvent;\n        super.onCreate(bundle);\n        if (WebViewApp.getCurrentApp() == null) {\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onCreate\");\n            finish();\n            return;\n        }\n        AdUnit.setAdUnitActivity(this);\n        Intent.setActiveActivity(this);\n        createLayout();\n        ViewUtilities.removeViewFromParent(this._layout);\n        addContentView(this._layout, this._layout.getLayoutParams());\n        if (bundle == null) {\n            this._views = getIntent().getStringArrayExtra(EXTRA_VIEWS);\n            this._keyEventList = getIntent().getIntegerArrayListExtra(EXTRA_KEY_EVENT_LIST);\n            if (getIntent().hasExtra(EXTRA_ORIENTATION)) {\n                this._orientation = getIntent().getIntExtra(EXTRA_ORIENTATION, -1);\n            }\n            if (getIntent().hasExtra(EXTRA_SYSTEM_UI_VISIBILITY)) {\n                this._systemUiVisibility = getIntent().getIntExtra(EXTRA_SYSTEM_UI_VISIBILITY, 0);\n            }\n            if (getIntent().hasExtra(EXTRA_ACTIVITY_ID)) {\n                this._activityId = getIntent().getIntExtra(EXTRA_ACTIVITY_ID, -1);\n            }\n            if (getIntent().hasExtra(EXTRA_DISPLAY_CUTOUT_MODE)) {\n                this._displayCutoutMode = getIntent().getIntExtra(EXTRA_DISPLAY_CUTOUT_MODE, 0);\n            }\n            adUnitEvent = AdUnitEvent.ON_CREATE;\n        } else {\n            this._views = bundle.getStringArray(EXTRA_VIEWS);\n            this._orientation = bundle.getInt(EXTRA_ORIENTATION, -1);\n            this._systemUiVisibility = bundle.getInt(EXTRA_SYSTEM_UI_VISIBILITY, 0);\n            this._keyEventList = bundle.getIntegerArrayList(EXTRA_KEY_EVENT_LIST);\n            this._keepScreenOn = bundle.getBoolean(EXTRA_KEEP_SCREEN_ON);\n            this._activityId = bundle.getInt(EXTRA_ACTIVITY_ID, -1);\n            this._displayCutoutMode = bundle.getInt(EXTRA_DISPLAY_CUTOUT_MODE, 0);\n            setKeepScreenOn(this._keepScreenOn);\n            adUnitEvent = AdUnitEvent.ON_RESTORE;\n        }\n        setOrientation(this._orientation);\n        setSystemUiVisibility(this._systemUiVisibility);\n        setLayoutInDisplayCutoutMode(this._displayCutoutMode);\n        if (this._views != null) {\n            for (String str : this._views) {\n                IAdUnitViewHandler viewHandler = getViewHandler(str);\n                if (viewHandler != null) {\n                    viewHandler.onCreate(this, bundle);\n                }\n            }\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, adUnitEvent, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (isFinishing()) {\n                return;\n            }\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onDestroy\");\n            finish();\n            return;\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_DESTROY, Boolean.valueOf(isFinishing()), Integer.valueOf(this._activityId));\n        if (this._viewHandlers != null) {\n            for (Map.Entry<String, IAdUnitViewHandler> entry : this._viewHandlers.entrySet()) {\n                if (entry.getValue() != null) {\n                    entry.getValue().onDestroy(this);\n                }\n            }\n        }\n        if (AdUnit.getCurrentAdUnitActivityId() == this._activityId) {\n            AdUnit.setAdUnitActivity(null);\n        }\n        Intent.removeActiveActivity(this);\n    }",
+            "children": [
+                "<com.unity3d.services.core.api.Intent: void removeActiveActivity(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (this._keyEventList == null || !this._keyEventList.contains(Integer.valueOf(i))) {\n            return false;\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.KEY_DOWN, Integer.valueOf(i), Long.valueOf(keyEvent.getEventTime()), Long.valueOf(keyEvent.getDownTime()), Integer.valueOf(keyEvent.getRepeatCount()), Integer.valueOf(this._activityId));\n        return true;\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (isFinishing()) {\n                return;\n            }\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onPause\");\n            finish();\n            return;\n        }\n        if (WebViewApp.getCurrentApp().getWebView() == null) {\n            DeviceLog.warning(\"Unity Ads web view is null, from onPause\");\n        } else if (isFinishing()) {\n            ViewUtilities.removeViewFromParent(WebViewApp.getCurrentApp().getWebView());\n        }\n        if (this._viewHandlers != null) {\n            for (Map.Entry<String, IAdUnitViewHandler> entry : this._viewHandlers.entrySet()) {\n                if (entry.getValue() != null) {\n                    entry.getValue().onPause(this);\n                }\n            }\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_PAUSE, Boolean.valueOf(isFinishing()), Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        try {\n            JSONArray jSONArray = new JSONArray();\n            JSONArray jSONArray2 = new JSONArray();\n            for (String str : strArr) {\n                jSONArray.put(str);\n            }\n            for (int i2 : iArr) {\n                jSONArray2.put(i2);\n            }\n            WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.PERMISSIONS, PermissionsEvent.PERMISSIONS_RESULT, Integer.valueOf(i), jSONArray, jSONArray2);\n        } catch (Exception e) {\n            WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.PERMISSIONS, PermissionsEvent.PERMISSIONS_ERROR, e.getMessage());\n        }\n    }",
+            "children": [
+                "<com.unity3d.services.core.webview.WebViewApp: com.unity3d.services.core.webview.WebViewApp getCurrentApp()>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (isFinishing()) {\n                return;\n            }\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onResume\");\n            finish();\n            return;\n        }\n        setViews(this._views);\n        if (this._viewHandlers != null) {\n            for (Map.Entry<String, IAdUnitViewHandler> entry : this._viewHandlers.entrySet()) {\n                if (entry.getValue() != null) {\n                    entry.getValue().onResume(this);\n                }\n            }\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_RESUME, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(bundle);\n        bundle.putInt(EXTRA_ORIENTATION, this._orientation);\n        bundle.putInt(EXTRA_SYSTEM_UI_VISIBILITY, this._systemUiVisibility);\n        bundle.putIntegerArrayList(EXTRA_KEY_EVENT_LIST, this._keyEventList);\n        bundle.putBoolean(EXTRA_KEEP_SCREEN_ON, this._keepScreenOn);\n        bundle.putStringArray(EXTRA_VIEWS, this._views);\n        bundle.putInt(EXTRA_ACTIVITY_ID, this._activityId);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (isFinishing()) {\n                return;\n            }\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onStart\");\n            finish();\n            return;\n        }\n        if (this._viewHandlers != null) {\n            for (Map.Entry<String, IAdUnitViewHandler> entry : this._viewHandlers.entrySet()) {\n                if (entry.getValue() != null) {\n                    entry.getValue().onStart(this);\n                }\n            }\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_START, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (isFinishing()) {\n                return;\n            }\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onStop\");\n            finish();\n            return;\n        }\n        if (this._viewHandlers != null) {\n            for (Map.Entry<String, IAdUnitViewHandler> entry : this._viewHandlers.entrySet()) {\n                if (entry.getValue() != null) {\n                    entry.getValue().onStop(this);\n                }\n            }\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_STOP, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.services.ads.adunit.AdUnitActivity: void onWindowFocusChanged(boolean)>": {
+            "code": "void  onWindowFocusChanged(boolean)  {\n        if (z) {\n            WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_FOCUS_GAINED, Integer.valueOf(this._activityId));\n        } else {\n            WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_FOCUS_LOST, Integer.valueOf(this._activityId));\n        }\n        super.onWindowFocusChanged(z);\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        }
+    }
+}

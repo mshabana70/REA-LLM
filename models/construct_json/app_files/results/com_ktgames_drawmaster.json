@@ -1,0 +1,860 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void <init>()>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity$HostCallbacks: void <init>(androidx.fragment.app.FragmentActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                "<androidx.loader.app.LoaderManager: androidx.loader.app.LoaderManager getInstance(androidx.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<androidx.core.app.ActivityCompat: androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onBackPressed()>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity$NonConfigurationInstances: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStateNotSaved()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void <init>()>",
+            "children": [
+                "<androidx.collection.SimpleArrayMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchKeyEvent(androidx.core.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.common.api.internal.GoogleApiManager: com.google.android.gms.common.api.internal.GoogleApiManager zaa(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onTrimMemory(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onWindowFocusChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onTrimMemory(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onWindowFocusChanged(boolean)>"
+        }
+    ],
+    "functions": {
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>": {
+            "code": "void  dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])  {\n        super.dump(str, fileDescriptor, printWriter, strArr);\n        printWriter.print(str);\n        printWriter.print(\"Local FragmentActivity \");\n        printWriter.print(Integer.toHexString(System.identityHashCode(this)));\n        printWriter.println(\" State:\");\n        String str2 = str + \"  \";\n        printWriter.print(str2);\n        printWriter.print(\"mCreated=\");\n        printWriter.print(this.mCreated);\n        printWriter.print(\" mResumed=\");\n        printWriter.print(this.mResumed);\n        printWriter.print(\" mStopped=\");\n        printWriter.print(this.mStopped);\n        if (getApplication() != null) {\n            LoaderManager.getInstance(this).dump(str2, fileDescriptor, printWriter, strArr);\n        }\n        this.mFragments.getSupportFragmentManager().dump(str, fileDescriptor, printWriter, strArr);\n    }",
+            "children": [
+                "<androidx.loader.app.LoaderManager: androidx.loader.app.LoaderManager getInstance(androidx.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        int i3 = i >> 16;\n        if (i3 != 0) {\n            int i4 = i3 - 1;\n            String str = this.mPendingFragmentActivityResults.get(i4);\n            this.mPendingFragmentActivityResults.remove(i4);\n            if (str == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment findFragmentByWho = this.mFragments.findFragmentByWho(str);\n            if (findFragmentByWho == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + str);\n                return;\n            }\n            findFragmentByWho.onActivityResult(i & SupportMenu.USER_MASK, i2, intent);\n            return;\n        }\n        ActivityCompat.PermissionCompatDelegate permissionCompatDelegate = ActivityCompat.getPermissionCompatDelegate();\n        if (permissionCompatDelegate == null || !permissionCompatDelegate.onActivityResult(this, i, i2, intent)) {\n            super.onActivityResult(i, i2, intent);\n        }\n    }",
+            "children": [
+                "<androidx.core.app.ActivityCompat: androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        FragmentManager supportFragmentManager = this.mFragments.getSupportFragmentManager();\n        boolean isStateSaved = supportFragmentManager.isStateSaved();\n        if (!isStateSaved || Build.VERSION.SDK_INT > 25) {\n            if (isStateSaved || !supportFragmentManager.popBackStackImmediate()) {\n                super.onBackPressed();\n            }\n        }\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.dispatchConfigurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        this.mFragments.attachHost(null);\n        super.onCreate(bundle);\n        NonConfigurationInstances nonConfigurationInstances = (NonConfigurationInstances) getLastNonConfigurationInstance();\n        if (nonConfigurationInstances != null && nonConfigurationInstances.viewModelStore != null && this.mViewModelStore == null) {\n            this.mViewModelStore = nonConfigurationInstances.viewModelStore;\n        }\n        if (bundle != null) {\n            this.mFragments.restoreAllState(bundle.getParcelable(FRAGMENTS_TAG), nonConfigurationInstances != null ? nonConfigurationInstances.fragments : null);\n            if (bundle.containsKey(NEXT_CANDIDATE_REQUEST_INDEX_TAG)) {\n                this.mNextCandidateRequestIndex = bundle.getInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG);\n                int[] intArray = bundle.getIntArray(ALLOCATED_REQUEST_INDICIES_TAG);\n                String[] stringArray = bundle.getStringArray(REQUEST_FRAGMENT_WHO_TAG);\n                if (intArray == null || stringArray == null || intArray.length != stringArray.length) {\n                    Log.w(TAG, \"Invalid requestCode mapping in savedInstanceState.\");\n                } else {\n                    this.mPendingFragmentActivityResults = new SparseArrayCompat<>(intArray.length);\n                    for (int i = 0; i < intArray.length; i++) {\n                        this.mPendingFragmentActivityResults.put(intArray[i], stringArray[i]);\n                    }\n                }\n            }\n        }\n        if (this.mPendingFragmentActivityResults == null) {\n            this.mPendingFragmentActivityResults = new SparseArrayCompat<>();\n            this.mNextCandidateRequestIndex = 0;\n        }\n        this.mFragments.dispatchCreate();\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>": {
+            "code": "boolean  onCreatePanelMenu(int,android.view.Menu)  {\n        if (i == 0) {\n            return super.onCreatePanelMenu(i, menu) | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n        }\n        return super.onCreatePanelMenu(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (this.mViewModelStore != null && !isChangingConfigurations()) {\n            this.mViewModelStore.clear();\n        }\n        this.mFragments.dispatchDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(i, menuItem)) {\n            return true;\n        }\n        if (i != 0) {\n            if (i != 6) {\n                return false;\n            }\n            return this.mFragments.dispatchContextItemSelected(menuItem);\n        }\n        return this.mFragments.dispatchOptionsItemSelected(menuItem);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>": {
+            "code": "void  onMultiWindowModeChanged(boolean)  {\n        this.mFragments.dispatchMultiWindowModeChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        if (i == 0) {\n            this.mFragments.dispatchOptionsMenuClosed(menu);\n        }\n        super.onPanelClosed(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mResumed = false;\n        if (this.mHandler.hasMessages(2)) {\n            this.mHandler.removeMessages(2);\n            onResumeFragments();\n        }\n        this.mFragments.dispatchPause();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>": {
+            "code": "void  onPictureInPictureModeChanged(boolean)  {\n        this.mFragments.dispatchPictureInPictureModeChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        this.mHandler.removeMessages(2);\n        onResumeFragments();\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>": {
+            "code": "boolean  onPreparePanel(int,android.view.View,android.view.Menu)  {\n        if (i == 0 && menu != null) {\n            return onPrepareOptionsPanel(view, menu) | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        return super.onPreparePanel(i, view, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        this.mFragments.noteStateNotSaved();\n        int i2 = (i >> 16) & SupportMenu.USER_MASK;\n        if (i2 != 0) {\n            int i3 = i2 - 1;\n            String str = this.mPendingFragmentActivityResults.get(i3);\n            this.mPendingFragmentActivityResults.remove(i3);\n            if (str == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment findFragmentByWho = this.mFragments.findFragmentByWho(str);\n            if (findFragmentByWho == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + str);\n                return;\n            }\n            findFragmentByWho.onRequestPermissionsResult(i & SupportMenu.USER_MASK, strArr, iArr);\n        }\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mHandler.sendEmptyMessage(2);\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(bundle);\n        markFragmentsCreated();\n        Parcelable saveAllState = this.mFragments.saveAllState();\n        if (saveAllState != null) {\n            bundle.putParcelable(FRAGMENTS_TAG, saveAllState);\n        }\n        if (this.mPendingFragmentActivityResults.size() > 0) {\n            bundle.putInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG, this.mNextCandidateRequestIndex);\n            int[] iArr = new int[this.mPendingFragmentActivityResults.size()];\n            String[] strArr = new String[this.mPendingFragmentActivityResults.size()];\n            for (int i = 0; i < this.mPendingFragmentActivityResults.size(); i++) {\n                iArr[i] = this.mPendingFragmentActivityResults.keyAt(i);\n                strArr[i] = this.mPendingFragmentActivityResults.valueAt(i);\n            }\n            bundle.putIntArray(ALLOCATED_REQUEST_INDICIES_TAG, iArr);\n            bundle.putStringArray(REQUEST_FRAGMENT_WHO_TAG, strArr);\n        }\n    }",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mStopped = false;\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.execPendingActions();\n        this.mFragments.dispatchStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onStateNotSaved()>": {
+            "code": "void  onStateNotSaved()  {\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mStopped = true;\n        markFragmentsCreated();\n        this.mFragments.dispatchStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int)  {\n        if (!this.mStartedActivityFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startActivityForResult(intent, i);\n    }",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        if (!this.mStartedActivityFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startActivityForResult(intent, i);\n    }",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        if (!this.mStartedIntentSenderFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        if (!this.mStartedIntentSenderFromFragment && i != -1) {\n            checkForValidRequestCode(i);\n        }\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        View decorView = getWindow().getDecorView();\n        if (decorView == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decorView, keyEvent)) {\n            return KeyEventDispatcher.dispatchKeyEvent(this, decorView, this, keyEvent);\n        }\n        return true;\n    }",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchKeyEvent(androidx.core.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyShortcutEvent(android.view.KeyEvent)  {\n        View decorView = getWindow().getDecorView();\n        if (decorView == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decorView, keyEvent)) {\n            return super.dispatchKeyShortcutEvent(keyEvent);\n        }\n        return true;\n    }",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        ReportFragment.injectIfNeededIn(this);\n    }",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        this.mLifecycleRegistry.markState(Lifecycle.State.CREATED);\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        try {\n            this.zzacn.onActivityResult(i, i2, intent);\n        } catch (Exception e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n        }\n        super.onActivityResult(i, i2, intent);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        boolean z = true;\n        try {\n            if (this.zzacn != null) {\n                z = this.zzacn.zzul();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n        }\n        if (z) {\n            super.onBackPressed();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        try {\n            this.zzacn.zzad(ObjectWrapper.wrap(configuration));\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        this.zzacn = zzwg.zzpt().zzb(this);\n        zzaqi zzaqiVar = this.zzacn;\n        if (zzaqiVar == null) {\n            zzbba.zze(\"#007 Could not call remote method.\", null);\n            finish();\n            return;\n        }\n        try {\n            zzaqiVar.onCreate(bundle);\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onDestroy();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n        }\n        super.onDestroy();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onPause();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n        super.onPause();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>": {
+            "code": "void  onRestart()  {\n        super.onRestart();\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onRestart();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onResume();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onSaveInstanceState(bundle);\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onStart();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        try {\n            if (this.zzacn != null) {\n                this.zzacn.onStop();\n            }\n        } catch (RemoteException e) {\n            zzbba.zze(\"#007 Could not call remote method.\", e);\n            finish();\n        }\n        super.onStop();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.ads.zzbba: void zze(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        super.setContentView(i);\n        zzdp();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        super.setContentView(i);\n        zzdp();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        super.setContentView(i);\n        zzdp();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        super.onActivityResult(i, i2, intent);\n        if (i == 1) {\n            boolean booleanExtra = getIntent().getBooleanExtra(\"notify_manager\", true);\n            this.zaa = 0;\n            setResult(i2, intent);\n            if (booleanExtra) {\n                GoogleApiManager zaa = GoogleApiManager.zaa(this);\n                if (i2 == -1) {\n                    zaa.zac();\n                } else if (i2 == 0) {\n                    zaa.zab(new ConnectionResult(13, null), getIntent().getIntExtra(\"failing_client_id\", -1));\n                }\n            }\n        } else if (i == 2) {\n            this.zaa = 0;\n            setResult(i2, intent);\n        }\n        finish();\n    }",
+            "children": [
+                "<com.google.android.gms.common.api.internal.GoogleApiManager: com.google.android.gms.common.api.internal.GoogleApiManager zaa(android.content.Context)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        if (bundle != null) {\n            this.zaa = bundle.getInt(\"resolution\");\n        }\n        if (this.zaa != 1) {\n            Bundle extras = getIntent().getExtras();\n            if (extras == null) {\n                Log.e(\"GoogleApiActivity\", \"Activity started without extras\");\n                finish();\n                return;\n            }\n            PendingIntent pendingIntent = (PendingIntent) extras.get(\"pending_intent\");\n            Integer num = (Integer) extras.get(\"error_code\");\n            if (pendingIntent == null && num == null) {\n                Log.e(\"GoogleApiActivity\", \"Activity started without resolution\");\n                finish();\n            } else if (pendingIntent != null) {\n                try {\n                    startIntentSenderForResult(pendingIntent.getIntentSender(), 1, null, 0, 0, 0);\n                    this.zaa = 1;\n                } catch (ActivityNotFoundException e) {\n                    if (extras.getBoolean(\"notify_manager\", true)) {\n                        GoogleApiManager.zaa(this).zab(new ConnectionResult(22, null), getIntent().getIntExtra(\"failing_client_id\", -1));\n                    } else {\n                        String valueOf = String.valueOf(pendingIntent);\n                        StringBuilder sb = new StringBuilder(String.valueOf(valueOf).length() + 36);\n                        sb.append(\"Activity not found while launching \");\n                        sb.append(valueOf);\n                        sb.append(\".\");\n                        String sb2 = sb.toString();\n                        if (Build.FINGERPRINT.contains(\"generic\")) {\n                            sb2 = String.valueOf(sb2).concat(\" This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store.\");\n                        }\n                        Log.e(\"GoogleApiActivity\", sb2, e);\n                    }\n                    this.zaa = 1;\n                    finish();\n                } catch (IntentSender.SendIntentException e2) {\n                    Log.e(\"GoogleApiActivity\", \"Failed to launch pendingIntent\", e2);\n                    finish();\n                }\n            } else {\n                GoogleApiAvailability.getInstance().showErrorDialogFragment(this, ((Integer) Preconditions.checkNotNull(num)).intValue(), 2, this);\n                this.zaa = 1;\n            }\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        bundle.putInt(\"resolution\", this.zaa);\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        if (keyEvent.getAction() == 2) {\n            return this.mUnityPlayer.injectEvent(keyEvent);\n        }\n        return super.dispatchKeyEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getIntent().putExtra(\"unity\", updateUnityCommandLineArguments(getIntent().getStringExtra(\"unity\")));\n        this.mUnityPlayer = new UnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.mUnityPlayer.destroy();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onGenericMotionEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyUp(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        setIntent(intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mUnityPlayer.start();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onTouchEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onTrimMemory(int)>": {
+            "code": "void  onTrimMemory(int)  {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.ktgames.drawmaster.UnityPlayerActivity: void onWindowFocusChanged(boolean)>": {
+            "code": "void  onWindowFocusChanged(boolean)  {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        return keyEvent.getAction() == 2 ? this.mUnityPlayer.injectEvent(keyEvent) : super.dispatchKeyEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getIntent().putExtra(\"unity\", updateUnityCommandLineArguments(getIntent().getStringExtra(\"unity\")));\n        this.mUnityPlayer = new UnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.mUnityPlayer.destroy();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onGenericMotionEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyUp(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        setIntent(intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mUnityPlayer.start();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onTouchEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>": {
+            "code": "void  onTrimMemory(int)  {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>": {
+            "code": "void  onWindowFocusChanged(boolean)  {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        if (keyEvent.getAction() == 2) {\n            return this.mUnityPlayer.injectEvent(keyEvent);\n        }\n        return super.dispatchKeyEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getIntent().putExtra(\"unity\", updateUnityCommandLineArguments(getIntent().getStringExtra(\"unity\")));\n        this.mUnityPlayer = new UnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.mUnityPlayer.destroy();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onGenericMotionEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyUp(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        setIntent(intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mUnityPlayer.start();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onTouchEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onTrimMemory(int)>": {
+            "code": "void  onTrimMemory(int)  {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.zzgames.drawapart.UnityPlayerActivity: void onWindowFocusChanged(boolean)>": {
+            "code": "void  onWindowFocusChanged(boolean)  {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+            "children": []
+        }
+    }
+}

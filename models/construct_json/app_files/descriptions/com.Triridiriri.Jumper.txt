@@ -1,0 +1,11 @@
+This game is an easy jump game.
+
+This game is an easy jump game.
+
+Touch to jump, and the longer the touch, the higher the jump.
+
+Obtaining a Jump-Up item permanently increases the number of jumps.
+
+If you get 2x item, your score will double.
+
+If you get 3x item, your score will be 3 times higher.

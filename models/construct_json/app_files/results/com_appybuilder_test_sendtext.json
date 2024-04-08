@@ -1,0 +1,1107 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void closeOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onContentChanged()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void openOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setTheme(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void <init>()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity$HostCallbacks: void <init>(android.support.v4.app.FragmentActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                "<java.lang.Integer: java.lang.String toHexString(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onBackPressed()>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity$NonConfigurationInstances: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void markState(android.support.v4.app.FragmentManager,android.arch.lifecycle.Lifecycle$State)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStateNotSaved()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStop()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void markState(android.support.v4.app.FragmentManager,android.arch.lifecycle.Lifecycle$State)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi16: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi16: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi16: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi14: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi14: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi14: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.BaseFragmentActivityApi14: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void <init>()>",
+            "children": [
+                "<android.support.v4.util.SimpleArrayMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.arch.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<android.arch.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.appybuilder.test.sendtext.Screen1: void <clinit>()>",
+            "children": [
+                "<gnu.math.IntNum: gnu.math.IntNum make(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.appybuilder.test.sendtext.Screen1: void <init>()>",
+            "children": [
+                "<gnu.expr.ModuleInfo: void register(java.lang.Object)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void <clinit>()>",
+            "children": [
+                "<android.app.Activity: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void <init>()>",
+            "children": [
+                "<android.app.Activity: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<java.util.ArrayList: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onDestroy()>",
+            "children": [
+                "<java.lang.System: void exit(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onNewIntent(android.content.Intent)>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void <clinit>()>",
+            "children": [
+                "<android.app.Activity: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void <init>()>",
+            "children": [
+                "<com.google.appinventor.components.runtime.collect.Maps: java.util.HashMap newHashMap()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [
+                "<com.google.appinventor.components.runtime.Form$1: void <init>(com.google.appinventor.components.runtime.Form,int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: android.app.Dialog onCreateDialog(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onDestroy()>",
+            "children": [
+                "<com.google.appinventor.components.runtime.EventDispatcher: void removeDispatchDelegate(com.google.appinventor.components.runtime.HandlesEventDispatching)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: boolean onKeyDown(int,android.view.KeyEvent)>",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onNewIntent(android.content.Intent)>",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onPause()>",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onPostCreate(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onPrepareDialog(int,android.app.Dialog)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onResume()>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.Form: void onStop()>",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: void <init>()>",
+            "children": [
+                "<java.util.ArrayList: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: void onBackPressed()>",
+            "children": [
+                "<com.google.appinventor.components.runtime.ButtonBase: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: boolean onKeyDown(int,android.view.KeyEvent)>",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: void <init>()>",
+            "children": [
+                "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: void onBackPressed()>",
+            "children": [
+                "<com.google.appinventor.components.runtime.ButtonBase: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: boolean onKeyDown(int,android.view.KeyEvent)>",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.WebViewActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.appinventor.components.runtime.WebViewActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <org.acra.CrashReportDialog: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <org.acra.CrashReportDialog: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<org.acra.ACRA: org.acra.ACRAConfiguration getConfig()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <org.acra.CrashReportDialog: boolean onKeyUp(int,android.view.KeyEvent)>",
+            "children": [
+                "<org.acra.ACRA: org.acra.ErrorReporter getErrorReporter()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <org.acra.CrashReportDialog: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void onDestroy()>",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.internal.zzaap: com.google.android.gms.internal.zzaap zzax(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>"
+        }
+    ],
+    "functions": {
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  addContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        getDelegate().addContentView(view, params);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void closeOptionsMenu()>": {
+            "code": "void  closeOptionsMenu()  {\n        ActionBar actionBar = getSupportActionBar();\n        if (getWindow().hasFeature(0)) {\n            if (actionBar == null || !actionBar.closeOptionsMenu()) {\n                super.closeOptionsMenu();\n            }\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        int keyCode = event.getKeyCode();\n        ActionBar actionBar = getSupportActionBar();\n        if (keyCode == 82 && actionBar != null && actionBar.onMenuKeyEvent(event)) {\n            return true;\n        }\n        return super.dispatchKeyEvent(event);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>": {
+            "code": "void  invalidateOptionsMenu()  {\n        getDelegate().invalidateOptionsMenu();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(newConfig);\n        getDelegate().onConfigurationChanged(newConfig);\n        if (this.mResources != null) {\n            DisplayMetrics newMetrics = super.getResources().getDisplayMetrics();\n            this.mResources.updateConfiguration(newConfig, newMetrics);\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onContentChanged()>": {
+            "code": "void  onContentChanged()  {\n        onSupportContentChanged();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        AppCompatDelegate delegate = getDelegate();\n        delegate.installViewFactory();\n        delegate.onCreate(savedInstanceState);\n        if (delegate.applyDayNight() && this.mThemeId != 0) {\n            if (Build.VERSION.SDK_INT >= 23) {\n                onApplyThemeResource(getTheme(), this.mThemeId, false);\n            } else {\n                setTheme(this.mThemeId);\n            }\n        }\n        super.onCreate(savedInstanceState);\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        getDelegate().onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (performMenuItemShortcut(keyCode, event)) {\n            return true;\n        }\n        return super.onKeyDown(keyCode, event);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        ActionBar ab = getSupportActionBar();\n        if (item.getItemId() == 16908332 && ab != null && (ab.getDisplayOptions() & 4) != 0) {\n            return onSupportNavigateUp();\n        }\n        return false;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>": {
+            "code": "boolean  onMenuOpened(int,android.view.Menu)  {\n        return super.onMenuOpened(featureId, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        super.onPanelClosed(featureId, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>": {
+            "code": "void  onPostCreate(android.os.Bundle)  {\n        super.onPostCreate(savedInstanceState);\n        getDelegate().onPostCreate(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        getDelegate().onPostResume();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        getDelegate().onSaveInstanceState(outState);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        getDelegate().onStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        getDelegate().onStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>": {
+            "code": "void  onTitleChanged(java.lang.CharSequence,int)  {\n        super.onTitleChanged(title, color);\n        getDelegate().setTitle(title);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void openOptionsMenu()>": {
+            "code": "void  openOptionsMenu()  {\n        ActionBar actionBar = getSupportActionBar();\n        if (getWindow().hasFeature(0)) {\n            if (actionBar == null || !actionBar.openOptionsMenu()) {\n                super.openOptionsMenu();\n            }\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        getDelegate().setContentView(layoutResID);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        getDelegate().setContentView(layoutResID);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        getDelegate().setContentView(layoutResID);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setTheme(int)>": {
+            "code": "void  setTheme(int)  {\n        super.setTheme(resid);\n        this.mThemeId = resid;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>": {
+            "code": "void  dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])  {\n        super.dump(prefix, fd, writer, args);\n        writer.print(prefix);\n        writer.print(\"Local FragmentActivity \");\n        writer.print(Integer.toHexString(System.identityHashCode(this)));\n        writer.println(\" State:\");\n        String innerPrefix = prefix + \"  \";\n        writer.print(innerPrefix);\n        writer.print(\"mCreated=\");\n        writer.print(this.mCreated);\n        writer.print(\"mResumed=\");\n        writer.print(this.mResumed);\n        writer.print(\" mStopped=\");\n        writer.print(this.mStopped);\n        writer.print(\" mReallyStopped=\");\n        writer.println(this.mReallyStopped);\n        this.mFragments.dumpLoaders(innerPrefix, fd, writer, args);\n        this.mFragments.getSupportFragmentManager().dump(prefix, fd, writer, args);\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.String toHexString(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        int requestIndex = requestCode >> 16;\n        if (requestIndex != 0) {\n            int requestIndex2 = requestIndex - 1;\n            String who = this.mPendingFragmentActivityResults.get(requestIndex2);\n            this.mPendingFragmentActivityResults.remove(requestIndex2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment targetFragment = this.mFragments.findFragmentByWho(who);\n            if (targetFragment == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n                return;\n            } else {\n                targetFragment.onActivityResult(65535 & requestCode, resultCode, data);\n                return;\n            }\n        }\n        super.onActivityResult(requestCode, resultCode, data);\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        FragmentManager fragmentManager = this.mFragments.getSupportFragmentManager();\n        boolean isStateSaved = fragmentManager.isStateSaved();\n        if (!isStateSaved || Build.VERSION.SDK_INT > 25) {\n            if (isStateSaved || !fragmentManager.popBackStackImmediate()) {\n                super.onBackPressed();\n            }\n        }\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(newConfig);\n        this.mFragments.dispatchConfigurationChanged(newConfig);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        this.mFragments.attachHost(null);\n        super.onCreate(savedInstanceState);\n        NonConfigurationInstances nc = (NonConfigurationInstances) getLastNonConfigurationInstance();\n        if (nc != null) {\n            this.mFragments.restoreLoaderNonConfig(nc.loaders);\n        }\n        if (savedInstanceState != null) {\n            Parcelable p = savedInstanceState.getParcelable(FRAGMENTS_TAG);\n            this.mFragments.restoreAllState(p, nc != null ? nc.fragments : null);\n            if (savedInstanceState.containsKey(NEXT_CANDIDATE_REQUEST_INDEX_TAG)) {\n                this.mNextCandidateRequestIndex = savedInstanceState.getInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG);\n                int[] requestCodes = savedInstanceState.getIntArray(ALLOCATED_REQUEST_INDICIES_TAG);\n                String[] fragmentWhos = savedInstanceState.getStringArray(REQUEST_FRAGMENT_WHO_TAG);\n                if (requestCodes == null || fragmentWhos == null || requestCodes.length != fragmentWhos.length) {\n                    Log.w(TAG, \"Invalid requestCode mapping in savedInstanceState.\");\n                } else {\n                    this.mPendingFragmentActivityResults = new SparseArrayCompat<>(requestCodes.length);\n                    for (int i = 0; i < requestCodes.length; i++) {\n                        this.mPendingFragmentActivityResults.put(requestCodes[i], fragmentWhos[i]);\n                    }\n                }\n            }\n        }\n        if (this.mPendingFragmentActivityResults == null) {\n            this.mPendingFragmentActivityResults = new SparseArrayCompat<>();\n            this.mNextCandidateRequestIndex = 0;\n        }\n        this.mFragments.dispatchCreate();\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>": {
+            "code": "boolean  onCreatePanelMenu(int,android.view.Menu)  {\n        if (featureId == 0) {\n            boolean show = super.onCreatePanelMenu(featureId, menu);\n            return show | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n        }\n        boolean show2 = super.onCreatePanelMenu(featureId, menu);\n        return show2;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        doReallyStop(false);\n        this.mFragments.dispatchDestroy();\n        this.mFragments.doLoaderDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        switch (featureId) {\n            case 0:\n                return this.mFragments.dispatchOptionsItemSelected(item);\n            case 6:\n                return this.mFragments.dispatchContextItemSelected(item);\n            default:\n                return false;\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>": {
+            "code": "void  onMultiWindowModeChanged(boolean)  {\n        this.mFragments.dispatchMultiWindowModeChanged(isInMultiWindowMode);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        switch (featureId) {\n            case 0:\n                this.mFragments.dispatchOptionsMenuClosed(menu);\n                break;\n        }\n        super.onPanelClosed(featureId, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mResumed = false;\n        if (this.mHandler.hasMessages(2)) {\n            this.mHandler.removeMessages(2);\n            onResumeFragments();\n        }\n        this.mFragments.dispatchPause();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>": {
+            "code": "void  onPictureInPictureModeChanged(boolean)  {\n        this.mFragments.dispatchPictureInPictureModeChanged(isInPictureInPictureMode);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        this.mHandler.removeMessages(2);\n        onResumeFragments();\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>": {
+            "code": "boolean  onPreparePanel(int,android.view.View,android.view.Menu)  {\n        if (featureId == 0 && menu != null) {\n            boolean goforit = onPrepareOptionsPanel(view, menu);\n            return goforit | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        boolean goforit2 = super.onPreparePanel(featureId, view, menu);\n        return goforit2;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        int index = (requestCode >> 16) & SupportMenu.USER_MASK;\n        if (index != 0) {\n            int index2 = index - 1;\n            String who = this.mPendingFragmentActivityResults.get(index2);\n            this.mPendingFragmentActivityResults.remove(index2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment frag = this.mFragments.findFragmentByWho(who);\n            if (frag == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n            } else {\n                frag.onRequestPermissionsResult(requestCode & SupportMenu.USER_MASK, permissions, grantResults);\n            }\n        }\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mHandler.sendEmptyMessage(2);\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        markState(getSupportFragmentManager(), Lifecycle.State.CREATED);\n        Parcelable p = this.mFragments.saveAllState();\n        if (p != null) {\n            outState.putParcelable(FRAGMENTS_TAG, p);\n        }\n        if (this.mPendingFragmentActivityResults.size() > 0) {\n            outState.putInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG, this.mNextCandidateRequestIndex);\n            int[] requestCodes = new int[this.mPendingFragmentActivityResults.size()];\n            String[] fragmentWhos = new String[this.mPendingFragmentActivityResults.size()];\n            for (int i = 0; i < this.mPendingFragmentActivityResults.size(); i++) {\n                requestCodes[i] = this.mPendingFragmentActivityResults.keyAt(i);\n                fragmentWhos[i] = this.mPendingFragmentActivityResults.valueAt(i);\n            }\n            outState.putIntArray(ALLOCATED_REQUEST_INDICIES_TAG, requestCodes);\n            outState.putStringArray(REQUEST_FRAGMENT_WHO_TAG, fragmentWhos);\n        }\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void markState(android.support.v4.app.FragmentManager,android.arch.lifecycle.Lifecycle$State)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mStopped = false;\n        this.mReallyStopped = false;\n        this.mHandler.removeMessages(1);\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.execPendingActions();\n        this.mFragments.doLoaderStart();\n        this.mFragments.dispatchStart();\n        this.mFragments.reportLoaderStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStateNotSaved()>": {
+            "code": "void  onStateNotSaved()  {\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mStopped = true;\n        markState(getSupportFragmentManager(), Lifecycle.State.CREATED);\n        this.mHandler.sendEmptyMessage(1);\n        this.mFragments.dispatchStop();\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void markState(android.support.v4.app.FragmentManager,android.arch.lifecycle.Lifecycle$State)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int)  {\n        super.startActivityForResult(intent, i, bundle);\n    }",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        super.startActivityForResult(intent, i, bundle);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.BaseFragmentActivityApi16: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        if (!this.mStartedActivityFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startActivityForResult(intent, requestCode, options);\n    }",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.BaseFragmentActivityApi16: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags, options);\n    }",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.BaseFragmentActivityApi14: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);\n    }",
+            "children": [
+                "<android.support.v4.app.BaseFragmentActivityApi14: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        ReportFragment.injectIfNeededIn(this);\n    }",
+            "children": [
+                "<android.arch.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        this.mLifecycleRegistry.markState(Lifecycle.State.CREATED);\n        super.onSaveInstanceState(outState);\n    }",
+            "children": [
+                "<android.arch.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(icicle);\n        Log.d(\"ReplForm\", \"onCreate\");\n        this.loadedExternalDexs = new ArrayList();\n        Intent intent = getIntent();\n        processExtras(intent, false);\n    }",
+            "children": [
+                "<java.util.ArrayList: void <init>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ReplForm: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        super.onCreateOptionsMenu(menu);\n        addSettingsButton(menu);\n        addLogcatButton(menu);\n        return true;\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (this.httpdServer != null) {\n            this.httpdServer.stop();\n            this.httpdServer = null;\n        }\n        finish();\n        System.exit(0);\n    }",
+            "children": [
+                "<java.lang.System: void exit(int)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        Log.d(\"ReplForm\", \"onNewIntent Called\");\n        processExtras(intent, true);\n    }",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ReplForm: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        int keycode = event.getKeyCode();\n        int action = event.getAction();\n        return (keycode == 82 && action == 1) ? !this.deviceMenuEnabled : super.dispatchKeyEvent(event);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        String resultString;\n        Log.i(LOG_TAG, \"Form \" + this.formName + \" got onActivityResult, requestCode = \" + requestCode + \", resultCode = \" + resultCode);\n        if (this.billingProcessor != null && requestCode == 32459) {\n            if (!this.billingProcessor.handleActivityResult(requestCode, resultCode, data)) {\n                super.onActivityResult(requestCode, resultCode, data);\n            }\n        } else if (requestCode == 1) {\n            if (data != null && data.hasExtra(RESULT_NAME)) {\n                resultString = data.getStringExtra(RESULT_NAME);\n            } else {\n                resultString = \"\";\n            }\n            Object decodedResult = decodeJSONStringForForm(resultString, \"other screen closed\");\n            OtherScreenClosed(this.nextFormName, decodedResult);\n        } else {\n            ActivityResultListener component = this.activityResultMap.get(Integer.valueOf(requestCode));\n            if (component != null) {\n                component.resultReturned(requestCode, resultCode, data);\n            }\n        }\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(newConfig);\n        Log.d(LOG_TAG, \"onConfigurationChanged() called\");\n        final int newOrientation = newConfig.orientation;\n        if (newOrientation == 2 || newOrientation == 1) {\n            if (this.mDrawerToggle != null) {\n                this.mDrawerToggle.onConfigurationChanged(newConfig);\n            }\n            this.androidUIHandler.post(new Runnable() { // from class: com.google.appinventor.components.runtime.Form.1\n                @Override // java.lang.Runnable\n                public void run() {\n                    boolean dispatchEventNow = false;\n                    if (Form.this.frameLayout != null) {\n                        if (newOrientation == 2) {\n                            if (Form.this.frameLayout.getWidth() >= Form.this.frameLayout.getHeight()) {\n                                dispatchEventNow = true;\n                            }\n                        } else if (Form.this.frameLayout.getHeight() >= Form.this.frameLayout.getWidth()) {\n                            dispatchEventNow = true;\n                        }\n                    }\n                    if (dispatchEventNow) {\n                        Form.this.recomputeLayout();\n                        final FrameLayout savedLayout = Form.this.frameLayout;\n                        Form.this.androidUIHandler.postDelayed(new Runnable() { // from class: com.google.appinventor.components.runtime.Form.1.1\n                            @Override // java.lang.Runnable\n                            public void run() {\n                                if (savedLayout != null) {\n                                    savedLayout.invalidate();\n                                }\n                            }\n                        }, 100L);\n                        Form.this.ScreenOrientationChanged();\n                        return;\n                    }\n                    Form.this.androidUIHandler.post(this);\n                }\n            });\n        }\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.Form$1: void <init>(com.google.appinventor.components.runtime.Form,int)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(icicle);\n        this.onCreateBundle = icicle;\n        String className = getClass().getName();\n        this.userEmail = className;\n        int lastDot = className.lastIndexOf(46);\n        this.formName = className.substring(lastDot + 1);\n        Log.d(LOG_TAG, \"Form \" + this.formName + \" got onCreate\");\n        activeForm = this;\n        Log.i(LOG_TAG, \"activeForm is now \" + activeForm.formName);\n        this.deviceDensity = getResources().getDisplayMetrics().density;\n        Log.d(LOG_TAG, \"deviceDensity = \" + this.deviceDensity);\n        this.compatScalingFactor = ScreenDensityUtil.computeCompatibleScaling(this);\n        Log.i(LOG_TAG, \"compatScalingFactor = \" + this.compatScalingFactor);\n        this.viewLayout = new LinearLayout(this, 1);\n        this.alignmentSetter = new AlignmentUtil(this.viewLayout);\n        this.progress = null;\n        if (!_initialized && this.formName.equals(\"Screen1\")) {\n            Log.d(LOG_TAG, \"MULTI: _initialized = \" + _initialized + \" formName = \" + this.formName);\n            _initialized = true;\n            if (ReplApplication.installed) {\n                Log.d(LOG_TAG, \"MultiDex already installed.\");\n                onCreateFinish();\n                return;\n            }\n            this.progress = ProgressDialog.show(this, \"Please Wait...\", \"Installation Finishing\");\n            this.progress.show();\n            new MultiDexInstaller().execute(this);\n            return;\n        }\n        Log.d(LOG_TAG, \"NO MULTI: _initialized = \" + _initialized + \" formName = \" + this.formName);\n        _initialized = true;\n        onCreateFinish();\n    }",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        super.onCreateOptionsMenu(menu);\n        this.customMenu = menu;\n        addExitButtonToMenu(menu);\n        addAboutInfoToMenu(this.customMenu);\n        this.customMenu = menu;\n        InitializeMenu();\n        return true;\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        Log.i(LOG_TAG, \"Form \" + this.formName + \" got onDestroy\");\n        EventDispatcher.removeDispatchDelegate(this);\n        for (OnDestroyListener onDestroyListener : this.onDestroyListeners) {\n            onDestroyListener.onDestroy();\n        }\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.EventDispatcher: void removeDispatchDelegate(com.google.appinventor.components.runtime.HandlesEventDispatching)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (keyCode == 4) {\n            if (!BackPressed()) {\n                boolean handled = super.onKeyDown(keyCode, event);\n                AnimationUtil.ApplyCloseScreenAnimation(this, this.closeAnimType);\n                return handled;\n            }\n            return true;\n        }\n        boolean handled2 = super.onKeyDown(keyCode, event);\n        return handled2;\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        Log.d(LOG_TAG, \"Form \" + this.formName + \" got onNewIntent \" + intent);\n        for (OnNewIntentListener onNewIntentListener : this.onNewIntentListeners) {\n            onNewIntentListener.onNewIntent(intent);\n        }\n    }",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        for (OnOptionsItemSelectedListener onOptionsItemSelectedListener : this.onOptionsItemSelectedListeners) {\n            if (onOptionsItemSelectedListener.onOptionsItemSelected(item)) {\n                return true;\n            }\n        }\n        return false;\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        Log.i(LOG_TAG, \"Form \" + this.formName + \" got onPause\");\n        for (OnPauseListener onPauseListener : this.onPauseListeners) {\n            onPauseListener.onPause();\n        }\n    }",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onPostCreate(android.os.Bundle)>": {
+            "code": "void  onPostCreate(android.os.Bundle)  {\n        super.onPostCreate(savedInstanceState);\n        if (this.mDrawerToggle != null) {\n            this.mDrawerToggle.syncState();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onPrepareDialog(int,android.app.Dialog)>": {
+            "code": "void  onPrepareDialog(int,android.app.Dialog)  {\n        switch (id) {\n            case FullScreenVideoUtil.FULLSCREEN_VIDEO_DIALOG_FLAG /* 189 */:\n                this.fullScreenVideoUtil.prepareFullScreenVideoDialog(dialog);\n                return;\n            default:\n                super.onPrepareDialog(id, dialog);\n                return;\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        PermissionResultHandler responder = this.permissionHandlers.get(Integer.valueOf(requestCode));\n        if (responder == null) {\n            Log.e(LOG_TAG, \"Received permission response which we cannot match.\");\n            return;\n        }\n        if (grantResults.length > 0) {\n            if (grantResults[0] == 0) {\n                responder.HandlePermissionResponse(permissions[0], true);\n            } else {\n                responder.HandlePermissionResponse(permissions[0], false);\n            }\n        } else {\n            Log.d(LOG_TAG, \"onRequestPermissionsResult: grantResults.length = \" + grantResults.length + \" requestCode = \" + requestCode);\n        }\n        this.permissionHandlers.remove(Integer.valueOf(requestCode));\n    }",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        Log.i(LOG_TAG, \"Form \" + this.formName + \" got onResume\");\n        activeForm = this;\n        if (applicationIsBeingClosed) {\n            closeApplication();\n            return;\n        }\n        for (OnResumeListener onResumeListener : this.onResumeListeners) {\n            onResumeListener.onResume();\n        }\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.Form: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        Log.i(LOG_TAG, \"Form \" + this.formName + \" got onStop\");\n        for (OnStopListener onStopListener : this.onStopListeners) {\n            onStopListener.onStop();\n        }\n    }",
+            "children": [
+                "<java.lang.StringBuilder: void <init>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        Intent resultIntent = new Intent();\n        resultIntent.putExtra(ListPicker.LIST_ACTIVITY_ITEMS, this.itemsArrayList);\n        setResult(0, resultIntent);\n        finish();\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.ButtonBase: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        android.widget.LinearLayout viewLayout = new android.widget.LinearLayout(this);\n        viewLayout.setOrientation(1);\n        Intent myIntent = getIntent();\n        if (myIntent.hasExtra(ListPicker.LIST_ACTIVITY_ANIM_TYPE)) {\n            this.closeAnim = myIntent.getStringExtra(ListPicker.LIST_ACTIVITY_ANIM_TYPE);\n        }\n        if (myIntent.hasExtra(ListPicker.LIST_ACTIVITY_ORIENTATION_TYPE)) {\n            String orientation = myIntent.getStringExtra(ListPicker.LIST_ACTIVITY_ORIENTATION_TYPE).toLowerCase();\n            if (orientation.equals(\"portrait\")) {\n                setRequestedOrientation(1);\n            } else if (orientation.equals(\"landscape\")) {\n                setRequestedOrientation(0);\n            }\n        }\n        if (myIntent.hasExtra(ListPicker.LIST_ACTIVITY_TITLE)) {\n            String title = myIntent.getStringExtra(ListPicker.LIST_ACTIVITY_TITLE);\n            setTitle(title);\n        }\n        if (myIntent.hasExtra(ListPicker.LIST_ACTIVITY_ARG_NAME)) {\n            this.items = getIntent().getStringArrayExtra(ListPicker.LIST_ACTIVITY_ARG_NAME);\n            this.listView = new android.widget.ListView(this);\n            this.listView.setOnItemClickListener(this);\n            this.itemsArrayList = itemsToArrayList();\n            itemColor = myIntent.getIntExtra(ListPicker.LIST_ACTIVITY_ITEM_TEXT_COLOR, -1);\n            backgroundColor = myIntent.getIntExtra(ListPicker.LIST_ACTIVITY_BACKGROUND_COLOR, -16777216);\n            viewLayout.setBackgroundColor(backgroundColor);\n            this.adapter = new MyAdapter(this, this.itemsArrayList);\n            setupStyle();\n            String showFilterBar = myIntent.getStringExtra(ListPicker.LIST_ACTIVITY_SHOW_SEARCH_BAR);\n            this.txtSearchBox = new EditText(this);\n            this.txtSearchBox.setSingleLine(true);\n            this.txtSearchBox.setWidth(-2);\n            this.txtSearchBox.setPadding(10, 10, 10, 10);\n            this.txtSearchBox.setHint(\"Search list...\");\n            if (showFilterBar == null || !showFilterBar.equalsIgnoreCase(\"true\")) {\n                this.txtSearchBox.setVisibility(8);\n            }\n            if (this.txtSearchBox.getVisibility() == 0 && this.isSwipeToArchive) {\n                this.txtSearchBox.setVisibility(8);\n                Toast.makeText(this, \"With Swipe, you can't use ShowFilterBar\", 1).show();\n            }\n            this.txtSearchBox.addTextChangedListener(new TextWatcher() { // from class: com.google.appinventor.components.runtime.ListPickerActivity.1\n                @Override // android.text.TextWatcher\n                public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {\n                    ListPickerActivity.this.adapter.getFilter().filter(cs);\n                }\n\n                @Override // android.text.TextWatcher\n                public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {\n                }\n\n                @Override // android.text.TextWatcher\n                public void afterTextChanged(Editable arg0) {\n                }\n            });\n        } else {\n            setResult(0);\n            finish();\n            AnimationUtil.ApplyCloseScreenAnimation(this, this.closeAnim);\n        }\n        viewLayout.addView(this.txtSearchBox);\n        viewLayout.addView(this.listView);\n        setContentView(viewLayout);\n        viewLayout.requestLayout();\n        InputMethodManager imm = (InputMethodManager) getSystemService(\"input_method\");\n        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);\n        getWindow().setSoftInputMode(3);\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ListPickerActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (keyCode == 4) {\n            boolean handled = super.onKeyDown(keyCode, event);\n            AnimationUtil.ApplyCloseScreenAnimation(this, this.closeAnim);\n            return handled;\n        }\n        boolean handled2 = super.onKeyDown(keyCode, event);\n        return handled2;\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        Intent resultIntent = new Intent();\n        joinItemsBack();\n        resultIntent.putExtra(ListPickerCustom.LIST_ACTIVITY_ITEMS, this.itemsArrayList);\n        resultIntent.putExtra(ListPickerCustom.LIST_ACTIVITY_ITEMS_DELETED, this.deletedList);\n        setResult(0, resultIntent);\n        finish();\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.ButtonBase: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        String[] strArr;\n        super.onCreate(savedInstanceState);\n        Log.d(this.TAG, \"starting activity\");\n        android.widget.LinearLayout viewLayout = new android.widget.LinearLayout(this);\n        viewLayout.setOrientation(1);\n        this.layoutRows = new android.widget.LinearLayout(this);\n        Intent myIntent = getIntent();\n        if (myIntent.hasExtra(ListPickerCustom.LIST_ACTIVITY_ANIM_TYPE)) {\n            this.closeAnim = myIntent.getStringExtra(ListPickerCustom.LIST_ACTIVITY_ANIM_TYPE);\n        }\n        this.isRepl = Boolean.valueOf(myIntent.getStringExtra(ListPickerCustom.LIST_ACTIVITY_IS_REPL));\n        if (myIntent.hasExtra(ListPickerCustom.LIST_ACTIVITY_ORIENTATION_TYPE)) {\n            String orientation = myIntent.getStringExtra(ListPickerCustom.LIST_ACTIVITY_ORIENTATION_TYPE).toLowerCase();\n            if (orientation.equals(\"portrait\")) {\n                setRequestedOrientation(1);\n            } else if (orientation.equals(\"landscape\")) {\n                setRequestedOrientation(0);\n            }\n        }\n        if (myIntent.hasExtra(ListPickerCustom.LIST_ACTIVITY_TITLE)) {\n            String title = myIntent.getStringExtra(ListPickerCustom.LIST_ACTIVITY_TITLE);\n            setTitle(title);\n        }\n        if (myIntent.hasExtra(ListPickerCustom.LIST_ACTIVITY_ARG_NAME)) {\n            this.items = getIntent().getStringArrayExtra(ListPickerCustom.LIST_ACTIVITY_ARG_NAME);\n            for (String anItem : this.items) {\n                String[] temp = anItem.split(\"\\\\|\");\n                if (temp.length > 1) {\n                    this.listviewItems.add(new RowItem(temp[0], temp[1]));\n                } else {\n                    this.listviewItems.add(new RowItem(temp[0], \"NO_IMAGE_SPECIFIED\"));\n                }\n            }\n            this.listView = new android.widget.ListView(this);\n            this.listView.setOnItemClickListener(this);\n            itemColor = myIntent.getIntExtra(ListPickerCustom.LIST_ACTIVITY_ITEM_TEXT_COLOR, -1);\n            backgroundColor = myIntent.getIntExtra(ListPickerCustom.LIST_ACTIVITY_BACKGROUND_COLOR, -16777216);\n            viewLayout.setBackgroundColor(backgroundColor);\n            this.resources = getResources();\n            this.myLayout = this.resources.getIdentifier(\"lvimageview\", \"layout\", getApplicationContext().getPackageName());\n            this.adapter = new MyAdapter(getApplicationContext(), this.listviewItems);\n            this.listView.setAdapter((ListAdapter) this.adapter);\n            setupStyle(this.adapter);\n            Log.d(this.TAG, \"got adapter \");\n            String showFilterBar = myIntent.getStringExtra(ListPickerCustom.LIST_ACTIVITY_SHOW_SEARCH_BAR);\n            this.txtSearchBox = new EditText(this);\n            this.txtSearchBox.setSingleLine(true);\n            this.txtSearchBox.setWidth(-2);\n            this.txtSearchBox.setPadding(10, 10, 10, 10);\n            this.txtSearchBox.setHint(\"Search list...\");\n            if (showFilterBar == null || !showFilterBar.equalsIgnoreCase(\"true\")) {\n                this.txtSearchBox.setVisibility(8);\n            }\n            if (this.txtSearchBox.getVisibility() == 0 && this.isSwipeToArchive) {\n                this.txtSearchBox.setVisibility(8);\n                Toast.makeText(this, \"With Swipe, you can't use ShowFilterBar\", 1).show();\n            }\n            this.txtSearchBox.addTextChangedListener(new TextWatcher() { // from class: com.google.appinventor.components.runtime.ListPickerCustomActivity.1\n                @Override // android.text.TextWatcher\n                public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {\n                    ListPickerCustomActivity.this.adapter.getFilter().filter(cs);\n                }\n\n                @Override // android.text.TextWatcher\n                public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {\n                }\n\n                @Override // android.text.TextWatcher\n                public void afterTextChanged(Editable arg0) {\n                }\n            });\n        } else {\n            setResult(0);\n            finish();\n            AnimationUtil.ApplyCloseScreenAnimation(this, this.closeAnim);\n        }\n        viewLayout.addView(this.txtSearchBox);\n        viewLayout.addView(this.listView);\n        setContentView(viewLayout);\n        viewLayout.requestLayout();\n        InputMethodManager imm = (InputMethodManager) getSystemService(\"input_method\");\n        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);\n        getWindow().setSoftInputMode(3);\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.ListPickerCustomActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (keyCode == 4) {\n            boolean handled = super.onKeyDown(keyCode, event);\n            AnimationUtil.ApplyCloseScreenAnimation(this, this.closeAnim);\n            return handled;\n        }\n        boolean handled2 = super.onKeyDown(keyCode, event);\n        return handled2;\n    }",
+            "children": [
+                "<com.google.appinventor.components.runtime.util.AnimationUtil: void ApplyCloseScreenAnimation(android.app.Activity,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.google.appinventor.components.runtime.WebViewActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        WebView webview = new WebView(this);\n        webview.getSettings().setJavaScriptEnabled(true);\n        webview.setWebViewClient(new WebViewClient() { // from class: com.google.appinventor.components.runtime.WebViewActivity.1\n            @Override // android.webkit.WebViewClient\n            public boolean shouldOverrideUrlLoading(WebView view, String url) {\n                Log.i(\"WebView\", \"Handling url \" + url);\n                Uri uri = Uri.parse(url);\n                String scheme = uri.getScheme();\n                if (scheme.equals(Form.APPINVENTOR_URL_SCHEME)) {\n                    Intent resultIntent = new Intent();\n                    resultIntent.setData(uri);\n                    WebViewActivity.this.setResult(-1, resultIntent);\n                    WebViewActivity.this.finish();\n                    return true;\n                }\n                view.loadUrl(url);\n                return true;\n            }\n        });\n        setContentView(webview);\n        Intent uriIntent = getIntent();\n        if (uriIntent != null && uriIntent.getData() != null) {\n            Uri uri = uriIntent.getData();\n            String scheme = uri.getScheme();\n            String host = uri.getHost();\n            Log.i(\"WebView\", \"Got intent with URI: \" + uri + \", scheme=\" + scheme + \", host=\" + host);\n            webview.loadUrl(uri.toString());\n        }\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <org.acra.CrashReportDialog: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        String savedValue;\n        super.onCreate(savedInstanceState);\n        this.mReportFileName = getIntent().getStringExtra(\"REPORT_FILE_NAME\");\n        Log.d(ACRA.LOG_TAG, \"Opening CrashReportDialog for \" + this.mReportFileName);\n        if (this.mReportFileName == null) {\n            finish();\n        }\n        requestWindowFeature(3);\n        LinearLayout root = new LinearLayout(this);\n        root.setOrientation(1);\n        root.setPadding(10, 10, 10, 10);\n        root.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));\n        root.setFocusable(true);\n        root.setFocusableInTouchMode(true);\n        final ScrollView scroll = new ScrollView(this);\n        root.addView(scroll, new LinearLayout.LayoutParams(-1, -1, 1.0f));\n        LinearLayout scrollable = new LinearLayout(this);\n        scrollable.setOrientation(1);\n        scroll.addView(scrollable);\n        TextView text = new TextView(this);\n        text.setText(getText(ACRA.getConfig().resDialogText()));\n        scrollable.addView(text);\n        int commentPromptId = ACRA.getConfig().resDialogCommentPrompt();\n        if (commentPromptId != 0) {\n            TextView label = new TextView(this);\n            label.setText(getText(commentPromptId));\n            label.setPadding(label.getPaddingLeft(), 10, label.getPaddingRight(), label.getPaddingBottom());\n            scrollable.addView(label, new LinearLayout.LayoutParams(-1, -2));\n            this.userComment = new EditText(this);\n            this.userComment.setLines(2);\n            if (savedInstanceState != null && (savedValue = savedInstanceState.getString(STATE_COMMENT)) != null) {\n                this.userComment.setText(savedValue);\n            }\n            scrollable.addView(this.userComment);\n        }\n        int emailPromptId = ACRA.getConfig().resDialogEmailPrompt();\n        if (emailPromptId != 0) {\n            TextView label2 = new TextView(this);\n            label2.setText(getText(emailPromptId));\n            label2.setPadding(label2.getPaddingLeft(), 10, label2.getPaddingRight(), label2.getPaddingBottom());\n            scrollable.addView(label2);\n            this.userEmail = new EditText(this);\n            this.userEmail.setSingleLine();\n            this.userEmail.setInputType(33);\n            this.prefs = getSharedPreferences(ACRA.getConfig().sharedPreferencesName(), ACRA.getConfig().sharedPreferencesMode());\n            String savedValue2 = null;\n            if (savedInstanceState != null) {\n                savedValue2 = savedInstanceState.getString(\"email\");\n            }\n            if (savedValue2 != null) {\n                this.userEmail.setText(savedValue2);\n            } else {\n                this.userEmail.setText(this.prefs.getString(ACRA.PREF_USER_EMAIL_ADDRESS, \"\"));\n            }\n            scrollable.addView(this.userEmail);\n        }\n        LinearLayout buttons = new LinearLayout(this);\n        buttons.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));\n        buttons.setPadding(buttons.getPaddingLeft(), 10, buttons.getPaddingRight(), buttons.getPaddingBottom());\n        Button yes = new Button(this);\n        yes.setText(17039379);\n        yes.setOnClickListener(new View.OnClickListener() { // from class: org.acra.CrashReportDialog.1\n            @Override // android.view.View.OnClickListener\n            public void onClick(View v) {\n                String comment;\n                String usrEmail;\n                if (CrashReportDialog.this.userComment != null) {\n                    comment = CrashReportDialog.this.userComment.getText().toString();\n                } else {\n                    comment = \"\";\n                }\n                if (CrashReportDialog.this.prefs != null && CrashReportDialog.this.userEmail != null) {\n                    usrEmail = CrashReportDialog.this.userEmail.getText().toString();\n                    SharedPreferences.Editor prefEditor = CrashReportDialog.this.prefs.edit();\n                    prefEditor.putString(ACRA.PREF_USER_EMAIL_ADDRESS, usrEmail);\n                    prefEditor.commit();\n                } else {\n                    usrEmail = \"\";\n                }\n                CrashReportPersister persister = new CrashReportPersister(CrashReportDialog.this.getApplicationContext());\n                try {\n                    Log.d(ACRA.LOG_TAG, \"Add user comment to \" + CrashReportDialog.this.mReportFileName);\n                    CrashReportData crashData = persister.load(CrashReportDialog.this.mReportFileName);\n                    crashData.put((CrashReportData) ReportField.USER_COMMENT, (ReportField) comment);\n                    crashData.put((CrashReportData) ReportField.USER_EMAIL, (ReportField) usrEmail);\n                    persister.store(crashData, CrashReportDialog.this.mReportFileName);\n                } catch (IOException e) {\n                    Log.w(ACRA.LOG_TAG, \"User comment not added: \", e);\n                }\n                Log.v(ACRA.LOG_TAG, \"About to start SenderWorker from CrashReportDialog\");\n                ACRA.getErrorReporter().startSendingReports(false, true);\n                int toastId = ACRA.getConfig().resDialogOkToast();\n                if (toastId != 0) {\n                    ToastSender.sendToast(CrashReportDialog.this.getApplicationContext(), toastId, 1);\n                }\n                CrashReportDialog.this.finish();\n            }\n        });\n        buttons.addView(yes, new LinearLayout.LayoutParams(-1, -2, 1.0f));\n        Button no = new Button(this);\n        no.setText(17039369);\n        no.setOnClickListener(new View.OnClickListener() { // from class: org.acra.CrashReportDialog.2\n            @Override // android.view.View.OnClickListener\n            public void onClick(View v) {\n                ACRA.getErrorReporter().deletePendingNonApprovedReports(false);\n                CrashReportDialog.this.finish();\n            }\n        });\n        buttons.addView(no, new LinearLayout.LayoutParams(-1, -2, 1.0f));\n        root.addView(buttons, new LinearLayout.LayoutParams(-1, -2));\n        setContentView(root);\n        int resTitle = ACRA.getConfig().resDialogTitle();\n        if (resTitle != 0) {\n            setTitle(resTitle);\n        }\n        getWindow().setFeatureDrawableResource(3, ACRA.getConfig().resDialogIcon());\n        cancelNotification();\n        scroll.post(new Runnable() { // from class: org.acra.CrashReportDialog.3\n            @Override // java.lang.Runnable\n            public void run() {\n                scroll.scrollTo(0, 0);\n            }\n        });\n    }",
+            "children": [
+                "<org.acra.ACRA: org.acra.ACRAConfiguration getConfig()>"
+            ]
+        },
+        "Entry-point: <org.acra.CrashReportDialog: boolean onKeyUp(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyUp(int,android.view.KeyEvent)  {\n        if (keyCode == 4) {\n            ACRA.getErrorReporter().deletePendingNonApprovedReports(false);\n        }\n        return super.onKeyUp(keyCode, event);\n    }",
+            "children": [
+                "<org.acra.ACRA: org.acra.ErrorReporter getErrorReporter()>"
+            ]
+        },
+        "Entry-point: <org.acra.CrashReportDialog: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        if (this.userComment != null && this.userComment.getText() != null) {\n            outState.putString(STATE_COMMENT, this.userComment.getText().toString());\n        }\n        if (this.userEmail != null && this.userEmail.getText() != null) {\n            outState.putString(\"email\", this.userEmail.getText().toString());\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        try {\n            this.zzrA.onActivityResult(i, i2, intent);\n        } catch (Exception e) {\n            zzpy.zzc(\"Could not forward onActivityResult to ad overlay:\", e);\n        }\n        super.onActivityResult(i, i2, intent);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        boolean z;\n        try {\n            z = this.zzrA != null ? this.zzrA.zzhk() : true;\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onBackPressed to ad overlay:\", e);\n            z = true;\n        }\n        if (z) {\n            super.onBackPressed();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        try {\n            this.zzrA.zzn(zze.zzA(configuration));\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Failed to wrap configuration.\", e);\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        this.zzrA = zzeh.zzeP().zzc(this);\n        if (this.zzrA == null) {\n            zzpy.zzbe(\"Could not create ad overlay.\");\n            finish();\n            return;\n        }\n        try {\n            this.zzrA.onCreate(bundle);\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onCreate to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onDestroy();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onDestroy to ad overlay:\", e);\n        }\n        super.onDestroy();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onPause();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onPause to ad overlay:\", e);\n            finish();\n        }\n        super.onPause();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>": {
+            "code": "void  onRestart()  {\n        super.onRestart();\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onRestart();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onRestart to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onResume();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onResume to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onSaveInstanceState(bundle);\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onSaveInstanceState to ad overlay:\", e);\n            finish();\n        }\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onStart();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onStart to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        try {\n            if (this.zzrA != null) {\n                this.zzrA.onStop();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onStop to ad overlay:\", e);\n            finish();\n        }\n        super.onStop();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        super.setContentView(i);\n        zzbp();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        super.setContentView(i);\n        zzbp();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        super.setContentView(i);\n        zzbp();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        try {\n            if (this.zzZW != null) {\n                this.zzZW.onActivityResult(i, i2, intent);\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onActivityResult to in-app purchase manager:\", e);\n        }\n        super.onActivityResult(i, i2, intent);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        this.zzZW = zzeh.zzeP().zzb(this);\n        if (this.zzZW == null) {\n            zzpy.zzbe(\"Could not create in-app purchase manager.\");\n            finish();\n            return;\n        }\n        try {\n            this.zzZW.onCreate();\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onCreate to in-app purchase manager:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.purchase.InAppPurchaseActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        try {\n            if (this.zzZW != null) {\n                this.zzZW.onDestroy();\n            }\n        } catch (RemoteException e) {\n            zzpy.zzc(\"Could not forward onDestroy to in-app purchase manager:\", e);\n        }\n        super.onDestroy();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzpy: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        super.onActivityResult(i, i2, intent);\n        if (i == 1) {\n            boolean booleanExtra = getIntent().getBooleanExtra(\"notify_manager\", true);\n            this.zzaxL = 0;\n            setResultCode(i2);\n            if (booleanExtra) {\n                zza(i2, zzaap.zzax(this));\n            }\n        } else if (i == 2) {\n            this.zzaxL = 0;\n            setResultCode(i2);\n        }\n        finish();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaap: com.google.android.gms.internal.zzaap zzax(android.content.Context)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        if (bundle != null) {\n            this.zzaxL = bundle.getInt(\"resolution\");\n        }\n        if (this.zzaxL != 1) {\n            zzuL();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        bundle.putInt(\"resolution\", this.zzaxL);\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": []
+        }
+    }
+}

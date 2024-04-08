@@ -1,0 +1,1281 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AboutActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AboutActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: java.lang.String getFullVersionName()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AboutActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<androidx.databinding.DataBindingUtil: androidx.databinding.ViewDataBinding setContentView(android.app.Activity,int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.BLEDeviceDetailsActivity: void <init>()>",
+            "children": [
+                "<java.util.ArrayList: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.BLEDeviceDetailsActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.BLEDeviceDetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.CertificateInfoActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.CertificateInfoActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.CertificateInfoActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: java.lang.String loadTemplateFile(android.content.Context,java.io.File)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DebugPreferencesActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DebugPreferencesActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DebugPreferencesActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void onBackPressed()>",
+            "children": [
+                "<net.fluegels.iotutilities.fragments.documentation.DocumentationHomeFragment: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<androidx.fragment.app.Fragment: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onBackPressed()>",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ServerUtils: java.util.Set getDefaultSSLProtocols(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onNewIntent(android.content.Intent)>",
+            "children": [
+                "<java.lang.Throwable: void printStackTrace()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReference(android.content.Context,java.lang.Class)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: boolean onPrepareOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onRestoreInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void <clinit>()>",
+            "children": [
+                "<android.app.Activity: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onBackPressed()>",
+            "children": [
+                "<net.fluegels.iotutilities.fragments.preferences.PreferencesRootFragment: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.LayoutUtils: void hideKeyboard(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onRestoreInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<java.lang.Class: java.lang.String getName()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void <init>()>",
+            "children": [
+                "<java.util.ArrayList: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onBackPressed()>",
+            "children": [
+                "<java.lang.System: void exit(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.OnBoardingActivity$$ExternalSyntheticLambda1: void <init>(net.fluegels.iotutilities.activities.OnBoardingActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onRestoreInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void <init>()>",
+            "children": [
+                "<java.util.ArrayList: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onBackPressed()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: net.fluegels.iotutilities.aruba.northbound.core.ArubaIoTNorthboundDataProcessor getNorthboundDataProcessor()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onDestroy()>",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: net.fluegels.iotutilities.aruba.northbound.core.ArubaIoTNorthboundDataProcessor getNorthboundDataProcessor()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onRestoreInstanceState(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.services.ArubaIoTBLEConnectService: net.fluegels.iotutilities.aruba.bleconnect.core.ArubaIoTBLEConnectSession getSession(java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity: void onBackPressed()>",
+            "children": [
+                "<java.lang.System: void exit(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity$$ExternalSyntheticLambda1: void <init>(net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void onBackPressed()>",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: net.fluegels.iotutilities.aruba.iotendpoint.IoTEndpointServerStatisticsManager getStatisticsManager()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReference(android.content.Context,java.lang.Class)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void finish()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.services.BLEAdvertisingService: androidx.lifecycle.LiveData getBeaconStoreLiveData()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void onDestroy()>",
+            "children": [
+                "<net.fluegels.iotutilities.services.BLEAdvertisingService: androidx.lifecycle.LiveData getBeaconStoreLiveData()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void finish()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: androidx.lifecycle.LiveData getStatusLiveData()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ViewImageActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ViewImageActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.webkit.URLUtil: boolean isValidUrl(java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.activities.ViewImageActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onBackPressed()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity$$ExternalSyntheticLambda0: void <init>(net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReference(android.content.Context,java.lang.Class)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onRestoreInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onBackPressed()>",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReferenceArgs(android.content.Context,java.lang.Class,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onRestoreInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void attachBaseContext(android.content.Context)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void closeOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: android.view.View findViewById(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void invalidateOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onContentChanged()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void openOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setTheme(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void <init>()>",
+            "children": [
+                "<androidx.lifecycle.LifecycleRegistry: void <init>(androidx.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                "<androidx.loader.app.LoaderManager: androidx.loader.app.LoaderManager getInstance(androidx.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onDestroy()>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPause()>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStart()>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStateNotSaved()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStop()>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void <init>()>",
+            "children": [
+                "<androidx.savedstate.SavedStateRegistryController: androidx.savedstate.SavedStateRegistryController create(androidx.savedstate.SavedStateRegistryOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void onActivityResult(int,int,android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void onBackPressed()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                "<androidx.activity.ComponentActivity$NonConfigurationInstances: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void reportFullyDrawn()>",
+            "children": [
+                "<androidx.tracing.Trace: void endSection()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void <init>()>",
+            "children": [
+                "<androidx.collection.SimpleArrayMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchKeyEvent(androidx.core.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        }
+    ],
+    "functions": {
+        "Entry-point: <net.fluegels.iotutilities.activities.AboutActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_about);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        Button button = (Button) findViewById(R.id.settings_appinfo_opensourcelicensebutton);\n        this.ThirdPartyLicensesButton = button;\n        button.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.AboutActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                AboutActivity.this.lambda$onCreate$0$AboutActivity(view);\n            }\n        });\n        Button button2 = (Button) findViewById(R.id.settings_appinfo_privacystatementbutton);\n        this.PrivacyStatementButton = button2;\n        button2.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.AboutActivity$$ExternalSyntheticLambda1\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                AboutActivity.this.lambda$onCreate$1$AboutActivity(view);\n            }\n        });\n        Button button3 = (Button) findViewById(R.id.settings_appinfo_termsandconditionsbutton);\n        this.TermsAndConditionsButton = button3;\n        button3.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.AboutActivity$$ExternalSyntheticLambda2\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                AboutActivity.this.lambda$onCreate$2$AboutActivity(view);\n            }\n        });\n        Button button4 = (Button) findViewById(R.id.settings_appinfo_eulabutton);\n        this.EndUserLicenseAgreementButton = button4;\n        button4.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.AboutActivity$$ExternalSyntheticLambda3\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                AboutActivity.this.lambda$onCreate$3$AboutActivity(view);\n            }\n        });\n        Button button5 = (Button) findViewById(R.id.settings_appinfo_changelogbutton);\n        this.ChangelogAndUpdatesButton = button5;\n        button5.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.AboutActivity$$ExternalSyntheticLambda4\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                AboutActivity.this.lambda$onCreate$4$AboutActivity(view);\n            }\n        });\n        TextView textView = (TextView) findViewById(R.id.settings_appinfo_appversion);\n        this.VersionView = textView;\n        textView.setText(ResourceUtils.getFullVersionName());\n        final FinalIterator finalIterator = new FinalIterator();\n        this.VersionView.setSoundEffectsEnabled(false);\n        this.VersionView.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.AboutActivity$$ExternalSyntheticLambda5\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                AboutActivity.this.lambda$onCreate$5$AboutActivity(finalIterator, view);\n            }\n        });\n        getSupportActionBar().setTitle(getString(R.string.activity_about_title));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: java.lang.String getFullVersionName()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.AboutActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return false;\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        String stringExtra = getIntent().getStringExtra(getString(R.string.keys_addadvertiser_protocol));\n        long longExtra = getIntent().getLongExtra(getString(R.string.keys_addadvertiser_preloadedinstance), -1L);\n        ArrayList<String> stringArrayList = (savedInstanceState == null || !savedInstanceState.containsKey(State_SavedArguments)) ? null : savedInstanceState.getStringArrayList(State_SavedArguments);\n        stringExtra.hashCode();\n        if (stringExtra.equals(\"EddyStoneTLM\")) {\n            ActivityAddadvertiserEddystoneTlmBinding activityAddadvertiserEddystoneTlmBinding = (ActivityAddadvertiserEddystoneTlmBinding) DataBindingUtil.setContentView(this, R.layout.activity_addadvertiser_eddystone_tlm);\n            EddyStoneTLMAdvertiserViewModel eddyStoneTLMAdvertiserViewModel = new EddyStoneTLMAdvertiserViewModel(longExtra);\n            this.currentViewModel = eddyStoneTLMAdvertiserViewModel;\n            eddyStoneTLMAdvertiserViewModel.setOnActionCompleteListener(new EddyStoneTLMAdvertiserViewModel.OnActionCompletedListener() { // from class: net.fluegels.iotutilities.activities.AdvertiserActivity$$ExternalSyntheticLambda0\n                @Override // net.fluegels.iotutilities.viewmodels.EddyStoneTLMAdvertiserViewModel.OnActionCompletedListener\n                public final void onActionComplete(EddyStoneTLMAdvertiserInstance eddyStoneTLMAdvertiserInstance) {\n                    AdvertiserActivity.this.exitAndApplyChanges(eddyStoneTLMAdvertiserInstance);\n                }\n            });\n            activityAddadvertiserEddystoneTlmBinding.setEddyStoneTLMViewModel((EddyStoneTLMAdvertiserViewModel) this.currentViewModel);\n            activityAddadvertiserEddystoneTlmBinding.executePendingBindings();\n        } else if (stringExtra.equals(\"iBeacon\")) {\n            ActivityAddadvertiserIbeaconBinding activityAddadvertiserIbeaconBinding = (ActivityAddadvertiserIbeaconBinding) DataBindingUtil.setContentView(this, R.layout.activity_addadvertiser_ibeacon);\n            IBeaconAdvertiserViewModel iBeaconAdvertiserViewModel = new IBeaconAdvertiserViewModel(longExtra, stringArrayList);\n            this.currentViewModel = iBeaconAdvertiserViewModel;\n            iBeaconAdvertiserViewModel.setOnActionCompleteListener(new IBeaconAdvertiserViewModel.OnActionCompletedListener() { // from class: net.fluegels.iotutilities.activities.AdvertiserActivity$$ExternalSyntheticLambda1\n                @Override // net.fluegels.iotutilities.viewmodels.IBeaconAdvertiserViewModel.OnActionCompletedListener\n                public final void onActionComplete(IBeaconAdvertiserInstance iBeaconAdvertiserInstance) {\n                    AdvertiserActivity.this.exitAndApplyChanges(iBeaconAdvertiserInstance);\n                }\n            });\n            activityAddadvertiserIbeaconBinding.setIBeaconViewModel((IBeaconAdvertiserViewModel) this.currentViewModel);\n            activityAddadvertiserIbeaconBinding.executePendingBindings();\n        }\n        getSupportActionBar().setTitle(getString(longExtra != -1 ? R.string.addadvertiser_title_edit : R.string.addadvertiser_title_create));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n    }",
+            "children": [
+                "<androidx.databinding.DataBindingUtil: androidx.databinding.ViewDataBinding setContentView(android.app.Activity,int)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.AdvertiserActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        AdvertiserViewModel advertiserViewModel = this.currentViewModel;\n        if (advertiserViewModel != null) {\n            savedInstanceState.putStringArrayList(State_SavedArguments, advertiserViewModel.cacheArguments());\n        }\n        super.onSaveInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.BLEDeviceDetailsActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_ble_details);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        this.deviceInstance = IoTUtilitiesApplication.getInstance().getBluetoothDataProcessor().getBLELiveData().getValue().get(getIntent().getStringExtra(StartArgs_BLEDevice));\n        getSupportActionBar().setTitle(getString(R.string.activity_bluetooth_device_information_titleprefix) + this.deviceInstance.getScanResult().getDevice().getAddress());\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        initializeRecyclerView();\n        updateInstance();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.BLEDeviceDetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.CertificateInfoActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_certificate_info);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        this.CertificateStatusIcon = (ImageView) findViewById(R.id.activity_certificateinfo_statusview_icon);\n        this.CertificateStatusTitle = (TextView) findViewById(R.id.activity_certificateinfo_statusview_title);\n        this.CertificateStatusSubtitle = (TextView) findViewById(R.id.activity_certificateinfo_statusview_subtitle);\n        this.CertificateGeneralSubject = (TextView) findViewById(R.id.activity_certificateinfo_generalview_subjectdn);\n        this.CertificateGeneralIssuer = (TextView) findViewById(R.id.activity_certificateinfo_generalview_issuerdn);\n        this.CertificateGeneralSubjectAlternatives = (TextView) findViewById(R.id.activity_certificateinfo_generalview_subjectalternatives);\n        this.CertificateGeneralVersion = (TextView) findViewById(R.id.activity_certificateinfo_generalview_version);\n        this.CertificateGeneralSerialNumber = (TextView) findViewById(R.id.activity_certificateinfo_generalview_serialnumber);\n        this.CertificateGeneralExtendedKeyUsage = (TextView) findViewById(R.id.activity_certificateinfo_generalview_extendedkeyusages);\n        this.CertificateValidityValidFrom = (TextView) findViewById(R.id.activity_certificateinfo_validityview_validfrom);\n        this.CertificateValidityValidTo = (TextView) findViewById(R.id.activity_certificateinfo_validityview_validto);\n        this.CertificateValidityDays = (TextView) findViewById(R.id.activity_certificateinfo_validityview_validdays);\n        this.CertificateGeneralCopyButton = (ImageView) findViewById(R.id.activity_certificateinfo_generalview_copybutton);\n        this.CertificateValidityCopyButton = (ImageView) findViewById(R.id.activity_certificateinfo_validityview_copybutton);\n        UpdateCertificateInformation();\n        InitializeCopyContentFeature();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.CertificateInfoActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_configuration_template);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        this.TemplateTitle = getIntent().getStringExtra(START_TEMPLATE_TITLE);\n        this.TemplateFileName = getIntent().getStringExtra(START_TEMPLATE_PATH);\n        getSupportActionBar().setTitle(this.TemplateTitle);\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.activity_config_template_share);\n        this.ShareButton = floatingActionButton;\n        floatingActionButton.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ConfigurationTemplateActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ConfigurationTemplateActivity.this.lambda$onCreate$0$ConfigurationTemplateActivity(view);\n            }\n        });\n        this.MainScrollView = (ScrollView) findViewById(R.id.activity_config_template_scrollview);\n        EditText editText = (EditText) findViewById(R.id.activity_config_template_edit);\n        this.MainContentView = editText;\n        editText.setText(loadTemplateFile(getApplicationContext(), new File(this.TemplateFileName)));\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: java.lang.String loadTemplateFile(android.content.Context,java.io.File)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ConfigurationTemplateActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DebugPreferencesActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_debug_preferences);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        getSupportActionBar().setTitle(getString(R.string.activity_debug_preferences_title));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        getSupportFragmentManager().beginTransaction().replace(R.id.settings_debug_fragmentcontainer, new DebugPreferencesFragment()).commit();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DebugPreferencesActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return false;\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        Fragment fragment = this.currentFragment;\n        if (fragment instanceof DocumentationViewerFragment) {\n            if (((DocumentationViewerFragment) fragment).getStackSize() < 2) {\n                switchFragment(new DocumentationHomeFragment());\n                return;\n            } else {\n                ((DocumentationViewerFragment) this.currentFragment).loadPreviousPage();\n                return;\n            }\n        }\n        super.onBackPressed();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.fragments.documentation.DocumentationHomeFragment: void <init>()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_documentation);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        setSupportActionBar((Toolbar) findViewById(R.id.activity_documentation_toolbar));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        if (savedInstanceState != null) {\n            switchFragment(getSupportFragmentManager().getFragment(savedInstanceState, State_CurrentFragment));\n        } else {\n            switchFragment(getIntent().hasExtra(getString(R.string.documentation_startlink)) ? new DocumentationViewerFragment(getIntent()) : new DocumentationHomeFragment());\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        getMenuInflater().inflate(R.menu.activity_documentation_toolbar, menu);\n        this.currentMenu = menu;\n        MenuItem findItem = menu.findItem(R.id.activity_documentation_toolbar_search);\n        Fragment fragment = this.currentFragment;\n        findItem.setVisible((fragment instanceof DocumentationHomeFragment) || (fragment instanceof DocumentationSearchFragment));\n        return true;\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        switch (item.getItemId()) {\n            case 16908332:\n                finish();\n                return true;\n            case R.id.activity_documentation_toolbar_home /* 2131296376 */:\n                switchFragment(new DocumentationHomeFragment());\n                return true;\n            case R.id.activity_documentation_toolbar_search /* 2131296377 */:\n                switchFragment(new DocumentationSearchFragment());\n                return true;\n            default:\n                return false;\n        }\n    }",
+            "children": [
+                "<androidx.fragment.app.Fragment: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.DocumentationActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        getSupportFragmentManager().putFragment(outState, State_CurrentFragment, this.currentFragment);\n        super.onSaveInstanceState(outState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  \n        super.onActivityResult(requestCode, resultCode, data);\n        if (requestCode == 2000 && (getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer) instanceof ApplicationDashboardFragment)) {\n            ((ApplicationDashboardFragment) getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer)).showGuide(null);\n        }\n    }\n",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (this.MainDrawer.isDrawerOpen(GravityCompat.START)) {\n            this.MainDrawer.closeDrawer(GravityCompat.START);\n        } else if (IoTUtilitiesApplication.getInstance().getGuideProvider().isShowingChains()) {\n            IoTUtilitiesApplication.getInstance().getGuideProvider().dismissAllChains();\n        } else if (this.backStackManager.getStackSize() == 1) {\n            if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean(getString(R.string.settings_general_closeconfirmdialog_key), true)) {\n                new MaterialAlertDialogBuilder(this).setTitle((CharSequence) getString(R.string.dialog_main_close_confirmation_title)).setMessage((CharSequence) getString(R.string.dialog_main_close_confirmation_message)).setIcon(R.drawable.ic_baseline_help_outline_24).setPositiveButton((CharSequence) getString(R.string.dialoginterface_action_close), new DialogInterface.OnClickListener() { // from class: net.fluegels.iotutilities.activities.MainActivity$$ExternalSyntheticLambda0\n                    @Override // android.content.DialogInterface.OnClickListener\n                    public final void onClick(DialogInterface dialogInterface, int i) {\n                        MainActivity.this.lambda$onBackPressed$5$MainActivity(dialogInterface, i);\n                    }\n                }).setNegativeButton((CharSequence) getString(R.string.dialoginterface_action_cancel), (DialogInterface.OnClickListener) null).create().show();\n            } else {\n                super.onBackPressed();\n            }\n        } else {\n            try {\n                FragmentBackStackManager.StackInstance fromStack = this.backStackManager.getFromStack();\n                this.backStackManager.popStack();\n                this.DrawerView.setCheckedItem(fromStack.getSavedDrawerID());\n                getSupportActionBar().setTitle(this.DrawerView.getCheckedItem().getTitle());\n                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_right, R.anim.exit_right).replace(R.id.main_drawer_fragmentcontainer, (Fragment) Class.forName(fromStack.getSavedInstanceName()).asSubclass(MainActivityFragment.class).newInstance()).commit();\n            } catch (Exception e) {\n                e.printStackTrace();\n                IoTUtilitiesApplication.getInstance().getLogger().error(\"Getting last fragment from back stack failed! \" + e.getMessage(), SystemEvent.MessageType.Default);\n                ApplicationDashboardFragment applicationDashboardFragment = new ApplicationDashboardFragment();\n                this.DrawerView.setCheckedItem(applicationDashboardFragment.getDrawerID());\n                getSupportActionBar().setTitle(this.DrawerView.getCheckedItem().getTitle());\n                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_right, R.anim.exit_right).replace(R.id.main_drawer_fragmentcontainer, applicationDashboardFragment);\n            }\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setTheme(R.style.AppTheme_NoActionBar);\n        setContentView(R.layout.activity_main);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        Thread.setDefaultUncaughtExceptionHandler(new ApplicationUncaughtExceptionHandler(getApplicationContext()));\n        ApplicationUncaughtExceptionHandler.checkRecentCrashes(this);\n        SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());\n        this.ApplicationPreferences = defaultSharedPreferences;\n        if (defaultSharedPreferences.getBoolean(getString(R.string.app_isfirststart), true)) {\n            onFirstStart();\n        }\n        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);\n        setSupportActionBar(toolbar);\n        this.MainDrawer = (DrawerLayout) findViewById(R.id.main_drawerlayout);\n        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, this.MainDrawer, toolbar, R.string.main_opendrawer, R.string.main_closedrawer);\n        this.MainDrawer.addDrawerListener(actionBarDrawerToggle);\n        actionBarDrawerToggle.syncState();\n        NavigationView navigationView = (NavigationView) findViewById(R.id.main_drawerview);\n        this.DrawerView = navigationView;\n        navigationView.getChildAt(0).setVerticalScrollBarEnabled(false);\n        ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) this.DrawerView.getHeaderView(0).getLayoutParams();\n        marginLayoutParams.setMargins(marginLayoutParams.leftMargin, ResourceUtils.getStatusBarHeight(getApplicationContext()) + marginLayoutParams.topMargin, marginLayoutParams.rightMargin, marginLayoutParams.bottomMargin);\n        this.DrawerView.getHeaderView(0).setLayoutParams(marginLayoutParams);\n        View headerView = this.DrawerView.getHeaderView(0);\n        final ImageView imageView = (ImageView) this.DrawerView.getHeaderView(0).findViewById(R.id.main_drawer_header_appicon);\n        final TextView textView = (TextView) this.DrawerView.getHeaderView(0).findViewById(R.id.main_drawer_header_appname);\n        final TextView textView2 = (TextView) this.DrawerView.getHeaderView(0).findViewById(R.id.main_drawer_header_appversion);\n        textView2.setText(ResourceUtils.getFullVersionName());\n        this.backStackManager = new FragmentBackStackManager(ApplicationDashboardFragment.class);\n        this.DrawerView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() { // from class: net.fluegels.iotutilities.activities.MainActivity$$ExternalSyntheticLambda3\n            @Override // com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener\n            public final boolean onNavigationItemSelected(MenuItem menuItem) {\n                return MainActivity.this.lambda$onCreate$0$MainActivity(menuItem);\n            }\n        });\n        try {\n            if (getIntent().getStringExtra(\"startFragment\") != null) {\n                redirectFragmentBody((MainActivityFragment) Class.forName(getIntent().getStringExtra(\"startFragment\")).asSubclass(MainActivityFragment.class).newInstance(), false);\n            } else if (savedInstanceState != null) {\n                restoreInstanceState(savedInstanceState);\n            } else {\n                redirectFragmentBody(new ApplicationDashboardFragment(), false);\n            }\n            MainActivityFragment mainActivityFragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer);\n            if (mainActivityFragment != null) {\n                this.DrawerView.setCheckedItem(mainActivityFragment.getDrawerID());\n                getSupportActionBar().setTitle(this.DrawerView.getCheckedItem().getTitle());\n            }\n        } catch (Exception e) {\n            e.printStackTrace();\n            redirectFragmentBody(new ApplicationDashboardFragment(), true);\n        }\n        headerView.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.MainActivity$$ExternalSyntheticLambda2\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                MainActivity.this.lambda$onCreate$1$MainActivity(imageView, textView, textView2, view);\n            }\n        });\n        this.notificationSubBar = (LinearLayout) findViewById(R.id.main_toolbar_subnotificationbar);\n        this.notificationSubBarIcon = (ImageView) findViewById(R.id.main_toolbar_subnotificationbar_icon);\n        this.notificationSubBarText = (TextView) findViewById(R.id.main_toolbar_subnotificationbar_text);\n        this.notificationSubBar.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.MainActivity$$ExternalSyntheticLambda1\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                MainActivity.this.lambda$onCreate$2$MainActivity(view);\n            }\n        });\n        this.eventHandler = ComponentEventHandler.attach(this).withCallback(new IntentFilter(\"android.net.conn.CONNECTIVITY_CHANGE\"), new ComponentEventHandler.ComponentEvent() { // from class: net.fluegels.iotutilities.activities.MainActivity$$ExternalSyntheticLambda6\n            @Override // net.fluegels.iotutilities.components.ComponentEventHandler.ComponentEvent\n            public final void onEvent(Intent intent) {\n                MainActivity.this.lambda$onCreate$3$MainActivity(intent);\n            }\n        });\n        JavaUtils.tryNoCatch(new Runnable() { // from class: net.fluegels.iotutilities.activities.MainActivity$$ExternalSyntheticLambda4\n            @Override // java.lang.Runnable\n            public final void run() {\n                MainActivity.this.lambda$onCreate$4$MainActivity();\n            }\n        });\n        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putStringSet(getString(R.string.settings_iotendpoint_sslprotocols_key), ServerUtils.getDefaultSSLProtocols(getApplicationContext())).apply();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ServerUtils: java.util.Set getDefaultSSLProtocols(android.content.Context)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        this.mainMenu = menu;\n        getMenuInflater().inflate(R.menu.activity_main_universal_toolbar, menu);\n        menu.findItem(R.id.main_general_guide).setVisible(getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer) instanceof GuideProvider.GuideProviderInterface);\n        if (menu.findItem(R.id.main_general_keepscreenon) != null) {\n            menu.findItem(R.id.main_general_keepscreenon).setChecked(this.KeepScreenOn);\n        }\n        return super.onCreateOptionsMenu(menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.eventHandler.detach();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        setIntent(intent);\n        if (intent == null || intent.getStringExtra(\"startFragment\") == null) {\n            return;\n        }\n        try {\n            redirectToFragment(Class.forName(intent.getStringExtra(\"startFragment\")).asSubclass(MainActivityFragment.class));\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }",
+            "children": [
+                "<java.lang.Throwable: void printStackTrace()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        switch (item.getItemId()) {\n            case R.id.main_general_documentation /* 2131297143 */:\n                DocumentationActivity.openFromClassReference(this, getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer).getClass());\n                return true;\n            case R.id.main_general_guide /* 2131297144 */:\n                if (getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer) instanceof GuideProvider.GuideProviderInterface) {\n                    ((GuideProvider.GuideProviderInterface) getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer)).showGuide(null);\n                }\n                return true;\n            case R.id.main_general_keepscreenon /* 2131297145 */:\n                this.KeepScreenOn = !this.KeepScreenOn;\n                this.mainMenu.findItem(R.id.main_general_keepscreenon).setChecked(this.KeepScreenOn);\n                if (this.KeepScreenOn) {\n                    getWindow().addFlags(128);\n                } else {\n                    getWindow().clearFlags(128);\n                }\n                return true;\n            default:\n                return super.onOptionsItemSelected(item);\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReference(android.content.Context,java.lang.Class)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: boolean onPrepareOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onPrepareOptionsMenu(android.view.Menu)  {\n        this.mainMenu = menu;\n        return super.onPrepareOptionsMenu(menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onRestoreInstanceState(android.os.Bundle)>": {
+            "code": "void  onRestoreInstanceState(android.os.Bundle)  {\n        super.onRestoreInstanceState(savedInstanceState);\n        if (savedInstanceState.containsKey(State_CurrentFragment) && savedInstanceState.containsKey(State_FragmentBackStack)) {\n            restoreInstanceState(savedInstanceState);\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        String str;\n        savedInstanceState.putString(State_CurrentFragment, getSupportFragmentManager().findFragmentById(R.id.main_drawer_fragmentcontainer).getClass().getName());\n        this.backStackManager.writeToBundle(State_FragmentBackStack, savedInstanceState);\n        savedInstanceState.putBoolean(State_KeepScreenOn, this.KeepScreenOn);\n        if (this.notificationSubBar.getVisibility() == 0 && (str = this.notificationBarState) != null && str.length() > 0) {\n            savedInstanceState.putString(State_SubNotificationBar, this.notificationBarState);\n        }\n        super.onSaveInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (getCurrentFragment() != null) {\n            if (getCurrentFragment() instanceof PreferencesRootFragment) {\n                super.onBackPressed();\n                return;\n            } else {\n                redirectFragment(new PreferencesRootFragment(), true);\n                return;\n            }\n        }\n        super.onBackPressed();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.fragments.preferences.PreferencesRootFragment: void <init>()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_settings);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        updateTitle(getString(R.string.settings_title));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        if (savedInstanceState == null || !savedInstanceState.containsKey(State_CurrentFragment)) {\n            redirectFragment(new PreferencesRootFragment(), true);\n        } else {\n            restoreInstanceState(savedInstanceState);\n        }\n        String stringExtra = getIntent().getStringExtra(\"redirect\");\n        String stringExtra2 = getIntent().getStringExtra(RtspHeaders.Values.DESTINATION);\n        if (stringExtra != null) {\n            redirectDestination(stringExtra, stringExtra2);\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        getMenuInflater().inflate(R.menu.activity_preferences_toolbar, menu);\n        this.preferenceMenu = menu;\n        updateOptionsMenu(getCurrentFragment().getClass());\n        return true;\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        switch (item.getItemId()) {\n            case 16908332:\n                if (getCurrentFragment() instanceof PreferenceSearchFragment) {\n                    redirectFragment(new PreferencesRootFragment(), true);\n                    LayoutUtils.hideKeyboard(this);\n                    return true;\n                }\n                onBackPressed();\n                return true;\n            case R.id.activity_preferences_menu_documentation /* 2131296457 */:\n                DocumentationActivity.openFromClassReference(this, getCurrentFragment().getClass());\n                return true;\n            case R.id.activity_preferences_menu_searchview /* 2131296458 */:\n                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fade_through_enter, R.anim.fade_through_exit).replace(R.id.settings_fragmentcontainer, new PreferenceSearchFragment(), State_CurrentFragment).commit();\n                return true;\n            default:\n                return false;\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.LayoutUtils: void hideKeyboard(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onRestoreInstanceState(android.os.Bundle)>": {
+            "code": "void  onRestoreInstanceState(android.os.Bundle)  {\n        super.onRestoreInstanceState(savedInstanceState);\n        restoreInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.MainPreferencesActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        savedInstanceState.putString(State_CurrentFragment, (getCurrentFragment() != null ? getCurrentFragment().getClass() : PreferencesRootFragment.class).getName());\n        super.onSaveInstanceState(savedInstanceState);\n    }",
+            "children": [
+                "<java.lang.Class: java.lang.String getName()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (this.SetupActivityViewPager.getCurrentItem() != 0) {\n            LockableViewPager lockableViewPager = this.SetupActivityViewPager;\n            lockableViewPager.setCurrentItem(lockableViewPager.getCurrentItem() - 1, true);\n            return;\n        }\n        finishAffinity();\n        System.exit(0);\n    }",
+            "children": [
+                "<java.lang.System: void exit(int)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_setup);\n        ResourceUtils.setSystemThemeStyle(getWindow().getDecorView(), getApplicationContext());\n        if (savedInstanceState != null) {\n            restoreInstanceState(savedInstanceState);\n        }\n        SetupActivityViewPagerAdapter setupActivityViewPagerAdapter = new SetupActivityViewPagerAdapter(getSupportFragmentManager());\n        this.SetupActivityAdapter = setupActivityViewPagerAdapter;\n        setupActivityViewPagerAdapter.registerSetupFragment(OnBoardingActivityWelcomeFragment.class);\n        this.SetupActivityAdapter.registerSetupFragment(OnBoardingActivityLicenseFragment.class);\n        this.SetupActivityAdapter.registerSetupFragment(OnBoardingActivityPermissionsFragment.class);\n        this.SetupActivityAdapter.registerSetupFragment(OnBoardingActivityIoTServerFragment.class);\n        this.SetupActivityAdapter.registerSetupFragment(OnBoardingActivityWizardFragment.class);\n        LockableViewPager lockableViewPager = (LockableViewPager) findViewById(R.id.setup_viewpager);\n        this.SetupActivityViewPager = lockableViewPager;\n        lockableViewPager.setAdapter(this.SetupActivityAdapter);\n        this.SetupActivityViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: net.fluegels.iotutilities.activities.OnBoardingActivity.1\n            @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener\n            public void onPageScrollStateChanged(int state) {\n            }\n\n            @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener\n            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {\n            }\n\n            @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener\n            public void onPageSelected(int position) {\n                OnBoardingActivity.this.NextButton.setText(OnBoardingActivity.this.getString(R.string.setup_nextbutton));\n                OnBoardingActivity.this.invokeAllListeners(position);\n                OnBoardingActivity.this.refreshPageIndicator();\n            }\n        });\n        this.SetupActivityViewPager.setPageTransformer(false, new SetupActivityViewPagerAdapter.ShrinkPageTransformer());\n        this.SetupActivityViewPager.setOffscreenPageLimit(this.SetupActivityAdapter.getCount());\n        Button button = (Button) findViewById(R.id.setup_backbutton);\n        this.BackButton = button;\n        button.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.OnBoardingActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                OnBoardingActivity.this.lambda$onCreate$1$OnBoardingActivity(view);\n            }\n        });\n        Button button2 = (Button) findViewById(R.id.setup_nextbutton);\n        this.NextButton = button2;\n        button2.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.OnBoardingActivity$$ExternalSyntheticLambda1\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                OnBoardingActivity.this.lambda$onCreate$2$OnBoardingActivity(view);\n            }\n        });\n        this.PageIndicator = (LinearLayout) findViewById(R.id.setup_pageindicator);\n        buildPageIndicator();\n        invokeAllListeners(0);\n        updateLockState(null);\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.OnBoardingActivity$$ExternalSyntheticLambda1: void <init>(net.fluegels.iotutilities.activities.OnBoardingActivity)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onRestoreInstanceState(android.os.Bundle)>": {
+            "code": "void  onRestoreInstanceState(android.os.Bundle)  {\n        super.onRestoreInstanceState(savedInstanceState);\n        if (savedInstanceState == null || !savedInstanceState.containsKey(State_Persistent_Licenses_Accepted)) {\n            return;\n        }\n        restoreInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.OnBoardingActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        savedInstanceState.putBoolean(State_Persistent_Licenses_Accepted, this.persistentLicensesAccepted);\n        super.onSaveInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (getSessionController() != null && !getSessionController().getInternalPairingStatus().equals(PhilipsHueSessionController.InternalPairingStatus.ProcedureOffline) && !getSessionController().getInternalPairingStatus().equals(PhilipsHueSessionController.InternalPairingStatus.ProcedureComplete)) {\n            getSessionController().cancelPairingProcedure();\n        }\n        super.onBackPressed();\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_philipshue_pairing);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        if (getIntent() != null && getIntent().hasExtra(STARTARGS_SESSIONTOKEN)) {\n            this.sessionInstance = ArubaIoTBLEConnectService.getSession(getIntent().getStringExtra(STARTARGS_SESSIONTOKEN));\n        } else if (savedInstanceState == null || !savedInstanceState.containsKey(INSTANCESTATE_SESSIONTOKEN)) {\n            finish();\n        } else {\n            this.sessionInstance = ArubaIoTBLEConnectService.getSession(savedInstanceState.getString(INSTANCESTATE_SESSIONTOKEN));\n        }\n        getSupportActionBar().setTitle(getString(R.string.activity_philipshue_pairing_title));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        this.instanceStepperView = (VerticalStepperView) findViewById(R.id.activity_philipshue_pairing_stepperview);\n        this.stepperItems.add(new VerticalStepperView.VerticalStepperItem(getString(R.string.activity_philipshue_pairing_stepconnect_title), getString(R.string.activity_philipshue_pairing_stepconnect_notdone)));\n        this.stepperItems.add(new VerticalStepperView.VerticalStepperItem(getString(R.string.activity_philipshue_pairing_steprequest_title), getString(R.string.activity_philipshue_pairing_steprequest_notdone)));\n        this.stepperItems.add(new VerticalStepperView.VerticalStepperItem(getString(R.string.activity_philipshue_pairing_steppairing_title), getString(R.string.activity_philipshue_pairing_steppairing_notdone)));\n        this.stepperItems.add(new VerticalStepperView.VerticalStepperItem(getString(R.string.activity_philipshue_pairing_stepauthentication_title), getString(R.string.activity_philipshue_pairing_stepauthentication_notdone)));\n        this.instanceStepperView.updateItems(this.stepperItems);\n        this.RSSIOutputMain = (TextView) findViewById(R.id.activity_philipshue_pairing_rssimain);\n        this.RSSIOutputSub = (TextView) findViewById(R.id.activity_philipshue_pairing_rssisub);\n        this.PairingCompleteView = (TextView) findViewById(R.id.activity_philipshue_pairing_doneview);\n        Button button = (Button) findViewById(R.id.activity_philipshue_pairing_retrybutton);\n        this.RetryButton = button;\n        button.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.PhilipsHuePairingActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                PhilipsHuePairingActivity.this.lambda$onCreate$0$PhilipsHuePairingActivity(view);\n            }\n        });\n        if (getSessionInstance() != null) {\n            if (IoTEndpointServerService.getNorthboundDataProcessor().hasHistory(getSessionInstance().getDeviceAddress())) {\n                IoTEndpointServerService.getNorthboundDataProcessor().requestHistory(getSessionInstance().getDeviceAddress()).getHistoryLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.PhilipsHuePairingActivity$$ExternalSyntheticLambda2\n                    @Override // androidx.lifecycle.Observer\n                    public final void onChanged(Object obj) {\n                        PhilipsHuePairingActivity.this.lambda$onCreate$1$PhilipsHuePairingActivity((Map) obj);\n                    }\n                });\n            }\n            if (getSessionController() != null) {\n                getSessionController().getInternalPairingLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.PhilipsHuePairingActivity$$ExternalSyntheticLambda1\n                    @Override // androidx.lifecycle.Observer\n                    public final void onChanged(Object obj) {\n                        PhilipsHuePairingActivity.this.lambda$onCreate$2$PhilipsHuePairingActivity((String) obj);\n                    }\n                });\n            }\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: net.fluegels.iotutilities.aruba.northbound.core.ArubaIoTNorthboundDataProcessor getNorthboundDataProcessor()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        if (getSessionInstance() != null) {\n            if (IoTEndpointServerService.getNorthboundDataProcessor().hasHistory(getSessionInstance().getDeviceAddress())) {\n                IoTEndpointServerService.getNorthboundDataProcessor().requestHistory(getSessionInstance().getDeviceAddress()).getHistoryLiveData().removeObservers(this);\n            }\n            if (getSessionController() != null) {\n                getSessionController().getInternalPairingLiveData().removeObservers(this);\n            }\n        }\n        this.instanceStepperView.destroy();\n        this.instanceStepperView = null;\n        super.onDestroy();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: net.fluegels.iotutilities.aruba.northbound.core.ArubaIoTNorthboundDataProcessor getNorthboundDataProcessor()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        if (item.getItemId() == 16908332) {\n            onBackPressed();\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onRestoreInstanceState(android.os.Bundle)>": {
+            "code": "void  onRestoreInstanceState(android.os.Bundle)  {\n        super.onRestoreInstanceState(savedInstanceState);\n        if (savedInstanceState.containsKey(INSTANCESTATE_SESSIONTOKEN)) {\n            this.sessionInstance = ArubaIoTBLEConnectService.getSession(savedInstanceState.getString(INSTANCESTATE_SESSIONTOKEN));\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.ArubaIoTBLEConnectService: net.fluegels.iotutilities.aruba.bleconnect.core.ArubaIoTBLEConnectSession getSession(java.lang.String)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PhilipsHuePairingActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        outState.putString(INSTANCESTATE_SESSIONTOKEN, this.sessionInstance.getSessionToken());\n        super.onSaveInstanceState(outState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        finishAffinity();\n        System.exit(0);\n    }",
+            "children": [
+                "<java.lang.System: void exit(int)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_privacy_notice_changed);\n        getSupportActionBar().setTitle(getString(R.string.activity_notice_changed_title));\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        Button button = (Button) findViewById(R.id.activity_notice_changed_viewbutton);\n        this.ViewButton = button;\n        button.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                PrivacyNoticeChangedActivity.this.lambda$onCreate$1$PrivacyNoticeChangedActivity(view);\n            }\n        });\n        Button button2 = (Button) findViewById(R.id.activity_notice_changed_remindbutton);\n        this.RemindButton = button2;\n        button2.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity$$ExternalSyntheticLambda1\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                PrivacyNoticeChangedActivity.this.lambda$onCreate$2$PrivacyNoticeChangedActivity(view);\n            }\n        });\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity$$ExternalSyntheticLambda1: void <init>(net.fluegels.iotutilities.activities.PrivacyNoticeChangedActivity)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (IoTUtilitiesApplication.getInstance().getGuideProvider().isShowingChains()) {\n            IoTUtilitiesApplication.getInstance().getGuideProvider().dismissAllChains();\n        } else {\n            super.onBackPressed();\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_server_statistics);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        setSupportActionBar((Toolbar) findViewById(R.id.activity_server_statistics_toolbar));\n        getSupportActionBar().setTitle(getString(R.string.activity_server_statistics_title));\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        this.TotalDataView = (TextView) findViewById(R.id.activity_server_statistics_totaldataview);\n        this.AverageReadView = (TextView) findViewById(R.id.activity_server_statistics_averagereadview);\n        this.TotalUptimeView = (TextView) findViewById(R.id.activity_server_statistics_totaluptimeview);\n        this.LiveWriteView = (TextView) findViewById(R.id.activity_server_statistics_writeaverage);\n        this.WriteChart = (LineChart) findViewById(R.id.activity_server_statistics_writechart);\n        this.LiveReadView = (TextView) findViewById(R.id.activity_server_statistics_readaverage);\n        this.ReadChart = (LineChart) findViewById(R.id.activity_server_statistics_readchart);\n        CountDownTimer countDownTimer = new CountDownTimer(LongCompanionObject.MAX_VALUE, 1000L) { // from class: net.fluegels.iotutilities.activities.ServerStatisticsActivity.1\n            @Override // android.os.CountDownTimer\n            public void onTick(long millisUntilFinished) {\n                ServerStatisticsActivity.this.updateUptime();\n            }\n\n            @Override // android.os.CountDownTimer\n            public void onFinish() {\n                start();\n            }\n        };\n        this.uptimeUpdateTimer = countDownTimer;\n        countDownTimer.start();\n        initializeCharts();\n        updateUptime();\n        IoTEndpointServerService.getStatisticsManager().getGlobalWriteLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ServerStatisticsActivity$$ExternalSyntheticLambda1\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ServerStatisticsActivity.this.lambda$onCreate$0$ServerStatisticsActivity((ArrayList) obj);\n            }\n        });\n        IoTEndpointServerService.getStatisticsManager().getGlobalReadLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ServerStatisticsActivity$$ExternalSyntheticLambda2\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ServerStatisticsActivity.this.lambda$onCreate$1$ServerStatisticsActivity((ArrayList) obj);\n            }\n        });\n        IoTEndpointServerService.getStatisticsManager().getGlobalTotalLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ServerStatisticsActivity$$ExternalSyntheticLambda0\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ServerStatisticsActivity.this.lambda$onCreate$2$ServerStatisticsActivity((Long) obj);\n            }\n        });\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: net.fluegels.iotutilities.aruba.iotendpoint.IoTEndpointServerStatisticsManager getStatisticsManager()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        getMenuInflater().inflate(R.menu.dialogs_servertraffic_toolbar, menu);\n        return true;\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.uptimeUpdateTimer.cancel();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ServerStatisticsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        switch (item.getItemId()) {\n            case 16908332:\n                onBackPressed();\n                return true;\n            case R.id.dialogs_server_statistics_documentationitem /* 2131296849 */:\n                DocumentationActivity.openFromClassReference(this, ServerStatisticsActivity.class);\n                return true;\n            case R.id.dialogs_server_statistics_guideitem /* 2131296850 */:\n                showGuide(null);\n                return true;\n            default:\n                return false;\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReference(android.content.Context,java.lang.Class)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void finish()>": {
+            "code": "void  finish()  {\n        super.finish();\n        overridePendingTransition(R.anim.fade_through_enter, R.anim.fade_through_exit);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        overridePendingTransition(R.anim.fade_through_enter, R.anim.fade_through_exit);\n        setContentView(R.layout.activity_shortcut_ble_testing_service);\n        getWindow().setLayout(-1, -1);\n        this.eventHandler = ComponentEventHandler.attach(this).withCallback(new IntentFilter(\"android.net.conn.CONNECTIVITY_CHANGE\"), new ComponentEventHandler.ComponentEvent() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda3\n            @Override // net.fluegels.iotutilities.components.ComponentEventHandler.ComponentEvent\n            public final void onEvent(Intent intent) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$0$ShortcutBLETestingServiceActivity(intent);\n            }\n        });\n        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.activity_shortcut_bletesting_service_rootlayout);\n        this.rootLayout = relativeLayout;\n        relativeLayout.setSoundEffectsEnabled(false);\n        this.rootLayout.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$1$ShortcutBLETestingServiceActivity(view);\n            }\n        });\n        this.buttonLayout = (LinearLayout) findViewById(R.id.activity_shortcut_bletesting_buttonlayout);\n        Button button = (Button) findViewById(R.id.activity_shortcut_bletesting_service_statebutton).findViewById(R.id.views_loadingbarbutton_button);\n        this.stateButton = button;\n        button.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda6\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$2$ShortcutBLETestingServiceActivity(view);\n            }\n        });\n        this.stateButtonProgressBar = (ProgressBar) findViewById(R.id.activity_shortcut_bletesting_service_statebutton).findViewById(R.id.views_loadingbarbutton_loadingbar);\n        Button button2 = (Button) findViewById(R.id.activity_shortcut_bletesting_serverbutton);\n        this.serverButton = button2;\n        button2.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda7\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$3$ShortcutBLETestingServiceActivity(view);\n            }\n        });\n        this.durationView = (TextView) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_durationview);\n        Slider slider = (Slider) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_durationslider);\n        this.durationSlider = slider;\n        slider.setLabelFormatter(null);\n        this.durationSlider.addOnChangeListener(new Slider.OnChangeListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda13\n            @Override // com.google.android.material.slider.BaseOnChangeListener\n            public final void onValueChange(Slider slider2, float f, boolean z) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$4$ShortcutBLETestingServiceActivity(slider2, f, z);\n            }\n        });\n        this.durationSlider.setValue(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(getString(R.string.settings_ble_testing_duration_key), 20));\n        this.timeoutView = (TextView) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_timeoutview);\n        Slider slider2 = (Slider) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_timeoutslider);\n        this.timeoutSlider = slider2;\n        slider2.setLabelFormatter(null);\n        this.timeoutSlider.addOnChangeListener(new Slider.OnChangeListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda1\n            @Override // com.google.android.material.slider.BaseOnChangeListener\n            public final void onValueChange(Slider slider3, float f, boolean z) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$5$ShortcutBLETestingServiceActivity(slider3, f, z);\n            }\n        });\n        this.timeoutSlider.setValue(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(getString(R.string.settings_ble_testing_timeout_key), 10));\n        this.thresholdView = (TextView) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_thresholdview);\n        Slider slider3 = (Slider) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_thresholdslider);\n        this.thresholdSlider = slider3;\n        slider3.setLabelFormatter(null);\n        this.thresholdSlider.addOnChangeListener(new Slider.OnChangeListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda2\n            @Override // com.google.android.material.slider.BaseOnChangeListener\n            public final void onValueChange(Slider slider4, float f, boolean z) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$6$ShortcutBLETestingServiceActivity(slider4, f, z);\n            }\n        });\n        this.thresholdSlider.setValue(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(getString(R.string.settings_ble_testing_threshold_key), -100));\n        this.testingBeaconView = (MaterialCardView) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_beaconview);\n        this.testingBeaconIcon = (ImageView) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_beaconview_icon);\n        this.testingBeaconEndIcon = (RelativeLayout) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_beaconview_endicon_parent);\n        this.testingBeaconText = (TextView) findViewById(R.id.activity_shortcut_bletesting_service_startlayout_beaconview_databody);\n        this.testingBeaconView.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda8\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$8$ShortcutBLETestingServiceActivity(view);\n            }\n        });\n        this.testingBeaconView.setOnLongClickListener(new View.OnLongClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda9\n            @Override // android.view.View.OnLongClickListener\n            public final boolean onLongClick(View view) {\n                return ShortcutBLETestingServiceActivity.this.lambda$onCreate$9$ShortcutBLETestingServiceActivity(view);\n            }\n        });\n        this.testingBeaconEndIcon.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda5\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$10$ShortcutBLETestingServiceActivity(view);\n            }\n        });\n        IoTEndpointServerService.getStatusLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda10\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$11$ShortcutBLETestingServiceActivity((Integer) obj);\n            }\n        });\n        ArubaIoTBLETestingService.getStatusLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda11\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$12$ShortcutBLETestingServiceActivity((Integer) obj);\n            }\n        });\n        BLEAdvertisingService.getBeaconStoreLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity$$ExternalSyntheticLambda12\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ShortcutBLETestingServiceActivity.this.lambda$onCreate$13$ShortcutBLETestingServiceActivity((Map) obj);\n            }\n        });\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.BLEAdvertisingService: androidx.lifecycle.LiveData getBeaconStoreLiveData()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ShortcutBLETestingServiceActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        IoTEndpointServerService.getStatusLiveData().removeObservers(this);\n        ArubaIoTBLETestingService.getStatusLiveData().removeObservers(this);\n        BLEAdvertisingService.getBeaconStoreLiveData().removeObservers(this);\n        if (!this.eventHandler.hasDetached()) {\n            this.eventHandler.detach();\n        }\n        this.eventHandler = null;\n        super.onDestroy();\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.BLEAdvertisingService: androidx.lifecycle.LiveData getBeaconStoreLiveData()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void finish()>": {
+            "code": "void  finish()  {\n        super.finish();\n        overridePendingTransition(R.anim.fade_through_enter, R.anim.fade_through_exit);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        overridePendingTransition(R.anim.fade_through_enter, R.anim.fade_through_exit);\n        setContentView(R.layout.activity_shortcut_endpoint_service);\n        getWindow().setLayout(-1, -1);\n        this.eventHandler = ComponentEventHandler.attach(this).withCallback(new IntentFilter(\"android.net.conn.CONNECTIVITY_CHANGE\"), new ComponentEventHandler.ComponentEvent() { // from class: net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity$$ExternalSyntheticLambda5\n            @Override // net.fluegels.iotutilities.components.ComponentEventHandler.ComponentEvent\n            public final void onEvent(Intent intent) {\n                ShortcutEndpointServiceActivity.this.lambda$onCreate$0$ShortcutEndpointServiceActivity(intent);\n            }\n        });\n        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.activity_endpoint_service_rootlayout);\n        this.rootLayout = relativeLayout;\n        relativeLayout.setSoundEffectsEnabled(false);\n        this.rootLayout.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity$$ExternalSyntheticLambda0\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutEndpointServiceActivity.this.lambda$onCreate$1$ShortcutEndpointServiceActivity(view);\n            }\n        });\n        TextView textView = (TextView) findViewById(R.id.activity_endpoint_service_erroroutput);\n        this.errorOutputView = textView;\n        textView.setVisibility(8);\n        Button button = (Button) findViewById(R.id.activity_endpoint_service_startbutton);\n        this.startButton = button;\n        button.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity$$ExternalSyntheticLambda1\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutEndpointServiceActivity.this.lambda$onCreate$2$ShortcutEndpointServiceActivity(view);\n            }\n        });\n        Button button2 = (Button) findViewById(R.id.activity_endpoint_service_stopbutton);\n        this.closeButton = button2;\n        button2.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity$$ExternalSyntheticLambda2\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutEndpointServiceActivity.this.lambda$onCreate$3$ShortcutEndpointServiceActivity(view);\n            }\n        });\n        Button button3 = (Button) findViewById(R.id.activity_endpoint_service_pauseresumebutton);\n        this.pauseButton = button3;\n        button3.setOnClickListener(new View.OnClickListener() { // from class: net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity$$ExternalSyntheticLambda3\n            @Override // android.view.View.OnClickListener\n            public final void onClick(View view) {\n                ShortcutEndpointServiceActivity.lambda$onCreate$4(view);\n            }\n        });\n        IoTEndpointServerService.getStatusLiveData().observe(this, new Observer() { // from class: net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity$$ExternalSyntheticLambda4\n            @Override // androidx.lifecycle.Observer\n            public final void onChanged(Object obj) {\n                ShortcutEndpointServiceActivity.this.lambda$onCreate$5$ShortcutEndpointServiceActivity((Integer) obj);\n            }\n        });\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.services.IoTEndpointServerService: androidx.lifecycle.LiveData getStatusLiveData()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ShortcutEndpointServiceActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        if (!this.eventHandler.hasDetached()) {\n            this.eventHandler.detach();\n        }\n        this.eventHandler = null;\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ViewImageActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  None",
+            "children": [
+                "<android.webkit.URLUtil: boolean isValidUrl(java.lang.String)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.activities.ViewImageActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  None",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (this.currentFragment instanceof ArubaIoTConnectorDetailsInfoFragment) {\n            this.activityBottomNavigation.setSelectedItemId(R.id.activity_aruba_iot_connector_details_bottomnav_devices);\n        } else {\n            super.onBackPressed();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_aruba_iot_connector_details);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_aruba_iot_connector_details_toolbar);\n        this.activityToolbar = toolbar;\n        setSupportActionBar(toolbar);\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.activity_aruba_iot_connector_details_bottomnav);\n        this.activityBottomNavigation = bottomNavigationView;\n        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { // from class: net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity$$ExternalSyntheticLambda0\n            @Override // com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener\n            public final boolean onNavigationItemSelected(MenuItem menuItem) {\n                return ArubaIoTConnectorDetailsActivity.this.lambda$onCreate$0$ArubaIoTConnectorDetailsActivity(menuItem);\n            }\n        });\n        this.messageInstanceKey = getIntent().getStringExtra(StartArgs_MessageInstance);\n        if (savedInstanceState != null) {\n            restoreInstanceState(savedInstanceState);\n        }\n        if (this.messageInstanceKey == null) {\n            finish();\n        }\n        if (savedInstanceState == null) {\n            openFragment(ArubaIoTConnectorDetailsDevicesFragment.class, false);\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity$$ExternalSyntheticLambda0: void <init>(net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        getMenuInflater().inflate(R.menu.activity_main_universal_toolbar, menu);\n        getMenuInflater().inflate(R.menu.activity_iotconnector_details_toolbar, menu);\n        menu.findItem(R.id.main_general_keepscreenon).setVisible(false);\n        menu.findItem(R.id.activity_aruba_iot_connector_details_toolbar_freezedata).setIcon(this.freezeData ? R.drawable.ic_play_arrow_black_24dp : R.drawable.ic_pause_black_24dp);\n        return super.onCreateOptionsMenu(menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        switch (item.getItemId()) {\n            case 16908332:\n                finish();\n                return true;\n            case R.id.activity_aruba_iot_connector_details_toolbar_freezedata /* 2131296327 */:\n                boolean z = !this.freezeData;\n                this.freezeData = z;\n                item.setIcon(z ? R.drawable.ic_play_arrow_black_24dp : R.drawable.ic_pause_black_24dp);\n                return true;\n            case R.id.main_general_documentation /* 2131297143 */:\n                DocumentationActivity.openFromClassReference(getApplicationContext(), getClass());\n                return true;\n            case R.id.main_general_guide /* 2131297144 */:\n                showGuide(null);\n                return true;\n            default:\n                return false;\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReference(android.content.Context,java.lang.Class)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onRestoreInstanceState(android.os.Bundle)>": {
+            "code": "void  onRestoreInstanceState(android.os.Bundle)  {\n        super.onRestoreInstanceState(savedInstanceState);\n        restoreInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.iotconnector.views.ArubaIoTConnectorDetailsActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        outState.putInt(State_CurrentFragment, this.activityBottomNavigation.getSelectedItemId());\n        String str = this.messageInstanceKey;\n        if (str != null) {\n            outState.putString(State_MessageInstance, str);\n        }\n        String str2 = this.currentDeviceKey;\n        if (str2 != null) {\n            outState.putString(State_DeviceInstance, str2);\n        }\n        outState.putBoolean(State_HeaderCardExpanded, this.devicesHeaderCardExpanded);\n        outState.putBoolean(State_FreezeData, this.freezeData);\n        super.onSaveInstanceState(outState);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        if (IoTUtilitiesApplication.getInstance().getGuideProvider().isShowingChains()) {\n            IoTUtilitiesApplication.getInstance().getGuideProvider().dismissAllChains();\n        } else {\n            super.onBackPressed();\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.components.IoTUtilitiesApplication: net.fluegels.iotutilities.components.IoTUtilitiesApplication getInstance()>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_northbound_details);\n        ResourceUtils.setNavigationBarStyle(getWindow().getDecorView(), getApplicationContext());\n        initActivity(savedInstanceState);\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.utils.ResourceUtils: void setNavigationBarStyle(android.view.View,android.content.Context)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)>": {
+            "code": "boolean  onCreateOptionsMenu(android.view.Menu)  {\n        this.mainMenu = menu;\n        getMenuInflater().inflate(R.menu.activity_main_universal_toolbar, menu);\n        getMenuInflater().inflate(R.menu.activity_northbound_details_toolbar, menu);\n        if (menu.findItem(R.id.main_general_keepscreenon) != null) {\n            menu.findItem(R.id.main_general_keepscreenon).setVisible(false);\n        }\n        if (menu.findItem(R.id.activity_northbound_details_toolbar_freeze) != null) {\n            menu.findItem(R.id.activity_northbound_details_toolbar_freeze).setTitle(getString(this.dataProcessingFreezed ? R.string.menu_northbound_details_unfreeze : R.string.menu_northbound_details_freeze));\n            menu.findItem(R.id.activity_northbound_details_toolbar_freeze).setIcon(this.dataProcessingFreezed ? R.drawable.ic_play_arrow_black_24dp : R.drawable.ic_pause_black_24dp);\n        }\n        return super.onCreateOptionsMenu(menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)  {\n        switch (menuItem.getItemId()) {\n            case 16908332:\n                onBackPressed();\n                return true;\n            case R.id.activity_northbound_details_toolbar_freeze /* 2131296446 */:\n                boolean z = !this.dataProcessingFreezed;\n                this.dataProcessingFreezed = z;\n                menuItem.setTitle(getString(z ? R.string.menu_northbound_details_unfreeze : R.string.menu_northbound_details_freeze));\n                menuItem.setIcon(this.dataProcessingFreezed ? R.drawable.ic_play_arrow_black_24dp : R.drawable.ic_pause_black_24dp);\n                return true;\n            case R.id.main_general_documentation /* 2131297143 */:\n                String str = \"&datatype=\";\n                if (this.instanceClassName.equals(ArubaIoTTelemetryData.class.getName())) {\n                    str = \"&datatype=ble_telemetry\";\n                } else if (this.instanceClassName.equals(ArubaIoTBLEData.class.getName())) {\n                    str = \"&datatype=ble_data\";\n                } else if (this.instanceClassName.equals(ArubaIoTWifiData.class.getName())) {\n                    str = \"&datatype=wifi-data\";\n                }\n                DocumentationActivity.openFromClassReferenceArgs(this, getClass(), str);\n                return true;\n            case R.id.main_general_guide /* 2131297144 */:\n                showGuide(null);\n                return true;\n            default:\n                return false;\n        }\n    }",
+            "children": [
+                "<net.fluegels.iotutilities.activities.DocumentationActivity: void openFromClassReferenceArgs(android.content.Context,java.lang.Class,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onRestoreInstanceState(android.os.Bundle)>": {
+            "code": "void  onRestoreInstanceState(android.os.Bundle)  {\n        super.onRestoreInstanceState(savedInstanceState);\n        if (savedInstanceState != null) {\n            restoreInstanceState(savedInstanceState);\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <net.fluegels.iotutilities.aruba.northbound.details.NorthboundDetailsActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        savedInstanceState.putString(State_InstanceClass, this.instanceClassName);\n        savedInstanceState.putString(State_InstanceIdentifier, this.instanceIdentifier);\n        savedInstanceState.putInt(State_CurrentFragment, this.activityViewPager.getCurrentItem());\n        savedInstanceState.putInt(State_CurrentSpinnerItem, this.SensorSpinner.getSelectedItemPosition());\n        savedInstanceState.putBoolean(State_ProcessingFreezed, this.dataProcessingFreezed);\n        super.onSaveInstanceState(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  addContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        initViewTreeOwners();\n        getDelegate().addContentView(view, layoutParams);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void attachBaseContext(android.content.Context)>": {
+            "code": "void  attachBaseContext(android.content.Context)  {\n        super.attachBaseContext(getDelegate().attachBaseContext2(context));\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void closeOptionsMenu()>": {
+            "code": "void  closeOptionsMenu()  {\n        ActionBar supportActionBar = getSupportActionBar();\n        if (getWindow().hasFeature(0)) {\n            if (supportActionBar == null || !supportActionBar.closeOptionsMenu()) {\n                super.closeOptionsMenu();\n            }\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        int keyCode = keyEvent.getKeyCode();\n        ActionBar supportActionBar = getSupportActionBar();\n        if (keyCode == 82 && supportActionBar != null && supportActionBar.onMenuKeyEvent(keyEvent)) {\n            return true;\n        }\n        return super.dispatchKeyEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void invalidateOptionsMenu()>": {
+            "code": "void  invalidateOptionsMenu()  {\n        getDelegate().invalidateOptionsMenu();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        if (this.mResources != null) {\n            this.mResources.updateConfiguration(configuration, super.getResources().getDisplayMetrics());\n        }\n        getDelegate().onConfigurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onContentChanged()>": {
+            "code": "void  onContentChanged()  {\n        onSupportContentChanged();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        getDelegate().onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (performMenuItemShortcut(keyEvent)) {\n            return true;\n        }\n        return super.onKeyDown(i, keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(i, menuItem)) {\n            return true;\n        }\n        ActionBar supportActionBar = getSupportActionBar();\n        if (menuItem.getItemId() != 16908332 || supportActionBar == null || (supportActionBar.getDisplayOptions() & 4) == 0) {\n            return false;\n        }\n        return onSupportNavigateUp();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>": {
+            "code": "boolean  onMenuOpened(int,android.view.Menu)  {\n        return super.onMenuOpened(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        super.onPanelClosed(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>": {
+            "code": "void  onPostCreate(android.os.Bundle)  {\n        super.onPostCreate(bundle);\n        getDelegate().onPostCreate(bundle);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        getDelegate().onPostResume();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        getDelegate().onStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        getDelegate().onStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>": {
+            "code": "void  onTitleChanged(java.lang.CharSequence,int)  {\n        super.onTitleChanged(charSequence, i);\n        getDelegate().setTitle(charSequence);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void openOptionsMenu()>": {
+            "code": "void  openOptionsMenu()  {\n        ActionBar supportActionBar = getSupportActionBar();\n        if (getWindow().hasFeature(0)) {\n            if (supportActionBar == null || !supportActionBar.openOptionsMenu()) {\n                super.openOptionsMenu();\n            }\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        initViewTreeOwners();\n        getDelegate().setContentView(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        initViewTreeOwners();\n        getDelegate().setContentView(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        initViewTreeOwners();\n        getDelegate().setContentView(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.appcompat.app.AppCompatActivity: void setTheme(int)>": {
+            "code": "void  setTheme(int)  {\n        super.setTheme(i);\n        getDelegate().setTheme(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>": {
+            "code": "void  dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])  {\n        super.dump(str, fileDescriptor, printWriter, strArr);\n        printWriter.print(str);\n        printWriter.print(\"Local FragmentActivity \");\n        printWriter.print(Integer.toHexString(System.identityHashCode(this)));\n        printWriter.println(\" State:\");\n        String str2 = str + \"  \";\n        printWriter.print(str2);\n        printWriter.print(\"mCreated=\");\n        printWriter.print(this.mCreated);\n        printWriter.print(\" mResumed=\");\n        printWriter.print(this.mResumed);\n        printWriter.print(\" mStopped=\");\n        printWriter.print(this.mStopped);\n        if (getApplication() != null) {\n            LoaderManager.getInstance(this).dump(str2, fileDescriptor, printWriter, strArr);\n        }\n        this.mFragments.getSupportFragmentManager().dump(str, fileDescriptor, printWriter, strArr);\n    }",
+            "children": [
+                "<androidx.loader.app.LoaderManager: androidx.loader.app.LoaderManager getInstance(androidx.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        super.onActivityResult(i, i2, intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        this.mFragments.noteStateNotSaved();\n        super.onConfigurationChanged(configuration);\n        this.mFragments.dispatchConfigurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        this.mFragmentLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE);\n        this.mFragments.dispatchCreate();\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>": {
+            "code": "boolean  onCreatePanelMenu(int,android.view.Menu)  {\n        if (i == 0) {\n            return super.onCreatePanelMenu(i, menu) | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n        }\n        return super.onCreatePanelMenu(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        this.mFragments.dispatchDestroy();\n        this.mFragmentLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY);\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(i, menuItem)) {\n            return true;\n        }\n        if (i != 0) {\n            if (i != 6) {\n                return false;\n            }\n            return this.mFragments.dispatchContextItemSelected(menuItem);\n        }\n        return this.mFragments.dispatchOptionsItemSelected(menuItem);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>": {
+            "code": "void  onMultiWindowModeChanged(boolean)  {\n        this.mFragments.dispatchMultiWindowModeChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        super.onNewIntent(intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        if (i == 0) {\n            this.mFragments.dispatchOptionsMenuClosed(menu);\n        }\n        super.onPanelClosed(i, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mResumed = false;\n        this.mFragments.dispatchPause();\n        this.mFragmentLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_PAUSE);\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>": {
+            "code": "void  onPictureInPictureModeChanged(boolean)  {\n        this.mFragments.dispatchPictureInPictureModeChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        onResumeFragments();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>": {
+            "code": "boolean  onPreparePanel(int,android.view.View,android.view.Menu)  {\n        if (i == 0) {\n            return onPrepareOptionsPanel(view, menu) | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        return super.onPreparePanel(i, view, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        this.mFragments.noteStateNotSaved();\n        super.onRequestPermissionsResult(i, strArr, iArr);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        this.mFragments.noteStateNotSaved();\n        super.onResume();\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        this.mFragments.noteStateNotSaved();\n        super.onStart();\n        this.mStopped = false;\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.execPendingActions();\n        this.mFragmentLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START);\n        this.mFragments.dispatchStart();\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onStateNotSaved()>": {
+            "code": "void  onStateNotSaved()  {\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.fragment.app.FragmentActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mStopped = true;\n        markFragmentsCreated();\n        this.mFragments.dispatchStop();\n        this.mFragmentLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP);\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$Event: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  addContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        initViewTreeOwners();\n        super.addContentView(view, layoutParams);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        if (this.mActivityResultRegistry.dispatchResult(i, i2, intent)) {\n            return;\n        }\n        super.onActivityResult(i, i2, intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        this.mOnBackPressedDispatcher.onBackPressed();\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        this.mSavedStateRegistryController.performRestore(bundle);\n        this.mContextAwareHelper.dispatchOnContextAvailable(this);\n        super.onCreate(bundle);\n        ReportFragment.injectIfNeededIn(this);\n        int i = this.mContentLayoutId;\n        if (i != 0) {\n            setContentView(i);\n        }\n    }",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        if (this.mActivityResultRegistry.dispatchResult(i, -1, new Intent().putExtra(ActivityResultContracts.RequestMultiplePermissions.EXTRA_PERMISSIONS, strArr).putExtra(ActivityResultContracts.RequestMultiplePermissions.EXTRA_PERMISSION_GRANT_RESULTS, iArr)) || Build.VERSION.SDK_INT < 23) {\n            return;\n        }\n        super.onRequestPermissionsResult(i, strArr, iArr);\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        Lifecycle lifecycle = getLifecycle();\n        if (lifecycle instanceof LifecycleRegistry) {\n            ((LifecycleRegistry) lifecycle).setCurrentState(Lifecycle.State.CREATED);\n        }\n        super.onSaveInstanceState(bundle);\n        this.mSavedStateRegistryController.performSave(bundle);\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void reportFullyDrawn()>": {
+            "code": "void  reportFullyDrawn()  {\n        try {\n            if (Trace.isEnabled()) {\n                Trace.beginSection(\"reportFullyDrawn() for \" + getComponentName());\n            }\n            if (Build.VERSION.SDK_INT > 19) {\n                super.reportFullyDrawn();\n            } else if (Build.VERSION.SDK_INT == 19 && ContextCompat.checkSelfPermission(this, \"android.permission.UPDATE_DEVICE_STATS\") == 0) {\n                super.reportFullyDrawn();\n            }\n        } finally {\n            Trace.endSection();\n        }\n    }",
+            "children": [
+                "<androidx.tracing.Trace: void endSection()>"
+            ]
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        initViewTreeOwners();\n        super.setContentView(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        initViewTreeOwners();\n        super.setContentView(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        initViewTreeOwners();\n        super.setContentView(i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int)  {\n        super.startActivityForResult(intent, i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        super.startActivityForResult(intent, i);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+            "children": []
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        View decorView = getWindow().getDecorView();\n        if (decorView == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decorView, keyEvent)) {\n            return KeyEventDispatcher.dispatchKeyEvent(this, decorView, this, keyEvent);\n        }\n        return true;\n    }",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchKeyEvent(androidx.core.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyShortcutEvent(android.view.KeyEvent)  {\n        View decorView = getWindow().getDecorView();\n        if (decorView == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decorView, keyEvent)) {\n            return super.dispatchKeyShortcutEvent(keyEvent);\n        }\n        return true;\n    }",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        ReportFragment.injectIfNeededIn(this);\n    }",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <androidx.core.app.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        this.mLifecycleRegistry.markState(Lifecycle.State.CREATED);\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        }
+    }
+}

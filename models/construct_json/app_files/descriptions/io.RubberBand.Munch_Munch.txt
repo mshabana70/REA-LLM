@@ -1,0 +1,5 @@
+The more you eat, the more you will be able to eat.
+
+Tapping game, where you as the player control a shark. When hunger sinks in you have to eat. But be careful, as some of the creatures you encounter might not be as friendly as the rest. Eat to survive and get the best high score that you can get as things start to speed up, while jumping from portal to portal.
+
+There are plenty of fish in the sea, lets see if you can get all of them.

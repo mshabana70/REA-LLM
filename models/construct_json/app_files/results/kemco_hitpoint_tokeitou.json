@@ -1,0 +1,1211 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void <init>()>",
+            "children": [
+                "<java.util.HashMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onActivityResult(int,int,android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void closeOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onContentChanged()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void openOptionsMenu()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v7.app.AppCompatActivity: void setTheme(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void <init>()>",
+            "children": [
+                "<game.kemco.billing.gplay.inapp.kemcoBillingV3Act$4: void <init>(game.kemco.billing.gplay.inapp.kemcoBillingV3Act)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onDestroy()>",
+            "children": [
+                "<java.lang.System: void gc()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onPause()>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onResume()>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onStart()>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void <init>()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity$HostCallbacks: void <init>(android.support.v4.app.FragmentActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                "<android.support.v4.app.LoaderManager: android.support.v4.app.LoaderManager getInstance(android.arch.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<android.support.v4.app.ActivityCompat: android.support.v4.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onBackPressed()>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity$NonConfigurationInstances: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStateNotSaved()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void <init>()>",
+            "children": [
+                "<android.support.v4.util.SimpleArrayMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchKeyEvent(android.support.v4.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.arch.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <android.support.v4.app.SupportActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<android.arch.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.common.api.internal.zzbp: com.google.android.gms.common.api.internal.zzbp zzch(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitSoftwareActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitTransparentSoftwareActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitTransparentActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitTransparentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.graphics.drawable.ColorDrawable: void <init>(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onDestroy()>",
+            "children": [
+                "<com.unity3d.ads.api.AdUnit: void setAdUnitActivity(com.unity3d.ads.adunit.AdUnitActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: boolean onKeyDown(int,android.view.KeyEvent)>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onPause()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onResume()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onStart()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onStop()>",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerNativeActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerNativeActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <kemco.hitpoint.override_lib.OverrideActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <kemco.hitpoint.override_lib.OverrideActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<com.unity3d.player.UnityPlayer: void UnitySendMessage(java.lang.String,java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerProxyActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerProxyActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onDestroy()>",
+            "children": [
+                "<java.lang.System: void gc()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onPause()>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onRestart()>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onResume()>",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onStart()>",
+            "children": [
+                "<game.kemco.billing.gplay.inapp.PurchaseController: void regist(game.kemco.billing.gplay.inapp.PurchaseCallback)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onStop()>",
+            "children": [
+                "<game.kemco.billing.gplay.inapp.PurchaseController: void unregist(game.kemco.billing.gplay.inapp.PurchaseCallback)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.eula.EulaActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.eula.EulaActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <game.kemco.eula.EulaActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        }
+    ],
+    "functions": {
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  ivityResult(requestCode, resultCode, data);\n    }\n\n    @Override // android.support.v4.app.FragmentActivity, android.app.Activity\n    protected voi",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        Log.d(TAG, \"onCreate\u306e\u6700\u521d\u306e\u90e8\u5206-20180809\");\n        setTheme(R.style.KemcoBillingAppCompatTheme);\n        super.onCreate(arg0);\n        if (KemcoBilling.getOrientation() != -1) {\n            setRequestedOrientation(KemcoBilling.getOrientation());\n        }\n        setContentView(R.layout.kb_base_activity);\n        Toolbar toolbar = (Toolbar) findViewById(R.id.kb_tool_bar);\n        setSupportActionBar(toolbar);\n        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n        Log.d(TAG, \"onCreate\u3067\u753b\u9762\u751f\u6210\u7d42\u4e86\");\n        this.handler = new Handler();\n        showProgress(getString(R.string.kb_connecting));\n        this.mBilling = new KemcoBilling(getApplicationContext());\n        if (!HttpUtil.reachable(this)) {\n            removeProgress();\n            showErrorDialog(getString(R.string.kb_offline), true, \"CONNECTION\");\n        } else if (KemcoBilling.checkBlacklistPackage(getApplicationContext())) {\n            removeProgress();\n            showErrorDialog(getString(R.string.kb_unknown_error_1) + \"\\nBILLINGERROR_ILLEGAL_EXCEPTION\\n\" + getString(R.string.kb_unknown_error_2), true, \"FREEDOM\");\n        } else {\n            this.skuList = loadKemcoSku(this);\n            loadSkuSettings();\n            Intent it = getIntent();\n            handleIntentExtra(it);\n            this.market = this.mBilling.getMarket();\n            setNavbarTitle();\n            if (this.monthlyLimit && this.mode == Mode.PURCHASE) {\n                showAgeCheckDialog();\n            } else {\n                initializeMarket();\n            }\n            Log.d(TAG, \"onCreate\u306e\u6700\u5f8c\u306e\u90e8\u5206\");\n        }\n    }\n\n    protected void close() {\n       ",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  rn super.onKeyDown(keyCode, event);\n    }\n\n    @Override // android.app.Activity\n    public boolean onOptionsItemSelected(MenuItem item) {\n",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  pport.v7.app.AppCompatActivity, android.app.Activity, android.view.Ke",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: boolean onOptionsItemSelected(android.view.MenuItem)>": {
+            "code": "boolean  onOptionsItemSelected(android.view.MenuItem)          return true;\n            default:\n                boolean result = super.onOptionsItemSelected(item);\n                return result;\n        }\n    }\n\n    @Override // game.kemco.billing.KemcoDialogFragment.KemcoDialogListener\n    public void onPo",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onPause()>": {
+            "code": "void  onPause()  p.FragmentActivity, android.app.Activity\n    protected voi",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.KemcoBillingBaseActivity: void onResume()>": {
+            "code": "void  onResume()  \n        super.onResume();\n    }\n\n    @Override // android.support.v4.app.FragmentActivity, android.app.Activity\n    protected voi",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  addContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        getDelegate().addContentView(view, params);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void closeOptionsMenu()>": {
+            "code": "void  closeOptionsMenu()  {\n        ActionBar actionBar = getSupportActionBar();\n        if (getWindow().hasFeature(0)) {\n            if (actionBar == null || !actionBar.closeOptionsMenu()) {\n                super.closeOptionsMenu();\n            }\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        int keyCode = event.getKeyCode();\n        ActionBar actionBar = getSupportActionBar();\n        if (keyCode == 82 && actionBar != null && actionBar.onMenuKeyEvent(event)) {\n            return true;\n        }\n        return super.dispatchKeyEvent(event);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>": {
+            "code": "void  invalidateOptionsMenu()  {\n        getDelegate().invalidateOptionsMenu();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(newConfig);\n        getDelegate().onConfigurationChanged(newConfig);\n        if (this.mResources != null) {\n            DisplayMetrics newMetrics = super.getResources().getDisplayMetrics();\n            this.mResources.updateConfiguration(newConfig, newMetrics);\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onContentChanged()>": {
+            "code": "void  onContentChanged()  {\n        onSupportContentChanged();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        AppCompatDelegate delegate = getDelegate();\n        delegate.installViewFactory();\n        delegate.onCreate(savedInstanceState);\n        if (delegate.applyDayNight() && this.mThemeId != 0) {\n            if (Build.VERSION.SDK_INT >= 23) {\n                onApplyThemeResource(getTheme(), this.mThemeId, false);\n            } else {\n                setTheme(this.mThemeId);\n            }\n        }\n        super.onCreate(savedInstanceState);\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        getDelegate().onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (performMenuItemShortcut(keyCode, event)) {\n            return true;\n        }\n        return super.onKeyDown(keyCode, event);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        ActionBar ab = getSupportActionBar();\n        if (item.getItemId() == 16908332 && ab != null && (ab.getDisplayOptions() & 4) != 0) {\n            return onSupportNavigateUp();\n        }\n        return false;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>": {
+            "code": "boolean  onMenuOpened(int,android.view.Menu)  {\n        return super.onMenuOpened(featureId, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        super.onPanelClosed(featureId, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>": {
+            "code": "void  onPostCreate(android.os.Bundle)  {\n        super.onPostCreate(savedInstanceState);\n        getDelegate().onPostCreate(savedInstanceState);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        getDelegate().onPostResume();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        getDelegate().onSaveInstanceState(outState);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        getDelegate().onStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        getDelegate().onStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>": {
+            "code": "void  onTitleChanged(java.lang.CharSequence,int)  {\n        super.onTitleChanged(title, color);\n        getDelegate().setTitle(title);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void openOptionsMenu()>": {
+            "code": "void  openOptionsMenu()  {\n        ActionBar actionBar = getSupportActionBar();\n        if (getWindow().hasFeature(0)) {\n            if (actionBar == null || !actionBar.openOptionsMenu()) {\n                super.openOptionsMenu();\n            }\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        getDelegate().setContentView(layoutResID);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        getDelegate().setContentView(layoutResID);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        getDelegate().setContentView(layoutResID);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v7.app.AppCompatActivity: void setTheme(int)>": {
+            "code": "void  setTheme(int)  {\n        super.setTheme(resid);\n        this.mThemeId = resid;\n    }",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        Log.d(TAG, \"onActivityResult(\" + requestCode + \",\" + resultCode + \",\" + data);\n        if (!this.mHelper.handleActivityResult(requestCode, resultCode, data)) {\n            super.onActivityResult(requestCode, resultCode, data);\n        } else {\n            Log.d(TAG, \"onActivityResult handled by IABUtil.\");\n        }\n    }",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        if (KemcoBilling.getOrientation() != -1) {\n            setRequestedOrientation(KemcoBilling.getOrientation());\n        }\n        this.sflag = 0;\n        requestWindowFeature(1);\n        getWindow().clearFlags(2048);\n        getWindow().addFlags(1024);\n        getWindow().setFormat(-3);\n        setContentView(R.layout.billing);\n        this.pac_name = getPackageName();\n        this.pref_dat = new savePreData(this, this.pac_name);\n        if (this.pref_dat.resChackFlag() && !this.pref_dat.resBackup().equals(\"\")) {\n            this.mSKU = \"\";\n        } else {\n            this.pref_dat.savChackFlag(false);\n            this.pref_dat.savBackClear();\n        }\n        String en_str = \"\";\n        try {\n            en_str = URLEncoder.encode(Build.MODEL, \"utf-8\");\n        } catch (UnsupportedEncodingException e) {\n            Log.d(\"error\", \"\" + e);\n        }\n        this.dev_name = en_str;\n        this.time_Restriction = new timer();\n        this.sflag = 1;\n        this.mContext = this;\n        Intent i = getIntent();\n        this.mSKU = i.getStringExtra(\"KEMCO_ITEM_ID\");\n        try {\n            ApplicationInfo ai = getPackageManager().getApplicationInfo(getPackageName(), 128);\n            Bundle bundle = ai.metaData;\n            this.mPublicKey = bundle.getString(\"android.publickey\");\n            this.mHelper = new IabHelper(this, this.mPublicKey);\n            this.mHelper.enableDebugLogging(true);\n            this.mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() { // from class: game.kemco.billing.gplay.inapp.kemcoBillingV3Act.1\n                @Override // game.kemco.billing.gplay.util.IabHelper.OnIabSetupFinishedListener\n                public void onIabSetupFinished(IabResult result) {\n                    if (!result.isSuccess()) {\n                        kemcoBillingV3Act.this.errorAct(result.getAPI2ErrorMessage());\n                    } else {\n                        kemcoBillingV3Act.this.mHelper.queryInventoryAsync(kemcoBillingV3Act.this.mGotInventoryListener);\n                    }\n                }\n            });\n        } catch (PackageManager.NameNotFoundException e2) {\n            errorAct(\"No public key\");\n            e2.printStackTrace();\n        }\n    }",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        Log.d(TAG, \"On destroy\");\n        if (this.mHelper != null) {\n            this.mHelper.dispose();\n        }\n        this.mHelper = null;\n        if (this.mKemcoServerVerifier != null) {\n            this.mKemcoServerVerifier.cancel(true);\n            this.mKemcoServerVerifier = null;\n        }\n        super.onDestroy();\n        free();\n        System.gc();\n    }",
+            "children": [
+                "<java.lang.System: void gc()>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return keyCode != 4;\n    }",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onPause()>": {
+            "code": "void  onPause()  {\n        Log.i(TAG, \"onPause\");\n        super.onPause();\n        if (this.time_Restriction != null) {\n            this.time_Restriction.stop();\n        }\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onResume()>": {
+            "code": "void  onResume()  {\n        Log.i(TAG, \"onResume\");\n        super.onResume();\n        if (this.time_Restriction != null) {\n            this.time_Restriction.sleep(0L);\n        } else {\n            errorAct(\"SUSPENSION\");\n        }\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingV3Act: void onStart()>": {
+            "code": "void  onStart()  {\n        Log.i(TAG, \"onStart\");\n        super.onStart();\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>": {
+            "code": "void  dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])  {\n        super.dump(prefix, fd, writer, args);\n        writer.print(prefix);\n        writer.print(\"Local FragmentActivity \");\n        writer.print(Integer.toHexString(System.identityHashCode(this)));\n        writer.println(\" State:\");\n        String innerPrefix = prefix + \"  \";\n        writer.print(innerPrefix);\n        writer.print(\"mCreated=\");\n        writer.print(this.mCreated);\n        writer.print(\" mResumed=\");\n        writer.print(this.mResumed);\n        writer.print(\" mStopped=\");\n        writer.print(this.mStopped);\n        if (getApplication() != null) {\n            LoaderManager.getInstance(this).dump(innerPrefix, fd, writer, args);\n        }\n        this.mFragments.getSupportFragmentManager().dump(prefix, fd, writer, args);\n    }",
+            "children": [
+                "<android.support.v4.app.LoaderManager: android.support.v4.app.LoaderManager getInstance(android.arch.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        int requestIndex = requestCode >> 16;\n        if (requestIndex != 0) {\n            int requestIndex2 = requestIndex - 1;\n            String who = this.mPendingFragmentActivityResults.get(requestIndex2);\n            this.mPendingFragmentActivityResults.remove(requestIndex2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment targetFragment = this.mFragments.findFragmentByWho(who);\n            if (targetFragment == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n                return;\n            } else {\n                targetFragment.onActivityResult(65535 & requestCode, resultCode, data);\n                return;\n            }\n        }\n        ActivityCompat.PermissionCompatDelegate delegate = ActivityCompat.getPermissionCompatDelegate();\n        if (delegate == null || !delegate.onActivityResult(this, requestCode, resultCode, data)) {\n            super.onActivityResult(requestCode, resultCode, data);\n        }\n    }",
+            "children": [
+                "<android.support.v4.app.ActivityCompat: android.support.v4.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        FragmentManager fragmentManager = this.mFragments.getSupportFragmentManager();\n        boolean isStateSaved = fragmentManager.isStateSaved();\n        if (!isStateSaved || Build.VERSION.SDK_INT > 25) {\n            if (isStateSaved || !fragmentManager.popBackStackImmediate()) {\n                super.onBackPressed();\n            }\n        }\n    }",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(newConfig);\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.dispatchConfigurationChanged(newConfig);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        this.mFragments.attachHost(null);\n        super.onCreate(savedInstanceState);\n        NonConfigurationInstances nc = (NonConfigurationInstances) getLastNonConfigurationInstance();\n        if (nc != null && nc.viewModelStore != null && this.mViewModelStore == null) {\n            this.mViewModelStore = nc.viewModelStore;\n        }\n        if (savedInstanceState != null) {\n            Parcelable p = savedInstanceState.getParcelable(FRAGMENTS_TAG);\n            this.mFragments.restoreAllState(p, nc != null ? nc.fragments : null);\n            if (savedInstanceState.containsKey(NEXT_CANDIDATE_REQUEST_INDEX_TAG)) {\n                this.mNextCandidateRequestIndex = savedInstanceState.getInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG);\n                int[] requestCodes = savedInstanceState.getIntArray(ALLOCATED_REQUEST_INDICIES_TAG);\n                String[] fragmentWhos = savedInstanceState.getStringArray(REQUEST_FRAGMENT_WHO_TAG);\n                if (requestCodes == null || fragmentWhos == null || requestCodes.length != fragmentWhos.length) {\n                    Log.w(TAG, \"Invalid requestCode mapping in savedInstanceState.\");\n                } else {\n                    this.mPendingFragmentActivityResults = new SparseArrayCompat<>(requestCodes.length);\n                    for (int i = 0; i < requestCodes.length; i++) {\n                        this.mPendingFragmentActivityResults.put(requestCodes[i], fragmentWhos[i]);\n                    }\n                }\n            }\n        }\n        if (this.mPendingFragmentActivityResults == null) {\n            this.mPendingFragmentActivityResults = new SparseArrayCompat<>();\n            this.mNextCandidateRequestIndex = 0;\n        }\n        this.mFragments.dispatchCreate();\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>": {
+            "code": "boolean  onCreatePanelMenu(int,android.view.Menu)  {\n        if (featureId == 0) {\n            boolean show = super.onCreatePanelMenu(featureId, menu);\n            return show | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n        }\n        boolean show2 = super.onCreatePanelMenu(featureId, menu);\n        return show2;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (this.mViewModelStore != null && !isChangingConfigurations()) {\n            this.mViewModelStore.clear();\n        }\n        this.mFragments.dispatchDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>": {
+            "code": "boolean  onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        switch (featureId) {\n            case 0:\n                return this.mFragments.dispatchOptionsItemSelected(item);\n            case 6:\n                return this.mFragments.dispatchContextItemSelected(item);\n            default:\n                return false;\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>": {
+            "code": "void  onMultiWindowModeChanged(boolean)  {\n        this.mFragments.dispatchMultiWindowModeChanged(isInMultiWindowMode);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>": {
+            "code": "void  onPanelClosed(int,android.view.Menu)  {\n        switch (featureId) {\n            case 0:\n                this.mFragments.dispatchOptionsMenuClosed(menu);\n                break;\n        }\n        super.onPanelClosed(featureId, menu);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mResumed = false;\n        if (this.mHandler.hasMessages(2)) {\n            this.mHandler.removeMessages(2);\n            onResumeFragments();\n        }\n        this.mFragments.dispatchPause();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>": {
+            "code": "void  onPictureInPictureModeChanged(boolean)  {\n        this.mFragments.dispatchPictureInPictureModeChanged(isInPictureInPictureMode);\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onPostResume()>": {
+            "code": "void  onPostResume()  {\n        super.onPostResume();\n        this.mHandler.removeMessages(2);\n        onResumeFragments();\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>": {
+            "code": "boolean  onPreparePanel(int,android.view.View,android.view.Menu)  {\n        if (featureId == 0 && menu != null) {\n            boolean goforit = onPrepareOptionsPanel(view, menu);\n            return goforit | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        boolean goforit2 = super.onPreparePanel(featureId, view, menu);\n        return goforit2;\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        this.mFragments.noteStateNotSaved();\n        int index = (requestCode >> 16) & SupportMenu.USER_MASK;\n        if (index != 0) {\n            int index2 = index - 1;\n            String who = this.mPendingFragmentActivityResults.get(index2);\n            this.mPendingFragmentActivityResults.remove(index2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment frag = this.mFragments.findFragmentByWho(who);\n            if (frag == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n            } else {\n                frag.onRequestPermissionsResult(requestCode & SupportMenu.USER_MASK, permissions, grantResults);\n            }\n        }\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mHandler.sendEmptyMessage(2);\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        markFragmentsCreated();\n        Parcelable p = this.mFragments.saveAllState();\n        if (p != null) {\n            outState.putParcelable(FRAGMENTS_TAG, p);\n        }\n        if (this.mPendingFragmentActivityResults.size() > 0) {\n            outState.putInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG, this.mNextCandidateRequestIndex);\n            int[] requestCodes = new int[this.mPendingFragmentActivityResults.size()];\n            String[] fragmentWhos = new String[this.mPendingFragmentActivityResults.size()];\n            for (int i = 0; i < this.mPendingFragmentActivityResults.size(); i++) {\n                requestCodes[i] = this.mPendingFragmentActivityResults.keyAt(i);\n                fragmentWhos[i] = this.mPendingFragmentActivityResults.valueAt(i);\n            }\n            outState.putIntArray(ALLOCATED_REQUEST_INDICIES_TAG, requestCodes);\n            outState.putStringArray(REQUEST_FRAGMENT_WHO_TAG, fragmentWhos);\n        }\n    }",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mStopped = false;\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.execPendingActions();\n        this.mFragments.dispatchStart();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStateNotSaved()>": {
+            "code": "void  onStateNotSaved()  {\n        this.mFragments.noteStateNotSaved();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mStopped = true;\n        markFragmentsCreated();\n        this.mFragments.dispatchStop();\n    }",
+            "children": []
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int)  {\n        if (!this.mStartedActivityFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startActivityForResult(intent, requestCode);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>": {
+            "code": "void  startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        if (!this.mStartedActivityFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startActivityForResult(intent, requestCode);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>": {
+            "code": "void  startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);\n    }",
+            "children": [
+                "<android.support.v4.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        View decor = getWindow().getDecorView();\n        if (decor == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decor, event)) {\n            return KeyEventDispatcher.dispatchKeyEvent(this, decor, this, event);\n        }\n        return true;\n    }",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchKeyEvent(android.support.v4.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyShortcutEvent(android.view.KeyEvent)  {\n        View decor = getWindow().getDecorView();\n        if (decor == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decor, event)) {\n            return super.dispatchKeyShortcutEvent(event);\n        }\n        return true;\n    }",
+            "children": [
+                "<android.support.v4.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        ReportFragment.injectIfNeededIn(this);\n    }",
+            "children": [
+                "<android.arch.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        "Entry-point: <android.support.v4.app.SupportActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        this.mLifecycleRegistry.markState(Lifecycle.State.CREATED);\n        super.onSaveInstanceState(outState);\n    }",
+            "children": [
+                "<android.arch.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        try {\n            this.zzakp.onActivityResult(i, i2, intent);\n        } catch (Exception e) {\n            zzaiw.zzc(\"Could not forward onActivityResult to ad overlay:\", e);\n        }\n        super.onActivityResult(i, i2, intent);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onBackPressed()>": {
+            "code": "void  onBackPressed()  {\n        boolean z = true;\n        try {\n            if (this.zzakp != null) {\n                z = this.zzakp.zzmo();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onBackPressed to ad overlay:\", e);\n        }\n        if (z) {\n            super.onBackPressed();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        try {\n            this.zzakp.zzk(zzn.zzy(configuration));\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Failed to wrap configuration.\", e);\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        this.zzakp = zzjk.zzhy().zzb(this);\n        if (this.zzakp == null) {\n            zzaiw.zzco(\"Could not create ad overlay.\");\n            finish();\n            return;\n        }\n        try {\n            this.zzakp.onCreate(bundle);\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onCreate to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onDestroy();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onDestroy to ad overlay:\", e);\n        }\n        super.onDestroy();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onPause();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onPause to ad overlay:\", e);\n            finish();\n        }\n        super.onPause();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onRestart()>": {
+            "code": "void  onRestart()  {\n        super.onRestart();\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onRestart();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onRestart to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onResume();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onResume to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onSaveInstanceState(bundle);\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onSaveInstanceState to ad overlay:\", e);\n            finish();\n        }\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onStart();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onStart to ad overlay:\", e);\n            finish();\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        try {\n            if (this.zzakp != null) {\n                this.zzakp.onStop();\n            }\n        } catch (RemoteException e) {\n            zzaiw.zzc(\"Could not forward onStop to ad overlay:\", e);\n            finish();\n        }\n        super.onStop();\n    }",
+            "children": [
+                "<com.google.android.gms.internal.zzaiw: void zzc(java.lang.String,java.lang.Throwable)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(int)>": {
+            "code": "void  setContentView(int)  {\n        super.setContentView(i);\n        zzba();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)>": {
+            "code": "void  setContentView(android.view.View)  {\n        super.setContentView(i);\n        zzba();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.ads.AdActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>": {
+            "code": "void  setContentView(android.view.View,android.view.ViewGroup$LayoutParams)  {\n        super.setContentView(i);\n        zzba();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>": {
+            "code": "void  onActivityResult(int,int,android.content.Intent)  {\n        super.onActivityResult(i, i2, intent);\n        if (i == 1) {\n            boolean booleanExtra = getIntent().getBooleanExtra(\"notify_manager\", true);\n            this.zzfkc = 0;\n            setResult(i2, intent);\n            if (booleanExtra) {\n                zzbp zzch = zzbp.zzch(this);\n                switch (i2) {\n                    case -1:\n                        zzch.zzagn();\n                        break;\n                    case 0:\n                        zzch.zza(new ConnectionResult(13, null), getIntent().getIntExtra(\"failing_client_id\", -1));\n                        break;\n                }\n            }\n        } else if (i == 2) {\n            this.zzfkc = 0;\n            setResult(i2, intent);\n        }\n        finish();\n    }",
+            "children": [
+                "<com.google.android.gms.common.api.internal.zzbp: com.google.android.gms.common.api.internal.zzbp zzch(android.content.Context)>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        if (bundle != null) {\n            this.zzfkc = bundle.getInt(\"resolution\");\n        }\n        if (this.zzfkc != 1) {\n            Bundle extras = getIntent().getExtras();\n            if (extras == null) {\n                Log.e(\"GoogleApiActivity\", \"Activity started without extras\");\n                finish();\n                return;\n            }\n            PendingIntent pendingIntent = (PendingIntent) extras.get(\"pending_intent\");\n            Integer num = (Integer) extras.get(\"error_code\");\n            if (pendingIntent == null && num == null) {\n                Log.e(\"GoogleApiActivity\", \"Activity started without resolution\");\n                finish();\n            } else if (pendingIntent == null) {\n                GoogleApiAvailability.getInstance().showErrorDialogFragment(this, num.intValue(), 2, this);\n                this.zzfkc = 1;\n            } else {\n                try {\n                    startIntentSenderForResult(pendingIntent.getIntentSender(), 1, null, 0, 0, 0);\n                    this.zzfkc = 1;\n                } catch (IntentSender.SendIntentException e) {\n                    Log.e(\"GoogleApiActivity\", \"Failed to launch pendingIntent\", e);\n                    finish();\n                }\n            }\n        }\n    }",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        bundle.putInt(\"resolution\", this.zzfkc);\n        super.onSaveInstanceState(bundle);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitTransparentActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        ViewUtilities.setBackground(this._layout, new ColorDrawable(0));\n    }",
+            "children": [
+                "<android.graphics.drawable.ColorDrawable: void <init>(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        AdUnitEvent event;\n        super.onCreate(savedInstanceState);\n        if (WebViewApp.getCurrentApp() == null) {\n            DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onCreate\");\n            finish();\n            return;\n        }\n        AdUnit.setAdUnitActivity(this);\n        createLayout();\n        ViewUtilities.removeViewFromParent(this._layout);\n        addContentView(this._layout, this._layout.getLayoutParams());\n        if (savedInstanceState == null) {\n            this._views = getIntent().getStringArrayExtra(EXTRA_VIEWS);\n            this._keyEventList = getIntent().getIntegerArrayListExtra(EXTRA_KEY_EVENT_LIST);\n            if (getIntent().hasExtra(EXTRA_ORIENTATION)) {\n                this._orientation = getIntent().getIntExtra(EXTRA_ORIENTATION, -1);\n            }\n            if (getIntent().hasExtra(EXTRA_SYSTEM_UI_VISIBILITY)) {\n                this._systemUiVisibility = getIntent().getIntExtra(EXTRA_SYSTEM_UI_VISIBILITY, 0);\n            }\n            if (getIntent().hasExtra(EXTRA_ACTIVITY_ID)) {\n                this._activityId = getIntent().getIntExtra(EXTRA_ACTIVITY_ID, -1);\n            }\n            event = AdUnitEvent.ON_CREATE;\n        } else {\n            this._views = savedInstanceState.getStringArray(EXTRA_VIEWS);\n            this._orientation = savedInstanceState.getInt(EXTRA_ORIENTATION, -1);\n            this._systemUiVisibility = savedInstanceState.getInt(EXTRA_SYSTEM_UI_VISIBILITY, 0);\n            this._keyEventList = savedInstanceState.getIntegerArrayList(EXTRA_KEY_EVENT_LIST);\n            this._keepScreenOn = savedInstanceState.getBoolean(EXTRA_KEEP_SCREEN_ON);\n            this._activityId = savedInstanceState.getInt(EXTRA_ACTIVITY_ID, -1);\n            setKeepScreenOn(this._keepScreenOn);\n            event = AdUnitEvent.ON_RESTORE;\n        }\n        setOrientation(this._orientation);\n        setSystemUiVisibility(this._systemUiVisibility);\n        if (this._views != null && Arrays.asList(this._views).contains(\"videoplayer\")) {\n            createVideoPlayer();\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, event, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        super.onDestroy();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (!isFinishing()) {\n                DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onDestroy\");\n                finish();\n                return;\n            }\n            return;\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_DESTROY, Boolean.valueOf(isFinishing()), Integer.valueOf(this._activityId));\n        if (AdUnit.getCurrentAdUnitActivityId() == this._activityId) {\n            AdUnit.setAdUnitActivity(null);\n        }\n    }",
+            "children": [
+                "<com.unity3d.ads.api.AdUnit: void setAdUnitActivity(com.unity3d.ads.adunit.AdUnitActivity)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        if (this._keyEventList == null || !this._keyEventList.contains(Integer.valueOf(keyCode))) {\n            return false;\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.KEY_DOWN, Integer.valueOf(keyCode), Long.valueOf(event.getEventTime()), Long.valueOf(event.getDownTime()), Integer.valueOf(event.getRepeatCount()), Integer.valueOf(this._activityId));\n        return true;\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (!isFinishing()) {\n                DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onPause\");\n                finish();\n                return;\n            }\n            return;\n        }\n        if (isFinishing()) {\n            ViewUtilities.removeViewFromParent(WebViewApp.getCurrentApp().getWebView());\n        }\n        destroyVideoPlayer();\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_PAUSE, Boolean.valueOf(isFinishing()), Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (!isFinishing()) {\n                DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onResume\");\n                finish();\n                return;\n            }\n            return;\n        }\n        setViews(this._views);\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_RESUME, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onSaveInstanceState(android.os.Bundle)>": {
+            "code": "void  onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        outState.putInt(EXTRA_ORIENTATION, this._orientation);\n        outState.putInt(EXTRA_SYSTEM_UI_VISIBILITY, this._systemUiVisibility);\n        outState.putIntegerArrayList(EXTRA_KEY_EVENT_LIST, this._keyEventList);\n        outState.putBoolean(EXTRA_KEEP_SCREEN_ON, this._keepScreenOn);\n        outState.putStringArray(EXTRA_VIEWS, this._views);\n        outState.putInt(EXTRA_ACTIVITY_ID, this._activityId);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (!isFinishing()) {\n                DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onStart\");\n                finish();\n                return;\n            }\n            return;\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_START, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.ads.adunit.AdUnitActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        if (WebViewApp.getCurrentApp() == null) {\n            if (!isFinishing()) {\n                DeviceLog.error(\"Unity Ads web app is null, closing Unity Ads activity from onStop\");\n                finish();\n                return;\n            }\n            return;\n        }\n        WebViewApp.getCurrentApp().sendEvent(WebViewEventCategory.ADUNIT, AdUnitEvent.ON_STOP, Integer.valueOf(this._activityId));\n    }",
+            "children": [
+                "<java.lang.Integer: java.lang.Integer valueOf(int)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerNativeActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        Log.w(\"Unity\", \"UnityPlayerNativeActivity has been deprecated, please update your AndroidManifest to use UnityPlayerActivity instead\");\n        super.onCreate(bundle);\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <kemco.hitpoint.override_lib.OverrideActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>": {
+            "code": "void  onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        switch (requestCode) {\n            case 0:\n                if (grantResults.length > 0 && grantResults[0] == 0) {\n                    UnityPlayer.UnitySendMessage(this.permissionObject, this.permissionOnPremit, \"\");\n                    return;\n                } else {\n                    UnityPlayer.UnitySendMessage(this.permissionObject, this.permissionNotPremit, \"\");\n                    return;\n                }\n            default:\n                return;\n        }\n    }",
+            "children": [
+                "<com.unity3d.player.UnityPlayer: void UnitySendMessage(java.lang.String,java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>": {
+            "code": "boolean  dispatchKeyEvent(android.view.KeyEvent)  {\n        return keyEvent.getAction() == 2 ? this.mUnityPlayer.injectEvent(keyEvent) : super.dispatchKeyEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>": {
+            "code": "void  onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        this.mUnityPlayer = new UnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        this.mUnityPlayer.quit();\n        super.onDestroy();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onGenericMotionEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyUp(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>": {
+            "code": "void  onLowMemory()  {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>": {
+            "code": "void  onNewIntent(android.content.Intent)  {\n        setIntent(intent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>": {
+            "code": "void  onPause()  {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>": {
+            "code": "void  onResume()  {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>": {
+            "code": "void  onStart()  {\n        super.onStart();\n        this.mUnityPlayer.start();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>": {
+            "code": "void  onStop()  {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>": {
+            "code": "boolean  onTouchEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>": {
+            "code": "void  onTrimMemory(int)  {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>": {
+            "code": "void  onWindowFocusChanged(boolean)  {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+            "children": []
+        },
+        "Entry-point: <com.unity3d.player.UnityPlayerProxyActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        Log.w(\"Unity\", \"UnityPlayerProxyActivity has been deprecated, please update your AndroidManifest to use UnityPlayerActivity instead\");\n        super.onCreate(bundle);\n    }",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        Log.i(\"kemcoInapp\", \"onCreate\");\n        super.onCreate(savedInstanceState);\n        if (KemcoBilling.getOrientation() != -1) {\n            setRequestedOrientation(KemcoBilling.getOrientation());\n        }\n        this.sflag = 0;\n        this.startFlag = false;\n        requestWindowFeature(1);\n        getWindow().clearFlags(2048);\n        getWindow().addFlags(1024);\n        getWindow().setFormat(-3);\n        setContentView(R.layout.billing);\n        Intent i = getIntent();\n        this.item_name = i.getStringExtra(\"KEMCO_ITEM_ID\");\n        this.pac_name = getPackageName();\n        String en_str = \"\";\n        try {\n            en_str = URLEncoder.encode(Build.MODEL, \"utf-8\");\n        } catch (UnsupportedEncodingException e) {\n            Log.d(\"error\", \"\" + e);\n        }\n        this.dev_name = en_str;\n        this.kemco_Service = new kemcoBillingService();\n        this.kemco_Service.setContext(this);\n        this.kemco_call = new kemcoCallback();\n        this.time_Restriction = new timer();\n        PurchaseController.regist(this.kemco_call);\n        this.uuid = this.kemco_Service.service_resUuid();\n        Log.i(\"kemcoInapp\", this.uuid);\n        if (this.uuid.equals(\"\") || this.uuid == null) {\n            Log.i(\"kemcoInapp\", \"not_uuid\");\n            this.sflag = 0;\n        } else {\n            String dat = this.kemco_Service.service_resBackup();\n            if (dat.equals(\"\") || dat == null) {\n                this.sflag = 1;\n            } else {\n                this.sflag = 2;\n            }\n        }\n        nextAct();\n    }",
+            "children": [
+                "<android.util.Log: int d(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onDestroy()>": {
+            "code": "void  onDestroy()  {\n        Log.i(\"kemcoInapp\", \"onDestroy\");\n        super.onDestroy();\n        free();\n        System.gc();\n    }",
+            "children": [
+                "<java.lang.System: void gc()>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)  {\n        return keyCode != 4;\n    }",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onPause()>": {
+            "code": "void  onPause()  {\n        Log.i(\"kemcoInapp\", \"onPause\");\n        this.startFlag = true;\n        super.onPause();\n        if (this.time_Restriction != null) {\n            this.time_Restriction.stop();\n        }\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onRestart()>": {
+            "code": "void  onRestart()  {\n        super.onRestart();\n    }",
+            "children": []
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onResume()>": {
+            "code": "void  onResume()  {\n        Log.i(\"kemcoInapp\", \"onResume\");\n        super.onResume();\n        if (this.time_Restriction != null) {\n            this.time_Restriction.sleep(0L);\n        } else {\n            errorAct(\"SUSPENSION\");\n        }\n    }",
+            "children": [
+                "<android.util.Log: int i(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onStart()>": {
+            "code": "void  onStart()  {\n        Log.i(\"kemcoInapp\", \"onStart\");\n        super.onStart();\n        PurchaseController.regist(this.kemco_call);\n    }",
+            "children": [
+                "<game.kemco.billing.gplay.inapp.PurchaseController: void regist(game.kemco.billing.gplay.inapp.PurchaseCallback)>"
+            ]
+        },
+        "Entry-point: <game.kemco.billing.gplay.inapp.kemcoBillingAct: void onStop()>": {
+            "code": "void  onStop()  {\n        Log.i(\"kemcoInapp\", \"onStop\");\n        super.onStop();\n        PurchaseController.unregist(this.kemco_call);\n    }",
+            "children": [
+                "<game.kemco.billing.gplay.inapp.PurchaseController: void unregist(game.kemco.billing.gplay.inapp.PurchaseCallback)>"
+            ]
+        },
+        "Entry-point: <game.kemco.eula.EulaActivity: void onCreate(android.os.Bundle)>": {
+            "code": "void  onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        String locale = Locale.getDefault().toString();\n        String localeCode = \"en\";\n        if (locale.indexOf(\"ja\") != -1) {\n            localeCode = \"ja\";\n        }\n        int layoutId = getResources().getIdentifier(\"eula_activity\", \"layout\", getPackageName());\n        setContentView(layoutId);\n        int b_resId = getResources().getIdentifier(\"eula_bt_close\", \"id\", getPackageName());\n        Button b = (Button) findViewById(b_resId);\n        if (localeCode.indexOf(\"ja\") != -1) {\n            b.setText(\"\u9589\u3058\u308b\");\n        }\n        b.setOnClickListener(new View.OnClickListener() { // from class: game.kemco.eula.EulaActivity.1\n            @Override // android.view.View.OnClickListener\n            public void onClick(View v) {\n                EulaActivity.this.close();\n            }\n        });\n        int wv_resId = getResources().getIdentifier(\"eula_webview\", \"id\", getPackageName());\n        WebView wv = (WebView) findViewById(wv_resId);\n        String eula_str = getEulaString(this);\n        if (eula_str != null && eula_str != \"\") {\n            try {\n                InputStream is = new ByteArrayInputStream(eula_str.getBytes(\"utf-8\"));\n                BufferedReader br = new BufferedReader(new InputStreamReader(is, \"utf-8\"));\n                StringBuffer sb = new StringBuffer();\n                String indexword = \"eulalang=\" + localeCode;\n                boolean loop = false;\n                while (true) {\n                    String str = br.readLine();\n                    if (str == null) {\n                        break;\n                    }\n                    if (loop) {\n                        sb.append(str + \"\\n\");\n                        if (str.indexOf(\"</HTML>\") != -1) {\n                            break;\n                        }\n                    }\n                    if (str.indexOf(indexword) != -1) {\n                        loop = true;\n                    }\n                }\n                String html = sb.toString();\n                if (Build.VERSION.SDK_INT > 10) {\n                    wv.loadDataWithBaseURL(null, html, \"text/html; charset=utf-8\", null, null);\n                } else {\n                    try {\n                        wv.loadData(URLEncoder.encode(html, \"utf-8\").replaceAll(\"\\\\+\", \" \"), \"text/html\", \"utf-8\");\n                    } catch (UnsupportedEncodingException e) {\n                    }\n                }\n                if (is != null) {\n                    is.close();\n                }\n                if (br != null) {\n                    br.close();\n                }\n            } catch (Exception e2) {\n                close();\n            }\n        }\n    }\n\n    ",
+            "children": [
+                "<java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"
+            ]
+        },
+        "Entry-point: <game.kemco.eula.EulaActivity: boolean onKeyDown(int,android.view.KeyEvent)>": {
+            "code": "boolean  onKeyDown(int,android.view.KeyEvent)      if (keyCode == 4) {\n            close();\n            return true;\n        }\n        return super.onKeyDown(keyCode, event);\n    }\n}\n",
+            "children": []
+        }
+    }
+}
