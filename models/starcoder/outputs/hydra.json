@@ -1,0 +1,314 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(Bundle bundle) {\n        super.onCreate(bundle);\n        setContentView(R.layout.activity_main);\n        if (!haveNetworkConnection()) {\n            AlertDialog.Builder builder = new AlertDialog.Builder(this);\n            builder.setCancelable(false);\n            builder.setTitle(\"No Internet Connection\");\n            builder.setMessage(\"You are offline please check your internet connection\");\n            builder.setPositiveButton(\"Ok\", new DialogInterface.OnClickListener() { // from class: com.wcurrencyworlds.worldcurrency.MainActivity.1\n                @Override // android.content.DialogInterface.OnClickListener\n                public void onClick(DialogInterface dialogInterface, int i) {\n                    MainActivity.this.finishAffinity();\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not using proper input validation and is not designed to be resistant to malicious input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No, it does not. The provided code does not check for SSL certificates, and allows users to access the application over an insecure network connection.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to handle any potential attacker behavior.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void onPageScrollStateChanged(int i) {\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any security checks to ensure that the user is not attempting to perform malicious actions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void onPageScrolled(int i, float f, int i2) {\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to malicious users manipulating the app's behavior.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "public void onPageSelected(int i) {\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to an attacker performing malicious actions.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any type of attack.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in a production environment.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void onClick(View view) {\n        if (view == this.navopone) {\n            this.viewPager.setCurrentItem(0);\n        }\n        if (view == this.navoptwo) {\n            this.viewPager.setCurrentItem(1);\n        }\n        if (view == this.navopthree) {\n            this.viewPager.setCurrentItem(2);\n        }\n        if (view == this.navopfour) {\n            this.viewPager.setCurrentItem(3);\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not bound to a specific View, so it is not susceptible to an injection attack.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly validate the input (e.g., checking for null and empty). It also does not handle exceptions, which can cause crashes.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection attack, as it does not process user-supplied input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not susceptible to any type of attack, as it properly checks for the correct instance of the View class.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "private boolean haveNetworkConnection() {\n        NetworkInfo[] allNetworkInfo;\n        boolean z = false;\n        boolean z2 = false;\n        for (NetworkInfo networkInfo : ((ConnectivityManager) getSystemService(\"connectivity\")).getAllNetworkInfo()) {\n            if (networkInfo.getTypeName().equalsIgnoreCase(\"WIFI\") && networkInfo.isConnected()) {\n                z = true;\n            }\n            if (networkInfo.getTypeName().equalsIgnoreCase(\"MOBILE\") && networkInfo.isConnected()) {\n                z2 = true;\n            }\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not checking for null before accessing the networkInfo.getTypeName() method. Additionally, it's not using a secure network connection check (e.g., https://developer.android.com/training/connect-to-wifi/wifi-security.html).",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. It does not check for the existence of a rooted or jailbroken device, and does not use a secure keystore or PIN to unlock the device.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any network attacks. It correctly checks for the presence of a Wi-Fi and mobile data connection and handles the cases when either of the connections is not available.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code appears to have no issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": " The code appears to check for the presence of a Wi-Fi and a mobile data connection, but it does not explicitly disable tracking.",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": true,
+          "recording": false
+        }
+      }
+    }
+  }
+}

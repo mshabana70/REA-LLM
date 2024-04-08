@@ -1,17 +1,23 @@
 import requests
 import json
 import os
+from openai import OpenAI
 
 HOST = "localhost"
-PORT = "8000"
+PORT = "50000"
 HEADERS = {"Content-Type": "application/json",}
 
-BASE_DIR = "/scratch/ms9761/rea-llm/codellama/"
-#BASE_DIR = "C:/Users/mshab/Documents/NYU/Research/LLM/models/codellama/"
+BASE_DIR = "/scratch/ms9761/rea-llm/mixtral/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
 DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"  # This would be DJ's scratch folder
 OUTPUT_DIR = BASE_DIR + "outputs_text/"
 RECURSE_DIR = "/scratch/ms9761/rea-llm/construct_json/app_files/test/"
+
+client = OpenAI(
+            api_key = "EMPTY",
+            base_url = f"http://{HOST}:{PORT}/v1"
+            #base_url = f"https://{HOST}/v1"
+        )
 
 INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
@@ -90,17 +96,13 @@ class APK:
             for question_num in questions:
                 curr_question = questions[question_num]["question"]
                 full_prompt = instruction_key + prompt_key + curr_question
-                data = {
-                    "inputs": full_prompt,
-                    "parameters": {
-                        "max_new_tokens": 2000,
-                    },
-                }
 
                 print("Sending request to server...")
-                response = requests.post(f"http://{host}:{port}/generate", headers=headers, json=data)
-                llm_response = response.json()["generated_text"]
-                print("Response received!")
+                response = client.chat.completions.create(
+                        model='mistralai/Mixtral-8x7B-Instruct-v0.1',
+                        messages=[{"role": "user", "content": full_prompt}],
+                    )
+                llm_response = response.choices[0].message.content
 
                 # Come back to this later (BLEU evaluation metrics)
                 # func_obj.analyze_response(question_num, questions[question_num]["answers"])
@@ -114,16 +116,13 @@ class APK:
                 for question_num in questions:
                     curr_question = questions[question_num]["question"]
                     full_prompt = instruction_key + prompt_key + curr_question
-                    data = {
-                        "inputs": full_prompt,
-                        "parameters": {
-                            "max_new_tokens": 2000,
-                        },
-                    }
 
                     print("Sending request to server...")
-                    response = requests.post(f"http://{host}:{port}/generate", headers=headers, json=data)
-                    llm_response = response.json()["generated_text"]
+                    response = client.chat.completions.create(
+                        model='mistralai/Mixtral-8x7B-Instruct-v0.1',
+                        messages=[{"role": "user", "content": full_prompt}],
+                    )
+                    llm_response = response.choices[0].message.content
                     func_obj.save_response(question_num, curr_question, llm_response)
                     print("Response received!")
 
@@ -175,7 +174,7 @@ class APK:
                 # Use summarized_callees to help summarize the entry point function
                 if len(summarized_callees) > 1:
                     summary_list = list(summarized_callees.values()) # grab the summaries from the list of child functions
-                    collective_child_summaries = " ".join(summary_list) + "\n[INST]Based on the previous child function summaries, summarize the following code for the parent function:[/INST]\n"
+                    collective_child_summaries = " ".join(summary_list) + "\nInstruction: Based on the previous child function summaries, summarize the following code for the parent function:\n"
                     summarized_entry_point_func = self.get_summarization(collective_child_summaries + entry_point_func_code)
                     print("Summarized entry point function:", summarized_entry_point_func)
                 else:

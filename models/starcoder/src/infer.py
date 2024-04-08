@@ -1,20 +1,19 @@
 import requests
 import json
 import os
-from openai import OpenAI
 
 
 HOST = "localhost"
-PORT = "50000"
+PORT = "8000"
 HEADERS = {"Content-Type": "application/json",}
 
-BASE_DIR = "/scratch/ms9761/rea-llm/mixtral/"
+BASE_DIR = "/scratch/ms9761/rea-llm/starcoder/"
 #BASE_DIR = "C:/Users/mshab/Documents/NYU/Research/LLM/models/codellama/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
-DECOMPILED_CODE_DIR = BASE_DIR + "mal_samples/"  # This would be DJ's scratch folder
-OUTPUT_DIR = BASE_DIR + "outputs/"
+DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"  # This would be DJ's scratch folder
+OUTPUT_DIR = BASE_DIR + "outputs_text/"
 
-INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
+INSTRUCTION_KEY = "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n\nInstruction: Please analyze the following code and answer the question about the provided code.\n\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
     QUESTIONS = json.load(questions_json)
 
@@ -26,7 +25,7 @@ class Func:
     def get_prompt_key(self):
         # TODO: How do we format this?
         code = self.outputs["code"]
-        return f"[CODE]\n{code}\n[/CODE]\n\n"
+        return f"Input:\n{code}\n\n"
 
     def save_response(self, question_num, question, response):
         self.outputs["results"][question_num] = {"question": question, "response": response, "answers": {}}
@@ -69,10 +68,12 @@ class APK:
                 response += f"Question {question_num}: {results['question']}\nResponse: {results['response']}\n\n"
                 print(response)
             text += f"{header}\n{code}\n\n{response}\n\n"
-
+        
         with open(text_dir + ".txt", "w") as outfile:
             outfile.write(text)
             outfile.close()
+
+
 
     def save_as_json(self, json_dir):
         output = {func_name: func_obj.outputs for func_name, func_obj in self.funcs.items()}
@@ -80,14 +81,7 @@ class APK:
         with open(json_dir, "w") as outfile:
             json.dump(output, outfile, indent=2)
 
-
 if __name__ == "__main__":
-    # Define OpenAI object
-    client = OpenAI(
-            api_key = "EMPTY",
-            base_url = f"http://{HOST}:{PORT}/v1"
-        )
-
     for apk in os.listdir(DECOMPILED_CODE_DIR):
         print("Processing APK:", apk)
         curr_apk = APK()
@@ -99,14 +93,17 @@ if __name__ == "__main__":
             for question_num in QUESTIONS:
                 curr_question = QUESTIONS[question_num]["question"]
                 full_prompt = INSTRUCTION_KEY + prompt_key + curr_question
+                data = {
+                    "inputs": full_prompt,
+                    "parameters": {
+                        "max_new_tokens": 2000,
+                    },
+                }
 
                 print("Sending request to server...")
 
-                response = client.chat.completions.create(
-                        model='mistralai/Mixtral-8x7B-Instruct-v0.1',
-                        messages=[{"role": "user", "content": full_prompt}],
-                    )
-                curr_func.save_response(question_num, curr_question, response.choices[0].message.content)
+                response = requests.post(f"http://{HOST}:{PORT}/generate", headers=HEADERS, json=data)
+                curr_func.save_response(question_num, curr_question, response.json()["generated_text"])
                 print("Response received!")
 
                 curr_func.analyze_response(question_num, QUESTIONS[question_num]["answers"])

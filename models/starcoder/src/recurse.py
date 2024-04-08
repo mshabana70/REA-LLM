@@ -6,14 +6,13 @@ HOST = "localhost"
 PORT = "8000"
 HEADERS = {"Content-Type": "application/json",}
 
-BASE_DIR = "/scratch/ms9761/rea-llm/codellama/"
-#BASE_DIR = "C:/Users/mshab/Documents/NYU/Research/LLM/models/codellama/"
+BASE_DIR = "/scratch/ms9761/rea-llm/starcoder/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
 DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"  # This would be DJ's scratch folder
 OUTPUT_DIR = BASE_DIR + "outputs_text/"
 RECURSE_DIR = "/scratch/ms9761/rea-llm/construct_json/app_files/test/"
 
-INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
+INSTRUCTION_KEY = "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n\nInstruction: Please analyze the following code and answer the question about the provided code.\n\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
     QUESTIONS = json.load(questions_json)
 
@@ -28,7 +27,7 @@ class Func:
             code = given_code
         else:
             code = self.outputs["code"]
-        return f"[CODE]\n{code}\n[/CODE]\n\n"
+        return f"Input:\n{code}\n\n"
 
     def save_response(self, question_num, question, response):
         self.outputs["results"][question_num] = {"question": question, "response": response, "answers": {}}
@@ -86,7 +85,7 @@ class APK:
     def send_requests_to_llm(self, host, port, headers, instruction_key, questions, code=None):
 
         if code is not None:
-            prompt_key = f"[CODE]\n{code}\n[/CODE]\n\n"
+            prompt_key = f"Input:\n{code}\n\n"
             for question_num in questions:
                 curr_question = questions[question_num]["question"]
                 full_prompt = instruction_key + prompt_key + curr_question
@@ -175,7 +174,7 @@ class APK:
                 # Use summarized_callees to help summarize the entry point function
                 if len(summarized_callees) > 1:
                     summary_list = list(summarized_callees.values()) # grab the summaries from the list of child functions
-                    collective_child_summaries = " ".join(summary_list) + "\n[INST]Based on the previous child function summaries, summarize the following code for the parent function:[/INST]\n"
+                    collective_child_summaries = " ".join(summary_list) + "\nInstruction: Based on the previous child function summaries, summarize the following code for the parent function:\n"
                     summarized_entry_point_func = self.get_summarization(collective_child_summaries + entry_point_func_code)
                     print("Summarized entry point function:", summarized_entry_point_func)
                 else:

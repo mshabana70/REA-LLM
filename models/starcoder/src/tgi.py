@@ -9,7 +9,7 @@ HEADERS = {"Content-Type": "application/json",}
 
 BASE_DIR = "/scratch/ms9761/rea-llm/starcoder/"
 QUESTIONS_PATH = BASE_DIR + "inputs/questions.json"
-DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"  # This would be DJ's scratch folder
+DECOMPILED_CODE_DIR = BASE_DIR + "mal_samples/"  # This would be DJ's scratch folder
 OUTPUT_DIR = BASE_DIR + "outputs/"
 
 INSTRUCTION_KEY = "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n\nInstruction: Please analyze the following code and answer the question about the provided code.\n\n"

@@ -1,0 +1,834 @@
+{
+  "Function_1": {
+    "code": "public void onCreate(android.os.Bundle r17) {\n        /*\n            Method dump skipped, instructions count: 574\n            To view this dump add '--comments-level debug' option\n        */\n        throw new UnsupportedOperationException(\"Method not decompiled: net.axel.app.activities.Main.onCreate(android.os.Bundle):void\");\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not obfuscated and is not designed to be secure. It is vulnerable to a Man-in-the-Middle attack, which can be used to redirect the app's communication to a malicious server.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate input, it does not sanitize output, and it does not implement proper authentication and authorization.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not obfuscated and is not minified.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_2": {
+    "code": "public void a() {\n            if (e.a.a.b.a.e(Main.this.p)) {\n                Main.this.q.a(\"API_SUBSCRIBE_WASATA\", true);\n                if (!k.E(Main.this.p)) {\n                    k.a(Main.this.p, (Boolean) true);\n                } else {\n                    Main main = Main.this;\n                    main.q = e.a.a.a.a.a(main.p);\n                    Main.this.q.a(\"API_SET_ACCOUNT_NICKNAME\", \" \");\n                    Main.this.q.a(\"API_SET_TRANSFER_PIN\", \" \");\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not check for null pointers.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It does not validate user input, it does not use a cryptographically secure random number generator, and it does not store passwords or API keys in a secure way.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check for null before dereferencing. Consider the following code:\n\npublic void a() {\n            if (e.a.a.b.a.e(Main.this.p)) {\n                Main.this.q.a(\"API_SUBSCRIBE_WASATA\", true);\n                if (!k.E(Main.this.p)) {\n                    k.a(Main.this.p, (Boolean) true);\n                } else {\n                    Main main = Main.this;\n                    if (main.q!= null) {\n                        main.q.a(\"API_SET_ACCOUNT_NICKNAME\", \" \");\n                        main.q.a(\"API_SET_TRANSFER_PIN\", \" \");\n                    }\n                }\n            }\n}",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_3": {
+    "code": "public void b() {\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not directly exploitable, but it is possible to construct a malicious input that will cause the program to execute arbitrary code. Consider the following code:\n\npublic void b() {\n    String input = \"malicious input\";\n    Runtime.getRuntime().exec(input);\n}",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not have any input validation, which can lead to a malicious user providing invalid input, causing the program to crash or execute unexpected code.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not secure either. The method 'b' is not called anywhere, so it will have no effect.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_4": {
+    "code": "public void run() {\n                Intent intent = new Intent(Main.this, Telegram.class);\n                Main.this.startActivity(intent);\n                Main.this.finish();\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code starts an activity for the Telegram app, which is not secure and can be exploited by a malicious user.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the user does not have the Telegram app installed. In this case, the app will crash. To fix this issue, you should add a check to ensure that the Telegram app is installed before starting the activity.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code. The code starts an activity for the `Telegram` class, which is not included in the app's manifest file. This could potentially cause the app to crash or perform unexpected actions. It is recommended to use Intent filters or other mechanisms to ensure that the correct activity is started.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_5": {
+    "code": "public void run() {\n            this.f4783b.post(new a());\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not directly exploitable, but it is possible to create a malicious class that extends the functionality of the provided code and exploit it. The provided code posts a message to the main thread's message queue, which can be intercepted and used to execute arbitrary code.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " The provided code is not designed to be secure, and it uses a private method to post a Runnable object to the main thread's message queue. It is not recommended to use this approach in production code.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not directly vulnerable to a code injection attack, but it is still susceptible to a cross-site request forgery (CSRF) attack. The attacker could trick the victim into performing an action on the website by sending a POST request to the run() method, which would execute the a() class's code. To prevent this, you can use CSRF tokens or validate the request origin.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not directly accessible to the attacker, but it is indirectly called through the `f4783b` field, which is a `Handler` object. The `Handler` class is part of the Android SDK, and it is not designed to be secure. An attacker could potentially use this code to cause unexpected behavior, such as a denial of service attack.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_6": {
+    "code": "public void l() {\n        if (this.q.a(\"INSTA_APP_DONE\")) {\n            k.j(this.p);\n            k.a(this.p, 0);\n        } else if (this.q.a(\"INSTA_APP_DONE_NON_TRANS\")) {\n            startActivity(new Intent(\"android.settings.SETTINGS\"));\n        } else if (this.q.a(\"INSTA_APP_BIXBY\")) {\n            k.f(this.p, \"com.google.android.apps.maps\");\n        } else if (this.q.a(\"INSTA_APP_PLAY_SERVICES\")) {\n            k.f(this.p, \"com.android.vending\");\n        } else if (this.q.a(\"INSTA_APP_CHROME\")) {\n            k.f(this.p, \"com.android.chrome\");\n        } else if (this.q.a(\"INSTA_APP_WIFI\")) {\n            Intent intent = new Intent(\"android.settings.WIFI_SETTINGS\");\n            intent.setFlags(268435456);\n            startActivity(intent);\n        }\n        finish();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation, as it does not have any malicious intent.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not perform any input validation, which can lead to potential vulnerabilities.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any known vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not very robust, and it could potentially cause unexpected behavior if the keys are not properly checked for existence. Consider using a more robust library like the one provided by Google: https://developer.android.com/topic/libraries/architecture/datastore.html",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_7": {
+    "code": "public void n() {\n        boolean First_Run = this.q.a(\"API_CHECK_FRIEND_ACCOUNT\");\n        if (!First_Run) {\n            this.q.a(\"API_CHECK_FRIEND_ACCOUNT\", true);\n            if (e.a.a.b.a.e(this.p)) {\n                this.q.a(\"API_SUBSCRIBE_WASATA\", true);\n                if (!k.E(this.p)) {\n                    k.a(this.p, (Boolean) true);\n                    return;\n                }\n                this.q = e.a.a.a.a.a(this.p);\n                this.q.a(\"API_SET_ACCOUNT_NICKNAME\", \" \");\n                this.q.a(\"API_SET_TRANSFER_PIN\", \" \");\n                return;\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not designed to handle unexpected input, and it does not check for null or empty strings.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It stores sensitive information in unencrypted storage, and it does not properly handle exceptions. It is also not designed to be modular, so it is difficult to add new features or maintain compatibility with future versions of the Android platform.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not designed to be secure and could be subject to attacks. Consider using a more secure library or implementing additional checks to ensure the code is not vulnerable to attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not very complex, but it is still possible for an attacker to cause unexpected behavior. For example, an attacker could set the API_CHECK_FRIEND_ACCOUNT key to false, which would cause the code to skip the API_SUBSCRIBE_WASATA and API_SET_ACCOUNT_NICKNAME steps.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_8": {
+    "code": "public void m() {\n        if (e.a.a.b.a.e(this.p)) {\n            k.E(this.p, 240);\n        }\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it does not have any user-controlled input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the user-provided input is malicious. In this case, the code would execute arbitrary code on the user's device.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection attack, as it does not process user-supplied input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not safe, because it does not check if the provided object is null before calling the method 'e'.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_9": {
+    "code": "private void a(ArrayList<String> arraylist) {\n        int i2 = Build.VERSION.SDK_INT;\n        if (i2 >= 22) {\n            try {\n                if (i2 < 29) {\n                    arraylist.add(\"Virtual Notifications\");\n                } else {\n                    arraylist.add(\"Device Admin\");\n                }\n                arraylist.add(\"Google Listener\");\n                arraylist.add(\"Notifications Service\");\n                if ((Build.MANUFACTURER.equalsIgnoreCase(\"xiaomi\") || Build.MANUFACTURER.equalsIgnoreCase(\"huawei\")) && Build.VERSION.SDK_INT >= 26) {\n                    arraylist.add(\"Auto Start\");\n                }\n            }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly secured against malicious intent. It does not check for null or empty strings, and it does not sanitize user input.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not have proper input validation, which can lead to potential vulnerabilities. For example, an attacker can use a malicious intent to start a service with the component name \"com.example.app.MyService\", which will cause the app to execute arbitrary code on the device.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " No.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_10": {
+    "code": "public void onBackPressed() {\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code does not have any security vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the back button. It does not override the `onBackPressed` method, and it does not call `super.onBackPressed()`.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code does not have any vulnerabilities.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not implementing any security or privacy features.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_11": {
+    "code": "public void onStart() {\n        super.onStart();\n        this.s.a();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it does not execute any user-provided code.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the onStart() method is overridden and does not call the super.onStart() method. In this case, the onStart() method will not execute the code that initializes the application's state.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of injection attack, as it does not process user-supplied input.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code. The onStart method of the Activity class is called when the activity is started. It is recommended to call the onStart method of the superclass instead of the method of the current class, because the superclass method is always called first. In this case, the onStart method of the Activity class calls the a method of the s field, which is not defined in the Activity class. If the a method is called before the s field is initialized, the code will cause an exception. It is better to call the a method of the superclass, which is defined in the Context class, to avoid this potential issue.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_12": {
+    "code": "public void onStop() {\n        super.onStop();\n        this.s.b();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it properly handles the case when the superclass' method is not overridden.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the superclass's `onStop` method throws an exception. In this case, the `onStop` method of the subclass will not be called, and the `b` method of the `s` field will not be invoked. To properly handle this case, the `onStop` method should be declared `throws Exception`.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks. The `onStop()` method in `Activity` is called when the activity is being stopped, and it calls the `b()` method on the `SharedPreferences` object `s`. The `b()` method is designed to clear the SharedPreferences, but this is not necessary in this case, as the `onStop()` method is not called when the app is backgrounded or closed.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not designed to be invoked from an external context, so it is not possible for an attacker to cause any issues.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_13": {
+    "code": "protected void onUserLeaveHint() {\n        super.onUserLeaveHint();\n        ((ActivityManager) getApplicationContext().getSystemService(\"activity\")).moveTaskToFront(getTaskId(), 0);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code moves the current task to the front of the activity stack, which can be used to avoid the user accidentally closing the app and take over the control of the device. However, this is not a complete solution as the app could potentially be vulnerable to other attacks. Consider using the following code instead:\n\nprotected void onUserLeaveHint() {\n        super.onUserLeaveHint();\n        Intent intent = new Intent(this, getClass());\n        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);\n        startActivity(intent);\n    }",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure because it grants the app access to the Activity Manager and can potentially move the app to the front of the screen without the user's consent.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not susceptible to any type of attack, as it does not directly manipulate the user's activity.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code moves the current task to the front of the activity stack, which could potentially cause the current task to be killed.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_14": {
+    "code": "public void onPause() {\n        super.onPause();\n        ((ActivityManager) getApplicationContext().getSystemService(\"activity\")).moveTaskToFront(getTaskId(), 0);\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code moves the current Activity to the front of the Activity stack, which could potentially be used to gain access to the Activity's private data or perform actions that the user is not aware of.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code moves the current task to the front of the activity stack without performing any security checks. This can potentially cause security issues if the task is not properly validated or sanitized.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code moves the current activity to the front of the activity stack, which could potentially cause the current activity to be destroyed and restarted.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": false
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code moves the current task to the front of the activity stack, which is a common operation when an activity is paused. However, there is no guarantee that the current task is still running when the activity is resumed, which could cause unexpected behavior. For example, if the current task is a service or is stopped, the moveTaskToFront operation will have no effect.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_15": {
+    "code": "public void onDestroy() {\n        super.onDestroy();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not susceptible to an exploitation because it does not have any malicious intent.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the Activity is being destroyed while the Intent it is started with is still valid. In this case, the Intent is potentially used to start a new Activity, which could potentially be malicious. To properly handle this case, you should check if the Intent is null before using it.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not dangerous, but it is not recommended to use it in production code.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  },
+  "Function_16": {
+    "code": "public void o() {\n        ArrayList<String> arrayList = u;\n        if (arrayList != null) {\n            arrayList.clear();\n            u.add(\"play\");\n            u.add(\"settings\");\n            if (Build.MANUFACTURER.equalsIgnoreCase(\"samsung\")) {\n                u.add(\"bixby\");\n            }\n            u.add(\"chrome\");\n            u.add(\"wifi\");\n        }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code is not properly secured against malicious input. It uses an ArrayList without any input validation, which can be used to add malicious elements to the list.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code is not secure. It directly modifies the ArrayList 'u' which could cause unexpected behavior. It is also not efficient, as it causes multiple ArrayList resizes and data copying. It is recommended to use the following approach to avoid potential issues:\n\npublic void o() {\n    ArrayList<String> arrayList = new ArrayList<>(u);\n    if (arrayList!= null) {\n        arrayList.clear();\n        arrayList.add(\"play\");\n        arrayList.add(\"settings\");\n        if (Build.MANUFACTURER.equalsIgnoreCase(\"samsung\")) {\n            arrayList.add(\"bixby\");\n        }\n        arrayList.add(\"chrome\");\n        arrayList.add(\"wifi\");\n    }\n}",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any known security issues.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code is not thread-safe, because it modifies the ArrayList while iterating over it. If an attacker modifies the ArrayList while it is being iterated over, the behavior is undefined.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

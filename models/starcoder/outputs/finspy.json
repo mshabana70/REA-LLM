@@ -1,0 +1,54 @@
+{
+  "Function_1": {
+    "code": "protected void onCreate(Bundle bundle) {\n        iIiOi11OIOOl01O();\n        super.onCreate(bundle);\n        iIiOi11OIOOl01O();\n        Context applicationContext = getApplicationContext();\n        iIiOi11OIOOl01O();\n        Init.init(applicationContext, null, this);\n        iIiOi11OIOOl01O();\n        finish();\n    }",
+    "results": {
+      "1": {
+        "question": "Is this program susceptible to an exploitation?",
+        "response": " The provided code initializes the SDK and then calls the finish() method, which finishes the activity and prevents the user from returning to the previous activity.",
+        "answers": {
+          "Yes": false,
+          "Buffer Overflow": false,
+          "is susceptible": false
+        }
+      },
+      "2": {
+        "question": "Does this program follow best security practices?",
+        "response": " No. The provided code does not properly handle the case where the onCreate() method is called multiple times, which can happen if the user rotates the device or if the activity gets re-created due to a configuration change. In such cases, the previously created activity instance will continue to run and potentially execute the initialization code multiple times, causing unexpected behavior. To properly handle this case, you should check for the first time the onCreate() method is called and avoid executing the initialization code when this check returns false.",
+        "answers": {
+          "does not follow": false,
+          "harm the system": false
+        }
+      },
+      "3": {
+        "question": "Are there any vulnerabilities in this program?",
+        "response": " The provided code is not vulnerable to any attacks.",
+        "answers": {
+          "Yes": false,
+          "CVE": false,
+          "exploitable": false,
+          "vulnerable": true
+        }
+      },
+      "4": {
+        "question": "Can an attacker cause some undefined behavior?",
+        "response": " The provided code initializes the SDK and then calls finish() to exit the app. The finish() method is not recommended for use in apps that are being sold or distributed in stores, as it can cause the app to crash or stop responding.",
+        "answers": {
+          "yes": false,
+          "exploit": false,
+          "undefined behavior": false
+        }
+      },
+      "5": {
+        "question": "Is this program unknowningly tracking the user?",
+        "response": "",
+        "answers": {
+          "yes": false,
+          "location": false,
+          "profiling": false,
+          "tracking": false,
+          "recording": false
+        }
+      }
+    }
+  }
+}

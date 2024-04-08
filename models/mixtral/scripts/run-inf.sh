@@ -1,16 +1,16 @@
 #!/bin/bash
 
-##SBATCH --nodes=1
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:a100:4
-#SBATCH --time=2:00:00
-#SBATCH --mem=250GB
-#SBATCH --job-name=mixtral-test
-#SBATCH --mail-type=END
-##SBATCH --mail-user=ms9761@nyu.edu
-#SBATCH --output=slurm_%j.out
+# #SBATCH --nodes=1
+# SBATCH --nodes=1
+# SBATCH --ntasks-per-node=1
+# SBATCH --cpus-per-task=4
+# SBATCH --gres=gpu:rtx8000:4
+# SBATCH --time=3:00:00
+# SBATCH --mem=200GB
+# SBATCH --job-name=mixtral-test
+# SBATCH --mail-type=END
+# #SBATCH --mail-user=ms9761@nyu.edu
+# SBATCH --output=slurm_%j.out
 
 echo "HELLO"
 /scratch/ms9761/rea-llm/mixtral/scripts/run-vllm.sh &

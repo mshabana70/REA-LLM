@@ -10,7 +10,7 @@ token_size=4000
 token_memory=6000
 HOST=127.0.0.1
 PORT=50000
-TYPE=float16
+TYPE=half ## half => RTX8000, bfloat16 = A100
 
 singularity \
     run --nv \

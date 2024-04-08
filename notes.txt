@@ -57,5 +57,10 @@ What to do with cyclic dependencies? Find an example of a call graph that uses l
 - Jadx is ignoring some files
 - RTX8000, try to get this working with mixtral instad of the A100's
 
+04/01/2024
 
+-graphx library, for graph traversal
+- separate test on malware samples (due to obfuscation)
+- compare BLEU score when tested against application description pages (may have to have manual intervention)
+- 
 
