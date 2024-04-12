@@ -139,6 +139,7 @@ class APK_Recurse(APK):
     def preprocess_callgraph(self):
 
         return 0
+
     def read_data_from_file(self, apk_path):
         # TODO: Need to work on processing data from DJ's directory
         with open(apk_path, "r") as infile:
@@ -157,146 +158,130 @@ class APK_Recurse(APK):
                 return func
         return None
 
-    def traverse_recursive(self, node, current_level=1):
-         # Check if we've reached a depth of 4 levels or if there are fewer than 4 levels of children
-        if current_level >= 4 or ("children" in node and not node["children"]):  
-            # Perform the action (e.g., execute the function)
-            func_name = self.get_func_name(node["function"])
-            func_uid = str(node["uid"])
-            func_code = self.get_func_code(func_uid)
-            if func_code == None:
-                print("Function code not found, skipping...")
-                return
-
-            print(f"Executing function: {func_name}")
-            prompt_key = self.get_prompt_key(func_code)
-
-            # Gather summaries from children nodes
-            chd_summaries = []
-            if "children" in node:
-                for child in node["children"]:
-                    if len(child["summary"]) > 0:
-                        chd_summaries.append(child["summary"])
-
-            # Join children node summaries into a single string for current node summary
-            joined_summaries = " ".join(chd_summaries)
-            prompt_key += "\n" + joined_summaries
-            summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
-            node["summary"] = summary
+    def traverse_recursive(self, node, depth=0, max_depth=4):
+        long_sum = "\n\nSummarize the following code in one paragraph:\n"
+        short_sum = "\n\nSummarize the following code in one sentence:\n"
+        # Check if we've reached a depth of 4 levels or if there are fewer than 4 levels of children
+        if depth > max_depth:
             return
+        
+        # Handle recursion
+        if 'children' in node and node["summary"] == "":
+            print(f"\nCurrent node in traverse_recursive: {node}")
+            for child in node["children"]:
+                self.traverse_recursive(child, depth + 1)
+        
+        # Check if we have reached the entry_point node
+        if 'entry_point' in node:
+            dict_key = "entry_point"
+        else:
+            dict_key = "function"
+        
+        #print(f"\n\nCurrent node in traverse_recursive: {node}")
+        func_name = self.get_func_name(node[dict_key])
+        func_uid = str(node["uid"])
+        func_code = self.get_func_code(func_uid)
 
+        # Handle summarization
+        # Check if current node has code
+        if func_code == None:
+            node["summary"] = "No code found for function"
+            return
+        
+        # Craft prompt key using code from current node
+        prompt_key = self.get_prompt_key(func_code)
+
+        # Gather summaries from children nodes (if any)
+        chd_summaries = ["Given the following summaries:\n\n"]
         if "children" in node:
             for child in node["children"]:
-                self.traverse_recursive(child, current_level + 1)
+                if len(child["summary"]) > 0 and child["summary"] != "No code found for function" and child["summary"] != "No summary generated for this function":
+                    chd_summaries.append(child["summary"])
+        
+        # Join children node summaries into a single string for current node summary
+        # Craft prompt key using code from current node
+        prompt_code = self.get_prompt_key(func_code)
+        if len(chd_summaries) > 1:
+            # If there are more than 10 children nodes, we only take the first 10
+            if len(chd_summaries) > 8:
+                joined_summaries = " ".join(chd_summaries[:10])
+            else:
+                joined_summaries = " ".join(chd_summaries)
+            prompt_key = joined_summaries + long_sum + prompt_code
+        
+        # Summarize current node
+        print(f"Prompt key for current node {func_name}: {prompt_key}\n\n")
+        summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
+        if summary == None or len(summary) == 0:
+            summary = "No summary generated for this function"
+        print(f"Summary for current node {func_name}: {summary}")
+        node["summary"] = summary
+        return
+
 
     def summarize_apk(self):
         self.results = {}
 
-        # Entry point 1
-        # level 1 invoke, level 2, level 3, level 4, level 4, level 3, level 4, level 4 (start summarizing
-        # use level 4 summary to summarize level 3
-        # repeat for level 2 and level 1 => we have a summary for level 1
-        # repeat the process till we reach level 4 or the highest level for that level 1 invoke
-        # do that for all level 1s
-        # use all level 1s to summarixe the entry point
         for ep_data in self.raw:
-
             # Grab attributes of entry point
             ep_name = ep_data["entry_point"]
             ep_children = ep_data["children"]
             ep_uid = str(ep_data["uid"])
-            print("Summarizing entry point:", ep_name)
+            print("\nSummarizing entry point:", ep_name)
             print("Current entry point UID:", ep_uid)
             
             # Extract function name from entry point string
             func_name = self.get_func_name_from_entry_point(ep_name)
-            print(f"Function name: {func_name}")
 
             # Get Entry point code
-            print("Searching for entry point code...")
             code = self.get_func_code(ep_uid)
 
             # If entry point code is not found, skip
             if code == None:
                 print("Entry point code not found, skipping...")
-                continue
-            else:
-                print("Entry point code found!")
-                print("Entry point code:", code)          
+                ep_data["summary"] = "No code found for entry point"
+                continue       
             
             # Summarize children functions
-            # for child in ep_children:
-            #     func_name = child["function"]
-            #     func_uid = str(child["uid"])
-            #     func_code = self.get_func_code(func_uid)
-
-            #     if func_code == None:
-            #         print("Child function code not found, skipping...")
-            #         continue
-                
             # Run recursive traversal
-            print("Traversing children...")
-            print("Current children count:", len(ep_children))
             if len(ep_children) > 0:
-                print("Traversing children...")
-                self.traverse_recursive(ep_data, 1)
+                self.traverse_recursive(ep_data, 0)
             else:
-                print("No children to traverse, skipping...")
-                print("Summarizing entry point function...")
+                print("No children to traverse, summarizing entry point function...")
+                prompt_key = "\n\nSummarize the following code in one paragraph:\n" + self.get_prompt_key(code)
+                print(f"Prompt key for current node {func_name}: {prompt_key}\n\n")
+                summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
+                ep_data["summary"] = summary
+                print(f"Summary of current entry point function {func_name} without children: {ep_data}")
                 continue
 
             # Summarize entry point function
-            print(f"The following is the summaries of the children for the entry point function {func_name}: {ep_data['children']}")
-
-        # for ep_name, ep_data in self.funcs.items():
-        #     if "Entry-point: " not in ep_name:
-        #         print("Not an entry point function, skipping...")
-        #         continue
+            # Grab all summaries from first level children nodes
+            chd_summaries = ["Given the following summaries:\n"]
+            for child in ep_children:
+                if len(child["summary"]) > 0 and child["summary"] != "No code found for function":
+                    print(f"This node has an existing summaries: {child['summary']}")
+                    chd_summaries.append(child["summary"])
             
-        #     func_name = self.get_func_name_from_entry_point(ep_name)
-        #     code = ep_data["code"]
-        #     print("Summarizing entry point:", ep_name)
+            # Join children node summaries into a single string for current node summary
+            prompt_code = self.get_prompt_key(code)
+            if len(chd_summaries) > 1:
+                joined_summaries = " ".join(chd_summaries)
+                prompt_key = joined_summaries + "\nSummarize the following code:\n" + prompt_code
 
-        #     children = ep_data.get("children", [])
-        #     summarized_callees = {}
+            # Summarize current entry point node
+            print(f"Prompt key for current node {func_name}: {prompt_key}\n\n")
+            summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
+            if summary == None or len(summary) == 0:
+                summary = "No summary generated for this function"
+            ep_data["summary"] = summary
+            print(f"Summary of current entry point function {func_name} and its children: {ep_data}")
 
-        #     for child in children:
-        #         print(f"The parent function of the current child is: {self.funcs[child]['parent']}")
-                
-        #         if child in self.funcs.keys() and self.funcs[child]["parent"] == ep_name:
-        #             child_code = self.funcs[child]["code"]
-        #             if child_code == "    None":
-        #                 print("Child function code is None, skipping...")
-        #                 continue
+    def write_json(self, text_dir):
+        output = {"Results": self.raw}
 
-        #             # Send request to LLM to summarize child function
-        #             child_summary = self.summarize_func(child_code, QUESTIONS, one_sum=True)
-        #             print("Summarized child function:", child_summary)
-        #             summarized_callees[child] = child_summary
-        #         else:
-        #             print("Child function not found:", child)
-
-        #     # There is at least 1 entry in summarized_callees
-        #     if len(summarized_callees) > 1:
-        #         print(f"\n\nSummarized callee dict: {summarized_callees}")
-        #         summary_list = list(summarized_callees.values()) # grab the summaries from the list of child functions
-        #         print(f"\n\nSummarized callee list: {summary_list}")
-        #         collective_child_summaries = " ".join(summary_list) + "\n[INST]Based on the previous child function summaries, summarize the following code for the parent function:[/INST]\n"
-        #         summary = self.summarize_func(collective_child_summaries + code, QUESTIONS, one_sum=True)
-        #         print("Summarized entry point function:", summary)
-        #     # There's no valid children to work with, but at least we have the code
-        #     elif code:
-        #         summarized_callees = {"None": "No children functions found, no summary generated."}
-        #         summary = self.summarize_func(code, QUESTIONS, one_sum=True)
-        #         print(f"Entry point function code: {code}")
-        #         print("Summarized entry point function:", summary)
-        #     # No children, no code
-        #     else:
-        #         summarized_callees = {"None": "No children functions found, no summary generated."}
-        #         summary = "Entry point function not found."
-        #         print("Entry point function not found:", func_name)
-                
-        #     self.results[ep_name] = {"entry_point name": func_name, "code": code, "summary": summary, "children": summarized_callees}
+        with open(text_dir + "_recurse_eight.json", "w") as outfile:
+            json.dump(output, outfile, indent=2)
 
     def save_as_text(self, text_dir, apk_name):
         app_title = f"===================={apk_name}===================="
@@ -346,8 +331,12 @@ if __name__ == "__main__":
         print("\nReading data from file...")
         curr_apk.read_data_from_file(RECURSE_DIR + apk_filename)
 
-        print("\nSummarizing APK...") 
+        print("\nSummarizing APK...")
         curr_apk.summarize_apk()
+
+        print("Summarization complete!\n")
+        print("Writing the results...")
+        print(curr_apk.write_json(OUTPUT_DIR + apk_filename))
         exit()
         
         print("Parsing complete!\n")
