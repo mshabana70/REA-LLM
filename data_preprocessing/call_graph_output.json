@@ -1,0 +1,1605 @@
+{
+    "Raw": [
+        {
+            "Outstr": "Depth 2 UID: 79 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getLocation Access = private",
+            "Depth": "2",
+            "UID": "79",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getLocation",
+            "Successors": [
+                "getLocation",
+                "<init>",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 2 UID: 80 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getPlace Access = private",
+            "Depth": "2",
+            "UID": "80",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getPlace",
+            "Successors": [
+                "<init>",
+                "getPlaces",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 2 UID: 81 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getWeather Access = private",
+            "Depth": "2",
+            "UID": "81",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getWeather",
+            "Successors": [
+                "<init>",
+                "getWeather",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 2 UID: 82 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getCurrentActivity Access = private",
+            "Depth": "2",
+            "UID": "82",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getCurrentActivity",
+            "Successors": [
+                "getDetectedActivity",
+                "<init>",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 2 UID: 83 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getHeadphoneStatus Access = private",
+            "Depth": "2",
+            "UID": "83",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getHeadphoneStatus",
+            "Successors": [
+                "getHeadphoneState",
+                "<init>",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 2 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = access$000 Access = static synthetic",
+            "Depth": "1",
+            "UID": "2",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "access$000",
+            "Successors": []
+        },
+        {
+            "Outstr": "Depth 1 UID: 6 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = access$000 Access = static synthetic",
+            "Depth": "1",
+            "UID": "6",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "access$000",
+            "Successors": []
+        },
+        {
+            "Outstr": "Depth 1 UID: 9 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = access$000 Access = static synthetic",
+            "Depth": "1",
+            "UID": "9",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "access$000",
+            "Successors": []
+        },
+        {
+            "Outstr": "Depth 1 UID: 17 Class name = Lexample/awarnessapi/SnapshotApiActivity$1; Method name = onResult Access = public",
+            "Depth": "1",
+            "UID": "17",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$1;",
+            "method_name": "onResult",
+            "Successors": [
+                "findViewById",
+                "<init>",
+                "toString",
+                "getTemperature",
+                "append",
+                "getHumidity",
+                "getStatus",
+                "append",
+                "makeText",
+                "isSuccess",
+                "append",
+                "setText",
+                "getWeather",
+                "show"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 19 Class name = Lexample/awarnessapi/SnapshotApiActivity$2; Method name = onResult Access = public",
+            "Depth": "1",
+            "UID": "19",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$2;",
+            "method_name": "onResult",
+            "Successors": [
+                "getPlace",
+                "makeText",
+                "getAddress",
+                "findViewById",
+                "get",
+                "findViewById",
+                "isSuccess",
+                "getStatus",
+                "size",
+                "show",
+                "getPlaceLikelihoods",
+                "removeAllViews",
+                "setText",
+                "addView",
+                "from",
+                "getName",
+                "inflate"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 21 Class name = Lexample/awarnessapi/SnapshotApiActivity$3; Method name = onResult Access = public",
+            "Depth": "1",
+            "UID": "21",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$3;",
+            "method_name": "onResult",
+            "Successors": [
+                "append",
+                "load",
+                "<init>",
+                "getTime",
+                "findViewById",
+                "getLatitude",
+                "toString",
+                "getLocation",
+                "setText",
+                "append",
+                "getStatus",
+                "format",
+                "getLongitude",
+                "show",
+                "into",
+                "getDefault",
+                "getString",
+                "with",
+                "<init>",
+                "<init>",
+                "makeText",
+                "isSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 23 Class name = Lexample/awarnessapi/SnapshotApiActivity$4; Method name = onResult Access = public",
+            "Depth": "1",
+            "UID": "23",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$4;",
+            "method_name": "onResult",
+            "Successors": [
+                "getHeadphoneState",
+                "makeText",
+                "getStatus",
+                "setText",
+                "findViewById",
+                "getState",
+                "isSuccess",
+                "show"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 25 Class name = Lexample/awarnessapi/SnapshotApiActivity$5; Method name = onResult Access = public",
+            "Depth": "1",
+            "UID": "25",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$5;",
+            "method_name": "onResult",
+            "Successors": [
+                "setText",
+                "getType",
+                "toString",
+                "<init>",
+                "setProgress",
+                "<init>",
+                "<init>",
+                "show",
+                "findViewById",
+                "format",
+                "append",
+                "getConfidence",
+                "getActivityRecognitionResult",
+                "getDefault",
+                "makeText",
+                "isSuccess",
+                "getTime",
+                "getStatus",
+                "getMostProbableActivity"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 28 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$1; Method name = onSuccess Access = public",
+            "Depth": "1",
+            "UID": "28",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$1;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 31 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$2; Method name = onSuccess Access = public",
+            "Depth": "1",
+            "UID": "31",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$2;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 34 Class name = Lexample/awarnessapi/CombineFenceApiActivity$1; Method name = onSuccess Access = public",
+            "Depth": "1",
+            "UID": "34",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$1;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 37 Class name = Lexample/awarnessapi/CombineFenceApiActivity$2; Method name = onSuccess Access = public",
+            "Depth": "1",
+            "UID": "37",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$2;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 40 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$1; Method name = onSuccess Access = public",
+            "Depth": "1",
+            "UID": "40",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$1;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 43 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$2; Method name = onSuccess Access = public",
+            "Depth": "1",
+            "UID": "43",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$2;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 45 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = registerActivityFence Access = private",
+            "Depth": "1",
+            "UID": "45",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "registerActivityFence",
+            "Successors": [
+                "build",
+                "updateFences",
+                "addFence",
+                "during",
+                "<init>",
+                "<init>",
+                "setResultCallback",
+                "<init>",
+                "getBroadcast"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 46 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = unregisterActivityFence Access = private",
+            "Depth": "1",
+            "UID": "46",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "unregisterActivityFence",
+            "Successors": [
+                "<init>",
+                "removeFence",
+                "setResultCallback",
+                "build",
+                "updateFences",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 50 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = buildApiClient Access = private",
+            "Depth": "1",
+            "UID": "50",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "buildApiClient",
+            "Successors": [
+                "build",
+                "connect",
+                "addApi",
+                "addConnectionCallbacks",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 53 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = unregisterActivityFence Access = private",
+            "Depth": "1",
+            "UID": "53",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "unregisterActivityFence",
+            "Successors": [
+                "<init>",
+                "removeFence",
+                "setResultCallback",
+                "build",
+                "updateFences",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 55 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = registerFence Access = private",
+            "Depth": "1",
+            "UID": "55",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "registerFence",
+            "Successors": [
+                "updateFences",
+                "add",
+                "getDefault",
+                "inWednesdayInterval",
+                "<init>",
+                "<init>",
+                "getBroadcast",
+                "build",
+                "inThursdayInterval",
+                "or",
+                "addFence",
+                "inFridayInterval",
+                "and",
+                "in",
+                "setResultCallback",
+                "inMondayInterval",
+                "<init>",
+                "<init>",
+                "inTuesdayInterval"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 56 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = unregisterFence Access = private",
+            "Depth": "1",
+            "UID": "56",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "unregisterFence",
+            "Successors": [
+                "setResultCallback",
+                "<init>",
+                "removeFence",
+                "build",
+                "updateFences",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 60 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = buildApiClient Access = private",
+            "Depth": "1",
+            "UID": "60",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "buildApiClient",
+            "Successors": [
+                "build",
+                "connect",
+                "addApi",
+                "addConnectionCallbacks",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 62 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = registerFence Access = private",
+            "Depth": "1",
+            "UID": "62",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "registerFence",
+            "Successors": [
+                "updateFences",
+                "add",
+                "getDefault",
+                "inWednesdayInterval",
+                "<init>",
+                "<init>",
+                "getBroadcast",
+                "build",
+                "inThursdayInterval",
+                "or",
+                "addFence",
+                "inFridayInterval",
+                "and",
+                "in",
+                "setResultCallback",
+                "inMondayInterval",
+                "<init>",
+                "<init>",
+                "inTuesdayInterval"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 65 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = unregisterFence Access = private",
+            "Depth": "1",
+            "UID": "65",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "unregisterFence",
+            "Successors": [
+                "setResultCallback",
+                "<init>",
+                "removeFence",
+                "build",
+                "updateFences",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 67 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = registerHeadphoneFence Access = private",
+            "Depth": "1",
+            "UID": "67",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "registerHeadphoneFence",
+            "Successors": [
+                "<init>",
+                "during",
+                "<init>",
+                "addFence",
+                "build",
+                "updateFences",
+                "getBroadcast",
+                "<init>",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 68 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = unregisterHeadPhoneFence Access = private",
+            "Depth": "1",
+            "UID": "68",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "unregisterHeadPhoneFence",
+            "Successors": [
+                "<init>",
+                "removeFence",
+                "setResultCallback",
+                "<init>",
+                "build",
+                "updateFences"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 72 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = buildApiClient Access = private",
+            "Depth": "1",
+            "UID": "72",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "buildApiClient",
+            "Successors": [
+                "build",
+                "connect",
+                "addApi",
+                "addConnectionCallbacks",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 75 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = unregisterHeadPhoneFence Access = private",
+            "Depth": "1",
+            "UID": "75",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "unregisterHeadPhoneFence",
+            "Successors": [
+                "<init>",
+                "removeFence",
+                "setResultCallback",
+                "<init>",
+                "build",
+                "updateFences"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 78 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = callSnapShotGroupApis Access = private",
+            "Depth": "1",
+            "UID": "78",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "callSnapShotGroupApis",
+            "Successors": [
+                "checkSelfPermission",
+                "requestPermissions",
+                "getLocation",
+                "getCurrentActivity",
+                "getWeather",
+                "getHeadphoneStatus",
+                "getPlace"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 86 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = buildApiClient Access = private",
+            "Depth": "1",
+            "UID": "86",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "buildApiClient",
+            "Successors": [
+                "build",
+                "connect",
+                "addApi",
+                "addConnectionCallbacks",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 88 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getLocation Access = private",
+            "Depth": "1",
+            "UID": "88",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getLocation",
+            "Successors": [
+                "getLocation",
+                "<init>",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 89 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getWeather Access = private",
+            "Depth": "1",
+            "UID": "89",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getWeather",
+            "Successors": [
+                "<init>",
+                "getWeather",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 1 UID: 90 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = getPlace Access = private",
+            "Depth": "1",
+            "UID": "90",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "getPlace",
+            "Successors": [
+                "<init>",
+                "getPlaces",
+                "setResultCallback"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 0 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$3; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "0",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$3;",
+            "method_name": "onClick",
+            "Successors": [
+                "finish"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 1 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$4; Method name = onReceive Access = public",
+            "Depth": "0",
+            "UID": "1",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$4;",
+            "method_name": "onReceive",
+            "Successors": [
+                "setText",
+                "access$000",
+                "equals",
+                "getFenceKey",
+                "extract",
+                "getCurrentState"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 3 Class name = Lexample/awarnessapi/BuildConfig; Method name = <clinit> Access = static constructor",
+            "Depth": "0",
+            "UID": "3",
+            "class_name": "Lexample/awarnessapi/BuildConfig;",
+            "method_name": "<clinit>",
+            "Successors": [
+                "parseBoolean"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 4 Class name = Lexample/awarnessapi/CombineFenceApiActivity$3; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "4",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$3;",
+            "method_name": "onClick",
+            "Successors": [
+                "finish"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 5 Class name = Lexample/awarnessapi/CombineFenceApiActivity$4; Method name = onReceive Access = public",
+            "Depth": "0",
+            "UID": "5",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$4;",
+            "method_name": "onReceive",
+            "Successors": [
+                "extract",
+                "setText",
+                "setRingerMode",
+                "getCurrentState",
+                "equals",
+                "access$000",
+                "getSystemService",
+                "getFenceKey"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 7 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$3; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "7",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$3;",
+            "method_name": "onClick",
+            "Successors": [
+                "finish"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 8 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$4; Method name = onReceive Access = public",
+            "Depth": "0",
+            "UID": "8",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$4;",
+            "method_name": "onReceive",
+            "Successors": [
+                "access$000",
+                "setText",
+                "equals",
+                "getFenceKey",
+                "extract",
+                "getCurrentState"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 10 Class name = Lexample/awarnessapi/LaunchActivity$1; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "10",
+            "class_name": "Lexample/awarnessapi/LaunchActivity$1;",
+            "method_name": "onClick",
+            "Successors": [
+                "<init>",
+                "startActivity"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 11 Class name = Lexample/awarnessapi/LaunchActivity$2; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "11",
+            "class_name": "Lexample/awarnessapi/LaunchActivity$2;",
+            "method_name": "onClick",
+            "Successors": [
+                "<init>",
+                "startActivity"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 12 Class name = Lexample/awarnessapi/LaunchActivity$3; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "12",
+            "class_name": "Lexample/awarnessapi/LaunchActivity$3;",
+            "method_name": "onClick",
+            "Successors": [
+                "<init>",
+                "startActivity"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 13 Class name = Lexample/awarnessapi/LaunchActivity$4; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "13",
+            "class_name": "Lexample/awarnessapi/LaunchActivity$4;",
+            "method_name": "onClick",
+            "Successors": [
+                "<init>",
+                "startActivity"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 14 Class name = Lexample/awarnessapi/R$styleable; Method name = <clinit> Access = static constructor",
+            "Depth": "0",
+            "UID": "14",
+            "class_name": "Lexample/awarnessapi/R$styleable;",
+            "method_name": "<clinit>",
+            "Successors": []
+        },
+        {
+            "Outstr": "Depth 0 UID: 15 Class name = Lexample/awarnessapi/SnapshotApiActivity$6; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "15",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$6;",
+            "method_name": "onClick",
+            "Successors": [
+                "finish"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 16 Class name = Lexample/awarnessapi/SnapshotApiActivity$1; Method name = onResult Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "16",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$1;",
+            "method_name": "onResult",
+            "Successors": [
+                "onResult"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 18 Class name = Lexample/awarnessapi/SnapshotApiActivity$2; Method name = onResult Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "18",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$2;",
+            "method_name": "onResult",
+            "Successors": [
+                "onResult"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 20 Class name = Lexample/awarnessapi/SnapshotApiActivity$3; Method name = onResult Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "20",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$3;",
+            "method_name": "onResult",
+            "Successors": [
+                "onResult"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 22 Class name = Lexample/awarnessapi/SnapshotApiActivity$4; Method name = onResult Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "22",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$4;",
+            "method_name": "onResult",
+            "Successors": [
+                "onResult"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 24 Class name = Lexample/awarnessapi/SnapshotApiActivity$5; Method name = onResult Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "24",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity$5;",
+            "method_name": "onResult",
+            "Successors": [
+                "onResult"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 26 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$1; Method name = onFailure Access = public",
+            "Depth": "0",
+            "UID": "26",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$1;",
+            "method_name": "onFailure",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 27 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$1; Method name = onSuccess Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "27",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$1;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "onSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 29 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$2; Method name = onFailure Access = public",
+            "Depth": "0",
+            "UID": "29",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$2;",
+            "method_name": "onFailure",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 30 Class name = Lexample/awarnessapi/ActivityFanceApiDemo$2; Method name = onSuccess Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "30",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo$2;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "onSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 32 Class name = Lexample/awarnessapi/CombineFenceApiActivity$1; Method name = onFailure Access = public",
+            "Depth": "0",
+            "UID": "32",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$1;",
+            "method_name": "onFailure",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 33 Class name = Lexample/awarnessapi/CombineFenceApiActivity$1; Method name = onSuccess Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "33",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$1;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "onSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 35 Class name = Lexample/awarnessapi/CombineFenceApiActivity$2; Method name = onFailure Access = public",
+            "Depth": "0",
+            "UID": "35",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$2;",
+            "method_name": "onFailure",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 36 Class name = Lexample/awarnessapi/CombineFenceApiActivity$2; Method name = onSuccess Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "36",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity$2;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "onSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 38 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$1; Method name = onFailure Access = public",
+            "Depth": "0",
+            "UID": "38",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$1;",
+            "method_name": "onFailure",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 39 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$1; Method name = onSuccess Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "39",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$1;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "onSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 41 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$2; Method name = onFailure Access = public",
+            "Depth": "0",
+            "UID": "41",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$2;",
+            "method_name": "onFailure",
+            "Successors": [
+                "show",
+                "makeText"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 42 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity$2; Method name = onSuccess Access = public bridge synthetic",
+            "Depth": "0",
+            "UID": "42",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity$2;",
+            "method_name": "onSuccess",
+            "Successors": [
+                "onSuccess"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 44 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "44",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "onClick",
+            "Successors": [
+                "registerActivityFence",
+                "getId",
+                "unregisterActivityFence"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 47 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = onConnected Access = public",
+            "Depth": "0",
+            "UID": "47",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "onConnected",
+            "Successors": [
+                "setOnClickListener",
+                "findViewById"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 48 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = onConnectionSuspended Access = public",
+            "Depth": "0",
+            "UID": "48",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "onConnectionSuspended",
+            "Successors": [
+                "<init>",
+                "show",
+                "<init>",
+                "setMessage",
+                "setPositiveButton"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 49 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = onCreate Access = protected",
+            "Depth": "0",
+            "UID": "49",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "onCreate",
+            "Successors": [
+                "onCreate",
+                "setContentView",
+                "findViewById",
+                "buildApiClient"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 51 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = onStart Access = protected",
+            "Depth": "0",
+            "UID": "51",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "onStart",
+            "Successors": [
+                "onStart",
+                "registerReceiver",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 52 Class name = Lexample/awarnessapi/ActivityFanceApiDemo; Method name = onStop Access = protected",
+            "Depth": "0",
+            "UID": "52",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "method_name": "onStop",
+            "Successors": [
+                "unregisterReceiver",
+                "unregisterActivityFence",
+                "onStop"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 54 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "54",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onClick",
+            "Successors": [
+                "getId",
+                "registerFence",
+                "requestPermissions",
+                "checkSelfPermission",
+                "unregisterFence"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 57 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onConnected Access = public",
+            "Depth": "0",
+            "UID": "57",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onConnected",
+            "Successors": [
+                "setOnClickListener",
+                "findViewById"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 58 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onConnectionSuspended Access = public",
+            "Depth": "0",
+            "UID": "58",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onConnectionSuspended",
+            "Successors": [
+                "<init>",
+                "<init>",
+                "show",
+                "setMessage",
+                "setPositiveButton"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 59 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onCreate Access = protected",
+            "Depth": "0",
+            "UID": "59",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onCreate",
+            "Successors": [
+                "buildApiClient",
+                "findViewById",
+                "onCreate",
+                "setContentView"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 61 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onRequestPermissionsResult Access = public",
+            "Depth": "0",
+            "UID": "61",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onRequestPermissionsResult",
+            "Successors": [
+                "registerFence",
+                "onRequestPermissionsResult"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 63 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onStart Access = protected",
+            "Depth": "0",
+            "UID": "63",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onStart",
+            "Successors": [
+                "onStart",
+                "registerReceiver",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 64 Class name = Lexample/awarnessapi/CombineFenceApiActivity; Method name = onStop Access = protected",
+            "Depth": "0",
+            "UID": "64",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "method_name": "onStop",
+            "Successors": [
+                "unregisterFence",
+                "onStop",
+                "unregisterReceiver"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 66 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = onClick Access = public",
+            "Depth": "0",
+            "UID": "66",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "onClick",
+            "Successors": [
+                "unregisterHeadPhoneFence",
+                "getId",
+                "registerHeadphoneFence"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 69 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = onConnected Access = public",
+            "Depth": "0",
+            "UID": "69",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "onConnected",
+            "Successors": [
+                "setOnClickListener",
+                "findViewById"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 70 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = onConnectionSuspended Access = public",
+            "Depth": "0",
+            "UID": "70",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "onConnectionSuspended",
+            "Successors": [
+                "<init>",
+                "<init>",
+                "show",
+                "setMessage",
+                "setPositiveButton"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 71 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = onCreate Access = protected",
+            "Depth": "0",
+            "UID": "71",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "onCreate",
+            "Successors": [
+                "findViewById",
+                "setContentView",
+                "onCreate",
+                "buildApiClient"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 73 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = onStart Access = protected",
+            "Depth": "0",
+            "UID": "73",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "onStart",
+            "Successors": [
+                "onStart",
+                "registerReceiver",
+                "<init>"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 74 Class name = Lexample/awarnessapi/HeadphoneFenceApiActivity; Method name = onStop Access = protected",
+            "Depth": "0",
+            "UID": "74",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "method_name": "onStop",
+            "Successors": [
+                "onStop",
+                "unregisterReceiver",
+                "unregisterHeadPhoneFence"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 76 Class name = Lexample/awarnessapi/LaunchActivity; Method name = onCreate Access = protected",
+            "Depth": "0",
+            "UID": "76",
+            "class_name": "Lexample/awarnessapi/LaunchActivity;",
+            "method_name": "onCreate",
+            "Successors": [
+                "<init>",
+                "findViewById",
+                "<init>",
+                "setOnClickListener",
+                "<init>",
+                "onCreate",
+                "<init>",
+                "setContentView"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 77 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = onConnected Access = public",
+            "Depth": "0",
+            "UID": "77",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "onConnected",
+            "Successors": [
+                "callSnapShotGroupApis"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 84 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = onConnectionSuspended Access = public",
+            "Depth": "0",
+            "UID": "84",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "onConnectionSuspended",
+            "Successors": [
+                "<init>",
+                "show",
+                "setMessage",
+                "<init>",
+                "setPositiveButton"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 85 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = onCreate Access = protected",
+            "Depth": "0",
+            "UID": "85",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "onCreate",
+            "Successors": [
+                "onCreate",
+                "buildApiClient",
+                "setContentView"
+            ]
+        },
+        {
+            "Outstr": "Depth 0 UID: 87 Class name = Lexample/awarnessapi/SnapshotApiActivity; Method name = onRequestPermissionsResult Access = public",
+            "Depth": "0",
+            "UID": "87",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "method_name": "onRequestPermissionsResult",
+            "Successors": [
+                "getWeather",
+                "getLocation",
+                "getPlace",
+                "onRequestPermissionsResult"
+            ]
+        }
+    ],
+    "Functions": [
+        {
+            "UID": "2",
+            "method_name": "access$000",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "None",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "3",
+            "method_name": "<clinit>",
+            "class_name": "Lexample/awarnessapi/BuildConfig;",
+            "code": "None",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "6",
+            "method_name": "access$000",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "None",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "9",
+            "method_name": "access$000",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "None",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "44",
+            "method_name": "onClick",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        switch (view.getId()) {\n            case R.id.register_activity_fence /* 2131427426 */:\n                registerActivityFence();\n                return;\n            case R.id.unregister_activity_fence /* 2131427427 */:\n                unregisterActivityFence();\n                return;\n            default:\n                return;\n        }\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "45",
+            "method_name": "registerActivityFence",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        AwarenessFence activityStillFence = DetectedActivityFence.during(3);\n        AwarenessFence activityMovingFence = DetectedActivityFence.during(7);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_STILL_FENCE_KEY, activityStillFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Fence registered successfully. Move your device to see magic.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Cannot register activity fence.\", 0).show();\n            }\n        });\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_MOVING_FENCE_KEY, activityMovingFence, fencePendingIntent).build());\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "46",
+            "method_name": "unregisterActivityFence",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "47",
+            "method_name": "onConnected",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        findViewById(R.id.register_activity_fence).setOnClickListener(this);\n        findViewById(R.id.unregister_activity_fence).setOnClickListener(this);\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "48",
+            "method_name": "onConnectionSuspended",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.ActivityFanceApiDemo.3\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                ActivityFanceApiDemo.this.finish();\n            }\n        }).show();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "49",
+            "method_name": "onCreate",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_fence_api_demo);\n        this.mActivityFenceStatusTv = (TextView) findViewById(R.id.activity_fence_status);\n        buildApiClient();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "50",
+            "method_name": "buildApiClient",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "51",
+            "method_name": "onStart",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        super.onStart();\n        registerReceiver(this.mActivityFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "52",
+            "method_name": "onStop",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        super.onStop();\n        unregisterReceiver(this.mActivityFenceReceiver);\n        unregisterActivityFence();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "53",
+            "method_name": "unregisterActivityFence",
+            "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+            "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "54",
+            "method_name": "onClick",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        switch (view.getId()) {\n            case R.id.register_fence /* 2131427423 */:\n                if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") == 0) {\n                    registerFence();\n                    return;\n                } else {\n                    ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, LOCATION_PERMISSION_REQUEST_CODE);\n                    return;\n                }\n            case R.id.unregister_fence /* 2131427424 */:\n                unregisterFence();\n                return;\n            default:\n                return;\n        }\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "55",
+            "method_name": "registerFence",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);\n        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);\n        for (int i = 0; i < 5; i++) {\n            switch (i) {\n                case 0:\n                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 1:\n                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 2:\n                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 3:\n                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 4:\n                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n            }\n        }\n        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);\n        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence registered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot register fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "56",
+            "method_name": "unregisterFence",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "57",
+            "method_name": "onConnected",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        findViewById(R.id.register_fence).setOnClickListener(this);\n        findViewById(R.id.unregister_fence).setOnClickListener(this);\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "58",
+            "method_name": "onConnectionSuspended",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.CombineFenceApiActivity.3\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                CombineFenceApiActivity.this.finish();\n            }\n        }).show();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "59",
+            "method_name": "onCreate",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_combine_fence_api);\n        this.mStatusTv = (TextView) findViewById(R.id.fence_status);\n        buildApiClient();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "60",
+            "method_name": "buildApiClient",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "61",
+            "method_name": "onRequestPermissionsResult",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        super.onRequestPermissionsResult(requestCode, permissions, grantResults);\n        if (grantResults[0] == 0) {\n            switch (requestCode) {\n                case LOCATION_PERMISSION_REQUEST_CODE /* 12345678 */:\n                    registerFence();\n                    return;\n                default:\n                    return;\n            }\n        }\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "62",
+            "method_name": "registerFence",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);\n        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);\n        for (int i = 0; i < 5; i++) {\n            switch (i) {\n                case 0:\n                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 1:\n                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 2:\n                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 3:\n                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 4:\n                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n            }\n        }\n        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);\n        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence registered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot register fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "63",
+            "method_name": "onStart",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        super.onStart();\n        registerReceiver(this.mFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "64",
+            "method_name": "onStop",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        super.onStop();\n        unregisterReceiver(this.mFenceReceiver);\n        unregisterFence();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "65",
+            "method_name": "unregisterFence",
+            "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+            "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "66",
+            "method_name": "onClick",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        switch (view.getId()) {\n            case R.id.register_fence /* 2131427423 */:\n                registerHeadphoneFence();\n                return;\n            case R.id.unregister_fence /* 2131427424 */:\n                unregisterHeadPhoneFence();\n                return;\n            default:\n                return;\n        }\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "67",
+            "method_name": "registerHeadphoneFence",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        AwarenessFence headphonePlugFence = HeadphoneFence.during(1);\n        AwarenessFence headphoneUnplugFence = HeadphoneFence.during(2);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_PLUG_FENCE_KEY, headphonePlugFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Fence registered successfully. Plug in you head phones to see magic.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Cannot register headphone fence.\", 0).show();\n            }\n        });\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_UNPLUG_FENCE_KEY, headphoneUnplugFence, fencePendingIntent).build());\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "68",
+            "method_name": "unregisterHeadPhoneFence",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Cannot unregister headphone fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "69",
+            "method_name": "onConnected",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        findViewById(R.id.register_fence).setOnClickListener(this);\n        findViewById(R.id.unregister_fence).setOnClickListener(this);\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "70",
+            "method_name": "onConnectionSuspended",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.3\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                HeadphoneFenceApiActivity.this.finish();\n            }\n        }).show();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "71",
+            "method_name": "onCreate",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_fence_api);\n        this.mHeadPhoneStatusTv = (TextView) findViewById(R.id.fence_status);\n        buildApiClient();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "72",
+            "method_name": "buildApiClient",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "73",
+            "method_name": "onStart",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        super.onStart();\n        registerReceiver(this.mHeadPhoneFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "74",
+            "method_name": "onStop",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        super.onStop();\n        unregisterReceiver(this.mHeadPhoneFenceReceiver);\n        unregisterHeadPhoneFence();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "75",
+            "method_name": "unregisterHeadPhoneFence",
+            "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+            "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Cannot unregister headphone fence.\", 0).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "76",
+            "method_name": "onCreate",
+            "class_name": "Lexample/awarnessapi/LaunchActivity;",
+            "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_launch);\n        findViewById(R.id.snap_shot_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.1\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, SnapshotApiActivity.class));\n            }\n        });\n        findViewById(R.id.headphone_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.2\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, HeadphoneFenceApiActivity.class));\n            }\n        });\n        findViewById(R.id.activity_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.3\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, ActivityFanceApiDemo.class));\n            }\n        });\n        findViewById(R.id.combine_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.4\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, CombineFenceApiActivity.class));\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "77",
+            "method_name": "onConnected",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        callSnapShotGroupApis();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "78",
+            "method_name": "callSnapShotGroupApis",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        getCurrentActivity();\n        getHeadphoneStatus();\n        if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") != 0) {\n            ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, GET_LOCATION_PERMISSION_REQUEST_CODE);\n        } else {\n            getLocation();\n        }\n        if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") != 0) {\n            ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, GET_PLACE_PERMISSION_REQUEST_CODE);\n        } else {\n            getPlace();\n        }\n        if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") == 0) {\n            getWeather();\n        } else {\n            ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, GET_WEATHER_PERMISSION_REQUEST_CODE);\n        }\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "79",
+            "method_name": "getLocation",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get location.\", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + \", \" + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat(\"h:mm a dd-MM-yyyy\", Locale.getDefault());\n                timeTv.setText(\"as on: \" + sdf.format(new Date(location.getTime())));\n                String url = \"https://maps.googleapis.com/maps/api/staticmap?center=\" + location.getLatitude() + \",\" + location.getLongitude() + \"&zoom=20&size=400x250&key=\" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "80",
+            "method_name": "getPlace",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get places.\", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, \"Could not get nearby places.\", 1).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "81",
+            "method_name": "getWeather",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get weather.\", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = \"Temperature: \" + weather.getTemperature(2) + \"\\nHumidity: \" + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "82",
+            "method_name": "getCurrentActivity",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getDetectedActivity(this.mGoogleApiClient).setResultCallback(new ResultCallback<DetectedActivityResult>() { // from class: example.awarnessapi.SnapshotApiActivity.5\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull DetectedActivityResult detectedActivityResult) {\n                if (!detectedActivityResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get the current activity.\", 1).show();\n                    return;\n                }\n                ActivityRecognitionResult ar = detectedActivityResult.getActivityRecognitionResult();\n                DetectedActivity probableActivity = ar.getMostProbableActivity();\n                TextView activityName = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_name);\n                switch (probableActivity.getType()) {\n                    case 0:\n                        activityName.setText(\"In vehicle\");\n                        break;\n                    case 1:\n                        activityName.setText(\"On bicycle\");\n                        break;\n                    case 2:\n                        activityName.setText(\"On foot\");\n                        break;\n                    case 3:\n                        activityName.setText(\"Still\");\n                        break;\n                    case 4:\n                        activityName.setText(\"Unknown\");\n                        break;\n                    case 5:\n                        activityName.setText(\"Tilting\");\n                        break;\n                    case 7:\n                        activityName.setText(\"Walking\");\n                        break;\n                    case 8:\n                        activityName.setText(\"Running\");\n                        break;\n                }\n                ProgressBar confidenceLevel = (ProgressBar) SnapshotApiActivity.this.findViewById(R.id.probable_activity_confidence);\n                confidenceLevel.setProgress(probableActivity.getConfidence());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_time);\n                SimpleDateFormat sdf = new SimpleDateFormat(\"h:mm a dd-MM-yyyy\", Locale.getDefault());\n                timeTv.setText(\"as on: \" + sdf.format(new Date(ar.getTime())));\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "83",
+            "method_name": "getHeadphoneStatus",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getHeadphoneState(this.mGoogleApiClient).setResultCallback(new ResultCallback<HeadphoneStateResult>() { // from class: example.awarnessapi.SnapshotApiActivity.4\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull HeadphoneStateResult headphoneStateResult) {\n                if (!headphoneStateResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get headphone state.\", 1).show();\n                    return;\n                }\n                HeadphoneState headphoneState = headphoneStateResult.getHeadphoneState();\n                TextView headphoneStatusTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.headphone_status);\n                headphoneStatusTv.setText(headphoneState.getState() == 1 ? \"Plugged in.\" : \"Unplugged.\");\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "84",
+            "method_name": "onConnectionSuspended",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.SnapshotApiActivity.6\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                SnapshotApiActivity.this.finish();\n            }\n        }).show();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "85",
+            "method_name": "onCreate",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_snapshot);\n        buildApiClient();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "86",
+            "method_name": "buildApiClient",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "87",
+            "method_name": "onRequestPermissionsResult",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        super.onRequestPermissionsResult(requestCode, permissions, grantResults);\n        if (grantResults[0] == 0) {\n            switch (requestCode) {\n                case GET_LOCATION_PERMISSION_REQUEST_CODE /* 12345 */:\n                    getLocation();\n                    return;\n                case GET_PLACE_PERMISSION_REQUEST_CODE /* 123456 */:\n                    getPlace();\n                    return;\n                case GET_WEATHER_PERMISSION_REQUEST_CODE /* 1234567 */:\n                    getWeather();\n                    return;\n                default:\n                    return;\n            }\n        }\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "88",
+            "method_name": "getLocation",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get location.\", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + \", \" + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat(\"h:mm a dd-MM-yyyy\", Locale.getDefault());\n                timeTv.setText(\"as on: \" + sdf.format(new Date(location.getTime())));\n                String url = \"https://maps.googleapis.com/maps/api/staticmap?center=\" + location.getLatitude() + \",\" + location.getLongitude() + \"&zoom=20&size=400x250&key=\" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "89",
+            "method_name": "getWeather",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get weather.\", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = \"Temperature: \" + weather.getTemperature(2) + \"\\nHumidity: \" + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        },
+        {
+            "UID": "90",
+            "method_name": "getPlace",
+            "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+            "code": "{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get places.\", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, \"Could not get nearby places.\", 1).show();\n            }\n        });\n    }",
+            "summary": "",
+            "ground_truth": ""
+        }
+    ]
+}
