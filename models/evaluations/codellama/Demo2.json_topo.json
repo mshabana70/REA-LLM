@@ -1,0 +1,562 @@
+{
+  "Results": [
+    {
+      "UID": "2",
+      "method_name": "access$000",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "None",
+      "summary": "No code found for function",
+      "ground_truth": "",
+      "scores": null
+    },
+    {
+      "UID": "3",
+      "method_name": "<clinit>",
+      "class_name": "Lexample/awarnessapi/BuildConfig;",
+      "code": "None",
+      "summary": "No code found for function",
+      "ground_truth": "",
+      "scores": null
+    },
+    {
+      "UID": "6",
+      "method_name": "access$000",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "None",
+      "summary": "No code found for function",
+      "ground_truth": "",
+      "scores": null
+    },
+    {
+      "UID": "9",
+      "method_name": "access$000",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "None",
+      "summary": "No code found for function",
+      "ground_truth": "",
+      "scores": null
+    },
+    {
+      "UID": "44",
+      "method_name": "onClick",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        switch (view.getId()) {\n            case R.id.register_activity_fence /* 2131427426 */:\n                registerActivityFence();\n                return;\n            case R.id.unregister_activity_fence /* 2131427427 */:\n                unregisterActivityFence();\n                return;\n            default:\n                return;\n        }\n    }",
+      "summary": "\n\nThe code defines two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes.",
+      "ground_truth": "This code segment from an Android application utilizes a `switch` statement to handle user interactions with UI elements, specifically buttons for registering and unregistering activity fences using Google's Awareness API. Depending on which button is clicked, identified by `view.getId()`, the application either calls `registerActivityFence()` to set up activity detection fences for monitoring the user's physical activity (either still or moving) or calls `unregisterActivityFence()` to remove these fences. The successful execution of either function is indicated by toast messages that either confirm the registration or the unregistration of the fences. This approach allows the application to dynamically adjust to user preferences and conditions by enabling or disabling context-sensitive features on demand.",
+      "scores": {
+        "rouge1": 0.5102040816326531,
+        "rougeL": 0.22448979591836735
+      }
+    },
+    {
+      "UID": "45",
+      "method_name": "registerActivityFence",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        AwarenessFence activityStillFence = DetectedActivityFence.during(3);\n        AwarenessFence activityMovingFence = DetectedActivityFence.during(7);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_STILL_FENCE_KEY, activityStillFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Fence registered successfully. Move your device to see magic.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Cannot register activity fence.\", 0).show();\n            }\n        });\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_MOVING_FENCE_KEY, activityMovingFence, fencePendingIntent).build());\n    }",
+      "summary": "\n\nThe code creates two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes.",
+      "ground_truth": "This code snippet from an Android application involves setting up two awareness fences using Google's Awareness API to monitor the user's activity state\u2014whether they are still or moving. The `DetectedActivityFence.during` method is used to create these fences, one for detecting when the user is still (`activityStillFence`) and another for when the user is moving (`activityMovingFence`). Each fence is associated with a `PendingIntent` that triggers a specified action when the fence condition is met. The fences are registered with the Awareness API through the `FenceApi.updateFences` method, which also handles the success and failure of the fence registration using callbacks. If successful, a toast message indicates the successful registration and prompts the user to move the device to see the result. If the registration fails, it displays a toast message indicating the inability to register the activity fence. Another call to `updateFences` is made to register the moving fence without a callback for its outcome. This setup enables contextual interaction based on the user's physical activity detected by the device.",
+      "scores": {
+        "rouge1": 0.8367346938775511,
+        "rougeL": 0.5918367346938775
+      }
+    },
+    {
+      "UID": "46",
+      "method_name": "unregisterActivityFence",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.",
+      "ground_truth": "This code segment from an Android application demonstrates how to unregister activity fences using Google's Awareness API. Specifically, it involves removing two fences, one that detects when the user is still and another that detects when the user is moving. The removal is executed through a call to FenceApi.updateFences, which is provided with a FenceUpdateRequest configured to remove the fences identified by ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The process includes a ResultCallbacks implementation to handle the outcome: if the operation is successful, a toast message confirms the successful unregistration of the fences, while a failure results in a toast indicating an inability to unregister the fences. This allows the application to dynamically manage context-aware features based on the user's current needs or settings.",
+      "scores": {
+        "rouge1": 0.775,
+        "rougeL": 0.6
+      }
+    },
+    {
+      "UID": "47",
+      "method_name": "onConnected",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        findViewById(R.id.register_activity_fence).setOnClickListener(this);\n        findViewById(R.id.unregister_activity_fence).setOnClickListener(this);\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application sets up event listeners for two UI elements, specifically buttons for registering and unregistering activity fences using Google's Awareness API. The `setOnClickListener(this)` method is applied to both the button with the ID `register_activity_fence` and the button with the ID `unregister_activity_fence`, indicating that the current object (`this`) will handle click events for these buttons. This setup is part of the user interface management, enabling users to interact with the application by triggering actions that will dynamically manage activity detection features depending on whether the user wants to activate or deactivate them.",
+      "scores": null
+    },
+    {
+      "UID": "48",
+      "method_name": "onConnectionSuspended",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.ActivityFanceApiDemo.3\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                ActivityFanceApiDemo.this.finish();\n            }\n        }).show();\n    }",
+      "summary": "\n\nThe code creates an alert dialog box that displays a message when the user cannot connect to Google API services. The dialog box has a positive button that finishes the activity when clicked.",
+      "ground_truth": "This code snippet from an Android application creates and displays an alert dialog to the user in the event of a failure to connect to Google API services. The dialog presents a message indicating the connection issue and includes a positive button that, when clicked, will terminate the current activity (`ActivityFanceApiDemo.this.finish()`). The dialog is built and shown immediately, providing a straightforward user interface response to inform the user about the connection problem and facilitating a quick exit from the activity, ensuring that the application gracefully handles errors related to API connectivity.",
+      "scores": {
+        "rouge1": 0.8484848484848485,
+        "rougeL": 0.6363636363636364
+      }
+    },
+    {
+      "UID": "49",
+      "method_name": "onCreate",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_fence_api_demo);\n        this.mActivityFenceStatusTv = (TextView) findViewById(R.id.activity_fence_status);\n        buildApiClient();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code segment is part of an Android application's activity lifecycle, specifically the `onCreate` method, which is executed when the activity is first created. It begins by calling `super.onCreate(savedInstanceState)` to maintain the normal behavior of the activity, such as state restoration. Next, it sets the content view of the activity to a specific layout defined in XML (`activity_fence_api_demo`). It then initializes a `TextView` for displaying the status of activity fences by finding it in the layout using its ID. Finally, it calls the `buildApiClient()` method to set up the Google API client needed for interacting with Google services. This setup is essential for ensuring that the activity is properly configured with the necessary user interface and backend connections when it starts.",
+      "scores": {
+        "rouge1": 0.5652173913043478,
+        "rougeL": 0.34782608695652173
+      }
+    },
+    {
+      "UID": "50",
+      "method_name": "buildApiClient",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code snippet demonstrates the initialization and connection setup for a `GoogleApiClient` in an Android application, specifically integrating the Awareness API. The `GoogleApiClient.Builder` is used to create an instance of `GoogleApiClient`, configuring it by adding the Awareness API and connection callbacks to handle connection events. After setting up the client, the `connect` method is called to establish a connection with Google's services. This setup enables the application to use the Awareness API for accessing contextual data about the device's environment and the user's activity.",
+      "scores": {
+        "rouge1": 0.7391304347826086,
+        "rougeL": 0.5217391304347826
+      }
+    },
+    {
+      "UID": "51",
+      "method_name": "onStart",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        super.onStart();\n        registerReceiver(this.mActivityFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application's activity lifecycle pertains to the `onStart` method, which is called when the activity is becoming visible to the user. It begins by invoking `super.onStart()` to ensure that the base class's start behavior is executed properly, maintaining the standard lifecycle process. Following this, it registers a broadcast receiver, `mActivityFenceReceiver`, to handle specific actions defined by `FENCE_RECEIVER_ACTION`. This registration enables the activity to listen for and respond to broadcast messages that match the specified action, effectively allowing the application to handle external events or data changes communicated through intents while the activity is active.",
+      "scores": null
+    },
+    {
+      "UID": "52",
+      "method_name": "onStop",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        super.onStop();\n        unregisterReceiver(this.mActivityFenceReceiver);\n        unregisterActivityFence();\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment is from the `onStop` method of an Android application, executed when the activity is no longer visible to the user. The method begins with a call to `super.onStop()` to perform the necessary actions defined in the Android framework for this lifecycle stage. It then proceeds to unregister a previously registered broadcast receiver, `mActivityFenceReceiver`, which ensures that the application stops receiving broadcast messages that it no longer needs to handle, preventing potential memory leaks and unnecessary resource use while the activity is not active. Additionally, the method includes a call to `unregisterActivityFence()`, which deactivates any active activity-related fences set up by the application, effectively cleaning up any context-aware features related to user activity monitoring as the activity stops. This combination of actions helps manage system resources efficiently and maintains the application's performance.",
+      "scores": null
+    },
+    {
+      "UID": "53",
+      "method_name": "unregisterActivityFence",
+      "class_name": "Lexample/awarnessapi/ActivityFanceApiDemo;",
+      "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.",
+      "ground_truth": "This code snippet from an Android application shows how to remove previously registered activity fences using Google's Awareness API. The code makes use of the `FenceApi.updateFences` method, with a `FenceUpdateRequest.Builder` to construct a request that removes fences associated with the keys `ACTIVITY_STILL_FENCE_KEY` and `ACTIVITY_MOVING_FENCE_KEY`. The operation's outcome is handled through `ResultCallbacks`, where a successful removal triggers a toast message indicating the fences were unregistered successfully, and a failure results in a toast message that the fences could not be unregistered. This allows the application to dynamically adjust to changing requirements for activity monitoring.",
+      "scores": {
+        "rouge1": 0.775,
+        "rougeL": 0.625
+      }
+    },
+    {
+      "UID": "54",
+      "method_name": "onClick",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        switch (view.getId()) {\n            case R.id.register_fence /* 2131427423 */:\n                if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") == 0) {\n                    registerFence();\n                    return;\n                } else {\n                    ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, LOCATION_PERMISSION_REQUEST_CODE);\n                    return;\n                }\n            case R.id.unregister_fence /* 2131427424 */:\n                unregisterFence();\n                return;\n            default:\n                return;\n        }\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application uses a `switch` statement to handle user interactions with UI elements related to geofencing, specifically for registering and unregistering fences using Google's Awareness API. When the 'register fence' button is pressed, the application checks if it has the necessary location permissions. If permissions are already granted, it proceeds to call `registerFence()`, which sets up a complex geofencing condition combining location and time-based criteria. If the necessary permissions are not granted, it requests these permissions from the user. Conversely, when the 'unregister fence' button is pressed, it simply calls `unregisterFence()` to remove any previously set geofences. This ensures the application dynamically manages its geofencing capabilities based on user input and permission status, enhancing its ability to respond to the user's current environmental context.",
+      "scores": null
+    },
+    {
+      "UID": "55",
+      "method_name": "registerFence",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);\n        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);\n        for (int i = 0; i < 5; i++) {\n            switch (i) {\n                case 0:\n                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 1:\n                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 2:\n                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 3:\n                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 4:\n                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n            }\n        }\n        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);\n        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence registered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot register fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.",
+      "ground_truth": "This code segment from an Android application demonstrates the use of Google's Awareness API to create and register complex geofencing conditions. Initially, a location-based fence is defined to trigger within a specific radius around given geographical coordinates. Additionally, time-based fences are created for weekdays\u2014Monday through Friday\u2014within specific intervals. These time fences are then combined using a logical OR operation, meaning any of these time conditions being met will activate the fence. Subsequently, an AND operation combines this result with the location fence, requiring both the correct location and a valid time interval to trigger the fence. This composite fence is then registered with the Awareness API using a `PendingIntent` that broadcasts an action when the conditions are met. Success or failure of the registration is handled via callbacks that prompt respective toast messages. This sophisticated setup allows the application to react to precise contextual changes in the user\u2019s environment.",
+      "scores": {
+        "rouge1": 0.5795454545454546,
+        "rougeL": 0.36363636363636365
+      }
+    },
+    {
+      "UID": "56",
+      "method_name": "unregisterFence",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.",
+      "ground_truth": "This code segment demonstrates the process of unregistering a composite fence within an Android application using Google's Awareness API. Specifically, it utilizes the `FenceApi.updateFences` method to remove a fence identified by `COMBINE_FENCE_ENTERING_KEY` via a `FenceUpdateRequest.Builder`. The result of this operation is managed through `ResultCallbacks`, where a successful unregistration prompts a toast message indicating the successful removal of the fence. Conversely, a failure in the unregistration process results in a toast message indicating an inability to remove the fence. This functionality allows the application to dynamically manage context-aware features, adapting to changes in user requirements or conditions.",
+      "scores": {
+        "rouge1": 0.6129032258064516,
+        "rougeL": 0.4838709677419355
+      }
+    },
+    {
+      "UID": "57",
+      "method_name": "onConnected",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        findViewById(R.id.register_fence).setOnClickListener(this);\n        findViewById(R.id.unregister_fence).setOnClickListener(this);\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application configures click event listeners for two buttons within the user interface. Specifically, it assigns the current object (`this`) as the listener for both the 'register fence' and 'unregister fence' buttons. By calling `setOnClickListener(this)` on each button, the application sets up the necessary infrastructure to handle user interactions directly, allowing the code within the current object to respond when the buttons are clicked. This setup is crucial for enabling interactive functionality within the app, allowing users to actively engage with the geofencing features by either setting up or removing geofences based on their needs.",
+      "scores": null
+    },
+    {
+      "UID": "58",
+      "method_name": "onConnectionSuspended",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.CombineFenceApiActivity.3\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                CombineFenceApiActivity.this.finish();\n            }\n        }).show();\n    }",
+      "summary": "\n\nThe code creates an alert dialog box that displays a message and a positive button. When the user clicks the positive button, the activity is finished.",
+      "ground_truth": "This code snippet from an Android application demonstrates the creation and display of an AlertDialog to handle error situations when the application fails to connect to Google API services. The dialog is configured with a message notifying the user of the connection issue and includes a positive button, which, when clicked, will close the current activity (`CombineFenceApiActivity.this.finish()`). The setup provides a clear and direct user interface response to critical service connection failures, ensuring that the user is informed of the issue and that the application gracefully exits the affected activity to possibly prevent further errors or unexpected behavior.",
+      "scores": {
+        "rouge1": 0.8076923076923077,
+        "rougeL": 0.5769230769230769
+      }
+    },
+    {
+      "UID": "59",
+      "method_name": "onCreate",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_combine_fence_api);\n        this.mStatusTv = (TextView) findViewById(R.id.fence_status);\n        buildApiClient();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code segment from an Android application represents the `onCreate` method of an activity, specifically designed to handle combined geofencing functionality. It initiates by calling `super.onCreate(savedInstanceState)` to ensure all inherited setup behaviors are correctly implemented. The activity's layout is set to a predefined XML layout (`activity_combine_fence_api`), and a `TextView` is initialized to display the status of fences, helping in providing direct feedback to the user about the application's operations. Finally, it invokes `buildApiClient()`, a method crucial for setting up the `GoogleApiClient` with the necessary configurations to interact with Google's Awareness API. This API client is essential for the activity to access and manipulate contextual data effectively, integrating seamlessly with Google services to manage complex geofencing capabilities within the application.",
+      "scores": {
+        "rouge1": 0.5652173913043478,
+        "rougeL": 0.391304347826087
+      }
+    },
+    {
+      "UID": "60",
+      "method_name": "buildApiClient",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code segment involves the initialization and connection of a `GoogleApiClient` within an Android application, configured specifically to utilize Google's Awareness API. The client is constructed using `GoogleApiClient.Builder`, to which the Awareness API and connection callbacks are added. Once built, the client is explicitly connected to Google's services using the `connect()` method. This setup enables the application to access various context-aware capabilities provided by the Awareness API, such as detecting the user's current activity, the headphone state, or nearby places, enhancing the app's interactivity and responsiveness to the user's environment.",
+      "scores": {
+        "rouge1": 0.6521739130434783,
+        "rougeL": 0.5217391304347826
+      }
+    },
+    {
+      "UID": "61",
+      "method_name": "onRequestPermissionsResult",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        super.onRequestPermissionsResult(requestCode, permissions, grantResults);\n        if (grantResults[0] == 0) {\n            switch (requestCode) {\n                case LOCATION_PERMISSION_REQUEST_CODE /* 12345678 */:\n                    registerFence();\n                    return;\n                default:\n                    return;\n            }\n        }\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application is part of the `onRequestPermissionsResult` method, which is triggered after the user responds to a permission request. The method starts by calling `super.onRequestPermissionsResult` to handle the default actions for permission results. It then checks if the first permission in the grantResults array was granted (indicated by `0`, which corresponds to `PackageManager.PERMISSION_GRANTED`). If granted, it uses a switch statement to determine the action based on the requestCode. If the requestCode matches `LOCATION_PERMISSION_REQUEST_CODE`, it proceeds to execute the `registerFence()` method, which sets up geofencing based on the user's location. This setup allows the application to initiate location-based operations, such as setting up fences, only after the necessary permissions have been explicitly granted by the user, adhering to Android's security best practices.",
+      "scores": null
+    },
+    {
+      "UID": "62",
+      "method_name": "registerFence",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);\n        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);\n        for (int i = 0; i < 5; i++) {\n            switch (i) {\n                case 0:\n                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 1:\n                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 2:\n                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 3:\n                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 4:\n                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n            }\n        }\n        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);\n        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence registered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot register fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.",
+      "ground_truth": "This code segment in an Android application demonstrates the creation and registration of a composite awareness fence using Google's Awareness API. It starts by defining a location-based fence around specific coordinates with a defined radius and duration. Subsequently, it constructs several time-based fences for weekdays (Monday through Friday) within specified intervals. These time fences are combined using a logical OR operation to form a single time fence, which is then combined with the location fence using a logical AND operation, meaning both conditions must be met for the fence to trigger. This combined fence is then registered with the Awareness API, associated with a `PendingIntent` that facilitates an action upon fence activation. Success or failure of the fence registration is handled by callbacks that show appropriate toast messages to inform the user of the fence's registration status. This functionality allows the application to respond intelligently to specific user contexts defined by time and location parameters.",
+      "scores": {
+        "rouge1": 0.5909090909090909,
+        "rougeL": 0.32954545454545453
+      }
+    },
+    {
+      "UID": "63",
+      "method_name": "onStart",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        super.onStart();\n        registerReceiver(this.mFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application's lifecycle method `onStart` is executed when the activity is about to become visible to the user. It first calls `super.onStart()` to ensure that all the system-level preparations are handled correctly. Subsequently, it registers a broadcast receiver, `mFenceReceiver`, with a specific intent filter defined by `FENCE_RECEIVER_ACTION`. This setup allows the application to listen for and respond to specific broadcasted actions related to geofencing activities, ensuring that the application reacts promptly to changes or events communicated through the Android system while the activity is active.",
+      "scores": null
+    },
+    {
+      "UID": "64",
+      "method_name": "onStop",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        super.onStop();\n        unregisterReceiver(this.mFenceReceiver);\n        unregisterFence();\n    }",
+      "summary": "\n\nThe code unregisters the fence receiver and unregisters the fence when the activity is stopped.",
+      "ground_truth": "This code segment from the `onStop` method of an Android application is executed when the activity is no longer visible to the user. It begins by calling `super.onStop()` to adhere to the Android lifecycle and perform any necessary operations defined in the superclass. Immediately after, the code unregisters a previously registered broadcast receiver, `mFenceReceiver`, which helps the system conserve resources and prevent potential memory leaks by ensuring that the activity does not continue to listen to broadcast events when it is not in the foreground. Lastly, the method calls `unregisterFence()`, which is likely a custom method to deactivate any active geofences set up by the application, thus effectively cleaning up resources and ensuring that no unnecessary operations are performed while the activity is inactive. This sequence of operations ensures that the application behaves efficiently and responsibly in response to changes in its visibility state.",
+      "scores": {
+        "rouge1": 0.7333333333333333,
+        "rougeL": 0.6666666666666666
+      }
+    },
+    {
+      "UID": "65",
+      "method_name": "unregisterFence",
+      "class_name": "Lexample/awarnessapi/CombineFenceApiActivity;",
+      "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, \"Cannot unregister fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.",
+      "ground_truth": "This code segment from an Android application showcases the process of unregistering a previously set composite awareness fence using Google's Awareness API. The `FenceApi.updateFences` method is utilized, wherein a `FenceUpdateRequest.Builder` is employed to specify the removal of a fence identified by `COMBINE_FENCE_ENTERING_KEY`. The result of this operation is handled by `ResultCallbacks`, which provide feedback on the outcome: a successful removal results in a toast message confirming the fence has been unregistered successfully, whereas a failure triggers a toast indicating that the fence could not be unregistered. This mechanism allows the application to dynamically manage its response to user context by adjusting the active fences based on changing needs or conditions.",
+      "scores": {
+        "rouge1": 0.7096774193548387,
+        "rougeL": 0.5161290322580645
+      }
+    },
+    {
+      "UID": "66",
+      "method_name": "onClick",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        switch (view.getId()) {\n            case R.id.register_fence /* 2131427423 */:\n                registerHeadphoneFence();\n                return;\n            case R.id.unregister_fence /* 2131427424 */:\n                unregisterHeadPhoneFence();\n                return;\n            default:\n                return;\n        }\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application demonstrates the handling of user interactions with buttons for managing headphone-related geofences through a switch statement based on the ID of the clicked view. When a user clicks on the button with the ID `register_fence`, the application calls the `registerHeadphoneFence()` method to activate monitoring for headphone connection states. Conversely, if the `unregister_fence` button is clicked, the `unregisterHeadPhoneFence()` method is invoked to deactivate the headphone monitoring. This efficient and straightforward implementation allows the user to control headphone geofencing features directly from the user interface, enabling or disabling context-aware functionalities based on their current needs.",
+      "scores": null
+    },
+    {
+      "UID": "67",
+      "method_name": "registerHeadphoneFence",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        AwarenessFence headphonePlugFence = HeadphoneFence.during(1);\n        AwarenessFence headphoneUnplugFence = HeadphoneFence.during(2);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_PLUG_FENCE_KEY, headphonePlugFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Fence registered successfully. Plug in you head phones to see magic.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Cannot register headphone fence.\", 0).show();\n            }\n        });\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_UNPLUG_FENCE_KEY, headphoneUnplugFence, fencePendingIntent).build());\n    }",
+      "summary": "\n\nThe code creates two fences, one for when the user plugs in their headphones and another for when they unplug them. The fences are then registered with the Awareness API using the updateFences method. When the user plugs in their headphones, the fencePendingIntent is triggered, and a toast message is displayed. When the user unplugs their headphones, the fencePendingIntent is triggered again, and another toast message is displayed.",
+      "ground_truth": "This code segment from an Android application illustrates the setup and registration of headphone state-awareness fences using Google's Awareness API. Two specific fences are created: one for detecting when headphones are plugged in (`headphonePlugFence`) and another for when they are unplugged (`headphoneUnplugFence`). Each fence is associated with a `PendingIntent` that broadcasts a specific action when the fence condition is met. The fences are registered using the `FenceApi.updateFences` method, with callbacks in place to notify on the success or failure of the operation. A successful registration triggers a toast message encouraging the user to plug in their headphones to experience the functionality, while a failure results in a message indicating the inability to register the fence. This setup enables the application to interact with the user based on changes in headphone connection status, enhancing the contextual responsiveness of the app.",
+      "scores": {
+        "rouge1": 0.7352941176470589,
+        "rougeL": 0.5147058823529411
+      }
+    },
+    {
+      "UID": "68",
+      "method_name": "unregisterHeadPhoneFence",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Cannot unregister headphone fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.",
+      "ground_truth": "This code segment in an Android application demonstrates the process of unregistering headphone state-awareness fences using Google's Awareness API. Specifically, the fences for detecting when headphones are either plugged in or unplugged are targeted for removal. The application uses the `FenceApi.updateFences` method, passing a `FenceUpdateRequest.Builder` configured to remove these specific fences identified by `HEADPHONE_PLUG_FENCE_KEY` and `HEADPHONE_UNPLUG_FENCE_KEY`. The outcome of this unregistering process is managed through `ResultCallbacks`, where a successful removal triggers a toast message confirming the fences' successful unregistration, and a failure results in a toast message indicating an inability to unregister the fences. This allows the application to dynamically manage notifications based on the user's interaction with their headphones, adapting to their current state or preferences.",
+      "scores": {
+        "rouge1": 0.6808510638297872,
+        "rougeL": 0.5106382978723404
+      }
+    },
+    {
+      "UID": "69",
+      "method_name": "onConnected",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        findViewById(R.id.register_fence).setOnClickListener(this);\n        findViewById(R.id.unregister_fence).setOnClickListener(this);\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment configures button click listeners for two buttons in an Android application's user interface. It associates these buttons with the `OnClickListener` implemented by the current class (`this`). When the button with the ID `register_fence` is clicked, it triggers an action handled by the class implementing the `OnClickListener`. Similarly, when the button with the ID `unregister_fence` is clicked, it also invokes an action handled by the same `OnClickListener`. This setup ensures that the respective actions associated with registering and unregistering fences are triggered when the corresponding buttons are clicked, facilitating user interaction with geofencing features in the application.",
+      "scores": null
+    },
+    {
+      "UID": "70",
+      "method_name": "onConnectionSuspended",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.3\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                HeadphoneFenceApiActivity.this.finish();\n            }\n        }).show();\n    }",
+      "summary": "\n\nThe code creates an alert dialog box that displays a message and a positive button. When the user clicks the positive button, the app will close.",
+      "ground_truth": "This code segment creates an alert dialog in an Android application, specifically within the `HeadphoneFenceApiActivity`. The dialog displays a message indicating the inability to connect to Google API services. It contains a single positive button with the text represented by the resource ID `17039370`, typically associated with an 'OK' action. When this button is clicked, it triggers an `OnClickListener` that finishes the current activity, effectively closing it. This alert dialog serves to notify the user about the failure to connect to Google API services and provides an option to dismiss the dialog and exit the activity.",
+      "scores": {
+        "rouge1": 0.8461538461538461,
+        "rougeL": 0.6153846153846154
+      }
+    },
+    {
+      "UID": "71",
+      "method_name": "onCreate",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_fence_api);\n        this.mHeadPhoneStatusTv = (TextView) findViewById(R.id.fence_status);\n        buildApiClient();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code initializes an Android activity in the `onCreate` method. It begins by calling the superclass's `onCreate` method to ensure proper initialization, passing it the `savedInstanceState` parameter. Then, it sets the content view of the activity to the layout defined in `activity_fence_api.xml` using the `setContentView` method. Next, it initializes a `TextView` named `mHeadPhoneStatusTv` by finding the corresponding view in the layout file using its ID. Finally, it calls the `buildApiClient()` method to set up the Google API client required for accessing Google services, indicating that this activity requires connectivity with these services for its functionality.",
+      "scores": {
+        "rouge1": 0.4782608695652174,
+        "rougeL": 0.2608695652173913
+      }
+    },
+    {
+      "UID": "72",
+      "method_name": "buildApiClient",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code snippet is from an Android application where a `GoogleApiClient` is being configured and initialized. The `GoogleApiClient.Builder` is used to build the client, specifying the addition of the Awareness API and connection callbacks to handle events related to connectivity. After the client is built, it immediately calls the `connect()` method to establish a connection with Google's services. This setup is crucial for the application to access the functionalities provided by the Awareness API, enabling it to react to contextual changes in the user's environment.",
+      "scores": {
+        "rouge1": 0.7391304347826086,
+        "rougeL": 0.6086956521739131
+      }
+    },
+    {
+      "UID": "73",
+      "method_name": "onStart",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        super.onStart();\n        registerReceiver(this.mHeadPhoneFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "In this code segment, within the `onStart` method of an Android activity, the superclass's `onStart` method is called first to maintain proper initialization. Then, a broadcast receiver (`mHeadPhoneFenceReceiver`) is registered using the `registerReceiver` method. This receiver is set up to listen for broadcast intents with the action specified by `FENCE_RECEIVER_ACTION`. By registering this receiver, the activity establishes its ability to receive broadcast messages sent by the system or other components, allowing it to react to events related to the specified action, such as fence triggers or updates.",
+      "scores": null
+    },
+    {
+      "UID": "74",
+      "method_name": "onStop",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        super.onStop();\n        unregisterReceiver(this.mHeadPhoneFenceReceiver);\n        unregisterHeadPhoneFence();\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "In this code segment, within the `onStop` method of an Android activity, the superclass's `onStop` method is invoked first to ensure proper lifecycle management. Then, the broadcast receiver (`mHeadPhoneFenceReceiver`) previously registered is unregistered using the `unregisterReceiver` method. This action removes the receiver's association with the activity, preventing it from receiving further broadcast intents related to headphone state changes. Additionally, the method `unregisterHeadPhoneFence` is called to initiate the removal of the headphone state-awareness fences previously registered with the Awareness API. This combination of steps ensures that the activity disengages from monitoring headphone state changes and removes associated fences, contributing to efficient resource management and preventing unnecessary processing when the activity is no longer visible or active.",
+      "scores": null
+    },
+    {
+      "UID": "75",
+      "method_name": "unregisterHeadPhoneFence",
+      "class_name": "Lexample/awarnessapi/HeadphoneFenceApiActivity;",
+      "code": "{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Fence unregistered successfully.\", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, \"Cannot unregister headphone fence.\", 0).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.",
+      "ground_truth": "This code segment from an Android application demonstrates the process of unregistering two headphone-related fences using Google's Awareness API. The fences, which detect when headphones are either plugged in or unplugged, are being removed through a call to `FenceApi.updateFences`. The operation uses a `FenceUpdateRequest.Builder` to specify the removal of these fences identified by specific keys. The process is monitored with `ResultCallbacks`, where a successful removal triggers a toast message stating 'Fence unregistered successfully,' and a failure results in a toast message alerting that the fences could not be unregistered. This functionality allows the application to cease monitoring these specific user actions when no longer needed, thereby managing resources and adapting to the application's changing requirements.",
+      "scores": {
+        "rouge1": 0.7446808510638298,
+        "rougeL": 0.574468085106383
+      }
+    },
+    {
+      "UID": "76",
+      "method_name": "onCreate",
+      "class_name": "Lexample/awarnessapi/LaunchActivity;",
+      "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_launch);\n        findViewById(R.id.snap_shot_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.1\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, SnapshotApiActivity.class));\n            }\n        });\n        findViewById(R.id.headphone_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.2\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, HeadphoneFenceApiActivity.class));\n            }\n        });\n        findViewById(R.id.activity_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.3\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, ActivityFanceApiDemo.class));\n            }\n        });\n        findViewById(R.id.combine_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.4\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, CombineFenceApiActivity.class));\n            }\n        });\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "In this code segment, within the `onCreate` method of an Android activity named `LaunchActivity`, various clickable views are initialized and assigned click event listeners to start different activities upon user interaction. These views are associated with specific demos of the Awareness API functionalities, such as Snapshot API, Headphone Fence API, Activity Fence API, and Combine Fence API. Each click event listener triggers the `startActivity` method, which launches the corresponding activity class when the associated view is clicked. This setup allows users to navigate to different parts of the application where they can explore and interact with various features provided by the Awareness API, promoting user engagement and exploration of the app's capabilities.",
+      "scores": null
+    },
+    {
+      "UID": "77",
+      "method_name": "onConnected",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        callSnapShotGroupApis();\n    }",
+      "summary": "\n\nThe code calls the callSnapShotGroupApis function.",
+      "ground_truth": "The `callSnapShotGroupApis` function in an Android application initiates the integration of various functionalities from Google's Awareness API. This method serves as a central point for fetching data related to the user's context, including their current physical activity, headphone status, location information such as current coordinates, nearby places, and current weather conditions. It coordinates the sequential retrieval of these data points, ensuring that permissions for accessing fine location are checked and requested if necessary before invoking the respective methods to fetch the data. By encapsulating these API calls within a single function, it promotes modularity and clarity in the codebase, facilitating the retrieval of contextually relevant data to enhance the user experience within the application.",
+      "scores": {
+        "rouge1": 0.8333333333333334,
+        "rougeL": 0.5
+      }
+    },
+    {
+      "UID": "78",
+      "method_name": "callSnapShotGroupApis",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        getCurrentActivity();\n        getHeadphoneStatus();\n        if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") != 0) {\n            ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, GET_LOCATION_PERMISSION_REQUEST_CODE);\n        } else {\n            getLocation();\n        }\n        if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") != 0) {\n            ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, GET_PLACE_PERMISSION_REQUEST_CODE);\n        } else {\n            getPlace();\n        }\n        if (ContextCompat.checkSelfPermission(this, \"android.permission.ACCESS_FINE_LOCATION\") == 0) {\n            getWeather();\n        } else {\n            ActivityCompat.requestPermissions(this, new String[]{\"android.permission.ACCESS_FINE_LOCATION\"}, GET_WEATHER_PERMISSION_REQUEST_CODE);\n        }\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "This code segment from an Android application demonstrates the integration of various features from Google's Awareness API, including activity detection, headphone status, location, places, and weather updates. The application sequentially checks and requests the necessary permissions for accessing fine location before invoking the respective methods to retrieve this data. It begins by fetching the current physical activity and headphone status. For location-based features\u2014getting the current location, nearby places, and current weather conditions\u2014it first checks if the application has the required location permissions. If permission is not granted, it requests it; otherwise, it proceeds to fetch the relevant data. This approach ensures that the application adheres to Android's permissions framework while providing the user with contextually relevant data based on their current environment and activities.",
+      "scores": null
+    },
+    {
+      "UID": "79",
+      "method_name": "getLocation",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get location.\", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + \", \" + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat(\"h:mm a dd-MM-yyyy\", Locale.getDefault());\n                timeTv.setText(\"as on: \" + sdf.format(new Date(location.getTime())));\n                String url = \"https://maps.googleapis.com/maps/api/staticmap?center=\" + location.getLatitude() + \",\" + location.getLongitude() + \"&zoom=20&size=400x250&key=\" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.",
+      "ground_truth": "The provided code segment is part of an Android application that uses Google's Awareness API to fetch the current location of a device. Specifically, the SnapshotApi.getLocation() method is invoked to get the location asynchronously, with a ResultCallback handling the outcome of this request. If the location retrieval is successful, the application displays the latitude and longitude in a TextView, formats and displays the current date and time of the location update, and shows a static map image of the location using Google's Static Maps API via the Picasso library. If the location cannot be retrieved successfully, a toast notification is displayed to the user indicating that the location could not be obtained. This entire process is handled within an anonymous class implementing the ResultCallback interface for handling LocationResult objects.",
+      "scores": {
+        "rouge1": 0.7419354838709677,
+        "rougeL": 0.4032258064516129
+      }
+    },
+    {
+      "UID": "80",
+      "method_name": "getPlace",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get places.\", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, \"Could not get nearby places.\", 1).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.",
+      "ground_truth": "The provided code segment describes an Android application using the Awareness API to obtain information about nearby places. It calls SnapshotApi.getPlaces() to asynchronously fetch this data and handles the results with a ResultCallback. If fetching the places is unsuccessful, it displays a toast message stating the inability to get places. Otherwise, it retrieves a list of PlaceLikelihood objects, which indicates the likelihood of the device's location being at each place. The code then dynamically updates the UI, specifically a LinearLayout, to display up to five of the most likely places with their names and addresses. Each place's information is formatted and added to the layout using a custom layout resource defined in XML. If no places are found, it displays a toast message indicating the failure to get nearby places. This interaction ensures the user is presented with real-time, location-specific data about their surroundings.",
+      "scores": {
+        "rouge1": 0.6792452830188679,
+        "rougeL": 0.3584905660377358
+      }
+    },
+    {
+      "UID": "81",
+      "method_name": "getWeather",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get weather.\", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = \"Temperature: \" + weather.getTemperature(2) + \"\\nHumidity: \" + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.",
+      "ground_truth": "The provided code segment is part of an Android application that uses Google's Awareness API to fetch current weather conditions. It makes an asynchronous request to obtain weather data and handles the results using a ResultCallback. If the weather data retrieval is successful, the application constructs a string displaying the temperature (with a unit defined by the integer 2, which typically refers to Celsius in the API) and humidity, and then updates a TextView with this information. If the retrieval is unsuccessful, it displays a toast notification indicating the failure to obtain weather information. This setup ensures that users are provided with real-time updates about the weather conditions at their location.",
+      "scores": {
+        "rouge1": 0.5555555555555556,
+        "rougeL": 0.3472222222222222
+      }
+    },
+    {
+      "UID": "82",
+      "method_name": "getCurrentActivity",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getDetectedActivity(this.mGoogleApiClient).setResultCallback(new ResultCallback<DetectedActivityResult>() { // from class: example.awarnessapi.SnapshotApiActivity.5\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull DetectedActivityResult detectedActivityResult) {\n                if (!detectedActivityResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get the current activity.\", 1).show();\n                    return;\n                }\n                ActivityRecognitionResult ar = detectedActivityResult.getActivityRecognitionResult();\n                DetectedActivity probableActivity = ar.getMostProbableActivity();\n                TextView activityName = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_name);\n                switch (probableActivity.getType()) {\n                    case 0:\n                        activityName.setText(\"In vehicle\");\n                        break;\n                    case 1:\n                        activityName.setText(\"On bicycle\");\n                        break;\n                    case 2:\n                        activityName.setText(\"On foot\");\n                        break;\n                    case 3:\n                        activityName.setText(\"Still\");\n                        break;\n                    case 4:\n                        activityName.setText(\"Unknown\");\n                        break;\n                    case 5:\n                        activityName.setText(\"Tilting\");\n                        break;\n                    case 7:\n                        activityName.setText(\"Walking\");\n                        break;\n                    case 8:\n                        activityName.setText(\"Running\");\n                        break;\n                }\n                ProgressBar confidenceLevel = (ProgressBar) SnapshotApiActivity.this.findViewById(R.id.probable_activity_confidence);\n                confidenceLevel.setProgress(probableActivity.getConfidence());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_time);\n                SimpleDateFormat sdf = new SimpleDateFormat(\"h:mm a dd-MM-yyyy\", Locale.getDefault());\n                timeTv.setText(\"as on: \" + sdf.format(new Date(ar.getTime())));\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a part of the Awareness API that retrieves the current activity of the user using the Google Play Services API. It uses the DetectedActivityResult object to get the most probable activity and displays it in a TextView along with its confidence level and the time of the activity.",
+      "ground_truth": "This code snippet from an Android application utilizes Google's Awareness API to detect the user's current physical activity and display it along with a confidence level and timestamp. When the application requests the current activity via getDetectedActivity, it processes the results using a ResultCallback. If successful, it fetches the most probable activity from the ActivityRecognitionResult and updates a TextView with the corresponding activity description, such as 'In vehicle,' 'On bicycle,' 'On foot,'' and others based on the activity type code. Additionally, it updates a ProgressBar to reflect the confidence level of the detected activity and sets another TextView to display the timestamp of the activity detection, formatted to show both time and date. If the retrieval fails, the application informs the user with a toast message that it could not get the current activity. This implementation provides real-time updates about the user's activities within the app, enhancing user engagement with contextual information.",
+      "scores": {
+        "rouge1": 0.803921568627451,
+        "rougeL": 0.49019607843137253
+      }
+    },
+    {
+      "UID": "83",
+      "method_name": "getHeadphoneStatus",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getHeadphoneState(this.mGoogleApiClient).setResultCallback(new ResultCallback<HeadphoneStateResult>() { // from class: example.awarnessapi.SnapshotApiActivity.4\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull HeadphoneStateResult headphoneStateResult) {\n                if (!headphoneStateResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get headphone state.\", 1).show();\n                    return;\n                }\n                HeadphoneState headphoneState = headphoneStateResult.getHeadphoneState();\n                TextView headphoneStatusTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.headphone_status);\n                headphoneStatusTv.setText(headphoneState.getState() == 1 ? \"Plugged in.\" : \"Unplugged.\");\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a part of the Awareness API that retrieves the current state of the headphones. It uses the getHeadphoneState() method to get the current state of the headphones and then sets the result callback to update the UI with the current state.",
+      "ground_truth": "This code snippet is part of an Android application that uses the Google Awareness API to check the status of headphones connected to the device. The application makes an asynchronous request to get the headphone state, which is processed using a ResultCallback. If the request is successful, the application checks the state of the headphones and updates a TextView to display 'Plugged in.' if the headphones are connected (state equals 1) or 'Unplugged.' if they are not. If the request fails, it notifies the user with a toast message stating that it could not determine the headphone state. This functionality helps provide contextual feedback to the user based on whether they have headphones connected to the device.",
+      "scores": {
+        "rouge1": 0.75,
+        "rougeL": 0.5454545454545454
+      }
+    },
+    {
+      "UID": "84",
+      "method_name": "onConnectionSuspended",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        new AlertDialog.Builder(this).setMessage(\"Cannot connect to google api services.\").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.SnapshotApiActivity.6\n            @Override // android.content.DialogInterface.OnClickListener\n            public void onClick(DialogInterface dialogInterface, int i2) {\n                SnapshotApiActivity.this.finish();\n            }\n        }).show();\n    }",
+      "summary": "\n\nThe code creates an alert dialog box that displays a message when the user cannot connect to the Google API services. The dialog box has a positive button that finishes the activity when clicked.",
+      "ground_truth": "In this code segment from the `SnapshotApiActivity` class, an alert dialog is created using the `AlertDialog.Builder` class, indicating the failure to connect to Google API services. The message displayed in the dialog is set to 'Cannot connect to Google API services.' It includes a positive button with the text resource ID `17039370`, which typically represents an 'OK' or 'Dismiss' option. When the positive button is clicked, it triggers an `onClick` event where the `finish()` method is called on the `SnapshotApiActivity`, effectively closing the activity. This dialog provides feedback to the user about the inability to connect to the required API services and allows them to dismiss the dialog and possibly take further actions.",
+      "scores": {
+        "rouge1": 0.7941176470588235,
+        "rougeL": 0.5294117647058824
+      }
+    },
+    {
+      "UID": "85",
+      "method_name": "onCreate",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_snapshot);\n        buildApiClient();\n    }",
+      "summary": "\n\nThe code sets the activity's content view to the activity_snapshot layout and creates a new GoogleApiClient object. It then calls the buildApiClient() function to add the Awareness API and connection callbacks to the GoogleApiClient object. Finally, it connects the GoogleApiClient object.",
+      "ground_truth": "In this code segment, within the `onCreate` method of an Android activity named `SnapshotActivity`, the superclass method `onCreate` is invoked to ensure proper initialization of the activity, passing the `savedInstanceState` parameter for state restoration. The content view of the activity is set to a layout defined in XML, specifically `activity_snapshot`. Following this, the `buildApiClient()` method is called to initialize and configure the `GoogleApiClient`, which is essential for accessing functionalities provided by the Awareness API. This segment sets up the activity's user interface and establishes the necessary connection to Google's services for contextual awareness within the application.",
+      "scores": {
+        "rouge1": 0.6744186046511628,
+        "rougeL": 0.4186046511627907
+      }
+    },
+    {
+      "UID": "86",
+      "method_name": "buildApiClient",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }",
+      "summary": "\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.",
+      "ground_truth": "This code snippet is from an Android application where a `GoogleApiClient` is being configured and initialized. The `GoogleApiClient.Builder` is used to build the client, specifying the addition of the Awareness API and connection callbacks to handle events related to connectivity. After the client is built, it immediately calls the `connect()` method to establish a connection with Google's services. This setup is crucial for the application to access the functionalities provided by the Awareness API, enabling it to react to contextual changes in the user's environment.",
+      "scores": {
+        "rouge1": 0.7391304347826086,
+        "rougeL": 0.6086956521739131
+      }
+    },
+    {
+      "UID": "87",
+      "method_name": "onRequestPermissionsResult",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        super.onRequestPermissionsResult(requestCode, permissions, grantResults);\n        if (grantResults[0] == 0) {\n            switch (requestCode) {\n                case GET_LOCATION_PERMISSION_REQUEST_CODE /* 12345 */:\n                    getLocation();\n                    return;\n                case GET_PLACE_PERMISSION_REQUEST_CODE /* 123456 */:\n                    getPlace();\n                    return;\n                case GET_WEATHER_PERMISSION_REQUEST_CODE /* 1234567 */:\n                    getWeather();\n                    return;\n                default:\n                    return;\n            }\n        }\n    }",
+      "summary": "No summary generated for this function",
+      "ground_truth": "In this code segment, within the `onRequestPermissionsResult` method of an Android activity, the superclass method `onRequestPermissionsResult` is first invoked to handle the permission request result. If the permission request is granted (indicated by `grantResults[0] == 0`), a switch statement is used to determine the requestCode corresponding to each permission request. Depending on the requestCode, specific methods (`getLocation`, `getPlace`, or `getWeather`) are called to fetch location, nearby places, or weather information asynchronously, respectively. Each method call is conditioned on the successful permission grant, ensuring that the application proceeds to fetch the relevant data only when the required permissions are granted by the user. This segment encapsulates the logic for fetching contextual data based on user permissions within the application's lifecycle.",
+      "scores": null
+    },
+    {
+      "UID": "88",
+      "method_name": "getLocation",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get location.\", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + \", \" + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat(\"h:mm a dd-MM-yyyy\", Locale.getDefault());\n                timeTv.setText(\"as on: \" + sdf.format(new Date(location.getTime())));\n                String url = \"https://maps.googleapis.com/maps/api/staticmap?center=\" + location.getLatitude() + \",\" + location.getLongitude() + \"&zoom=20&size=400x250&key=\" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.",
+      "ground_truth": "This code snippet from an Android application uses Google's Awareness API to retrieve the device's current location and handle the response using a `ResultCallback`. If the location retrieval is successful, the application updates a `TextView` with the current latitude and longitude, and another `TextView` with the date and time formatted to show the timestamp of the location. Additionally, it generates a URL to request a static map image from Google Maps API centered on the retrieved coordinates, which is then loaded into an `ImageView` using the Picasso library. If the location retrieval is unsuccessful, it displays a toast notification alerting the user that the location could not be obtained. This functionality enhances the app's interactivity by providing real-time location updates and visual maps based on the user's current position.",
+      "scores": {
+        "rouge1": 0.8225806451612904,
+        "rougeL": 0.41935483870967744
+      }
+    },
+    {
+      "UID": "89",
+      "method_name": "getWeather",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get weather.\", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = \"Temperature: \" + weather.getTemperature(2) + \"\\nHumidity: \" + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.",
+      "ground_truth": "This code segment from an Android application demonstrates the use of Google's Awareness API to fetch real-time weather conditions. The `SnapshotApi.getWeather` method is called to retrieve weather data, which is processed using a `ResultCallback`. If the weather data retrieval is successful, the application extracts temperature and humidity information from the `Weather` object and displays this data in a `TextView`. The temperature is retrieved with a specific unit code (presumably Celsius), and both the temperature and humidity are formatted into a string that updates the UI. If the retrieval is unsuccessful, a toast notification is displayed to inform the user that the weather information could not be obtained, ensuring the user is aware of the status of the request. This implementation provides the user with timely and relevant weather updates, enhancing the contextual awareness of the application.",
+      "scores": {
+        "rouge1": 0.6388888888888888,
+        "rougeL": 0.3472222222222222
+      }
+    },
+    {
+      "UID": "90",
+      "method_name": "getPlace",
+      "class_name": "Lexample/awarnessapi/SnapshotApiActivity;",
+      "code": "{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, \"Could not get places.\", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, \"Could not get nearby places.\", 1).show();\n            }\n        });\n    }",
+      "summary": "\n\nThe code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.",
+      "ground_truth": "This code snippet from an Android application illustrates the process of fetching nearby place information using Google's Awareness API. The method `SnapshotApi.getPlaces` is called, and its results are handled using a `ResultCallback`. If the places retrieval is successful, the application populates a `LinearLayout` with the top five most likely places, displaying each place's name and address. This is achieved by dynamically inflating a custom layout for each place and adding it to the `LinearLayout`. However, if the retrieval fails or if no places are found, the user is notified through a toast message indicating the inability to fetch places. This setup not only enhances the user's contextual awareness of their surroundings by providing detailed information about nearby places but also ensures a responsive user interface that adapts to the available place data.",
+      "scores": {
+        "rouge1": 0.6792452830188679,
+        "rougeL": 0.3584905660377358
+      }
+    }
+  ]
+}
