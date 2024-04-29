@@ -1,0 +1,362 @@
+{
+    "raw": [
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void <init>()>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity$HostCallbacks: void <init>(androidx.fragment.app.FragmentActivity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                "<androidx.loader.app.LoaderManager: androidx.loader.app.LoaderManager getInstance(androidx.lifecycle.LifecycleOwner)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<androidx.core.app.ActivityCompat: androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onBackPressed()>",
+            "children": [
+                "<android.os.Build$VERSION: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onPostResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity$NonConfigurationInstances: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<java.lang.String: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStateNotSaved()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.fragment.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [
+                "<androidx.fragment.app.FragmentActivity: void checkForValidRequestCode(int)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void <init>()>",
+            "children": [
+                "<androidx.collection.SimpleArrayMap: void <init>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchKeyEvent(androidx.core.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>",
+            "children": [
+                "<androidx.core.view.KeyEventDispatcher: boolean dispatchBeforeHierarchy(android.view.View,android.view.KeyEvent)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.ReportFragment: void injectIfNeededIn(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <androidx.core.app.ComponentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                "<androidx.lifecycle.Lifecycle$State: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.MessageFullScreenActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.MessageFullScreenActivity: void onBackPressed()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.MessageFullScreenActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.adobe.mobile.Messages: com.adobe.mobile.MessageFullScreen getCurrentFullscreenMessage()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.MessageFullScreenActivity: void onResume()>",
+            "children": [
+                "<com.adobe.mobile.StaticMethods: void logWarningFormat(java.lang.String,java.lang.Object[])>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.MessageFullScreenActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.AdobeMarketingActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.AdobeMarketingActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.adobe.mobile.Config: void setContext(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.AdobeMarketingActivity: void onPause()>",
+            "children": [
+                "<com.adobe.mobile.Config: void pauseCollectingLifecycleData()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.adobe.mobile.AdobeMarketingActivity: void onResume()>",
+            "children": [
+                "<com.adobe.mobile.Config: void collectLifecycleData(android.app.Activity)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                "<com.google.android.gms.common.api.internal.GoogleApiManager: com.google.android.gms.common.api.internal.GoogleApiManager zab(android.content.Context)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<com.google.android.gms.common.GoogleApiAvailability: com.google.android.gms.common.GoogleApiAvailability getInstance()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerNativeActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerNativeActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <net.gree.unitywebview.CUnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <net.gree.unitywebview.CUnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onConfigurationChanged(android.content.res.Configuration)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.view.View: void <clinit>()>"
+            ]
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onDestroy()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onGenericMotionEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyDown(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onKeyUp(int,android.view.KeyEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onLowMemory()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onNewIntent(android.content.Intent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onPause()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onResume()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStart()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onStop()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: boolean onTouchEvent(android.view.MotionEvent)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onTrimMemory(int)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerActivity: void onWindowFocusChanged(boolean)>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerProxyActivity: void <init>()>"
+        },
+        {
+            "entry_point": "Entry-point: <com.unity3d.player.UnityPlayerProxyActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                "<android.util.Log: int w(java.lang.String,java.lang.String)>"
+            ]
+        }
+    ],
+    "functions": [
+        "void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])  {\n        super.dump(prefix, fd, writer, args);\n        writer.print(prefix);\n        writer.print(\"Local FragmentActivity \");\n        writer.print(Integer.toHexString(System.identityHashCode(this)));\n        writer.println(\" State:\");\n        String innerPrefix = prefix + \"  \";\n        writer.print(innerPrefix);\n        writer.print(\"mCreated=\");\n        writer.print(this.mCreated);\n        writer.print(\" mResumed=\");\n        writer.print(this.mResumed);\n        writer.print(\" mStopped=\");\n        writer.print(this.mStopped);\n        if (getApplication() != null) {\n            LoaderManager.getInstance(this).dump(innerPrefix, fd, writer, args);\n        }\n        this.mFragments.getSupportFragmentManager().dump(prefix, fd, writer, args);\n    }",
+        "void onActivityResult(int,int,android.content.Intent)  {\n        this.mFragments.noteStateNotSaved();\n        int requestIndex = requestCode >> 16;\n        if (requestIndex != 0) {\n            int requestIndex2 = requestIndex - 1;\n            String who = this.mPendingFragmentActivityResults.get(requestIndex2);\n            this.mPendingFragmentActivityResults.remove(requestIndex2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment targetFragment = this.mFragments.findFragmentByWho(who);\n            if (targetFragment == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n                return;\n            } else {\n                targetFragment.onActivityResult(65535 & requestCode, resultCode, data);\n                return;\n            }\n        }\n        ActivityCompat.PermissionCompatDelegate delegate = ActivityCompat.getPermissionCompatDelegate();\n        if (delegate == null || !delegate.onActivityResult(this, requestCode, resultCode, data)) {\n            super.onActivityResult(requestCode, resultCode, data);\n        }\n    }",
+        "void onBackPressed()  {\n        FragmentManager fragmentManager = this.mFragments.getSupportFragmentManager();\n        boolean isStateSaved = fragmentManager.isStateSaved();\n        if (!isStateSaved || Build.VERSION.SDK_INT > 25) {\n            if (isStateSaved || !fragmentManager.popBackStackImmediate()) {\n                super.onBackPressed();\n            }\n        }\n    }",
+        "void onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(newConfig);\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.dispatchConfigurationChanged(newConfig);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        this.mFragments.attachHost(null);\n        super.onCreate(savedInstanceState);\n        NonConfigurationInstances nc = (NonConfigurationInstances) getLastNonConfigurationInstance();\n        if (nc != null && nc.viewModelStore != null && this.mViewModelStore == null) {\n            this.mViewModelStore = nc.viewModelStore;\n        }\n        if (savedInstanceState != null) {\n            Parcelable p = savedInstanceState.getParcelable(FRAGMENTS_TAG);\n            this.mFragments.restoreAllState(p, nc != null ? nc.fragments : null);\n            if (savedInstanceState.containsKey(NEXT_CANDIDATE_REQUEST_INDEX_TAG)) {\n                this.mNextCandidateRequestIndex = savedInstanceState.getInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG);\n                int[] requestCodes = savedInstanceState.getIntArray(ALLOCATED_REQUEST_INDICIES_TAG);\n                String[] fragmentWhos = savedInstanceState.getStringArray(REQUEST_FRAGMENT_WHO_TAG);\n                if (requestCodes == null || fragmentWhos == null || requestCodes.length != fragmentWhos.length) {\n                    Log.w(TAG, \"Invalid requestCode mapping in savedInstanceState.\");\n                } else {\n                    this.mPendingFragmentActivityResults = new SparseArrayCompat<>(requestCodes.length);\n                    for (int i = 0; i < requestCodes.length; i++) {\n                        this.mPendingFragmentActivityResults.put(requestCodes[i], fragmentWhos[i]);\n                    }\n                }\n            }\n        }\n        if (this.mPendingFragmentActivityResults == null) {\n            this.mPendingFragmentActivityResults = new SparseArrayCompat<>();\n            this.mNextCandidateRequestIndex = 0;\n        }\n        this.mFragments.dispatchCreate();\n    }",
+        "boolean onCreatePanelMenu(int,android.view.Menu)  {\n        if (featureId == 0) {\n            boolean show = super.onCreatePanelMenu(featureId, menu);\n            return show | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n        }\n        boolean show2 = super.onCreatePanelMenu(featureId, menu);\n        return show2;\n    }",
+        "void onDestroy()  {\n        super.onDestroy();\n        if (this.mViewModelStore != null && !isChangingConfigurations()) {\n            this.mViewModelStore.clear();\n        }\n        this.mFragments.dispatchDestroy();\n    }",
+        "void onLowMemory()  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+        "boolean onMenuItemSelected(int,android.view.MenuItem)  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        switch (featureId) {\n            case 0:\n                return this.mFragments.dispatchOptionsItemSelected(item);\n            case 6:\n                return this.mFragments.dispatchContextItemSelected(item);\n            default:\n                return false;\n        }\n    }",
+        "void onMultiWindowModeChanged(boolean)  {\n        this.mFragments.dispatchMultiWindowModeChanged(isInMultiWindowMode);\n    }",
+        "void onNewIntent(android.content.Intent)  {\n        super.onNewIntent(intent);\n        this.mFragments.noteStateNotSaved();\n    }",
+        "void onPanelClosed(int,android.view.Menu)  {\n        switch (featureId) {\n            case 0:\n                this.mFragments.dispatchOptionsMenuClosed(menu);\n                break;\n        }\n        super.onPanelClosed(featureId, menu);\n    }",
+        "void onPause()  {\n        super.onPause();\n        this.mResumed = false;\n        if (this.mHandler.hasMessages(2)) {\n            this.mHandler.removeMessages(2);\n            onResumeFragments();\n        }\n        this.mFragments.dispatchPause();\n    }",
+        "void onPictureInPictureModeChanged(boolean)  {\n        this.mFragments.dispatchPictureInPictureModeChanged(isInPictureInPictureMode);\n    }",
+        "void onPostResume()  {\n        super.onPostResume();\n        this.mHandler.removeMessages(2);\n        onResumeFragments();\n        this.mFragments.execPendingActions();\n    }",
+        "boolean onPreparePanel(int,android.view.View,android.view.Menu)  {\n        if (featureId == 0 && menu != null) {\n            boolean goforit = onPrepareOptionsPanel(view, menu);\n            return goforit | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        boolean goforit2 = super.onPreparePanel(featureId, view, menu);\n        return goforit2;\n    }",
+        "void onRequestPermissionsResult(int,java.lang.String[],int[])  {\n        this.mFragments.noteStateNotSaved();\n        int index = (requestCode >> 16) & SupportMenu.USER_MASK;\n        if (index != 0) {\n            int index2 = index - 1;\n            String who = this.mPendingFragmentActivityResults.get(index2);\n            this.mPendingFragmentActivityResults.remove(index2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment frag = this.mFragments.findFragmentByWho(who);\n            if (frag == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n            } else {\n                frag.onRequestPermissionsResult(requestCode & SupportMenu.USER_MASK, permissions, grantResults);\n            }\n        }\n    }",
+        "void onResume()  {\n        super.onResume();\n        this.mHandler.sendEmptyMessage(2);\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+        "void onSaveInstanceState(android.os.Bundle)  {\n        super.onSaveInstanceState(outState);\n        markFragmentsCreated();\n        Parcelable p = this.mFragments.saveAllState();\n        if (p != null) {\n            outState.putParcelable(FRAGMENTS_TAG, p);\n        }\n        if (this.mPendingFragmentActivityResults.size() > 0) {\n            outState.putInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG, this.mNextCandidateRequestIndex);\n            int[] requestCodes = new int[this.mPendingFragmentActivityResults.size()];\n            String[] fragmentWhos = new String[this.mPendingFragmentActivityResults.size()];\n            for (int i = 0; i < this.mPendingFragmentActivityResults.size(); i++) {\n                requestCodes[i] = this.mPendingFragmentActivityResults.keyAt(i);\n                fragmentWhos[i] = this.mPendingFragmentActivityResults.valueAt(i);\n            }\n            outState.putIntArray(ALLOCATED_REQUEST_INDICIES_TAG, requestCodes);\n            outState.putStringArray(REQUEST_FRAGMENT_WHO_TAG, fragmentWhos);\n        }\n    }",
+        "void onStart()  {\n        super.onStart();\n        this.mStopped = false;\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.execPendingActions();\n        this.mFragments.dispatchStart();\n    }",
+        "void onStateNotSaved()  {\n        this.mFragments.noteStateNotSaved();\n    }",
+        "void onStop()  {\n        super.onStop();\n        this.mStopped = true;\n        markFragmentsCreated();\n        this.mFragments.dispatchStop();\n    }",
+        "void startActivityForResult(android.content.Intent,int)  {\n        if (!this.mStartedActivityFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startActivityForResult(intent, requestCode);\n    }",
+        "void startActivityForResult(android.content.Intent,int,android.os.Bundle)  {\n        if (!this.mStartedActivityFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startActivityForResult(intent, requestCode);\n    }",
+        "void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);\n    }",
+        "void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);\n    }",
+        "boolean dispatchKeyEvent(android.view.KeyEvent)  {\n        View decor = getWindow().getDecorView();\n        if (decor == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decor, event)) {\n            return KeyEventDispatcher.dispatchKeyEvent(this, decor, this, event);\n        }\n        return true;\n    }",
+        "boolean dispatchKeyShortcutEvent(android.view.KeyEvent)  {\n        View decor = getWindow().getDecorView();\n        if (decor == null || !KeyEventDispatcher.dispatchBeforeHierarchy(decor, event)) {\n            return super.dispatchKeyShortcutEvent(event);\n        }\n        return true;\n    }",
+        "void onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        ReportFragment.injectIfNeededIn(this);\n    }",
+        "void onSaveInstanceState(android.os.Bundle)  {\n        this.mLifecycleRegistry.markState(Lifecycle.State.CREATED);\n        super.onSaveInstanceState(outState);\n    }",
+        "void onBackPressed()  {\n        if (this.message != null) {\n            this.message.isVisible = false;\n            this.message.viewed();\n        }\n        finish();\n        overridePendingTransition(0, 0);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        if (savedInstanceState != null) {\n            this.message = restoreFromSavedState(savedInstanceState);\n            Messages.setCurrentMessageFullscreen(this.message);\n        } else {\n            this.message = Messages.getCurrentFullscreenMessage();\n        }\n        if (messageIsValid()) {\n            this.message.messageFullScreenActivity = this;\n            requestWindowFeature(1);\n            RelativeLayout relativeLayout = new RelativeLayout(this);\n            setContentView(relativeLayout);\n        }\n    }",
+        "void onResume()  {\n        super.onResume();\n        if (messageIsValid()) {\n            try {\n                final ViewGroup rootViewGroup = (ViewGroup) findViewById(16908290);\n                if (rootViewGroup == null) {\n                    StaticMethods.logErrorFormat(\"Messages - unable to get root view group from os\", new Object[0]);\n                    finish();\n                    overridePendingTransition(0, 0);\n                } else {\n                    rootViewGroup.post(new Runnable() { // from class: com.adobe.mobile.MessageFullScreenActivity.1\n                        @Override // java.lang.Runnable\n                        public void run() {\n                            MessageFullScreenActivity.this.message.rootViewGroup = rootViewGroup;\n                            MessageFullScreenActivity.this.message.showInRootViewGroup();\n                        }\n                    });\n                }\n            } catch (NullPointerException ex) {\n                StaticMethods.logWarningFormat(\"Messages - content view is in undefined state (%s)\", ex.getMessage());\n                finish();\n                overridePendingTransition(0, 0);\n            }\n        }\n    }",
+        "void onSaveInstanceState(android.os.Bundle)  {\n        outState.putString(MESSAGE_STATE_MESSAGE_ID, this.message.messageId);\n        outState.putString(MESSAGE_STATE_REPLACED_HTML, this.message.replacedHtml);\n        super.onSaveInstanceState(outState);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        super.onCreate(savedInstanceState);\n        Config.setContext(getApplicationContext());\n    }",
+        "void onPause()  {\n        super.onPause();\n        Config.pauseCollectingLifecycleData();\n    }",
+        "void onResume()  {\n        super.onResume();\n        Config.collectLifecycleData(this);\n    }",
+        "void onActivityResult(int,int,android.content.Intent)  {\n        super.onActivityResult(i, i2, intent);\n        if (i == 1) {\n            boolean booleanExtra = getIntent().getBooleanExtra(\"notify_manager\", true);\n            this.zabp = 0;\n            setResult(i2, intent);\n            if (booleanExtra) {\n                GoogleApiManager zab = GoogleApiManager.zab(this);\n                switch (i2) {\n                    case -1:\n                        zab.zao();\n                        break;\n                    case 0:\n                        zab.zaa(new ConnectionResult(13, null), getIntent().getIntExtra(\"failing_client_id\", -1));\n                        break;\n                }\n            }\n        } else if (i == 2) {\n            this.zabp = 0;\n            setResult(i2, intent);\n        }\n        finish();\n    }",
+        "void onCreate(android.os.Bundle)  {\n        super.onCreate(bundle);\n        if (bundle != null) {\n            this.zabp = bundle.getInt(\"resolution\");\n        }\n        if (this.zabp != 1) {\n            Bundle extras = getIntent().getExtras();\n            if (extras == null) {\n                Log.e(\"GoogleApiActivity\", \"Activity started without extras\");\n                finish();\n                return;\n            }\n            PendingIntent pendingIntent = (PendingIntent) extras.get(\"pending_intent\");\n            Integer num = (Integer) extras.get(\"error_code\");\n            if (pendingIntent == null && num == null) {\n                Log.e(\"GoogleApiActivity\", \"Activity started without resolution\");\n                finish();\n            } else if (pendingIntent != null) {\n                try {\n                    startIntentSenderForResult(pendingIntent.getIntentSender(), 1, null, 0, 0, 0);\n                    this.zabp = 1;\n                } catch (IntentSender.SendIntentException e) {\n                    Log.e(\"GoogleApiActivity\", \"Failed to launch pendingIntent\", e);\n                    finish();\n                }\n            } else {\n                GoogleApiAvailability.getInstance().showErrorDialogFragment(this, num.intValue(), 2, this);\n                this.zabp = 1;\n            }\n        }\n    }",
+        "void onSaveInstanceState(android.os.Bundle)  {\n        bundle.putInt(\"resolution\", this.zabp);\n        super.onSaveInstanceState(bundle);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        Log.w(\"Unity\", \"UnityPlayerNativeActivity has been deprecated, please update your AndroidManifest to use UnityPlayerActivity instead\");\n        super.onCreate(bundle);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        getWindow().setFormat(2);\n        this.mUnityPlayer = new CUnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+        "boolean dispatchKeyEvent(android.view.KeyEvent)  {\n        return keyEvent.getAction() == 2 ? this.mUnityPlayer.injectEvent(keyEvent) : super.dispatchKeyEvent(keyEvent);\n    }",
+        "void onConfigurationChanged(android.content.res.Configuration)  {\n        super.onConfigurationChanged(configuration);\n        this.mUnityPlayer.configurationChanged(configuration);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        requestWindowFeature(1);\n        super.onCreate(bundle);\n        this.mUnityPlayer = new UnityPlayer(this);\n        setContentView(this.mUnityPlayer);\n        this.mUnityPlayer.requestFocus();\n    }",
+        "void onDestroy()  {\n        this.mUnityPlayer.quit();\n        super.onDestroy();\n    }",
+        "boolean onGenericMotionEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+        "boolean onKeyDown(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+        "boolean onKeyUp(int,android.view.KeyEvent)  {\n        return this.mUnityPlayer.injectEvent(keyEvent);\n    }",
+        "void onLowMemory()  {\n        super.onLowMemory();\n        this.mUnityPlayer.lowMemory();\n    }",
+        "void onNewIntent(android.content.Intent)  {\n        setIntent(intent);\n    }",
+        "void onPause()  {\n        super.onPause();\n        this.mUnityPlayer.pause();\n    }",
+        "void onResume()  {\n        super.onResume();\n        this.mUnityPlayer.resume();\n    }",
+        "void onStart()  {\n        super.onStart();\n        this.mUnityPlayer.start();\n    }",
+        "void onStop()  {\n        super.onStop();\n        this.mUnityPlayer.stop();\n    }",
+        "boolean onTouchEvent(android.view.MotionEvent)  {\n        return this.mUnityPlayer.injectEvent(motionEvent);\n    }",
+        "void onTrimMemory(int)  {\n        super.onTrimMemory(i);\n        if (i == 15) {\n            this.mUnityPlayer.lowMemory();\n        }\n    }",
+        "void onWindowFocusChanged(boolean)  {\n        super.onWindowFocusChanged(z);\n        this.mUnityPlayer.windowFocusChanged(z);\n    }",
+        "void onCreate(android.os.Bundle)  {\n        Log.w(\"Unity\", \"UnityPlayerProxyActivity has been deprecated, please update your AndroidManifest to use UnityPlayerActivity instead\");\n        super.onCreate(bundle);\n    }"
+    ]
+}
