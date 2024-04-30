@@ -10,7 +10,7 @@ token_memory=6000
 num_of_gpu=4
 HOST=127.0.0.1
 PORT=50000
-access_token="TOKEN"
+access_token=$TOKEN
 TYPE=half ## half => RTX8000, bfloat16 = A100
 
 singularity \
