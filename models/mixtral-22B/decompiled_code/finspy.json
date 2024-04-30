@@ -1,0 +1,6 @@
+{
+    "raw": "package org.xmlpush.v3;\n\nimport android.app.Activity;\nimport android.content.Context;\nimport android.os.Bundle;\n/* loaded from: classes.dex */\npublic class StartVersion extends Activity {\n    public StartVersion() {\n        iIiOi11OIOOl01O();\n    }\n\n    public static void iIiOi11OIOOl01O() {\n        if (0 != 0) {\n            System.currentTimeMillis();\n        }\n    }\n\n    @Override // android.app.Activity\n    protected void onCreate(Bundle bundle) {\n        iIiOi11OIOOl01O();\n        super.onCreate(bundle);\n        iIiOi11OIOOl01O();\n        Context applicationContext = getApplicationContext();\n        iIiOi11OIOOl01O();\n        Init.init(applicationContext, null, this);\n        iIiOi11OIOOl01O();\n        finish();\n    }\n}\n",
+    "functions": [
+        "protected void onCreate(Bundle bundle) {\n        iIiOi11OIOOl01O();\n        super.onCreate(bundle);\n        iIiOi11OIOOl01O();\n        Context applicationContext = getApplicationContext();\n        iIiOi11OIOOl01O();\n        Init.init(applicationContext, null, this);\n        iIiOi11OIOOl01O();\n        finish();\n    }"
+    ]
+}

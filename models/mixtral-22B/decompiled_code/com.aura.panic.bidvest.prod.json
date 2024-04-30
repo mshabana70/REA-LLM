@@ -1,0 +1,7 @@
+{
+    "raw": "package com.whitelabelapplication;\n\nimport android.os.Bundle;\nimport com.facebook.react.ReactActivity;\nimport org.devio.rn.splashscreen.SplashScreen;\n/* loaded from: classes2.dex */\npublic class MainActivity extends ReactActivity {\n    @Override // com.facebook.react.ReactActivity\n    protected String getMainComponentName() {\n        return \"whiteLabelApplication\";\n    }\n\n    /* JADX INFO: Access modifiers changed from: protected */\n    @Override // com.facebook.react.ReactActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity\n    public void onCreate(Bundle bundle) {\n        SplashScreen.show(this);\n        super.onCreate(bundle);\n    }\n}\n",
+    "functions": [
+        "protected String getMainComponentName() {\n        return \"whiteLabelApplication\";\n    }",
+        "public void onCreate(Bundle bundle) {\n        SplashScreen.show(this);\n        super.onCreate(bundle);\n    }"
+    ]
+}
