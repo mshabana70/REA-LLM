@@ -1,0 +1,2814 @@
+Processing APK: Demo2.json
+
+Reading data from file...
+
+Summarizing APK...
+
+
+++++++++++++++Summarizing getLocation++++++++++++++
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull LocationResult locationResult) {
+                if (!locationResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get location.", 1).show();
+                    return;
+                }
+                Location location = locationResult.getLocation();
+                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + ", " + location.getLongitude());
+                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);
+                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());
+                timeTv.setText("as on: " + sdf.format(new Date(location.getTime())));
+                String url = "https://maps.googleapis.com/maps/api/staticmap?center=" + location.getLatitude() + "," + location.getLongitude() + "&zoom=20&size=400x250&key=" + SnapshotApiActivity.this.getString(R.string.api_key);
+                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getLocation: 
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.
+Summary set for node getLocation
+
+
+++++++++++++++Summarizing getPlace++++++++++++++
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull PlacesResult placesResult) {
+                if (!placesResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get places.", 1).show();
+                    return;
+                }
+                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();
+                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);
+                linearLayout.removeAllViews();
+                if (placeLikelihoodList != null) {
+                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {
+                        PlaceLikelihood p = placeLikelihoodList.get(i);
+                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);
+                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());
+                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());
+                        linearLayout.addView(v);
+                    }
+                    return;
+                }
+                Toast.makeText(SnapshotApiActivity.this, "Could not get nearby places.", 1).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getPlace: 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+Summary set for node getPlace
+
+
+++++++++++++++Summarizing getWeather++++++++++++++
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull WeatherResult weatherResult) {
+                if (!weatherResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get weather.", 1).show();
+                    return;
+                }
+                Weather weather = weatherResult.getWeather();
+                String weatherReport = "Temperature: " + weather.getTemperature(2) + "\nHumidity: " + weather.getHumidity();
+                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getWeather: 
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.
+Summary set for node getWeather
+
+
+++++++++++++++Summarizing getCurrentActivity++++++++++++++
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getDetectedActivity(this.mGoogleApiClient).setResultCallback(new ResultCallback<DetectedActivityResult>() { // from class: example.awarnessapi.SnapshotApiActivity.5
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull DetectedActivityResult detectedActivityResult) {
+                if (!detectedActivityResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get the current activity.", 1).show();
+                    return;
+                }
+                ActivityRecognitionResult ar = detectedActivityResult.getActivityRecognitionResult();
+                DetectedActivity probableActivity = ar.getMostProbableActivity();
+                TextView activityName = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_name);
+                switch (probableActivity.getType()) {
+                    case 0:
+                        activityName.setText("In vehicle");
+                        break;
+                    case 1:
+                        activityName.setText("On bicycle");
+                        break;
+                    case 2:
+                        activityName.setText("On foot");
+                        break;
+                    case 3:
+                        activityName.setText("Still");
+                        break;
+                    case 4:
+                        activityName.setText("Unknown");
+                        break;
+                    case 5:
+                        activityName.setText("Tilting");
+                        break;
+                    case 7:
+                        activityName.setText("Walking");
+                        break;
+                    case 8:
+                        activityName.setText("Running");
+                        break;
+                }
+                ProgressBar confidenceLevel = (ProgressBar) SnapshotApiActivity.this.findViewById(R.id.probable_activity_confidence);
+                confidenceLevel.setProgress(probableActivity.getConfidence());
+                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_time);
+                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());
+                timeTv.setText("as on: " + sdf.format(new Date(ar.getTime())));
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getCurrentActivity: 
+
+The code is a part of the Awareness API that retrieves the current activity of the user using the Google Play Services API. It uses the DetectedActivityResult object to get the most probable activity and displays it in a TextView along with its confidence level and the time of the activity.
+Summary set for node getCurrentActivity
+
+
+++++++++++++++Summarizing getHeadphoneStatus++++++++++++++
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getHeadphoneState(this.mGoogleApiClient).setResultCallback(new ResultCallback<HeadphoneStateResult>() { // from class: example.awarnessapi.SnapshotApiActivity.4
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull HeadphoneStateResult headphoneStateResult) {
+                if (!headphoneStateResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get headphone state.", 1).show();
+                    return;
+                }
+                HeadphoneState headphoneState = headphoneStateResult.getHeadphoneState();
+                TextView headphoneStatusTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.headphone_status);
+                headphoneStatusTv.setText(headphoneState.getState() == 1 ? "Plugged in." : "Unplugged.");
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getHeadphoneStatus: 
+
+The code is a part of the Awareness API that retrieves the current state of the headphones. It uses the getHeadphoneState() method to get the current state of the headphones and then sets the result callback to update the UI with the current state.
+Summary set for node getHeadphoneStatus
+
+
+++++++++++++++Summarizing access$000++++++++++++++
+No code found for function, skipping...
+Summary set for node access$000
+
+
+++++++++++++++Summarizing access$000++++++++++++++
+No code found for function, skipping...
+Summary set for node access$000
+
+
+++++++++++++++Summarizing access$000++++++++++++++
+No code found for function, skipping...
+Summary set for node access$000
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 1, Max depth: 2
+Method: findViewById
+Method: <init>
+Method: toString
+Method: getTemperature
+Method: append
+Method: getHumidity
+Method: getStatus
+Method: append
+Method: makeText
+Method: isSuccess
+Method: append
+Method: setText
+Method: getWeather
+Function found: {'UID': '81', 'method_name': 'getWeather', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get weather.", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = "Temperature: " + weather.getTemperature(2) + "\\nHumidity: " + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }', 'summary': '\n\nThe code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.', 'ground_truth': "The provided code segment is part of an Android application that uses Google's Awareness API to fetch current weather conditions. It makes an asynchronous request to obtain weather data and handles the results using a ResultCallback. If the weather data retrieval is successful, the application constructs a string displaying the temperature (with a unit defined by the integer 2, which typically refers to Celsius in the API) and humidity, and then updates a TextView with this information. If the retrieval is unsuccessful, it displays a toast notification indicating the failure to obtain weather information. This setup ensures that users are provided with real-time updates about the weather conditions at their location."}
+Summary found: 
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.
+Method: show
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+None
+[/CODE]
+Sending request to server...
+Empty response received, retrying...
+Sending request to server...
+Empty response received, retrying...
+Sending request to server...
+Empty response received, retrying...
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 1, Max depth: 2
+Method: getPlace
+Function found: {'UID': '80', 'method_name': 'getPlace', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get places.", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, "Could not get nearby places.", 1).show();\n            }\n        });\n    }', 'summary': '\n\nThe code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.', 'ground_truth': "The provided code segment describes an Android application using the Awareness API to obtain information about nearby places. It calls SnapshotApi.getPlaces() to asynchronously fetch this data and handles the results with a ResultCallback. If fetching the places is unsuccessful, it displays a toast message stating the inability to get places. Otherwise, it retrieves a list of PlaceLikelihood objects, which indicates the likelihood of the device's location being at each place. The code then dynamically updates the UI, specifically a LinearLayout, to display up to five of the most likely places with their names and addresses. Each place's information is formatted and added to the layout using a custom layout resource defined in XML. If no places are found, it displays a toast message indicating the failure to get nearby places. This interaction ensures the user is presented with real-time, location-specific data about their surroundings."}
+Summary found: 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+Method: makeText
+Method: getAddress
+Method: findViewById
+Method: get
+Method: findViewById
+Method: isSuccess
+Method: getStatus
+Method: size
+Method: show
+Method: getPlaceLikelihoods
+Method: removeAllViews
+Method: setText
+Method: addView
+Method: from
+Method: getName
+Method: inflate
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+None
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 1, Max depth: 2
+Method: append
+Method: load
+Method: <init>
+Method: getTime
+Method: findViewById
+Method: getLatitude
+Method: toString
+Method: getLocation
+Function found: {'UID': '79', 'method_name': 'getLocation', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get location.", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + ", " + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());\n                timeTv.setText("as on: " + sdf.format(new Date(location.getTime())));\n                String url = "https://maps.googleapis.com/maps/api/staticmap?center=" + location.getLatitude() + "," + location.getLongitude() + "&zoom=20&size=400x250&key=" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }', 'summary': "\n\nThe code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.", 'ground_truth': "The provided code segment is part of an Android application that uses Google's Awareness API to fetch the current location of a device. Specifically, the SnapshotApi.getLocation() method is invoked to get the location asynchronously, with a ResultCallback handling the outcome of this request. If the location retrieval is successful, the application displays the latitude and longitude in a TextView, formats and displays the current date and time of the location update, and shows a static map image of the location using Google's Static Maps API via the Picasso library. If the location cannot be retrieved successfully, a toast notification is displayed to the user indicating that the location could not be obtained. This entire process is handled within an anonymous class implementing the ResultCallback interface for handling LocationResult objects."}
+Summary found: 
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.
+Method: setText
+Method: append
+Method: getStatus
+Method: format
+Method: getLongitude
+Method: show
+Method: into
+Method: getDefault
+Method: getString
+Method: with
+Method: <init>
+Method: <init>
+Method: makeText
+Method: isSuccess
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+None
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 1, Max depth: 2
+Method: getHeadphoneState
+Method: makeText
+Method: getStatus
+Method: setText
+Method: findViewById
+Method: getState
+Method: isSuccess
+Method: show
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 1, Max depth: 2
+Method: setText
+Method: getType
+Method: toString
+Method: <init>
+Method: setProgress
+Method: <init>
+Method: <init>
+Method: show
+Method: findViewById
+Method: format
+Method: append
+Method: getConfidence
+Method: getActivityRecognitionResult
+Method: getDefault
+Method: makeText
+Method: isSuccess
+Method: getTime
+Method: getStatus
+Method: getMostProbableActivity
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 1, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 1, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 1, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 1, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 1, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 1, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing registerActivityFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: build
+Method: updateFences
+Method: addFence
+Method: during
+Method: <init>
+Method: <init>
+Method: setResultCallback
+Method: <init>
+Method: getBroadcast
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        AwarenessFence activityStillFence = DetectedActivityFence.during(3);
+        AwarenessFence activityMovingFence = DetectedActivityFence.during(7);
+        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_STILL_FENCE_KEY, activityStillFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.1
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(ActivityFanceApiDemo.this, "Fence registered successfully. Move your device to see magic.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(ActivityFanceApiDemo.this, "Cannot register activity fence.", 0).show();
+            }
+        });
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_MOVING_FENCE_KEY, activityMovingFence, fencePendingIntent).build());
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node registerActivityFence: 
+
+The code creates two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes.
+Summary set for node registerActivityFence
+
+
+++++++++++++++Summarizing unregisterActivityFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: removeFence
+Method: setResultCallback
+Method: build
+Method: updateFences
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(ActivityFanceApiDemo.this, "Fence unregistered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(ActivityFanceApiDemo.this, "Cannot unregister fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node unregisterActivityFence: 
+
+The code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.
+Summary set for node unregisterActivityFence
+
+
+++++++++++++++Summarizing buildApiClient++++++++++++++
+Current depth: 1, Max depth: 2
+Method: build
+Method: connect
+Method: addApi
+Method: addConnectionCallbacks
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();
+        this.mGoogleApiClient.connect();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node buildApiClient: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node buildApiClient
+
+
+++++++++++++++Summarizing unregisterActivityFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: removeFence
+Method: setResultCallback
+Method: build
+Method: updateFences
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(ActivityFanceApiDemo.this, "Fence unregistered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(ActivityFanceApiDemo.this, "Cannot unregister fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node unregisterActivityFence: 
+
+The code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.
+Summary set for node unregisterActivityFence
+
+
+++++++++++++++Summarizing registerFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: updateFences
+Method: add
+Method: getDefault
+Method: inWednesdayInterval
+Method: <init>
+Method: <init>
+Method: getBroadcast
+Method: build
+Method: inThursdayInterval
+Method: or
+Method: addFence
+Method: inFridayInterval
+Method: and
+Method: in
+Method: setResultCallback
+Method: inMondayInterval
+Method: <init>
+Method: <init>
+Method: inTuesdayInterval
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);
+        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);
+        for (int i = 0; i < 5; i++) {
+            switch (i) {
+                case 0:
+                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 1:
+                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 2:
+                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 3:
+                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 4:
+                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+            }
+        }
+        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);
+        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);
+        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Fence registered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Cannot register fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node registerFence: 
+
+The code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.
+Summary set for node registerFence
+
+
+++++++++++++++Summarizing unregisterFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: setResultCallback
+Method: <init>
+Method: removeFence
+Method: build
+Method: updateFences
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Fence unregistered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Cannot unregister fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node unregisterFence: 
+
+The code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.
+Summary set for node unregisterFence
+
+
+++++++++++++++Summarizing buildApiClient++++++++++++++
+Current depth: 1, Max depth: 2
+Method: build
+Method: connect
+Method: addApi
+Method: addConnectionCallbacks
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();
+        this.mGoogleApiClient.connect();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node buildApiClient: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node buildApiClient
+
+
+++++++++++++++Summarizing registerFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: updateFences
+Method: add
+Method: getDefault
+Method: inWednesdayInterval
+Method: <init>
+Method: <init>
+Method: getBroadcast
+Method: build
+Method: inThursdayInterval
+Method: or
+Method: addFence
+Method: inFridayInterval
+Method: and
+Method: in
+Method: setResultCallback
+Method: inMondayInterval
+Method: <init>
+Method: <init>
+Method: inTuesdayInterval
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);
+        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);
+        for (int i = 0; i < 5; i++) {
+            switch (i) {
+                case 0:
+                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 1:
+                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 2:
+                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 3:
+                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+                case 4:
+                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));
+                    break;
+            }
+        }
+        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);
+        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);
+        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Fence registered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Cannot register fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node registerFence: 
+
+The code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.
+Summary set for node registerFence
+
+
+++++++++++++++Summarizing unregisterFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: setResultCallback
+Method: <init>
+Method: removeFence
+Method: build
+Method: updateFences
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Fence unregistered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(CombineFenceApiActivity.this, "Cannot unregister fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node unregisterFence: 
+
+The code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.
+Summary set for node unregisterFence
+
+
+++++++++++++++Summarizing registerHeadphoneFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: during
+Method: <init>
+Method: addFence
+Method: build
+Method: updateFences
+Method: getBroadcast
+Method: <init>
+Method: setResultCallback
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        AwarenessFence headphonePlugFence = HeadphoneFence.during(1);
+        AwarenessFence headphoneUnplugFence = HeadphoneFence.during(2);
+        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_PLUG_FENCE_KEY, headphonePlugFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.1
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(HeadphoneFenceApiActivity.this, "Fence registered successfully. Plug in you head phones to see magic.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(HeadphoneFenceApiActivity.this, "Cannot register headphone fence.", 0).show();
+            }
+        });
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_UNPLUG_FENCE_KEY, headphoneUnplugFence, fencePendingIntent).build());
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node registerHeadphoneFence: 
+
+The code creates two fences, one for when the user plugs in their headphones and another for when they unplug them. The fences are then registered with the Awareness API using the updateFences method. When the user plugs in their headphones, the fencePendingIntent is triggered, and a toast message is displayed. When the user unplugs their headphones, the fencePendingIntent is triggered again, and another toast message is displayed.
+Summary set for node registerHeadphoneFence
+
+
+++++++++++++++Summarizing unregisterHeadPhoneFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: removeFence
+Method: setResultCallback
+Method: <init>
+Method: build
+Method: updateFences
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(HeadphoneFenceApiActivity.this, "Fence unregistered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(HeadphoneFenceApiActivity.this, "Cannot unregister headphone fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node unregisterHeadPhoneFence: 
+
+The code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.
+Summary set for node unregisterHeadPhoneFence
+
+
+++++++++++++++Summarizing buildApiClient++++++++++++++
+Current depth: 1, Max depth: 2
+Method: build
+Method: connect
+Method: addApi
+Method: addConnectionCallbacks
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();
+        this.mGoogleApiClient.connect();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node buildApiClient: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node buildApiClient
+
+
+++++++++++++++Summarizing unregisterHeadPhoneFence++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: removeFence
+Method: setResultCallback
+Method: <init>
+Method: build
+Method: updateFences
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onSuccess(@NonNull Status status) {
+                Toast.makeText(HeadphoneFenceApiActivity.this, "Fence unregistered successfully.", 0).show();
+            }
+
+            @Override // com.google.android.gms.common.api.ResultCallbacks
+            public void onFailure(@NonNull Status status) {
+                Toast.makeText(HeadphoneFenceApiActivity.this, "Cannot unregister headphone fence.", 0).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node unregisterHeadPhoneFence: 
+
+The code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.
+Summary set for node unregisterHeadPhoneFence
+
+
+++++++++++++++Summarizing callSnapShotGroupApis++++++++++++++
+Current depth: 1, Max depth: 2
+Method: checkSelfPermission
+Method: requestPermissions
+Method: getLocation
+Function found: {'UID': '79', 'method_name': 'getLocation', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get location.", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + ", " + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());\n                timeTv.setText("as on: " + sdf.format(new Date(location.getTime())));\n                String url = "https://maps.googleapis.com/maps/api/staticmap?center=" + location.getLatitude() + "," + location.getLongitude() + "&zoom=20&size=400x250&key=" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }', 'summary': "\n\nThe code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.", 'ground_truth': "The provided code segment is part of an Android application that uses Google's Awareness API to fetch the current location of a device. Specifically, the SnapshotApi.getLocation() method is invoked to get the location asynchronously, with a ResultCallback handling the outcome of this request. If the location retrieval is successful, the application displays the latitude and longitude in a TextView, formats and displays the current date and time of the location update, and shows a static map image of the location using Google's Static Maps API via the Picasso library. If the location cannot be retrieved successfully, a toast notification is displayed to the user indicating that the location could not be obtained. This entire process is handled within an anonymous class implementing the ResultCallback interface for handling LocationResult objects."}
+Summary found: 
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.
+Method: getCurrentActivity
+Function found: {'UID': '82', 'method_name': 'getCurrentActivity', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getDetectedActivity(this.mGoogleApiClient).setResultCallback(new ResultCallback<DetectedActivityResult>() { // from class: example.awarnessapi.SnapshotApiActivity.5\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull DetectedActivityResult detectedActivityResult) {\n                if (!detectedActivityResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get the current activity.", 1).show();\n                    return;\n                }\n                ActivityRecognitionResult ar = detectedActivityResult.getActivityRecognitionResult();\n                DetectedActivity probableActivity = ar.getMostProbableActivity();\n                TextView activityName = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_name);\n                switch (probableActivity.getType()) {\n                    case 0:\n                        activityName.setText("In vehicle");\n                        break;\n                    case 1:\n                        activityName.setText("On bicycle");\n                        break;\n                    case 2:\n                        activityName.setText("On foot");\n                        break;\n                    case 3:\n                        activityName.setText("Still");\n                        break;\n                    case 4:\n                        activityName.setText("Unknown");\n                        break;\n                    case 5:\n                        activityName.setText("Tilting");\n                        break;\n                    case 7:\n                        activityName.setText("Walking");\n                        break;\n                    case 8:\n                        activityName.setText("Running");\n                        break;\n                }\n                ProgressBar confidenceLevel = (ProgressBar) SnapshotApiActivity.this.findViewById(R.id.probable_activity_confidence);\n                confidenceLevel.setProgress(probableActivity.getConfidence());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.probable_activity_time);\n                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());\n                timeTv.setText("as on: " + sdf.format(new Date(ar.getTime())));\n            }\n        });\n    }', 'summary': '\n\nThe code is a part of the Awareness API that retrieves the current activity of the user using the Google Play Services API. It uses the DetectedActivityResult object to get the most probable activity and displays it in a TextView along with its confidence level and the time of the activity.', 'ground_truth': "This code snippet from an Android application utilizes Google's Awareness API to detect the user's current physical activity and display it along with a confidence level and timestamp. When the application requests the current activity via getDetectedActivity, it processes the results using a ResultCallback. If successful, it fetches the most probable activity from the ActivityRecognitionResult and updates a TextView with the corresponding activity description, such as 'In vehicle,' 'On bicycle,' 'On foot,'' and others based on the activity type code. Additionally, it updates a ProgressBar to reflect the confidence level of the detected activity and sets another TextView to display the timestamp of the activity detection, formatted to show both time and date. If the retrieval fails, the application informs the user with a toast message that it could not get the current activity. This implementation provides real-time updates about the user's activities within the app, enhancing user engagement with contextual information."}
+Summary found: 
+
+The code is a part of the Awareness API that retrieves the current activity of the user using the Google Play Services API. It uses the DetectedActivityResult object to get the most probable activity and displays it in a TextView along with its confidence level and the time of the activity.
+Method: getWeather
+Function found: {'UID': '81', 'method_name': 'getWeather', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get weather.", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = "Temperature: " + weather.getTemperature(2) + "\\nHumidity: " + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }', 'summary': '\n\nThe code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.', 'ground_truth': "The provided code segment is part of an Android application that uses Google's Awareness API to fetch current weather conditions. It makes an asynchronous request to obtain weather data and handles the results using a ResultCallback. If the weather data retrieval is successful, the application constructs a string displaying the temperature (with a unit defined by the integer 2, which typically refers to Celsius in the API) and humidity, and then updates a TextView with this information. If the retrieval is unsuccessful, it displays a toast notification indicating the failure to obtain weather information. This setup ensures that users are provided with real-time updates about the weather conditions at their location."}
+Summary found: 
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.
+Method: getHeadphoneStatus
+Function found: {'UID': '83', 'method_name': 'getHeadphoneStatus', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getHeadphoneState(this.mGoogleApiClient).setResultCallback(new ResultCallback<HeadphoneStateResult>() { // from class: example.awarnessapi.SnapshotApiActivity.4\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull HeadphoneStateResult headphoneStateResult) {\n                if (!headphoneStateResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get headphone state.", 1).show();\n                    return;\n                }\n                HeadphoneState headphoneState = headphoneStateResult.getHeadphoneState();\n                TextView headphoneStatusTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.headphone_status);\n                headphoneStatusTv.setText(headphoneState.getState() == 1 ? "Plugged in." : "Unplugged.");\n            }\n        });\n    }', 'summary': '\n\nThe code is a part of the Awareness API that retrieves the current state of the headphones. It uses the getHeadphoneState() method to get the current state of the headphones and then sets the result callback to update the UI with the current state.', 'ground_truth': "This code snippet is part of an Android application that uses the Google Awareness API to check the status of headphones connected to the device. The application makes an asynchronous request to get the headphone state, which is processed using a ResultCallback. If the request is successful, the application checks the state of the headphones and updates a TextView to display 'Plugged in.' if the headphones are connected (state equals 1) or 'Unplugged.' if they are not. If the request fails, it notifies the user with a toast message stating that it could not determine the headphone state. This functionality helps provide contextual feedback to the user based on whether they have headphones connected to the device."}
+Summary found: 
+
+The code is a part of the Awareness API that retrieves the current state of the headphones. It uses the getHeadphoneState() method to get the current state of the headphones and then sets the result callback to update the UI with the current state.
+Method: getPlace
+Function found: {'UID': '80', 'method_name': 'getPlace', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get places.", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, "Could not get nearby places.", 1).show();\n            }\n        });\n    }', 'summary': '\n\nThe code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.', 'ground_truth': "The provided code segment describes an Android application using the Awareness API to obtain information about nearby places. It calls SnapshotApi.getPlaces() to asynchronously fetch this data and handles the results with a ResultCallback. If fetching the places is unsuccessful, it displays a toast message stating the inability to get places. Otherwise, it retrieves a list of PlaceLikelihood objects, which indicates the likelihood of the device's location being at each place. The code then dynamically updates the UI, specifically a LinearLayout, to display up to five of the most likely places with their names and addresses. Each place's information is formatted and added to the layout using a custom layout resource defined in XML. If no places are found, it displays a toast message indicating the failure to get nearby places. This interaction ensures the user is presented with real-time, location-specific data about their surroundings."}
+Summary found: 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView. 
+
+The code is a part of the Awareness API that retrieves the current activity of the user using the Google Play Services API. It uses the DetectedActivityResult object to get the most probable activity and displays it in a TextView along with its confidence level and the time of the activity. 
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI. 
+
+The code is a part of the Awareness API that retrieves the current state of the headphones. It uses the getHeadphoneState() method to get the current state of the headphones and then sets the result callback to update the UI with the current state. 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        getCurrentActivity();
+        getHeadphoneStatus();
+        if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") != 0) {
+            ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, GET_LOCATION_PERMISSION_REQUEST_CODE);
+        } else {
+            getLocation();
+        }
+        if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") != 0) {
+            ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, GET_PLACE_PERMISSION_REQUEST_CODE);
+        } else {
+            getPlace();
+        }
+        if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == 0) {
+            getWeather();
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, GET_WEATHER_PERMISSION_REQUEST_CODE);
+        }
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node callSnapShotGroupApis: No summary generated for this function
+Summary set for node callSnapShotGroupApis
+
+
+++++++++++++++Summarizing buildApiClient++++++++++++++
+Current depth: 1, Max depth: 2
+Method: build
+Method: connect
+Method: addApi
+Method: addConnectionCallbacks
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();
+        this.mGoogleApiClient.connect();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node buildApiClient: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node buildApiClient
+
+
+++++++++++++++Summarizing getLocation++++++++++++++
+Current depth: 1, Max depth: 2
+Method: getLocation
+Method: <init>
+Method: setResultCallback
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull LocationResult locationResult) {
+                if (!locationResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get location.", 1).show();
+                    return;
+                }
+                Location location = locationResult.getLocation();
+                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + ", " + location.getLongitude());
+                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);
+                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());
+                timeTv.setText("as on: " + sdf.format(new Date(location.getTime())));
+                String url = "https://maps.googleapis.com/maps/api/staticmap?center=" + location.getLatitude() + "," + location.getLongitude() + "&zoom=20&size=400x250&key=" + SnapshotApiActivity.this.getString(R.string.api_key);
+                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getLocation: 
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.
+Summary set for node getLocation
+
+
+++++++++++++++Summarizing getWeather++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: getWeather
+Method: setResultCallback
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull WeatherResult weatherResult) {
+                if (!weatherResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get weather.", 1).show();
+                    return;
+                }
+                Weather weather = weatherResult.getWeather();
+                String weatherReport = "Temperature: " + weather.getTemperature(2) + "\nHumidity: " + weather.getHumidity();
+                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getWeather: 
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.
+Summary set for node getWeather
+
+
+++++++++++++++Summarizing getPlace++++++++++++++
+Current depth: 1, Max depth: 2
+Method: <init>
+Method: getPlaces
+Method: setResultCallback
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2
+            @Override // com.google.android.gms.common.api.ResultCallback
+            public void onResult(@NonNull PlacesResult placesResult) {
+                if (!placesResult.getStatus().isSuccess()) {
+                    Toast.makeText(SnapshotApiActivity.this, "Could not get places.", 1).show();
+                    return;
+                }
+                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();
+                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);
+                linearLayout.removeAllViews();
+                if (placeLikelihoodList != null) {
+                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {
+                        PlaceLikelihood p = placeLikelihoodList.get(i);
+                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);
+                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());
+                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());
+                        linearLayout.addView(v);
+                    }
+                    return;
+                }
+                Toast.makeText(SnapshotApiActivity.this, "Could not get nearby places.", 1).show();
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node getPlace: 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+Summary set for node getPlace
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: finish
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onReceive++++++++++++++
+Current depth: 0, Max depth: 2
+Method: setText
+Method: access$000
+Function found: {'UID': '2', 'method_name': 'access$000', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': 'None', 'summary': 'No code found for function', 'ground_truth': ''}
+Summary found: No code found for function
+Method: equals
+Method: getFenceKey
+Method: extract
+Method: getCurrentState
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+No code found for function
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+None
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onReceive: No summary generated for this function
+
+
+++++++++++++++Summarizing <clinit>++++++++++++++
+No code found for function, skipping...
+Summary set for node <clinit>
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: finish
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onReceive++++++++++++++
+Current depth: 0, Max depth: 2
+Method: extract
+Method: setText
+Method: setRingerMode
+Method: getCurrentState
+Method: equals
+Method: access$000
+Function found: {'UID': '2', 'method_name': 'access$000', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': 'None', 'summary': 'No code found for function', 'ground_truth': ''}
+Summary found: No code found for function
+Method: getSystemService
+Method: getFenceKey
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+No code found for function
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+None
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onReceive: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: finish
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onReceive++++++++++++++
+Current depth: 0, Max depth: 2
+Method: access$000
+Function found: {'UID': '2', 'method_name': 'access$000', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': 'None', 'summary': 'No code found for function', 'ground_truth': ''}
+Summary found: No code found for function
+Method: setText
+Method: equals
+Method: getFenceKey
+Method: extract
+Method: getCurrentState
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+No code found for function
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+None
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onReceive: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: startActivity
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: startActivity
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: startActivity
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: startActivity
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing <clinit>++++++++++++++
+No children nodes found, summarizing current function...
+Prompt key with no successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node <clinit>: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: finish
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onResult
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onResult
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onResult
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onResult
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onResult
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onResult: No summary generated for this function
+
+
+++++++++++++++Summarizing onFailure++++++++++++++
+Current depth: 0, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onFailure: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onSuccess
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onFailure++++++++++++++
+Current depth: 0, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onFailure: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onSuccess
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onFailure++++++++++++++
+Current depth: 0, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onFailure: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onSuccess
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onFailure++++++++++++++
+Current depth: 0, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onFailure: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onSuccess
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onFailure++++++++++++++
+Current depth: 0, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onFailure: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onSuccess
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onFailure++++++++++++++
+Current depth: 0, Max depth: 2
+Method: show
+Method: makeText
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onFailure: No summary generated for this function
+
+
+++++++++++++++Summarizing onSuccess++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onSuccess
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+None
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onSuccess: No summary generated for this function
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: registerActivityFence
+Function found: {'UID': '45', 'method_name': 'registerActivityFence', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        AwarenessFence activityStillFence = DetectedActivityFence.during(3);\n        AwarenessFence activityMovingFence = DetectedActivityFence.during(7);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_STILL_FENCE_KEY, activityStillFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, "Fence registered successfully. Move your device to see magic.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, "Cannot register activity fence.", 0).show();\n            }\n        });\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(ACTIVITY_MOVING_FENCE_KEY, activityMovingFence, fencePendingIntent).build());\n    }', 'summary': "\n\nThe code creates two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes.", 'ground_truth': "This code snippet from an Android application involves setting up two awareness fences using Google's Awareness API to monitor the user's activity state—whether they are still or moving. The `DetectedActivityFence.during` method is used to create these fences, one for detecting when the user is still (`activityStillFence`) and another for when the user is moving (`activityMovingFence`). Each fence is associated with a `PendingIntent` that triggers a specified action when the fence condition is met. The fences are registered with the Awareness API through the `FenceApi.updateFences` method, which also handles the success and failure of the fence registration using callbacks. If successful, a toast message indicates the successful registration and prompts the user to move the device to see the result. If the registration fails, it displays a toast message indicating the inability to register the activity fence. Another call to `updateFences` is made to register the moving fence without a callback for its outcome. This setup enables contextual interaction based on the user's physical activity detected by the device."}
+Summary found: 
+
+The code creates two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes.
+Method: getId
+Method: unregisterActivityFence
+Function found: {'UID': '46', 'method_name': 'unregisterActivityFence', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, "Fence unregistered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, "Cannot unregister fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.', 'ground_truth': "This code segment from an Android application demonstrates how to unregister activity fences using Google's Awareness API. Specifically, it involves removing two fences, one that detects when the user is still and another that detects when the user is moving. The removal is executed through a call to FenceApi.updateFences, which is provided with a FenceUpdateRequest configured to remove the fences identified by ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The process includes a ResultCallbacks implementation to handle the outcome: if the operation is successful, a toast message confirms the successful unregistration of the fences, while a failure results in a toast indicating an inability to unregister the fences. This allows the application to dynamically manage context-aware features based on the user's current needs or settings."}
+Summary found: 
+
+The code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes. 
+
+The code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        switch (view.getId()) {
+            case R.id.register_activity_fence /* 2131427426 */:
+                registerActivityFence();
+                return;
+            case R.id.unregister_activity_fence /* 2131427427 */:
+                unregisterActivityFence();
+                return;
+            default:
+                return;
+        }
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onClick: 
+
+The code defines two fences, one for when the device is still and another for when it is moving. It then updates the fences using the Awareness.FenceApi.updateFences() method. The fences are registered with a pending intent that will trigger a broadcast when the device's activity changes.
+Summary set for node onClick
+
+
+++++++++++++++Summarizing onConnected++++++++++++++
+Current depth: 0, Max depth: 2
+Method: setOnClickListener
+Method: findViewById
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        findViewById(R.id.register_activity_fence).setOnClickListener(this);
+        findViewById(R.id.unregister_activity_fence).setOnClickListener(this);
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onConnected: No summary generated for this function
+Summary set for node onConnected
+
+
+++++++++++++++Summarizing onConnectionSuspended++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: show
+Method: <init>
+Method: setMessage
+Method: setPositiveButton
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        new AlertDialog.Builder(this).setMessage("Cannot connect to google api services.").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.ActivityFanceApiDemo.3
+            @Override // android.content.DialogInterface.OnClickListener
+            public void onClick(DialogInterface dialogInterface, int i2) {
+                ActivityFanceApiDemo.this.finish();
+            }
+        }).show();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node onConnectionSuspended: 
+
+The code creates an alert dialog box that displays a message when the user cannot connect to Google API services. The dialog box has a positive button that finishes the activity when clicked.
+Summary set for node onConnectionSuspended
+
+
+++++++++++++++Summarizing onCreate++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onCreate
+Method: setContentView
+Method: findViewById
+Method: buildApiClient
+Function found: {'UID': '50', 'method_name': 'buildApiClient', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }', 'summary': '\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.', 'ground_truth': "This code snippet demonstrates the initialization and connection setup for a `GoogleApiClient` in an Android application, specifically integrating the Awareness API. The `GoogleApiClient.Builder` is used to create an instance of `GoogleApiClient`, configuring it by adding the Awareness API and connection callbacks to handle connection events. After setting up the client, the `connect` method is called to establish a connection with Google's services. This setup enables the application to use the Awareness API for accessing contextual data about the device's environment and the user's activity."}
+Summary found: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fence_api_demo);
+        this.mActivityFenceStatusTv = (TextView) findViewById(R.id.activity_fence_status);
+        buildApiClient();
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onCreate: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node onCreate
+
+
+++++++++++++++Summarizing onStart++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onStart
+Method: registerReceiver
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        super.onStart();
+        registerReceiver(this.mActivityFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onStart: No summary generated for this function
+Summary set for node onStart
+
+
+++++++++++++++Summarizing onStop++++++++++++++
+Current depth: 0, Max depth: 2
+Method: unregisterReceiver
+Method: unregisterActivityFence
+Function found: {'UID': '46', 'method_name': 'unregisterActivityFence', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(ACTIVITY_STILL_FENCE_KEY).removeFence(ACTIVITY_MOVING_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.ActivityFanceApiDemo.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, "Fence unregistered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(ActivityFanceApiDemo.this, "Cannot unregister fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.', 'ground_truth': "This code segment from an Android application demonstrates how to unregister activity fences using Google's Awareness API. Specifically, it involves removing two fences, one that detects when the user is still and another that detects when the user is moving. The removal is executed through a call to FenceApi.updateFences, which is provided with a FenceUpdateRequest configured to remove the fences identified by ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The process includes a ResultCallbacks implementation to handle the outcome: if the operation is successful, a toast message confirms the successful unregistration of the fences, while a failure results in a toast indicating an inability to unregister the fences. This allows the application to dynamically manage context-aware features based on the user's current needs or settings."}
+Summary found: 
+
+The code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.
+Method: onStop
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code updates the fences using the FenceApi class. The removeFence method is used to remove the fences with the keys ACTIVITY_STILL_FENCE_KEY and ACTIVITY_MOVING_FENCE_KEY. The updateFences method is then called to update the fences.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onStop();
+        unregisterReceiver(this.mActivityFenceReceiver);
+        unregisterActivityFence();
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onStop: No summary generated for this function
+Summary set for node onStop
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: getId
+Method: registerFence
+Function found: {'UID': '55', 'method_name': 'registerFence', 'class_name': 'Lexample/awarnessapi/CombineFenceApiActivity;', 'code': '{\n        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);\n        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);\n        for (int i = 0; i < 5; i++) {\n            switch (i) {\n                case 0:\n                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 1:\n                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 2:\n                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 3:\n                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 4:\n                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n            }\n        }\n        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);\n        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Fence registered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Cannot register fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.', 'ground_truth': "This code segment from an Android application demonstrates the use of Google's Awareness API to create and register complex geofencing conditions. Initially, a location-based fence is defined to trigger within a specific radius around given geographical coordinates. Additionally, time-based fences are created for weekdays—Monday through Friday—within specific intervals. These time fences are then combined using a logical OR operation, meaning any of these time conditions being met will activate the fence. Subsequently, an AND operation combines this result with the location fence, requiring both the correct location and a valid time interval to trigger the fence. This composite fence is then registered with the Awareness API using a `PendingIntent` that broadcasts an action when the conditions are met. Success or failure of the registration is handled via callbacks that prompt respective toast messages. This sophisticated setup allows the application to react to precise contextual changes in the user’s environment."}
+Summary found: 
+
+The code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.
+Method: requestPermissions
+Method: checkSelfPermission
+Method: unregisterFence
+Function found: {'UID': '56', 'method_name': 'unregisterFence', 'class_name': 'Lexample/awarnessapi/CombineFenceApiActivity;', 'code': '{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Fence unregistered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Cannot unregister fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.', 'ground_truth': "This code segment demonstrates the process of unregistering a composite fence within an Android application using Google's Awareness API. Specifically, it utilizes the `FenceApi.updateFences` method to remove a fence identified by `COMBINE_FENCE_ENTERING_KEY` via a `FenceUpdateRequest.Builder`. The result of this operation is managed through `ResultCallbacks`, where a successful unregistration prompts a toast message indicating the successful removal of the fence. Conversely, a failure in the unregistration process results in a toast message indicating an inability to remove the fence. This functionality allows the application to dynamically manage context-aware features, adapting to changes in user requirements or conditions."}
+Summary found: 
+
+The code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API. 
+
+The code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        switch (view.getId()) {
+            case R.id.register_fence /* 2131427423 */:
+                if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == 0) {
+                    registerFence();
+                    return;
+                } else {
+                    ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, LOCATION_PERMISSION_REQUEST_CODE);
+                    return;
+                }
+            case R.id.unregister_fence /* 2131427424 */:
+                unregisterFence();
+                return;
+            default:
+                return;
+        }
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+Summary set for node onClick
+
+
+++++++++++++++Summarizing onConnected++++++++++++++
+Current depth: 0, Max depth: 2
+Method: setOnClickListener
+Method: findViewById
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        findViewById(R.id.register_fence).setOnClickListener(this);
+        findViewById(R.id.unregister_fence).setOnClickListener(this);
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onConnected: No summary generated for this function
+Summary set for node onConnected
+
+
+++++++++++++++Summarizing onConnectionSuspended++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: <init>
+Method: show
+Method: setMessage
+Method: setPositiveButton
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        new AlertDialog.Builder(this).setMessage("Cannot connect to google api services.").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.CombineFenceApiActivity.3
+            @Override // android.content.DialogInterface.OnClickListener
+            public void onClick(DialogInterface dialogInterface, int i2) {
+                CombineFenceApiActivity.this.finish();
+            }
+        }).show();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node onConnectionSuspended: 
+
+The code creates an alert dialog box that displays a message and a positive button. When the user clicks the positive button, the activity is finished.
+Summary set for node onConnectionSuspended
+
+
+++++++++++++++Summarizing onCreate++++++++++++++
+Current depth: 0, Max depth: 2
+Method: buildApiClient
+Function found: {'UID': '50', 'method_name': 'buildApiClient', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }', 'summary': '\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.', 'ground_truth': "This code snippet demonstrates the initialization and connection setup for a `GoogleApiClient` in an Android application, specifically integrating the Awareness API. The `GoogleApiClient.Builder` is used to create an instance of `GoogleApiClient`, configuring it by adding the Awareness API and connection callbacks to handle connection events. After setting up the client, the `connect` method is called to establish a connection with Google's services. This setup enables the application to use the Awareness API for accessing contextual data about the device's environment and the user's activity."}
+Summary found: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Method: findViewById
+Method: onCreate
+Method: setContentView
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_combine_fence_api);
+        this.mStatusTv = (TextView) findViewById(R.id.fence_status);
+        buildApiClient();
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onCreate: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node onCreate
+
+
+++++++++++++++Summarizing onRequestPermissionsResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: registerFence
+Function found: {'UID': '55', 'method_name': 'registerFence', 'class_name': 'Lexample/awarnessapi/CombineFenceApiActivity;', 'code': '{\n        AwarenessFence locationFence = LocationFence.in(23.0756607d, 72.5253209d, 50.0d, 5000L);\n        ArrayList<AwarenessFence> timeFences = new ArrayList<>(6);\n        for (int i = 0; i < 5; i++) {\n            switch (i) {\n                case 0:\n                    timeFences.add(TimeFence.inMondayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 1:\n                    timeFences.add(TimeFence.inTuesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 2:\n                    timeFences.add(TimeFence.inWednesdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 3:\n                    timeFences.add(TimeFence.inThursdayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n                case 4:\n                    timeFences.add(TimeFence.inFridayInterval(TimeZone.getDefault(), 18000000L, 72000000L));\n                    break;\n            }\n        }\n        AwarenessFence oredTimeFences = AwarenessFence.or(timeFences);\n        AwarenessFence andFence = AwarenessFence.and(locationFence, oredTimeFences);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(COMBINE_FENCE_ENTERING_KEY, andFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Fence registered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Cannot register fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.', 'ground_truth': "This code segment from an Android application demonstrates the use of Google's Awareness API to create and register complex geofencing conditions. Initially, a location-based fence is defined to trigger within a specific radius around given geographical coordinates. Additionally, time-based fences are created for weekdays—Monday through Friday—within specific intervals. These time fences are then combined using a logical OR operation, meaning any of these time conditions being met will activate the fence. Subsequently, an AND operation combines this result with the location fence, requiring both the correct location and a valid time interval to trigger the fence. This composite fence is then registered with the Awareness API using a `PendingIntent` that broadcasts an action when the conditions are met. Success or failure of the registration is handled via callbacks that prompt respective toast messages. This sophisticated setup allows the application to react to precise contextual changes in the user’s environment."}
+Summary found: 
+
+The code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.
+Method: onRequestPermissionsResult
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates a location fence that is 50 meters in diameter and centered at a specific latitude and longitude. It then creates five time fences that are Monday through Friday, 6:00 AM to 12:00 PM, and adds them to an array list. The code then creates an ored time fence by combining the five time fences and an and fence that combines the location fence and the ored time fence. Finally, the code creates a pending intent and updates the fences using the Awareness API.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (grantResults[0] == 0) {
+            switch (requestCode) {
+                case LOCATION_PERMISSION_REQUEST_CODE /* 12345678 */:
+                    registerFence();
+                    return;
+                default:
+                    return;
+            }
+        }
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onRequestPermissionsResult: No summary generated for this function
+Summary set for node onRequestPermissionsResult
+
+
+++++++++++++++Summarizing onStart++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onStart
+Method: registerReceiver
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        super.onStart();
+        registerReceiver(this.mFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onStart: No summary generated for this function
+Summary set for node onStart
+
+
+++++++++++++++Summarizing onStop++++++++++++++
+Current depth: 0, Max depth: 2
+Method: unregisterFence
+Function found: {'UID': '56', 'method_name': 'unregisterFence', 'class_name': 'Lexample/awarnessapi/CombineFenceApiActivity;', 'code': '{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(COMBINE_FENCE_ENTERING_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.CombineFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Fence unregistered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(CombineFenceApiActivity.this, "Cannot unregister fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.', 'ground_truth': "This code segment demonstrates the process of unregistering a composite fence within an Android application using Google's Awareness API. Specifically, it utilizes the `FenceApi.updateFences` method to remove a fence identified by `COMBINE_FENCE_ENTERING_KEY` via a `FenceUpdateRequest.Builder`. The result of this operation is managed through `ResultCallbacks`, where a successful unregistration prompts a toast message indicating the successful removal of the fence. Conversely, a failure in the unregistration process results in a toast message indicating an inability to remove the fence. This functionality allows the application to dynamically manage context-aware features, adapting to changes in user requirements or conditions."}
+Summary found: 
+
+The code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.
+Method: onStop
+Method: unregisterReceiver
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code updates the fences using the FenceUpdateRequest.Builder. The removeFence method removes the fence with the specified key. The setResultCallback method sets the result callback for the update fences request.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onStop();
+        unregisterReceiver(this.mFenceReceiver);
+        unregisterFence();
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onStop: 
+
+The code unregisters the fence receiver and unregisters the fence when the activity is stopped.
+Summary set for node onStop
+
+
+++++++++++++++Summarizing onClick++++++++++++++
+Current depth: 0, Max depth: 2
+Method: unregisterHeadPhoneFence
+Function found: {'UID': '68', 'method_name': 'unregisterHeadPhoneFence', 'class_name': 'Lexample/awarnessapi/HeadphoneFenceApiActivity;', 'code': '{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, "Fence unregistered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, "Cannot unregister headphone fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.', 'ground_truth': "This code segment in an Android application demonstrates the process of unregistering headphone state-awareness fences using Google's Awareness API. Specifically, the fences for detecting when headphones are either plugged in or unplugged are targeted for removal. The application uses the `FenceApi.updateFences` method, passing a `FenceUpdateRequest.Builder` configured to remove these specific fences identified by `HEADPHONE_PLUG_FENCE_KEY` and `HEADPHONE_UNPLUG_FENCE_KEY`. The outcome of this unregistering process is managed through `ResultCallbacks`, where a successful removal triggers a toast message confirming the fences' successful unregistration, and a failure results in a toast message indicating an inability to unregister the fences. This allows the application to dynamically manage notifications based on the user's interaction with their headphones, adapting to their current state or preferences."}
+Summary found: 
+
+The code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.
+Method: getId
+Method: registerHeadphoneFence
+Function found: {'UID': '67', 'method_name': 'registerHeadphoneFence', 'class_name': 'Lexample/awarnessapi/HeadphoneFenceApiActivity;', 'code': '{\n        AwarenessFence headphonePlugFence = HeadphoneFence.during(1);\n        AwarenessFence headphoneUnplugFence = HeadphoneFence.during(2);\n        PendingIntent fencePendingIntent = PendingIntent.getBroadcast(this, 10001, new Intent(FENCE_RECEIVER_ACTION), 0);\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_PLUG_FENCE_KEY, headphonePlugFence, fencePendingIntent).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, "Fence registered successfully. Plug in you head phones to see magic.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, "Cannot register headphone fence.", 0).show();\n            }\n        });\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().addFence(HEADPHONE_UNPLUG_FENCE_KEY, headphoneUnplugFence, fencePendingIntent).build());\n    }', 'summary': '\n\nThe code creates two fences, one for when the user plugs in their headphones and another for when they unplug them. The fences are then registered with the Awareness API using the updateFences method. When the user plugs in their headphones, the fencePendingIntent is triggered, and a toast message is displayed. When the user unplugs their headphones, the fencePendingIntent is triggered again, and another toast message is displayed.', 'ground_truth': "This code segment from an Android application illustrates the setup and registration of headphone state-awareness fences using Google's Awareness API. Two specific fences are created: one for detecting when headphones are plugged in (`headphonePlugFence`) and another for when they are unplugged (`headphoneUnplugFence`). Each fence is associated with a `PendingIntent` that broadcasts a specific action when the fence condition is met. The fences are registered using the `FenceApi.updateFences` method, with callbacks in place to notify on the success or failure of the operation. A successful registration triggers a toast message encouraging the user to plug in their headphones to experience the functionality, while a failure results in a message indicating the inability to register the fence. This setup enables the application to interact with the user based on changes in headphone connection status, enhancing the contextual responsiveness of the app."}
+Summary found: 
+
+The code creates two fences, one for when the user plugs in their headphones and another for when they unplug them. The fences are then registered with the Awareness API using the updateFences method. When the user plugs in their headphones, the fencePendingIntent is triggered, and a toast message is displayed. When the user unplugs their headphones, the fencePendingIntent is triggered again, and another toast message is displayed.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered. 
+
+The code creates two fences, one for when the user plugs in their headphones and another for when they unplug them. The fences are then registered with the Awareness API using the updateFences method. When the user plugs in their headphones, the fencePendingIntent is triggered, and a toast message is displayed. When the user unplugs their headphones, the fencePendingIntent is triggered again, and another toast message is displayed.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        switch (view.getId()) {
+            case R.id.register_fence /* 2131427423 */:
+                registerHeadphoneFence();
+                return;
+            case R.id.unregister_fence /* 2131427424 */:
+                unregisterHeadPhoneFence();
+                return;
+            default:
+                return;
+        }
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onClick: No summary generated for this function
+Summary set for node onClick
+
+
+++++++++++++++Summarizing onConnected++++++++++++++
+Current depth: 0, Max depth: 2
+Method: setOnClickListener
+Method: findViewById
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        findViewById(R.id.register_fence).setOnClickListener(this);
+        findViewById(R.id.unregister_fence).setOnClickListener(this);
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onConnected: No summary generated for this function
+Summary set for node onConnected
+
+
+++++++++++++++Summarizing onConnectionSuspended++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: <init>
+Method: show
+Method: setMessage
+Method: setPositiveButton
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        new AlertDialog.Builder(this).setMessage("Cannot connect to google api services.").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.3
+            @Override // android.content.DialogInterface.OnClickListener
+            public void onClick(DialogInterface dialogInterface, int i2) {
+                HeadphoneFenceApiActivity.this.finish();
+            }
+        }).show();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node onConnectionSuspended: 
+
+The code creates an alert dialog box that displays a message and a positive button. When the user clicks the positive button, the app will close.
+Summary set for node onConnectionSuspended
+
+
+++++++++++++++Summarizing onCreate++++++++++++++
+Current depth: 0, Max depth: 2
+Method: findViewById
+Method: setContentView
+Method: onCreate
+Method: buildApiClient
+Function found: {'UID': '50', 'method_name': 'buildApiClient', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }', 'summary': '\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.', 'ground_truth': "This code snippet demonstrates the initialization and connection setup for a `GoogleApiClient` in an Android application, specifically integrating the Awareness API. The `GoogleApiClient.Builder` is used to create an instance of `GoogleApiClient`, configuring it by adding the Awareness API and connection callbacks to handle connection events. After setting up the client, the `connect` method is called to establish a connection with Google's services. This setup enables the application to use the Awareness API for accessing contextual data about the device's environment and the user's activity."}
+Summary found: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fence_api);
+        this.mHeadPhoneStatusTv = (TextView) findViewById(R.id.fence_status);
+        buildApiClient();
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onCreate: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Summary set for node onCreate
+
+
+++++++++++++++Summarizing onStart++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onStart
+Method: registerReceiver
+Method: <init>
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        super.onStart();
+        registerReceiver(this.mHeadPhoneFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onStart: No summary generated for this function
+Summary set for node onStart
+
+
+++++++++++++++Summarizing onStop++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onStop
+Method: unregisterReceiver
+Method: unregisterHeadPhoneFence
+Function found: {'UID': '68', 'method_name': 'unregisterHeadPhoneFence', 'class_name': 'Lexample/awarnessapi/HeadphoneFenceApiActivity;', 'code': '{\n        Awareness.FenceApi.updateFences(this.mGoogleApiClient, new FenceUpdateRequest.Builder().removeFence(HEADPHONE_PLUG_FENCE_KEY).removeFence(HEADPHONE_UNPLUG_FENCE_KEY).build()).setResultCallback(new ResultCallbacks<Status>() { // from class: example.awarnessapi.HeadphoneFenceApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onSuccess(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, "Fence unregistered successfully.", 0).show();\n            }\n\n            @Override // com.google.android.gms.common.api.ResultCallbacks\n            public void onFailure(@NonNull Status status) {\n                Toast.makeText(HeadphoneFenceApiActivity.this, "Cannot unregister headphone fence.", 0).show();\n            }\n        });\n    }', 'summary': '\n\nThe code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.', 'ground_truth': "This code segment in an Android application demonstrates the process of unregistering headphone state-awareness fences using Google's Awareness API. Specifically, the fences for detecting when headphones are either plugged in or unplugged are targeted for removal. The application uses the `FenceApi.updateFences` method, passing a `FenceUpdateRequest.Builder` configured to remove these specific fences identified by `HEADPHONE_PLUG_FENCE_KEY` and `HEADPHONE_UNPLUG_FENCE_KEY`. The outcome of this unregistering process is managed through `ResultCallbacks`, where a successful removal triggers a toast message confirming the fences' successful unregistration, and a failure results in a toast message indicating an inability to unregister the fences. This allows the application to dynamically manage notifications based on the user's interaction with their headphones, adapting to their current state or preferences."}
+Summary found: 
+
+The code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code updates the fences by removing the headphone plug and unplug fences using the FenceUpdateRequest.Builder. The onSuccess callback displays a toast message indicating that the fence was unregistered successfully, while the onFailure callback displays a toast message indicating that the fence could not be unregistered.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onStop();
+        unregisterReceiver(this.mHeadPhoneFenceReceiver);
+        unregisterHeadPhoneFence();
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onStop: No summary generated for this function
+Summary set for node onStop
+
+
+++++++++++++++Summarizing onCreate++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: findViewById
+Method: <init>
+Method: setOnClickListener
+Method: <init>
+Method: onCreate
+Method: <init>
+Method: setContentView
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_launch);
+        findViewById(R.id.snap_shot_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.1
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, SnapshotApiActivity.class));
+            }
+        });
+        findViewById(R.id.headphone_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.2
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, HeadphoneFenceApiActivity.class));
+            }
+        });
+        findViewById(R.id.activity_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.3
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, ActivityFanceApiDemo.class));
+            }
+        });
+        findViewById(R.id.combine_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.4
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, CombineFenceApiActivity.class));
+            }
+        });
+    }
+[/CODE]
+
+
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onCreate: No summary generated for this function
+Summary set for node onCreate
+
+
+++++++++++++++Summarizing onConnected++++++++++++++
+Current depth: 0, Max depth: 2
+Method: callSnapShotGroupApis
+Function found: {'UID': '78', 'method_name': 'callSnapShotGroupApis', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        getCurrentActivity();\n        getHeadphoneStatus();\n        if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") != 0) {\n            ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, GET_LOCATION_PERMISSION_REQUEST_CODE);\n        } else {\n            getLocation();\n        }\n        if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") != 0) {\n            ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, GET_PLACE_PERMISSION_REQUEST_CODE);\n        } else {\n            getPlace();\n        }\n        if (ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == 0) {\n            getWeather();\n        } else {\n            ActivityCompat.requestPermissions(this, new String[]{"android.permission.ACCESS_FINE_LOCATION"}, GET_WEATHER_PERMISSION_REQUEST_CODE);\n        }\n    }', 'summary': 'No summary generated for this function', 'ground_truth': "This code segment from an Android application demonstrates the integration of various features from Google's Awareness API, including activity detection, headphone status, location, places, and weather updates. The application sequentially checks and requests the necessary permissions for accessing fine location before invoking the respective methods to retrieve this data. It begins by fetching the current physical activity and headphone status. For location-based features—getting the current location, nearby places, and current weather conditions—it first checks if the application has the required location permissions. If permission is not granted, it requests it; otherwise, it proceeds to fetch the relevant data. This approach ensures that the application adheres to Android's permissions framework while providing the user with contextually relevant data based on their current environment and activities."}
+Summary found: No summary generated for this function
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+No summary generated for this function
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        callSnapShotGroupApis();
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onConnected: 
+
+The code calls the callSnapShotGroupApis function.
+Summary set for node onConnected
+
+
+++++++++++++++Summarizing onConnectionSuspended++++++++++++++
+Current depth: 0, Max depth: 2
+Method: <init>
+Method: show
+Method: setMessage
+Method: <init>
+Method: setPositiveButton
+Prompt key with successors:
+
+
+Summarize the following code in one sentence:
+
+[CODE]
+{
+        new AlertDialog.Builder(this).setMessage("Cannot connect to google api services.").setPositiveButton(17039370, new DialogInterface.OnClickListener() { // from class: example.awarnessapi.SnapshotApiActivity.6
+            @Override // android.content.DialogInterface.OnClickListener
+            public void onClick(DialogInterface dialogInterface, int i2) {
+                SnapshotApiActivity.this.finish();
+            }
+        }).show();
+    }
+[/CODE]
+
+
+Sending request to server...
+Response received!
+Summary for current node onConnectionSuspended: 
+
+The code creates an alert dialog box that displays a message when the user cannot connect to the Google API services. The dialog box has a positive button that finishes the activity when clicked.
+Summary set for node onConnectionSuspended
+
+
+++++++++++++++Summarizing onCreate++++++++++++++
+Current depth: 0, Max depth: 2
+Method: onCreate
+Method: buildApiClient
+Function found: {'UID': '50', 'method_name': 'buildApiClient', 'class_name': 'Lexample/awarnessapi/ActivityFanceApiDemo;', 'code': '{\n        this.mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Awareness.API).addConnectionCallbacks(this).build();\n        this.mGoogleApiClient.connect();\n    }', 'summary': '\n\nThe code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.', 'ground_truth': "This code snippet demonstrates the initialization and connection setup for a `GoogleApiClient` in an Android application, specifically integrating the Awareness API. The `GoogleApiClient.Builder` is used to create an instance of `GoogleApiClient`, configuring it by adding the Awareness API and connection callbacks to handle connection events. After setting up the client, the `connect` method is called to establish a connection with Google's services. This setup enables the application to use the Awareness API for accessing contextual data about the device's environment and the user's activity."}
+Summary found: 
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+Method: setContentView
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code creates a new GoogleApiClient object and adds the Awareness API and connection callbacks to it. It then connects the GoogleApiClient object.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_snapshot);
+        buildApiClient();
+    }
+[/CODE]
+Sending request to server...
+Response received!
+Summary for current node onCreate: 
+
+The code sets the activity's content view to the activity_snapshot layout and creates a new GoogleApiClient object. It then calls the buildApiClient() function to add the Awareness API and connection callbacks to the GoogleApiClient object. Finally, it connects the GoogleApiClient object.
+Summary set for node onCreate
+
+
+++++++++++++++Summarizing onRequestPermissionsResult++++++++++++++
+Current depth: 0, Max depth: 2
+Method: getWeather
+Function found: {'UID': '81', 'method_name': 'getWeather', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getWeather(this.mGoogleApiClient).setResultCallback(new ResultCallback<WeatherResult>() { // from class: example.awarnessapi.SnapshotApiActivity.1\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull WeatherResult weatherResult) {\n                if (!weatherResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get weather.", 1).show();\n                    return;\n                }\n                Weather weather = weatherResult.getWeather();\n                String weatherReport = "Temperature: " + weather.getTemperature(2) + "\\nHumidity: " + weather.getHumidity();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.weather_status)).setText(weatherReport);\n            }\n        });\n    }', 'summary': '\n\nThe code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.', 'ground_truth': "The provided code segment is part of an Android application that uses Google's Awareness API to fetch current weather conditions. It makes an asynchronous request to obtain weather data and handles the results using a ResultCallback. If the weather data retrieval is successful, the application constructs a string displaying the temperature (with a unit defined by the integer 2, which typically refers to Celsius in the API) and humidity, and then updates a TextView with this information. If the retrieval is unsuccessful, it displays a toast notification indicating the failure to obtain weather information. This setup ensures that users are provided with real-time updates about the weather conditions at their location."}
+Summary found: 
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI.
+Method: getLocation
+Function found: {'UID': '79', 'method_name': 'getLocation', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getLocation(this.mGoogleApiClient).setResultCallback(new ResultCallback<LocationResult>() { // from class: example.awarnessapi.SnapshotApiActivity.3\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull LocationResult locationResult) {\n                if (!locationResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get location.", 1).show();\n                    return;\n                }\n                Location location = locationResult.getLocation();\n                ((TextView) SnapshotApiActivity.this.findViewById(R.id.current_latlng)).setText(location.getLatitude() + ", " + location.getLongitude());\n                TextView timeTv = (TextView) SnapshotApiActivity.this.findViewById(R.id.latlng_time);\n                SimpleDateFormat sdf = new SimpleDateFormat("h:mm a dd-MM-yyyy", Locale.getDefault());\n                timeTv.setText("as on: " + sdf.format(new Date(location.getTime())));\n                String url = "https://maps.googleapis.com/maps/api/staticmap?center=" + location.getLatitude() + "," + location.getLongitude() + "&zoom=20&size=400x250&key=" + SnapshotApiActivity.this.getString(R.string.api_key);\n                Picasso.with(SnapshotApiActivity.this).load(url).into((ImageView) SnapshotApiActivity.this.findViewById(R.id.current_map));\n            }\n        });\n    }', 'summary': "\n\nThe code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.", 'ground_truth': "The provided code segment is part of an Android application that uses Google's Awareness API to fetch the current location of a device. Specifically, the SnapshotApi.getLocation() method is invoked to get the location asynchronously, with a ResultCallback handling the outcome of this request. If the location retrieval is successful, the application displays the latitude and longitude in a TextView, formats and displays the current date and time of the location update, and shows a static map image of the location using Google's Static Maps API via the Picasso library. If the location cannot be retrieved successfully, a toast notification is displayed to the user indicating that the location could not be obtained. This entire process is handled within an anonymous class implementing the ResultCallback interface for handling LocationResult objects."}
+Summary found: 
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView.
+Method: getPlace
+Function found: {'UID': '80', 'method_name': 'getPlace', 'class_name': 'Lexample/awarnessapi/SnapshotApiActivity;', 'code': '{\n        Awareness.SnapshotApi.getPlaces(this.mGoogleApiClient).setResultCallback(new ResultCallback<PlacesResult>() { // from class: example.awarnessapi.SnapshotApiActivity.2\n            @Override // com.google.android.gms.common.api.ResultCallback\n            public void onResult(@NonNull PlacesResult placesResult) {\n                if (!placesResult.getStatus().isSuccess()) {\n                    Toast.makeText(SnapshotApiActivity.this, "Could not get places.", 1).show();\n                    return;\n                }\n                List<PlaceLikelihood> placeLikelihoodList = placesResult.getPlaceLikelihoods();\n                LinearLayout linearLayout = (LinearLayout) SnapshotApiActivity.this.findViewById(R.id.current_place_container);\n                linearLayout.removeAllViews();\n                if (placeLikelihoodList != null) {\n                    for (int i = 0; i < 5 && i < placeLikelihoodList.size(); i++) {\n                        PlaceLikelihood p = placeLikelihoodList.get(i);\n                        View v = LayoutInflater.from(SnapshotApiActivity.this).inflate(R.layout.row_nearby_place, (ViewGroup) linearLayout, false);\n                        ((TextView) v.findViewById(R.id.place_name)).setText(p.getPlace().getName());\n                        ((TextView) v.findViewById(R.id.place_address)).setText(p.getPlace().getAddress());\n                        linearLayout.addView(v);\n                    }\n                    return;\n                }\n                Toast.makeText(SnapshotApiActivity.this, "Could not get nearby places.", 1).show();\n            }\n        });\n    }', 'summary': '\n\nThe code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.', 'ground_truth': "The provided code segment describes an Android application using the Awareness API to obtain information about nearby places. It calls SnapshotApi.getPlaces() to asynchronously fetch this data and handles the results with a ResultCallback. If fetching the places is unsuccessful, it displays a toast message stating the inability to get places. Otherwise, it retrieves a list of PlaceLikelihood objects, which indicates the likelihood of the device's location being at each place. The code then dynamically updates the UI, specifically a LinearLayout, to display up to five of the most likely places with their names and addresses. Each place's information is formatted and added to the layout using a custom layout resource defined in XML. If no places are found, it displays a toast message indicating the failure to get nearby places. This interaction ensures the user is presented with real-time, location-specific data about their surroundings."}
+Summary found: 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+Method: onRequestPermissionsResult
+Prompt key with successors:
+Given the following summaries of the current code's sucessors:
+
+
+
+The code is a method that gets weather information from the Google Play Services API. It uses the SnapshotApi class to get the weather data and then sets the result callback to a new ResultCallback object. The ResultCallback object is an anonymous inner class that overrides the onResult method and gets the weather data from the WeatherResult object. The method then sets the weather data to a TextView object in the UI. 
+
+The code is a part of the Awareness API that retrieves the user's current location and displays it on a map. It uses the Google Maps Static API to generate a map image and displays it in an ImageView. The code also displays the user's current location in a TextView and the time the location was captured in another TextView. 
+
+The code is a callback function that is called when the Places API returns a result. It checks the status of the result and displays an error message if the result is not successful. If the result is successful, it retrieves the list of nearby places and displays them in a linear layout.
+
+
+Summarize the following code in one sentence:
+
+
+[CODE]
+{
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (grantResults[0] == 0) {
+            switch (requestCode) {
+                case GET_LOCATION_PERMISSION_REQUEST_CODE /* 12345 */:
+                    getLocation();
+                    return;
+                case GET_PLACE_PERMISSION_REQUEST_CODE /* 123456 */:
+                    getPlace();
+                    return;
+                case GET_WEATHER_PERMISSION_REQUEST_CODE /* 1234567 */:
+                    getWeather();
+                    return;
+                default:
+                    return;
+            }
+        }
+    }
+[/CODE]
+Sending request to server...
+Empty response received after 3 retries, skipping...
+Summary for current node onRequestPermissionsResult: No summary generated for this function
+Summary set for node onRequestPermissionsResult
+Summarization complete!
+Summarization complete!
+
+Evaluating results...
+Skipping access$000 at 2
+Skipping <clinit> at 3
+Skipping access$000 at 6
+Skipping access$000 at 9
+Scores for onClick at 44:
+{'rouge1': 0.5102040816326531, 'rougeL': 0.22448979591836735, 'BLEU': 1.1485032504878305e-155, 'Cosine': 0.6098823547363281}
+Scores for registerActivityFence at 45:
+{'rouge1': 0.8367346938775511, 'rougeL': 0.5918367346938775, 'BLEU': 0.01600142862064165, 'Cosine': 0.808226466178894}
+Scores for unregisterActivityFence at 46:
+{'rouge1': 0.775, 'rougeL': 0.6, 'BLEU': 0.014427488802767972, 'Cosine': 0.512927770614624}
+Skipping onConnected at 47
+Scores for onConnectionSuspended at 48:
+{'rouge1': 0.8484848484848485, 'rougeL': 0.6363636363636364, 'BLEU': 0.05244784540709575, 'Cosine': 0.8154950141906738}
+Scores for onCreate at 49:
+{'rouge1': 0.5652173913043478, 'rougeL': 0.34782608695652173, 'BLEU': 7.686401631549845e-157, 'Cosine': 0.6318018436431885}
+Scores for buildApiClient at 50:
+{'rouge1': 0.7391304347826086, 'rougeL': 0.5217391304347826, 'BLEU': 0.020226287483484453, 'Cosine': 0.8662368059158325}
+Skipping onStart at 51
+Skipping onStop at 52
+Scores for unregisterActivityFence at 53:
+{'rouge1': 0.775, 'rougeL': 0.625, 'BLEU': 5.2422095291951867e-79, 'Cosine': 0.6148131489753723}
+Skipping onClick at 54
+Scores for registerFence at 55:
+{'rouge1': 0.5795454545454546, 'rougeL': 0.36363636363636365, 'BLEU': 2.740489001114517e-155, 'Cosine': 0.6835892796516418}
+Scores for unregisterFence at 56:
+{'rouge1': 0.6129032258064516, 'rougeL': 0.4838709677419355, 'BLEU': 1.6053711764843032e-232, 'Cosine': 0.5552021861076355}
+Skipping onConnected at 57
+Scores for onConnectionSuspended at 58:
+{'rouge1': 0.8076923076923077, 'rougeL': 0.5769230769230769, 'BLEU': 5.319973420954623e-156, 'Cosine': 0.5377457141876221}
+Scores for onCreate at 59:
+{'rouge1': 0.5652173913043478, 'rougeL': 0.391304347826087, 'BLEU': 2.3319387173968214e-233, 'Cosine': 0.66072678565979}
+Scores for buildApiClient at 60:
+{'rouge1': 0.6521739130434783, 'rougeL': 0.5217391304347826, 'BLEU': 0.013102810623187052, 'Cosine': 0.8375911712646484}
+Skipping onRequestPermissionsResult at 61
+Scores for registerFence at 62:
+{'rouge1': 0.5909090909090909, 'rougeL': 0.32954545454545453, 'BLEU': 7.445539861844609e-79, 'Cosine': 0.7270981073379517}
+Skipping onStart at 63
+Scores for onStop at 64:
+{'rouge1': 0.7333333333333333, 'rougeL': 0.6666666666666666, 'BLEU': 3.9862506812117595e-05, 'Cosine': 0.5071790814399719}
+Scores for unregisterFence at 65:
+{'rouge1': 0.7096774193548387, 'rougeL': 0.5161290322580645, 'BLEU': 3.691524822641141e-156, 'Cosine': 0.6294320225715637}
+Skipping onClick at 66
+Scores for registerHeadphoneFence at 67:
+{'rouge1': 0.7352941176470589, 'rougeL': 0.5147058823529411, 'BLEU': 0.048270983547453475, 'Cosine': 0.8654351830482483}
+Scores for unregisterHeadPhoneFence at 68:
+{'rouge1': 0.6808510638297872, 'rougeL': 0.5106382978723404, 'BLEU': 0.022264530060755676, 'Cosine': 0.7083245515823364}
+Skipping onConnected at 69
+Scores for onConnectionSuspended at 70:
+{'rouge1': 0.8461538461538461, 'rougeL': 0.6153846153846154, 'BLEU': 0.01174001818446264, 'Cosine': 0.6476144790649414}
+Scores for onCreate at 71:
+{'rouge1': 0.4782608695652174, 'rougeL': 0.2608695652173913, 'BLEU': 5.913169423174083e-233, 'Cosine': 0.5893986225128174}
+Scores for buildApiClient at 72:
+{'rouge1': 0.7391304347826086, 'rougeL': 0.6086956521739131, 'BLEU': 0.019365727074581524, 'Cosine': 0.8476821184158325}
+Skipping onStart at 73
+Skipping onStop at 74
+Scores for unregisterHeadPhoneFence at 75:
+{'rouge1': 0.7446808510638298, 'rougeL': 0.574468085106383, 'BLEU': 0.028205604230000306, 'Cosine': 0.7445843815803528}
+Skipping onCreate at 76
+Scores for onConnected at 77:
+{'rouge1': 0.8333333333333334, 'rougeL': 0.5, 'BLEU': 2.333190236375313e-239, 'Cosine': 0.6120105981826782}
+Skipping callSnapShotGroupApis at 78
+Scores for getLocation at 79:
+{'rouge1': 0.7419354838709677, 'rougeL': 0.4032258064516129, 'BLEU': 2.7035141386748877e-155, 'Cosine': 0.7291355133056641}
+Scores for getPlace at 80:
+{'rouge1': 0.6792452830188679, 'rougeL': 0.3584905660377358, 'BLEU': 1.2339069275228245e-155, 'Cosine': 0.6181368231773376}
+Scores for getWeather at 81:
+{'rouge1': 0.5555555555555556, 'rougeL': 0.3472222222222222, 'BLEU': 1.4132469242558204e-78, 'Cosine': 0.7510000467300415}
+Scores for getCurrentActivity at 82:
+{'rouge1': 0.803921568627451, 'rougeL': 0.49019607843137253, 'BLEU': 0.0188793511156927, 'Cosine': 0.790163516998291}
+Scores for getHeadphoneStatus at 83:
+{'rouge1': 0.75, 'rougeL': 0.5454545454545454, 'BLEU': 0.03028028977864706, 'Cosine': 0.771647036075592}
+Scores for onConnectionSuspended at 84:
+{'rouge1': 0.7941176470588235, 'rougeL': 0.5294117647058824, 'BLEU': 0.016738200546100854, 'Cosine': 0.7974555492401123}
+Scores for onCreate at 85:
+{'rouge1': 0.6744186046511628, 'rougeL': 0.4186046511627907, 'BLEU': 1.72665763121793e-155, 'Cosine': 0.7953598499298096}
+Scores for buildApiClient at 86:
+{'rouge1': 0.7391304347826086, 'rougeL': 0.6086956521739131, 'BLEU': 0.019365727074581524, 'Cosine': 0.8476821184158325}
+Skipping onRequestPermissionsResult at 87
+Scores for getLocation at 88:
+{'rouge1': 0.8225806451612904, 'rougeL': 0.41935483870967744, 'BLEU': 9.600929716141161e-79, 'Cosine': 0.7992913722991943}
+Scores for getWeather at 89:
+{'rouge1': 0.6388888888888888, 'rougeL': 0.3472222222222222, 'BLEU': 9.859440152955761e-79, 'Cosine': 0.7577543258666992}
+Scores for getPlace at 90:
+{'rouge1': 0.6792452830188679, 'rougeL': 0.3584905660377358, 'BLEU': 1.5218515977961038e-155, 'Cosine': 0.6375614404678345}
+Average scores across 33 nodes for APK:
+Rouge1 Avg Score 0.7041808332448933
+RougeL Avg Score 0.4790364071550578
+BLEU Avg Score 0.0100410956077656
+Cosine Avg Score 0.7063086448293744
+Writing the results...
+None

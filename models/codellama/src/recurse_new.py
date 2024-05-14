@@ -2,6 +2,8 @@ import requests
 import json
 import os
 from rouge_score import rouge_scorer
+from nltk.translate import bleu_score
+from sentence_transformers import SentenceTransformer, util
 
 HOST = "localhost"
 PORT = "8000"
@@ -44,6 +46,8 @@ class APK:
     def __init__(self):
         self.raw = []
         self.funcs = {}
+        self.count = 0
+        self.max_depth = 0
 
     def get_func_name(self, func_num):
         return f"Function_{func_num}"
@@ -68,11 +72,15 @@ class APK:
         print("Sending request to server...")
         response = requests.post(f"http://{host}:{port}/generate", headers=headers, json=data)
         llm_response = response.json()["generated_text"]
-        print("Response received!")
 
-        # Come back to this later (BLEU evaluation metrics)
-        # func_obj.analyze_response(question_num, questions[question_num]["answers"])
-        # print("Response analyzed!")
+        if len(llm_response) == 0 and self.count < 3:
+            print("Empty response received, retrying...")
+            self.count += 1
+            return self.ask_llm(prompt_key, question)
+        elif len(llm_response) == 0 and self.count == 3:
+            print("Empty response received after 3 retries, skipping...")
+            return "No summary generated for this function"
+        print("Response received!")
 
         return llm_response
 
@@ -136,151 +144,131 @@ class APK:
 
 
 class APK_Recurse(APK):
-    def preprocess_callgraph(self):
-
-        return 0
 
     def read_data_from_file(self, apk_path):
         # TODO: Need to work on processing data from DJ's directory
         with open(apk_path, "r") as infile:
             apk_data = json.load(infile)
         
-        self.raw = apk_data['raw']
-        self.funcs = apk_data['functions']
+        self.raw = apk_data['Raw']
+        self.funcs = apk_data['Functions']
     
-    def get_prompt_key(self, code):
+    def get_prompt_key(self, code, sum_length="short", success_sums=None):
         # TODO: How do we format this?
-        return f"[CODE]\n{code}\n[/CODE]\n\n"
+        long_sum = "\n\nSummarize the following code in one paragraph:\n"
+        short_sum = "\n\nSummarize the following code in one sentence:\n"
+        header = "Given the following summaries of the current code's sucessors:\n"
+        if sum_length == "short" and success_sums is not None:
+            return f"{header}\n{success_sums}\n{short_sum}\n\n[CODE]\n{code}\n[/CODE]"
+        elif sum_length == "long" and success_sums is not None:
+            return f"{header}\n{success_sums}\n{long_sum}\n\n[CODE]\n{code}\n[/CODE]"
+        else:
+            return f"{short_sum}\n[CODE]\n{code}\n[/CODE]\n\n"
 
     def get_func_code(self, func_uid):
         for func in self.funcs:
-            if func.startswith(f"{func_uid}_"):
-                return func
+            if func_uid == func["UID"]:
+                return func["code"]
         return None
-
-    def traverse_recursive(self, node, depth=0, max_depth=4):
-        long_sum = "\n\nSummarize the following code in one paragraph:\n"
-        short_sum = "\n\nSummarize the following code in one sentence:\n"
-        # Check if we've reached a depth of 4 levels or if there are fewer than 4 levels of children
-        if depth > max_depth:
-            return
-        
-        # Handle recursion
-        if 'children' in node and node["summary"] == "":
-            print(f"\nCurrent node in traverse_recursive: {node}")
-            for child in node["children"]:
-                self.traverse_recursive(child, depth + 1)
-        
-        # Check if we have reached the entry_point node
-        if 'entry_point' in node:
-            dict_key = "entry_point"
-        else:
-            dict_key = "function"
-        
-        #print(f"\n\nCurrent node in traverse_recursive: {node}")
-        func_name = self.get_func_name(node[dict_key])
-        func_uid = str(node["uid"])
-        func_code = self.get_func_code(func_uid)
-
-        # Handle summarization
-        # Check if current node has code
-        if func_code == None:
-            node["summary"] = "No code found for function"
-            return
-        
-        # Craft prompt key using code from current node
-        prompt_key = self.get_prompt_key(func_code)
-
-        # Gather summaries from children nodes (if any)
-        chd_summaries = ["Given the following summaries:\n\n"]
-        if "children" in node:
-            for child in node["children"]:
-                if len(child["summary"]) > 0 and child["summary"] != "No code found for function" and child["summary"] != "No summary generated for this function":
-                    chd_summaries.append(child["summary"])
-        
-        # Join children node summaries into a single string for current node summary
-        # Craft prompt key using code from current node
-        prompt_code = self.get_prompt_key(func_code)
-        if len(chd_summaries) > 1:
-            # If there are more than 10 children nodes, we only take the first 10
-            if len(chd_summaries) > 8:
-                joined_summaries = " ".join(chd_summaries[:10])
-            else:
-                joined_summaries = " ".join(chd_summaries)
-            prompt_key = joined_summaries + long_sum + prompt_code
-        
-        # Summarize current node
-        print(f"Prompt key for current node {func_name}: {prompt_key}\n\n")
-        summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
-        if summary == None or len(summary) == 0:
-            summary = "No summary generated for this function"
-        print(f"Summary for current node {func_name}: {summary}")
-        node["summary"] = summary
+    
+    def set_node_summary(self, node_uid, summary):
+        for node in self.funcs:
+            if node["UID"] == node_uid:
+                node["summary"] = summary
+                print(f"Summary set for node {node['method_name']}")
+                return
         return
 
+    def traverse_recursive(self, node, depth=0, max_depth=4):
+        
+        # Check if the current node is less than the max depth in call graph
+        depth = int(node["Depth"])
+        if depth == self.max_depth:
+            # If we have reached the max depth, we stop traversing and summarize the current node
+            return None
+        else:
+            print(f"Current depth: {depth}, Max depth: {self.max_depth}")
 
+            # Get summaries of Successors
+            successor_sums = []
+            for method in node["Successors"]:
+                print(f"Method: {method}")
+                # Check if the method is in the functions list
+                for func in self.funcs:
+                    if func["method_name"] == method and method != node["method_name"]:
+                        print(f"Function found: {func}")
+                        if func["summary"] != "":
+                            print(f"Summary found: {func['summary']}")
+                            successor_sums.append(func["summary"])
+                        else:
+                            print("No summary found")
+                        break
+                
+            
+            # Join summaries of successors
+            if len(successor_sums) > 0:
+                joined_sums = " ".join(successor_sums)
+                return joined_sums
+            else:
+                return None
+            
     def summarize_apk(self):
         self.results = {}
 
-        for ep_data in self.raw:
-            # Grab attributes of entry point
-            ep_name = ep_data["entry_point"]
-            ep_children = ep_data["children"]
-            ep_uid = str(ep_data["uid"])
-            print("\nSummarizing entry point:", ep_name)
-            print("Current entry point UID:", ep_uid)
-            
-            # Extract function name from entry point string
-            func_name = self.get_func_name_from_entry_point(ep_name)
+        for node in self.raw:
+            node_method = node["method_name"]
+            node_class = node["class_name"]
+            node_uid = node["UID"]
+            node_depth = int(node["Depth"])
+            print(f"\n\n++++++++++++++Summarizing {node_method}++++++++++++++")
 
-            # Get Entry point code
-            code = self.get_func_code(ep_uid)
+            # Set max depth
+            if node_depth > self.max_depth:
+                self.max_depth = node_depth
 
-            # If entry point code is not found, skip
-            if code == None:
-                print("Entry point code not found, skipping...")
-                ep_data["summary"] = "No code found for entry point"
-                continue       
-            
-            # Summarize children functions
-            # Run recursive traversal
-            if len(ep_children) > 0:
-                self.traverse_recursive(ep_data, 0)
-            else:
-                print("No children to traverse, summarizing entry point function...")
-                prompt_key = "\n\nSummarize the following code in one paragraph:\n" + self.get_prompt_key(code)
-                print(f"Prompt key for current node {func_name}: {prompt_key}\n\n")
-                summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
-                ep_data["summary"] = summary
-                print(f"Summary of current entry point function {func_name} without children: {ep_data}")
+            # Check if current node has code
+            node_code = self.get_func_code(node_uid)
+            if node_code == "None":
+                print("No code found for function, skipping...")
+                self.set_node_summary(node_uid, "No code found for function")
                 continue
-
-            # Summarize entry point function
-            # Grab all summaries from first level children nodes
-            chd_summaries = ["Given the following summaries:\n"]
-            for child in ep_children:
-                if len(child["summary"]) > 0 and child["summary"] != "No code found for function":
-                    print(f"This node has an existing summaries: {child['summary']}")
-                    chd_summaries.append(child["summary"])
             
-            # Join children node summaries into a single string for current node summary
-            prompt_code = self.get_prompt_key(code)
-            if len(chd_summaries) > 1:
-                joined_summaries = " ".join(chd_summaries)
-                prompt_key = joined_summaries + "\nSummarize the following code:\n" + prompt_code
+            # Check node successors
+            if len(node["Successors"]) == 0:
+                print("No children nodes found, summarizing current function...")
 
-            # Summarize current entry point node
-            print(f"Prompt key for current node {func_name}: {prompt_key}\n\n")
-            summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
-            if summary == None or len(summary) == 0:
-                summary = "No summary generated for this function"
-            ep_data["summary"] = summary
-            print(f"Summary of current entry point function {func_name} and its children: {ep_data}")
+                # Craft prompt key using code from current node
+                prompt_key = self.get_prompt_key(node_code)
+                print(f"Prompt key with no successors:\n{prompt_key}")
+
+                # Summarize current node
+                summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
+                print(f"Summary for current node {node_method}: {summary}")
+
+                # Save summary to current node
+                self.set_node_summary(node_uid, summary)
+                continue
+            else:
+                # Traverse children nodes and grab successor summaries
+                success_sums = self.traverse_recursive(node)
+
+                # Craft prompt key using successor summaries and code from current node
+                prompt_key = self.get_prompt_key(node_code, sum_length="short", success_sums=success_sums)
+                print(f"Prompt key with successors:\n{prompt_key}")
+
+                # Summarize current node
+                summary = self.summarize_func(prompt_key, QUESTIONS, one_sum=True)
+                print(f"Summary for current node {node_method}: {summary}")
+
+                # Save summary to current node
+                self.set_node_summary(node_uid, summary)
+        
+        print("Summarization complete!")
 
     def write_json(self, text_dir):
-        output = {"Results": self.raw}
+        output = {"Results": self.funcs}
 
-        with open(text_dir + "_recurse_eight.json", "w") as outfile:
+        with open(text_dir + "_topo.json", "w") as outfile:
             json.dump(output, outfile, indent=2)
 
     def save_as_text(self, text_dir, apk_name):
@@ -305,23 +293,67 @@ class APK_Recurse(APK):
             outfile.write(text)
             outfile.close()
 
-class Evaluation(APK_Recurse):
-
-    def evaluate(self):
+    def evaluate_model(self):
         # Initialize RougeScorer
         scorer = rouge_scorer.RougeScorer(['rouge1', 'rougeL'], use_stemmer=True)
         scores = {}
+        model = SentenceTransformer('all-MiniLM-L6-v2')
 
-        # Grab reference summaries
-        reference_summaries = [QUESTIONS[question_num]["answers"]["1"] for question_num in QUESTIONS.keys()]
+        # Parse completed summaries
+        for node in self.funcs:
+            summary = node["summary"]
+            ground_truth = node["ground_truth"]
 
-        # Calculate scores for each entry point
-        for entry_point, ep_data in self.results.items():
-            summary = ep_data["summary"]
-            scores[entry_point] = scorer.score(reference_summaries, summary)
+            # Calculate scores for each entry point
+            if ground_truth != "" and summary != "" and summary != "No summary generated for this function":
+                score_result = scorer.score(ground_truth, summary)
+                rouge1_score = score_result["rouge1"][0]
+                rougeL_score = score_result["rougeL"][0]
+                
+
+                # Tokenize summaries and ground truths
+                summary_tokens = summary.split()
+                ground_truth_tokens = ground_truth.split()
+
+                # Calculate BLEU score
+                bleu_score_value = bleu_score.sentence_bleu([ground_truth_tokens], summary_tokens)
+
+                # Calulate sentence embeddings
+                summary_embedding = model.encode(summary, convert_to_tensor=True)
+                ground_truth_embedding = model.encode(ground_truth, convert_to_tensor=True)
+
+                # Calculate cosine similarity
+                cosine_score = util.cos_sim(summary_embedding, ground_truth_embedding)
+
+                # Convert from Tensor to float
+                cosine_score = cosine_score.item()
+
+                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score, "BLEU": bleu_score_value, "Cosine": cosine_score}
+
+                # Print scores
+                print(f"Scores for {node['method_name']} at {node['UID']}:\n{scores[node['UID']]}")
+
+                # Save scores to node
+                node["scores"] = scores[node['UID']]
+            else:
+                print(f"Skipping {node['method_name']} at {node['UID']}")
+                node["scores"] = None
+                continue
         
+        # Calculate average scores
+        avg_scores = {}
+        for score in scores.values():
+            for key, value in score.items():
+                if key not in avg_scores:
+                    avg_scores[key] = value
+                else:
+                    avg_scores[key] += value
+            
+        for key in avg_scores.keys():
+            avg_scores[key] = avg_scores[key] / len(scores)
+        
+        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}\nBLEU Avg Score {avg_scores['BLEU']}\nCosine Avg Score {avg_scores['Cosine']}")
         return scores
-
 
 if __name__ == "__main__":
     for apk_filename in os.listdir(RECURSE_DIR):
@@ -335,6 +367,10 @@ if __name__ == "__main__":
         curr_apk.summarize_apk()
 
         print("Summarization complete!\n")
+
+        print("Evaluating results...")
+        scores = curr_apk.evaluate_model()
+
         print("Writing the results...")
         print(curr_apk.write_json(OUTPUT_DIR + apk_filename))
         exit()

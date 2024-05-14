@@ -1,21 +1,7 @@
 #!/bin/bash
 
-##Hardware reqs go here
-
-##SBATCH --nodes=1
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-##SBATCH --cpus-per-task=2
-#SBATCH --gres=gpu:rtx8000:1
-#SBATCH --time=2:00:00
-#SBATCH --mem=150GB
-#SBATCH --job-name=codellama-test
-#SBATCH --mail-type=END
-##SBATCH --mail-user=ms9761@nyu.edu
-#SBATCH --output=slurm_%j.out
-
 ##commands go here
-
+# Llama 3 - Instruct model give it a try.
 model="codellama/CodeLlama-7b-Instruct-hf"
 cache=/scratch/ms9761/rea-llm/data
 volume=/scratch/ms9761/rea-llm/text-generation-inference_latest.sif
