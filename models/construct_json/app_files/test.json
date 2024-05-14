@@ -1,0 +1,78 @@
+{
+    "entry_point": "<androidx.fragment.app.FragmentActivity: void <init>()>",
+    "children": [
+      {
+        "function": " <androidx.fragment.app.FragmentController: androidx.fragment.app.FragmentController createController(androidx.fragment.app.FragmentHostCallback)>",
+        "children": [
+          {
+            "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+            "children": [
+                {
+                    "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+                    "children": [
+                        {
+                            "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+                            "children": [],
+                            "uid": 30,
+                            "summary": ""
+                        },
+                        {
+                            "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+                            "children": [],
+                            "uid": 33,
+                            "summary": ""
+                        }
+                    ],
+                    "uid": 38,
+                    "summary": ""
+                },
+                {
+                    "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+                    "children": [],
+                    "uid": 41,
+                    "summary": ""
+                },
+                {
+                    "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+                    "children": [],
+                    "uid": 44,
+                    "summary": ""
+                }
+                ],
+            "uid": 29,
+            "summary": ""
+          }
+        ],
+        "uid": 28,
+        "summary": ""
+      },
+      {
+        "function": " <androidx.fragment.app.FragmentHostCallback: void <init>(androidx.fragment.app.FragmentActivity)>",
+        "children": [
+          {
+            "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+            "children": [
+              {
+                "function": " <androidx.core.util.Preconditions: java.lang.Object checkNotNull(java.lang.Object,java.lang.Object)>",
+                "children": [],
+                "uid": 110,
+                "summary": ""
+              }
+            ],
+            "uid": 109,
+            "summary": ""
+          }
+        ],
+        "uid": 51,
+        "summary": ""
+      },
+      {
+        "function": " <androidx.lifecycle.Lifecycle$State: void <clinit>()>",
+        "children": [],
+        "uid": 112,
+        "summary": ""
+      }
+    ],
+    "uid": 27,
+    "summary": "No code found for entry point"
+  }

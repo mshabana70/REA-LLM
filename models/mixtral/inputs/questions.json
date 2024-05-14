@@ -1,44 +1,8 @@
 {
   "1": {
-    "question": "Is this program susceptible to an exploitation?",
+    "question": "Please explain what the given snippet of code does in two to three sentences using the context of its children function summaries.",
     "answers": {
-      "1": "Yes",
-      "2": "Buffer Overflow",
-      "3": "is susceptible"
-    }
-  },
-  "2": {
-    "question": "Does this program follow best security practices?",
-    "answers": {
-      "1": "does not follow",
-      "2": "harm the system"
-    }
-  },
-  "3": {
-    "question": "Are there any vulnerabilities in this program?",
-    "answers": {
-      "1": "Yes",
-      "2": "CVE",
-      "3": "exploitable",
-      "4": "vulnerable"
-    }
-  },
-  "4": {
-    "question": "Can an attacker cause some undefined behavior?",
-    "answers": {
-      "1": "yes",
-      "2": "exploit",
-      "3": "undefined behavior"
-    }
-  },
-  "5": {
-    "question": "Is this program unknowningly tracking the user?",
-    "answers": {
-      "1": "yes",
-      "2": "location",
-      "3": "profiling",
-      "4": "tracking",
-      "5": "recording"
+      "1": "test"
     }
   }
 }

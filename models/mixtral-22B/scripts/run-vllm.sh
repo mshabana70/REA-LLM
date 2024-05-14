@@ -10,8 +10,8 @@ token_memory=6000
 num_of_gpu=4
 HOST=127.0.0.1
 PORT=50000
-access_token="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"
-TYPE=half ## half => RTX8000, bfloat16 = A100
+access_token=$HF_TOKEN
+TYPE=bfloat16 ## half => RTX8000, bfloat16 = A100
 
 singularity \
     run --nv \

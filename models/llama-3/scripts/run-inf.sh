@@ -1,10 +1,11 @@
 #!/bin/bash
 
-#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks-per-node=1
+#SBATCH --nodes=1
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:rtx8000:4
-#SBATCH --time=2:00:00
-#SBATCH --mem=150GB
+#SBATCH --time=8:00:00
+#SBATCH --mem=300GB
 #SBATCH --job-name=llama-3-test
 #SBATCH --mail-type=END
 ##SBATCH --mail-user=ms9761@nyu.edu

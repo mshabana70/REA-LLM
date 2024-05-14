@@ -2,6 +2,8 @@ import requests
 import json
 import os
 from rouge_score import rouge_scorer
+from nltk.translate import bleu_score
+from sentence_transformers import SentenceTransformer, util
 
 HOST = "localhost"
 PORT = "8000"
@@ -13,7 +15,7 @@ DECOMPILED_CODE_DIR = BASE_DIR + "decompiled_code/"
 OUTPUT_DIR = BASE_DIR + "outputs_text/"
 RECURSE_DIR = "/scratch/ms9761/rea-llm/construct_json/app_files/test/"
 
-INSTRUCTION_KEY = "You are a helpful code evaluation bot that summarizes decompiled code from Android applications. Please, provide all answers in concise and accurate paragraph of what the decompiled code is doing.\n"
+INSTRUCTION_KEY = "You are a helpful code evaluation bot that summarizes decompiled code from Android applications to aid security researchers in reversing android applications. Please, provide all answers in concise and accurate paragraph of what the decompiled code is doing.\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
     QUESTIONS = json.load(questions_json)
 
@@ -69,7 +71,12 @@ class APK:
 
         print("Sending request to server...")
         response = requests.post(f"http://{host}:{port}/generate", headers=headers, json=data)
-        llm_response = response.json()["generated_text"]
+        if "error" in response.json().keys() and self.count < 3:
+            print("Error in response, retrying...")
+            self.count += 1
+            return self.ask_llm(prompt_key, question)
+        else:
+            llm_response = response.json()["generated_text"].rstrip()
 
         if len(llm_response) == 0 and self.count < 3:
             print("Empty response received, retrying...")
@@ -79,6 +86,16 @@ class APK:
             print("Empty response received after 3 retries, skipping...")
             return "No summary generated for this function"
         print("Response received!")
+
+        # Find the position of "EOT: true"
+        eot_index = llm_response.find("EOT: true")
+
+        if eot_index != -1:
+            trimmed_response = llm_response[:eot_index].strip()
+            print(trimmed_response)
+            llm_response = trimmed_response
+        else:
+            print("No 'EOT: true' found in the response.")
 
         return llm_response
 
@@ -155,7 +172,7 @@ class APK_Recurse(APK):
         # TODO: How do we format this?
         output = "<s>"
         for m in chat:
-            output += f"Source: {m['role']}\n\n {m['content'].strip()}"
+            output += f"Source: {m['role']}\n\n {m['content']}"
             output += " <step> "
         output += "Source: assistant\nDestination: user\n\n "
         return output
@@ -307,10 +324,11 @@ class APK_Recurse(APK):
             outfile.write(text)
             outfile.close()
 
-    def evaluate_rouge(self):
+    def evaluate_model(self):
         # Initialize RougeScorer
         scorer = rouge_scorer.RougeScorer(['rouge1', 'rougeL'], use_stemmer=True)
         scores = {}
+        model = SentenceTransformer('all-MiniLM-L6-v2')
 
         # Parse completed summaries
         for node in self.funcs:
@@ -322,7 +340,26 @@ class APK_Recurse(APK):
                 score_result = scorer.score(ground_truth, summary)
                 rouge1_score = score_result["rouge1"][0]
                 rougeL_score = score_result["rougeL"][0]
-                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score}
+                
+
+                # Tokenize summaries and ground truths
+                summary_tokens = summary.split()
+                ground_truth_tokens = ground_truth.split()
+
+                # Calculate BLEU score
+                bleu_score_value = bleu_score.sentence_bleu([ground_truth_tokens], summary_tokens)
+
+                # Calulate sentence embeddings
+                summary_embedding = model.encode(summary, convert_to_tensor=True)
+                ground_truth_embedding = model.encode(ground_truth, convert_to_tensor=True)
+
+                # Calculate cosine similarity
+                cosine_score = util.cos_sim(summary_embedding, ground_truth_embedding)
+
+                # Convert from Tensor to float
+                cosine_score = cosine_score.item()
+
+                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score, "BLEU": bleu_score_value, "Cosine": cosine_score}
 
                 # Print scores
                 print(f"Scores for {node['method_name']} at {node['UID']}:\n{scores[node['UID']]}")
@@ -346,7 +383,7 @@ class APK_Recurse(APK):
         for key in avg_scores.keys():
             avg_scores[key] = avg_scores[key] / len(scores)
         
-        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}")
+        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}\nBLEU Avg Score {avg_scores['BLEU']}\nCosine Avg Score {avg_scores['Cosine']}")
         return scores
             
 
@@ -365,7 +402,7 @@ if __name__ == "__main__":
         print("Summarization complete!\n")
 
         print("Evaluating results...")
-        scores = curr_apk.evaluate_rouge()
+        scores = curr_apk.evaluate_model()
 
         print("Writing the results...")
         print(curr_apk.write_json(OUTPUT_DIR + apk_filename))

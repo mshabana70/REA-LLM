@@ -1,0 +1,539 @@
+HELLO
+HELLO2
+Server is not up yet; status=000
+[2m2024-05-13T19:29:27.680005Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Args { model_id: "meta-llama/CodeLlama-70b-Instruct-hf", revision: None, validation_workers: 2, sharded: None, num_shard: None, quantize: None, dtype: None, trust_remote_code: false, max_concurrent_requests: 128, max_best_of: 2, max_stop_sequences: 4, max_top_n_tokens: 5, max_input_length: 4000, max_total_tokens: 6000, waiting_served_ratio: 1.2, max_batch_prefill_tokens: 4096, max_batch_total_tokens: None, max_waiting_tokens: 20, hostname: "0.0.0.0", port: 8000, shard_uds_path: "/tmp/text-generation-server", master_addr: "localhost", master_port: 29500, huggingface_hub_cache: Some("/scratch/ms9761/rea-llm/data"), weights_cache_override: None, disable_custom_kernels: true, cuda_memory_fraction: 1.0, rope_scaling: None, rope_factor: None, json_output: false, otlp_endpoint: None, cors_allow_origin: [], watermark_gamma: None, watermark_delta: None, ngrok: false, ngrok_authtoken: None, ngrok_edge: None, env: false }
+[2m2024-05-13T19:29:27.680029Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Sharding model on 4 processes
+[2m2024-05-13T19:29:27.680111Z[0m [32m INFO[0m [1mdownload[0m: [2mtext_generation_launcher[0m[2m:[0m Starting download process.
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:29:33.798136Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Files are already present on the host. Skipping download.
+
+Server is not up yet; status=000
+[2m2024-05-13T19:29:34.587080Z[0m [32m INFO[0m [1mdownload[0m: [2mtext_generation_launcher[0m[2m:[0m Successfully downloaded weights.
+[2m2024-05-13T19:29:34.587287Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Starting shard [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:29:34.587356Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Starting shard [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:29:34.587305Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Starting shard [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:29:34.587312Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Starting shard [2m[3mrank[0m[2m=[0m2[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:29:37.595207Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m We're not using custom kernels.
+
+[2m2024-05-13T19:29:37.595208Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m We're not using custom kernels.
+
+[2m2024-05-13T19:29:37.595208Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m We're not using custom kernels.
+
+[2m2024-05-13T19:29:37.595214Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m We're not using custom kernels.
+
+[2m2024-05-13T19:29:37.609477Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Unable to use Flash Attention V2: GPU with CUDA capability 7 5 is not supported for Flash Attention V2
+
+[2m2024-05-13T19:29:37.609480Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Unable to use Flash Attention V2: GPU with CUDA capability 7 5 is not supported for Flash Attention V2
+
+[2m2024-05-13T19:29:37.609482Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Unable to use Flash Attention V2: GPU with CUDA capability 7 5 is not supported for Flash Attention V2
+
+[2m2024-05-13T19:29:37.610205Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Unable to use Flash Attention V2: GPU with CUDA capability 7 5 is not supported for Flash Attention V2
+
+[2m2024-05-13T19:29:37.643195Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Could not import Mistral model: Mistral model requires flash attn v2
+
+[2m2024-05-13T19:29:37.643196Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Could not import Mistral model: Mistral model requires flash attn v2
+
+[2m2024-05-13T19:29:37.643196Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Could not import Mistral model: Mistral model requires flash attn v2
+
+[2m2024-05-13T19:29:37.643207Z[0m [33m WARN[0m [2mtext_generation_launcher[0m[2m:[0m Could not import Mistral model: Mistral model requires flash attn v2
+
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:29:44.594827Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:29:44.597340Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:29:44.597367Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:29:44.602817Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:29:54.613156Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:29:54.620048Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:29:54.622423Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:29:54.623506Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:30:04.637229Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:30:04.637269Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:30:04.644955Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+Server is not up yet; status=000
+[2m2024-05-13T19:30:04.659970Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:30:14.655192Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:30:14.661465Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:30:14.675021Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:30:14.685690Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:30:24.680065Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:30:24.686756Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:30:24.696775Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:30:24.700800Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:30:34.710832Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:30:34.710965Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:30:34.710980Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:30:34.710990Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:30:44.726908Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:30:44.733325Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:30:44.735063Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:30:44.736046Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:30:54.753985Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:30:54.756347Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:30:54.756410Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:30:54.759388Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:31:04.768113Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:31:04.771341Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:31:04.777456Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:31:04.789570Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:31:14.785092Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:31:14.792316Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:31:14.802179Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:31:14.805711Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:31:24.809616Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:31:24.814976Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:31:24.826245Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:31:24.844602Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:31:34.836966Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:31:34.845624Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:31:34.855352Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:31:34.898429Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:31:44.872130Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:31:44.879803Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:31:44.880780Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:31:44.929964Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:31:54.895440Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:31:54.897827Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:31:54.899024Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:31:54.951270Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:32:04.913554Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:32:04.917083Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:32:04.920128Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:32:04.998246Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:32:14.938722Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:32:14.945601Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:32:14.957909Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:32:15.014617Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:32:24.961876Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:32:24.970866Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:32:24.986104Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:32:25.024880Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:32:34.981450Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:32:34.981456Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:32:35.000844Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:32:35.075961Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:32:44.997666Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:32:45.003805Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:32:45.020048Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:32:45.111729Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:32:55.015254Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:32:55.015254Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:32:55.031643Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:32:55.126439Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:33:05.032338Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:33:05.048193Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:33:05.050227Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:33:05.147587Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:33:15.050105Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:33:15.070174Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:33:15.078067Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:33:15.182118Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:33:25.099322Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:33:25.099517Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:33:25.103847Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+Server is not up yet; status=000
+[2m2024-05-13T19:33:25.204831Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:33:35.115984Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:33:35.123008Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:33:35.136732Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+Server is not up yet; status=000
+[2m2024-05-13T19:33:35.216097Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:33:45.140425Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:33:45.146877Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:33:45.152510Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:33:45.246343Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Waiting for shard to be ready... [2m[3mrank[0m[2m=[0m3[0m
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:33:53.713238Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Server started at unix:///tmp/text-generation-server-2
+
+[2m2024-05-13T19:33:53.713241Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Server started at unix:///tmp/text-generation-server-3
+
+[2m2024-05-13T19:33:53.713238Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Server started at unix:///tmp/text-generation-server-1
+
+[2m2024-05-13T19:33:53.713237Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Server started at unix:///tmp/text-generation-server-0
+
+[2m2024-05-13T19:33:53.754539Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Shard ready in 259.166347531s [2m[3mrank[0m[2m=[0m3[0m
+[2m2024-05-13T19:33:53.770416Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Shard ready in 259.181908253s [2m[3mrank[0m[2m=[0m1[0m
+[2m2024-05-13T19:33:53.770428Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Shard ready in 259.181532194s [2m[3mrank[0m[2m=[0m2[0m
+[2m2024-05-13T19:33:53.777044Z[0m [32m INFO[0m [1mshard-manager[0m: [2mtext_generation_launcher[0m[2m:[0m Shard ready in 259.18514294s [2m[3mrank[0m[2m=[0m0[0m
+[2m2024-05-13T19:33:53.832298Z[0m [32m INFO[0m [2mtext_generation_launcher[0m[2m:[0m Starting Webserver
+Server is not up yet; status=000
+[2m2024-05-13T19:33:54.818835Z[0m [33m WARN[0m [2mtext_generation_router[0m[2m:[0m [2mrouter/src/main.rs[0m[2m:[0m[2m349:[0m `--revision` is not set
+[2m2024-05-13T19:33:54.818851Z[0m [33m WARN[0m [2mtext_generation_router[0m[2m:[0m [2mrouter/src/main.rs[0m[2m:[0m[2m350:[0m We strongly advise to set it to a known supported commit.
+[2m2024-05-13T19:33:54.967456Z[0m [32m INFO[0m [2mtext_generation_router[0m[2m:[0m [2mrouter/src/main.rs[0m[2m:[0m[2m371:[0m Serving revision 2826050dce6c8271bb9f667083b64e8254bd374f of model meta-llama/CodeLlama-70b-Instruct-hf
+[2m2024-05-13T19:33:55.109235Z[0m [32m INFO[0m [2mtext_generation_router[0m[2m:[0m [2mrouter/src/main.rs[0m[2m:[0m[2m213:[0m Warming up model
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+Server is not up yet; status=000
+[2m2024-05-13T19:34:04.521813Z[0m [32m INFO[0m [2mtext_generation_router[0m[2m:[0m [2mrouter/src/main.rs[0m[2m:[0m[2m246:[0m Setting max batch total tokens to 106544
+[2m2024-05-13T19:34:04.521831Z[0m [32m INFO[0m [2mtext_generation_router[0m[2m:[0m [2mrouter/src/main.rs[0m[2m:[0m[2m247:[0m Connected
+Server is up!
+HELLO FROM PYTHON
+[2m2024-05-13T19:37:44.306231Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.043421632s" [3mvalidation_time[0m[2m=[0m"3.12275ms" [3mqueue_time[0m[2m=[0m"51.314µs" [3minference_time[0m[2m=[0m"177.040247844s" [3mtime_per_token[0m[2m=[0m"88.520123ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:40:41.462592Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.153023477s" [3mvalidation_time[0m[2m=[0m"1.992759ms" [3mqueue_time[0m[2m=[0m"29.686µs" [3minference_time[0m[2m=[0m"177.15100126s" [3mtime_per_token[0m[2m=[0m"88.5755ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:43:35.760457Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.294565431s" [3mvalidation_time[0m[2m=[0m"987.06µs" [3mqueue_time[0m[2m=[0m"31.469µs" [3minference_time[0m[2m=[0m"174.293547115s" [3mtime_per_token[0m[2m=[0m"87.146773ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:46:34.951098Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"179.18697909s" [3mvalidation_time[0m[2m=[0m"2.320728ms" [3mqueue_time[0m[2m=[0m"28.578µs" [3minference_time[0m[2m=[0m"179.184630011s" [3mtime_per_token[0m[2m=[0m"89.592315ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:49:29.662742Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.708290036s" [3mvalidation_time[0m[2m=[0m"1.553605ms" [3mqueue_time[0m[2m=[0m"26.528µs" [3minference_time[0m[2m=[0m"174.706710141s" [3mtime_per_token[0m[2m=[0m"87.353355ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:52:22.013290Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.347098571s" [3mvalidation_time[0m[2m=[0m"1.080245ms" [3mqueue_time[0m[2m=[0m"24.278µs" [3minference_time[0m[2m=[0m"172.345994289s" [3mtime_per_token[0m[2m=[0m"86.172997ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:55:14.650279Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.633677076s" [3mvalidation_time[0m[2m=[0m"1.116768ms" [3mqueue_time[0m[2m=[0m"26.57µs" [3minference_time[0m[2m=[0m"172.632533967s" [3mtime_per_token[0m[2m=[0m"86.316266ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T19:58:07.907305Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.253595129s" [3mvalidation_time[0m[2m=[0m"867.096µs" [3mqueue_time[0m[2m=[0m"40.479µs" [3minference_time[0m[2m=[0m"173.252687764s" [3mtime_per_token[0m[2m=[0m"86.626343ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:00:59.143899Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.233132758s" [3mvalidation_time[0m[2m=[0m"407.197µs" [3mqueue_time[0m[2m=[0m"20.807µs" [3minference_time[0m[2m=[0m"171.232704987s" [3mtime_per_token[0m[2m=[0m"85.616352ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:03:50.260248Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.113219101s" [3mvalidation_time[0m[2m=[0m"408.339µs" [3mqueue_time[0m[2m=[0m"29.468µs" [3minference_time[0m[2m=[0m"171.112781514s" [3mtime_per_token[0m[2m=[0m"85.55639ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:06:41.573054Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.309620081s" [3mvalidation_time[0m[2m=[0m"471.34µs" [3mqueue_time[0m[2m=[0m"26.067µs" [3minference_time[0m[2m=[0m"171.309122917s" [3mtime_per_token[0m[2m=[0m"85.654561ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:09:32.896164Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.319946107s" [3mvalidation_time[0m[2m=[0m"456.174µs" [3mqueue_time[0m[2m=[0m"27.893µs" [3minference_time[0m[2m=[0m"171.319462309s" [3mtime_per_token[0m[2m=[0m"85.659731ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:12:24.319751Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.420387621s" [3mvalidation_time[0m[2m=[0m"305.297µs" [3mqueue_time[0m[2m=[0m"28.565µs" [3minference_time[0m[2m=[0m"171.420053981s" [3mtime_per_token[0m[2m=[0m"85.710026ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:15:15.815887Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.493008895s" [3mvalidation_time[0m[2m=[0m"472.441µs" [3mqueue_time[0m[2m=[0m"23.133µs" [3minference_time[0m[2m=[0m"171.492513538s" [3mtime_per_token[0m[2m=[0m"85.746256ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:18:07.229128Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.410151831s" [3mvalidation_time[0m[2m=[0m"461.429µs" [3mqueue_time[0m[2m=[0m"22.505µs" [3minference_time[0m[2m=[0m"171.409668134s" [3mtime_per_token[0m[2m=[0m"85.704834ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:20:58.570839Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.338542437s" [3mvalidation_time[0m[2m=[0m"485.448µs" [3mqueue_time[0m[2m=[0m"26.68µs" [3minference_time[0m[2m=[0m"171.338030518s" [3mtime_per_token[0m[2m=[0m"85.669015ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:23:55.816883Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.242947763s" [3mvalidation_time[0m[2m=[0m"1.815564ms" [3mqueue_time[0m[2m=[0m"20.021µs" [3minference_time[0m[2m=[0m"177.241112567s" [3mtime_per_token[0m[2m=[0m"88.620556ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:26:50.510750Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.69076607s" [3mvalidation_time[0m[2m=[0m"1.343944ms" [3mqueue_time[0m[2m=[0m"32.764µs" [3minference_time[0m[2m=[0m"174.689389575s" [3mtime_per_token[0m[2m=[0m"87.344694ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:29:42.501682Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.987835858s" [3mvalidation_time[0m[2m=[0m"522.513µs" [3mqueue_time[0m[2m=[0m"48.556µs" [3minference_time[0m[2m=[0m"171.987264992s" [3mtime_per_token[0m[2m=[0m"85.993632ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:32:37.063294Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.558506518s" [3mvalidation_time[0m[2m=[0m"534.779µs" [3mqueue_time[0m[2m=[0m"24.447µs" [3minference_time[0m[2m=[0m"174.557947572s" [3mtime_per_token[0m[2m=[0m"87.278973ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:35:39.540786Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"182.474380577s" [3mvalidation_time[0m[2m=[0m"1.995805ms" [3mqueue_time[0m[2m=[0m"24.644µs" [3minference_time[0m[2m=[0m"182.472360325s" [3mtime_per_token[0m[2m=[0m"91.23618ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:38:34.258617Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.714711024s" [3mvalidation_time[0m[2m=[0m"941.522µs" [3mqueue_time[0m[2m=[0m"28.419µs" [3minference_time[0m[2m=[0m"174.713741312s" [3mtime_per_token[0m[2m=[0m"87.35687ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:41:26.384256Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.12251384s" [3mvalidation_time[0m[2m=[0m"348.072µs" [3mqueue_time[0m[2m=[0m"29.797µs" [3minference_time[0m[2m=[0m"172.122136202s" [3mtime_per_token[0m[2m=[0m"86.061068ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:44:28.234228Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"181.846881048s" [3mvalidation_time[0m[2m=[0m"2.044506ms" [3mqueue_time[0m[2m=[0m"41.936µs" [3minference_time[0m[2m=[0m"181.844794824s" [3mtime_per_token[0m[2m=[0m"90.922397ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:47:22.765961Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.528628829s" [3mvalidation_time[0m[2m=[0m"904.342µs" [3mqueue_time[0m[2m=[0m"40.273µs" [3minference_time[0m[2m=[0m"174.527684428s" [3mtime_per_token[0m[2m=[0m"87.263842ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:50:19.977664Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.208456408s" [3mvalidation_time[0m[2m=[0m"1.829313ms" [3mqueue_time[0m[2m=[0m"25.213µs" [3minference_time[0m[2m=[0m"177.206602107s" [3mtime_per_token[0m[2m=[0m"88.603301ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:53:14.671297Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.690505461s" [3mvalidation_time[0m[2m=[0m"1.477909ms" [3mqueue_time[0m[2m=[0m"24.765µs" [3minference_time[0m[2m=[0m"174.689003019s" [3mtime_per_token[0m[2m=[0m"87.344501ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:56:06.684900Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.010408643s" [3mvalidation_time[0m[2m=[0m"543.596µs" [3mqueue_time[0m[2m=[0m"23.661µs" [3minference_time[0m[2m=[0m"172.009841599s" [3mtime_per_token[0m[2m=[0m"86.00492ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T20:59:01.431828Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.743680587s" [3mvalidation_time[0m[2m=[0m"534.982µs" [3mqueue_time[0m[2m=[0m"28.587µs" [3minference_time[0m[2m=[0m"174.743117235s" [3mtime_per_token[0m[2m=[0m"87.371558ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:02:03.510112Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"182.075030265s" [3mvalidation_time[0m[2m=[0m"2.164331ms" [3mqueue_time[0m[2m=[0m"48.392µs" [3minference_time[0m[2m=[0m"182.072817751s" [3mtime_per_token[0m[2m=[0m"91.036408ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:04:55.333327Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.820045402s" [3mvalidation_time[0m[2m=[0m"365.355µs" [3mqueue_time[0m[2m=[0m"40.506µs" [3minference_time[0m[2m=[0m"171.81963976s" [3mtime_per_token[0m[2m=[0m"85.909819ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:07:52.590567Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.254181926s" [3mvalidation_time[0m[2m=[0m"1.478636ms" [3mqueue_time[0m[2m=[0m"52.975µs" [3minference_time[0m[2m=[0m"177.252650603s" [3mtime_per_token[0m[2m=[0m"88.626325ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:10:47.270203Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"174.676575173s" [3mvalidation_time[0m[2m=[0m"600.704µs" [3mqueue_time[0m[2m=[0m"52.655µs" [3minference_time[0m[2m=[0m"174.675922024s" [3mtime_per_token[0m[2m=[0m"87.337961ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:13:44.617289Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.34373094s" [3mvalidation_time[0m[2m=[0m"1.185637ms" [3mqueue_time[0m[2m=[0m"28.2µs" [3minference_time[0m[2m=[0m"177.342517336s" [3mtime_per_token[0m[2m=[0m"88.671258ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:16:35.960132Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.339749626s" [3mvalidation_time[0m[2m=[0m"476.078µs" [3mqueue_time[0m[2m=[0m"22.958µs" [3minference_time[0m[2m=[0m"171.339250819s" [3mtime_per_token[0m[2m=[0m"85.669625ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:19:27.428834Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.465592273s" [3mvalidation_time[0m[2m=[0m"601.343µs" [3mqueue_time[0m[2m=[0m"24.014µs" [3minference_time[0m[2m=[0m"171.464972593s" [3mtime_per_token[0m[2m=[0m"85.732486ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:22:18.957637Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.525731895s" [3mvalidation_time[0m[2m=[0m"314.122µs" [3mqueue_time[0m[2m=[0m"34.666µs" [3minference_time[0m[2m=[0m"171.525383341s" [3mtime_per_token[0m[2m=[0m"85.762691ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:25:10.507306Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.546599757s" [3mvalidation_time[0m[2m=[0m"348.367µs" [3mqueue_time[0m[2m=[0m"35.301µs" [3minference_time[0m[2m=[0m"171.546216474s" [3mtime_per_token[0m[2m=[0m"85.773108ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:28:01.875860Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.365496419s" [3mvalidation_time[0m[2m=[0m"310.946µs" [3mqueue_time[0m[2m=[0m"24.67µs" [3minference_time[0m[2m=[0m"171.365160997s" [3mtime_per_token[0m[2m=[0m"85.68258ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:30:53.342674Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.463710026s" [3mvalidation_time[0m[2m=[0m"318.759µs" [3mqueue_time[0m[2m=[0m"23.585µs" [3minference_time[0m[2m=[0m"171.463367911s" [3mtime_per_token[0m[2m=[0m"85.731683ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:33:44.676696Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.330961835s" [3mvalidation_time[0m[2m=[0m"314.194µs" [3mqueue_time[0m[2m=[0m"29.328µs" [3minference_time[0m[2m=[0m"171.330618521s" [3mtime_per_token[0m[2m=[0m"85.665309ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:36:36.153761Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.47400407s" [3mvalidation_time[0m[2m=[0m"337.591µs" [3mqueue_time[0m[2m=[0m"29µs" [3minference_time[0m[2m=[0m"171.473637703s" [3mtime_per_token[0m[2m=[0m"85.736818ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:39:27.261742Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.104967469s" [3mvalidation_time[0m[2m=[0m"321.524µs" [3mqueue_time[0m[2m=[0m"25.326µs" [3minference_time[0m[2m=[0m"171.104620825s" [3mtime_per_token[0m[2m=[0m"85.55231ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:42:18.340098Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.075295404s" [3mvalidation_time[0m[2m=[0m"316.149µs" [3mqueue_time[0m[2m=[0m"27.894µs" [3minference_time[0m[2m=[0m"171.074951608s" [3mtime_per_token[0m[2m=[0m"85.537475ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:45:09.003888Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"170.660508832s" [3mvalidation_time[0m[2m=[0m"516.855µs" [3mqueue_time[0m[2m=[0m"29.591µs" [3minference_time[0m[2m=[0m"170.659962622s" [3mtime_per_token[0m[2m=[0m"85.329981ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:48:00.050120Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.043137844s" [3mvalidation_time[0m[2m=[0m"481.707µs" [3mqueue_time[0m[2m=[0m"29.221µs" [3minference_time[0m[2m=[0m"171.04262728s" [3mtime_per_token[0m[2m=[0m"85.521313ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:50:51.375101Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.321899351s" [3mvalidation_time[0m[2m=[0m"333.027µs" [3mqueue_time[0m[2m=[0m"28.506µs" [3minference_time[0m[2m=[0m"171.321538039s" [3mtime_per_token[0m[2m=[0m"85.660769ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:53:42.636315Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.258075894s" [3mvalidation_time[0m[2m=[0m"322.675µs" [3mqueue_time[0m[2m=[0m"23.38µs" [3minference_time[0m[2m=[0m"171.257730057s" [3mtime_per_token[0m[2m=[0m"85.628865ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:56:33.875534Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.236160951s" [3mvalidation_time[0m[2m=[0m"306.896µs" [3mqueue_time[0m[2m=[0m"27.429µs" [3minference_time[0m[2m=[0m"171.23582685s" [3mtime_per_token[0m[2m=[0m"85.617913ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T21:59:24.885240Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.006513066s" [3mvalidation_time[0m[2m=[0m"326.402µs" [3mqueue_time[0m[2m=[0m"22.89µs" [3minference_time[0m[2m=[0m"171.006163981s" [3mtime_per_token[0m[2m=[0m"85.503081ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:02:15.990013Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.101724082s" [3mvalidation_time[0m[2m=[0m"308.294µs" [3mqueue_time[0m[2m=[0m"23.032µs" [3minference_time[0m[2m=[0m"171.101392985s" [3mtime_per_token[0m[2m=[0m"85.550696ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:05:07.369680Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.376566934s" [3mvalidation_time[0m[2m=[0m"329.134µs" [3mqueue_time[0m[2m=[0m"30.859µs" [3minference_time[0m[2m=[0m"171.376207166s" [3mtime_per_token[0m[2m=[0m"85.688103ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:07:58.686531Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.313805932s" [3mvalidation_time[0m[2m=[0m"317.22µs" [3mqueue_time[0m[2m=[0m"27.158µs" [3minference_time[0m[2m=[0m"171.31346179s" [3mtime_per_token[0m[2m=[0m"85.65673ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:10:49.953507Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.263824679s" [3mvalidation_time[0m[2m=[0m"336.915µs" [3mqueue_time[0m[2m=[0m"28.736µs" [3minference_time[0m[2m=[0m"171.263459269s" [3mtime_per_token[0m[2m=[0m"85.631729ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:13:41.231037Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.274467279s" [3mvalidation_time[0m[2m=[0m"319.53µs" [3mqueue_time[0m[2m=[0m"32.568µs" [3minference_time[0m[2m=[0m"171.274115403s" [3mtime_per_token[0m[2m=[0m"85.637057ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:16:32.760794Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.526549528s" [3mvalidation_time[0m[2m=[0m"316.285µs" [3mqueue_time[0m[2m=[0m"29.496µs" [3minference_time[0m[2m=[0m"171.526203964s" [3mtime_per_token[0m[2m=[0m"85.763101ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:19:24.271481Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.507618523s" [3mvalidation_time[0m[2m=[0m"306.402µs" [3mqueue_time[0m[2m=[0m"28.574µs" [3minference_time[0m[2m=[0m"171.507283766s" [3mtime_per_token[0m[2m=[0m"85.753641ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:22:15.431997Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.157262751s" [3mvalidation_time[0m[2m=[0m"517.359µs" [3mqueue_time[0m[2m=[0m"27.198µs" [3minference_time[0m[2m=[0m"171.156718406s" [3mtime_per_token[0m[2m=[0m"85.578359ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:25:06.876961Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.441862465s" [3mvalidation_time[0m[2m=[0m"459.675µs" [3mqueue_time[0m[2m=[0m"23.166µs" [3minference_time[0m[2m=[0m"171.441379866s" [3mtime_per_token[0m[2m=[0m"85.720689ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:27:58.269867Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.389795348s" [3mvalidation_time[0m[2m=[0m"317.459µs" [3mqueue_time[0m[2m=[0m"23.465µs" [3minference_time[0m[2m=[0m"171.389454635s" [3mtime_per_token[0m[2m=[0m"85.694727ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:30:49.446754Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.17382462s" [3mvalidation_time[0m[2m=[0m"307.971µs" [3mqueue_time[0m[2m=[0m"18.009µs" [3minference_time[0m[2m=[0m"171.173498878s" [3mtime_per_token[0m[2m=[0m"85.586749ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:33:40.694753Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.244917384s" [3mvalidation_time[0m[2m=[0m"311.289µs" [3mqueue_time[0m[2m=[0m"27.641µs" [3minference_time[0m[2m=[0m"171.244578687s" [3mtime_per_token[0m[2m=[0m"85.622289ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:36:32.021137Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.323322067s" [3mvalidation_time[0m[2m=[0m"324.887µs" [3mqueue_time[0m[2m=[0m"26.891µs" [3minference_time[0m[2m=[0m"171.322970455s" [3mtime_per_token[0m[2m=[0m"85.661485ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:39:27.798872Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"175.774565154s" [3mvalidation_time[0m[2m=[0m"1.666872ms" [3mqueue_time[0m[2m=[0m"53.431µs" [3minference_time[0m[2m=[0m"175.772845018s" [3mtime_per_token[0m[2m=[0m"87.886422ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:42:19.666835Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.864766415s" [3mvalidation_time[0m[2m=[0m"736.062µs" [3mqueue_time[0m[2m=[0m"31.982µs" [3minference_time[0m[2m=[0m"171.863998644s" [3mtime_per_token[0m[2m=[0m"85.931999ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:45:12.628404Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.958439107s" [3mvalidation_time[0m[2m=[0m"814.569µs" [3mqueue_time[0m[2m=[0m"60.308µs" [3minference_time[0m[2m=[0m"172.957564449s" [3mtime_per_token[0m[2m=[0m"86.478782ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:48:05.821566Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.190004761s" [3mvalidation_time[0m[2m=[0m"918.578µs" [3mqueue_time[0m[2m=[0m"31.304µs" [3minference_time[0m[2m=[0m"173.189055103s" [3mtime_per_token[0m[2m=[0m"86.594527ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:50:57.633241Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.80858309s" [3mvalidation_time[0m[2m=[0m"517.349µs" [3mqueue_time[0m[2m=[0m"23.688µs" [3minference_time[0m[2m=[0m"171.808042302s" [3mtime_per_token[0m[2m=[0m"85.904021ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:53:51.407922Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.771534821s" [3mvalidation_time[0m[2m=[0m"964.598µs" [3mqueue_time[0m[2m=[0m"39.192µs" [3minference_time[0m[2m=[0m"173.770531239s" [3mtime_per_token[0m[2m=[0m"86.885265ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:56:50.036860Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"178.625751137s" [3mvalidation_time[0m[2m=[0m"1.686167ms" [3mqueue_time[0m[2m=[0m"27.17µs" [3minference_time[0m[2m=[0m"178.62403803s" [3mtime_per_token[0m[2m=[0m"89.312019ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T22:59:41.873135Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.833119003s" [3mvalidation_time[0m[2m=[0m"501.92µs" [3mqueue_time[0m[2m=[0m"28.254µs" [3minference_time[0m[2m=[0m"171.832589045s" [3mtime_per_token[0m[2m=[0m"85.916294ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:02:34.943970Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.06758252s" [3mvalidation_time[0m[2m=[0m"1.314326ms" [3mqueue_time[0m[2m=[0m"33.688µs" [3minference_time[0m[2m=[0m"173.06623473s" [3mtime_per_token[0m[2m=[0m"86.533117ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:05:28.075149Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.127945607s" [3mvalidation_time[0m[2m=[0m"1.042822ms" [3mqueue_time[0m[2m=[0m"24.578µs" [3minference_time[0m[2m=[0m"173.126878432s" [3mtime_per_token[0m[2m=[0m"86.563439ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:08:23.670163Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"175.591700595s" [3mvalidation_time[0m[2m=[0m"1.011666ms" [3mqueue_time[0m[2m=[0m"31.011µs" [3minference_time[0m[2m=[0m"175.590658136s" [3mtime_per_token[0m[2m=[0m"87.795329ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:11:15.596080Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.922786556s" [3mvalidation_time[0m[2m=[0m"569.026µs" [3mqueue_time[0m[2m=[0m"26.496µs" [3minference_time[0m[2m=[0m"171.922191276s" [3mtime_per_token[0m[2m=[0m"85.961095ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:14:08.821769Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.222560004s" [3mvalidation_time[0m[2m=[0m"813.543µs" [3mqueue_time[0m[2m=[0m"24.495µs" [3minference_time[0m[2m=[0m"173.22172217s" [3mtime_per_token[0m[2m=[0m"86.610861ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:17:04.540160Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"175.715215667s" [3mvalidation_time[0m[2m=[0m"1.375015ms" [3mqueue_time[0m[2m=[0m"22.099µs" [3minference_time[0m[2m=[0m"175.713818815s" [3mtime_per_token[0m[2m=[0m"87.856909ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:19:56.463058Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.919808324s" [3mvalidation_time[0m[2m=[0m"511.343µs" [3mqueue_time[0m[2m=[0m"24.097µs" [3minference_time[0m[2m=[0m"171.919273125s" [3mtime_per_token[0m[2m=[0m"85.959636ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:22:49.360462Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.89426789s" [3mvalidation_time[0m[2m=[0m"801.453µs" [3mqueue_time[0m[2m=[0m"52.109µs" [3minference_time[0m[2m=[0m"172.89341459s" [3mtime_per_token[0m[2m=[0m"86.446707ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:25:42.499387Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.135819367s" [3mvalidation_time[0m[2m=[0m"825.659µs" [3mqueue_time[0m[2m=[0m"54.208µs" [3minference_time[0m[2m=[0m"173.134939729s" [3mtime_per_token[0m[2m=[0m"86.567469ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:28:34.428460Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"171.925978361s" [3mvalidation_time[0m[2m=[0m"499.679µs" [3mqueue_time[0m[2m=[0m"21.362µs" [3minference_time[0m[2m=[0m"171.925457562s" [3mtime_per_token[0m[2m=[0m"85.962728ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:31:28.121167Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.689528343s" [3mvalidation_time[0m[2m=[0m"892.821µs" [3mqueue_time[0m[2m=[0m"33.652µs" [3minference_time[0m[2m=[0m"173.68860212s" [3mtime_per_token[0m[2m=[0m"86.844301ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:34:25.288703Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"177.16359101s" [3mvalidation_time[0m[2m=[0m"1.491766ms" [3mqueue_time[0m[2m=[0m"58.651µs" [3minference_time[0m[2m=[0m"177.162040806s" [3mtime_per_token[0m[2m=[0m"88.58102ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:37:18.546361Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.254502425s" [3mvalidation_time[0m[2m=[0m"878.303µs" [3mqueue_time[0m[2m=[0m"23.981µs" [3minference_time[0m[2m=[0m"173.253600363s" [3mtime_per_token[0m[2m=[0m"86.6268ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:40:11.731213Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"173.181722828s" [3mvalidation_time[0m[2m=[0m"714.501µs" [3mqueue_time[0m[2m=[0m"31.551µs" [3minference_time[0m[2m=[0m"173.180977001s" [3mtime_per_token[0m[2m=[0m"86.590488ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:43:04.538204Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"172.803746547s" [3mvalidation_time[0m[2m=[0m"562.037µs" [3mqueue_time[0m[2m=[0m"29.679µs" [3minference_time[0m[2m=[0m"172.803155069s" [3mtime_per_token[0m[2m=[0m"86.401577ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+[2m2024-05-13T23:46:02.591711Z[0m [32m INFO[0m [1mgenerate[0m[1m{[0m[3mparameters[0m[2m=[0mGenerateParameters { best_of: None, temperature: None, repetition_penalty: None, top_k: None, top_p: None, typical_p: None, do_sample: false, max_new_tokens: Some(2000), return_full_text: None, stop: [], truncate: None, watermark: false, details: false, decoder_input_details: false, seed: None, top_n_tokens: None } [3mtotal_time[0m[2m=[0m"178.050224066s" [3mvalidation_time[0m[2m=[0m"1.786553ms" [3mqueue_time[0m[2m=[0m"27.635µs" [3minference_time[0m[2m=[0m"178.048410176s" [3mtime_per_token[0m[2m=[0m"89.024205ms" [3mseed[0m[2m=[0m"None"[1m}[0m[2m:[0m [2mtext_generation_router::server[0m[2m:[0m [2mrouter/src/server.rs[0m[2m:[0m[2m289:[0m Success
+/ext3/miniconda3/envs/llama-env/lib/python3.11/site-packages/nltk/translate/bleu_score.py:552: UserWarning: 
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/ext3/miniconda3/envs/llama-env/lib/python3.11/site-packages/nltk/translate/bleu_score.py:552: UserWarning: 
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+/ext3/miniconda3/envs/llama-env/lib/python3.11/site-packages/nltk/translate/bleu_score.py:552: UserWarning: 
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+running python request script

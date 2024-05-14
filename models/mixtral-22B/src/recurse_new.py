@@ -2,7 +2,9 @@ import requests
 import json
 import os
 from rouge_score import rouge_scorer
+from nltk.translate import bleu_score
 from openai import OpenAI
+from sentence_transformers import SentenceTransformer, util
 
 HOST = "localhost"
 PORT = "50000"
@@ -20,7 +22,7 @@ client = OpenAI(
             #base_url = f"https://{HOST}/v1"
         )
 
-INSTRUCTION_KEY = "[INST]Analyze the following script of code that will be presented to you between [CODE] and [/CODE] tags and answer the accompanying question.[/INST]\n"
+INSTRUCTION_KEY = "You are a helpful code evaluation bot that summarizes decompiled code from Android applications to aid security researchers in reversing android applications. Please, provide all answers in concise and accurate paragraph of what the decompiled code is doing.\n"
 with open(QUESTIONS_PATH, "r") as questions_json:
     QUESTIONS = json.load(questions_json)
 
@@ -65,23 +67,16 @@ class APK:
         func_name = func_name.replace('<', '')
         return func_name
 
-    def generate_ground_truth(self, prompt_key, question, host=HOST, port=PORT, headers=HEADERS, instruction_key=INSTRUCTION_KEY):
-        # Request GPT 4 for ground truths
-        return None
-
     def ask_llm(self, prompt_key, question, host=HOST, port=PORT, headers=HEADERS, instruction_key=INSTRUCTION_KEY):
-        full_prompt = instruction_key + prompt_key + question
-        data = {
-            "inputs": full_prompt,
-            "parameters": {
-                "max_new_tokens": 2000,
-            },
-        }
+        full_prompt = prompt_key + question
 
         print("Sending request to server...")
         response = client.chat.completions.create(
-                model='mistralai/Mixtral-8x7B-Instruct-v0.1',
-                messages=[{"role": "user", "content": full_prompt}],
+                model='mistralai/Mixtral-8x22B-Instruct-v0.1',
+                messages=[
+                    {"role": "system", "content": INSTRUCTION_KEY}
+                    {"role": "user", "content": full_prompt}
+                    ],
             )
         llm_response = response.choices[0].message.content
 
@@ -305,10 +300,11 @@ class APK_Recurse(APK):
             outfile.write(text)
             outfile.close()
 
-    def evaluate_rouge(self):
+    def evaluate_model(self):
         # Initialize RougeScorer
         scorer = rouge_scorer.RougeScorer(['rouge1', 'rougeL'], use_stemmer=True)
         scores = {}
+        model = SentenceTransformer('all-MiniLM-L6-v2')
 
         # Parse completed summaries
         for node in self.funcs:
@@ -320,7 +316,26 @@ class APK_Recurse(APK):
                 score_result = scorer.score(ground_truth, summary)
                 rouge1_score = score_result["rouge1"][0]
                 rougeL_score = score_result["rougeL"][0]
-                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score}
+                
+
+                # Tokenize summaries and ground truths
+                summary_tokens = summary.split()
+                ground_truth_tokens = ground_truth.split()
+
+                # Calculate BLEU score
+                bleu_score_value = bleu_score.sentence_bleu([ground_truth_tokens], summary_tokens)
+
+                # Calulate sentence embeddings
+                summary_embedding = model.encode(summary, convert_to_tensor=True)
+                ground_truth_embedding = model.encode(ground_truth, convert_to_tensor=True)
+
+                # Calculate cosine similarity
+                cosine_score = util.cos_sim(summary_embedding, ground_truth_embedding)
+
+                # Convert from Tensor to float
+                cosine_score = cosine_score.item()
+
+                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score, "BLEU": bleu_score_value, "Cosine": cosine_score}
 
                 # Print scores
                 print(f"Scores for {node['method_name']} at {node['UID']}:\n{scores[node['UID']]}")
@@ -344,7 +359,7 @@ class APK_Recurse(APK):
         for key in avg_scores.keys():
             avg_scores[key] = avg_scores[key] / len(scores)
         
-        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}")
+        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}\nBLEU Avg Score {avg_scores['BLEU']}\nCosine Avg Score {avg_scores['Cosine']}")
         return scores
             
 
@@ -363,7 +378,7 @@ if __name__ == "__main__":
         print("Summarization complete!\n")
 
         print("Evaluating results...")
-        scores = curr_apk.evaluate_rouge()
+        scores = curr_apk.evaluate_model()
 
         print("Writing the results...")
         print(curr_apk.write_json(OUTPUT_DIR + apk_filename))

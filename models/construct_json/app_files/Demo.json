@@ -1,0 +1,1005 @@
+{
+    "raw": [
+        {
+            "entry_point": "<android.support.v7.app.ActionBarActivity: void <init>()>",
+            "children": [],
+            "uid": 0,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.ActivityFanceApiDemo: void <init>()>",
+            "children": [
+                {
+                    "function": " <example.awarnessapi.ActivityFanceApiDemo$4: void <init>(example.awarnessapi.ActivityFanceApiDemo)>",
+                    "children": [],
+                    "uid": 2,
+                    "summary": ""
+                }
+            ],
+            "uid": 1,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.ActivityFanceApiDemo: void onCreate(android.os.Bundle)>",
+            "children": [],
+            "uid": 15,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.ActivityFanceApiDemo: void onStart()>",
+            "children": [
+                {
+                    "function": " <android.content.IntentFilter: void <clinit>()>",
+                    "children": [],
+                    "uid": 17,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.RuntimeException: void <init>(java.lang.String)>",
+                    "children": [],
+                    "uid": 20,
+                    "summary": ""
+                }
+            ],
+            "uid": 16,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.ActivityFanceApiDemo: void onStop()>",
+            "children": [],
+            "uid": 22,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.CombineFenceApiActivity: void <init>()>",
+            "children": [
+                {
+                    "function": " <example.awarnessapi.CombineFenceApiActivity$4: void <init>(example.awarnessapi.CombineFenceApiActivity)>",
+                    "children": [],
+                    "uid": 24,
+                    "summary": ""
+                }
+            ],
+            "uid": 23,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.CombineFenceApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [],
+            "uid": 26,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.CombineFenceApiActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [],
+            "uid": 27,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.CombineFenceApiActivity: void onStart()>",
+            "children": [
+                {
+                    "function": " <android.content.IntentFilter: void <clinit>()>",
+                    "children": [],
+                    "uid": 29,
+                    "summary": ""
+                }
+            ],
+            "uid": 28,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.CombineFenceApiActivity: void onStop()>",
+            "children": [],
+            "uid": 31,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.HeadphoneFenceApiActivity: void <init>()>",
+            "children": [
+                {
+                    "function": " <example.awarnessapi.HeadphoneFenceApiActivity$4: void <init>(example.awarnessapi.HeadphoneFenceApiActivity)>",
+                    "children": [],
+                    "uid": 33,
+                    "summary": ""
+                }
+            ],
+            "uid": 32,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.HeadphoneFenceApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [],
+            "uid": 35,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.HeadphoneFenceApiActivity: void onStart()>",
+            "children": [
+                {
+                    "function": " <android.content.IntentFilter: void <clinit>()>",
+                    "children": [],
+                    "uid": 37,
+                    "summary": ""
+                }
+            ],
+            "uid": 36,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.HeadphoneFenceApiActivity: void onStop()>",
+            "children": [],
+            "uid": 39,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.LaunchActivity: void <init>()>",
+            "children": [],
+            "uid": 40,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.LaunchActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <example.awarnessapi.LaunchActivity$4: void <init>(example.awarnessapi.LaunchActivity)>",
+                    "children": [],
+                    "uid": 42,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.Object: void <init>()>",
+                    "children": [],
+                    "uid": 45,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.Object: void <init>()>",
+                    "children": [],
+                    "uid": 47,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.Object: void <init>()>",
+                    "children": [],
+                    "uid": 49,
+                    "summary": ""
+                }
+            ],
+            "uid": 41,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.SnapshotApiActivity: void <init>()>",
+            "children": [],
+            "uid": 50,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.SnapshotApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [],
+            "uid": 51,
+            "summary": ""
+        },
+        {
+            "entry_point": "<example.awarnessapi.SnapshotApiActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [],
+            "uid": 52,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void <init>()>",
+            "children": [],
+            "uid": 53,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>",
+            "children": [],
+            "uid": 54,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>",
+            "children": [
+                {
+                    "function": " <android.support.v4.view.KeyEventCompat: void <clinit>()>",
+                    "children": [
+                        {
+                            "function": " <android.support.v4.view.KeyEventCompatHoneycomb: boolean isCtrlPressed(android.view.KeyEvent)>",
+                            "children": [],
+                            "uid": 69,
+                            "summary": ""
+                        }
+                    ],
+                    "uid": 56,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.view.KeyEventCompat: void <clinit>()>",
+                    "children": [],
+                    "uid": 67,
+                    "summary": ""
+                }
+            ],
+            "uid": 55,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>",
+            "children": [],
+            "uid": 71,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>",
+            "children": [],
+            "uid": 72,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>",
+            "children": [],
+            "uid": 73,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [],
+            "uid": 74,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onContentChanged()>",
+            "children": [],
+            "uid": 75,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <android.os.Build$VERSION: void <clinit>()>",
+                    "children": [],
+                    "uid": 77,
+                    "summary": ""
+                }
+            ],
+            "uid": 76,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onDestroy()>",
+            "children": [],
+            "uid": 78,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>",
+            "children": [],
+            "uid": 79,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>",
+            "children": [],
+            "uid": 80,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>",
+            "children": [],
+            "uid": 81,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>",
+            "children": [],
+            "uid": 82,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onPostResume()>",
+            "children": [],
+            "uid": 83,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [],
+            "uid": 84,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onStop()>",
+            "children": [],
+            "uid": 85,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>",
+            "children": [],
+            "uid": 86,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void setContentView(int)>",
+            "children": [],
+            "uid": 87,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>",
+            "children": [],
+            "uid": 88,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>",
+            "children": [],
+            "uid": 89,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v7.app.AppCompatActivity: void setTheme(int)>",
+            "children": [],
+            "uid": 90,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void <init>()>",
+            "children": [
+                {
+                    "function": " <android.support.v4.app.FragmentController: android.support.v4.app.FragmentController createController(android.support.v4.app.FragmentHostCallback)>",
+                    "children": [],
+                    "uid": 92,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.os.Handler: void <init>()>",
+                    "children": [],
+                    "uid": 96,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.app.FragmentHostCallback: void <init>(android.support.v4.app.FragmentActivity)>",
+                    "children": [],
+                    "uid": 100,
+                    "summary": ""
+                }
+            ],
+            "uid": 91,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>",
+            "children": [
+                {
+                    "function": " <android.os.Build$VERSION: void <clinit>()>",
+                    "children": [],
+                    "uid": 123,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.RuntimeException: void <init>(java.lang.String)>",
+                    "children": [],
+                    "uid": 125,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.RuntimeException: void <init>(java.lang.String)>",
+                    "children": [],
+                    "uid": 127,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: void <init>()>",
+                    "children": [],
+                    "uid": 129,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+                    "children": [],
+                    "uid": 135,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: void <init>()>",
+                    "children": [],
+                    "uid": 137,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.System: void <clinit>()>",
+                    "children": [],
+                    "uid": 139,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.Integer: void <clinit>()>",
+                    "children": [],
+                    "uid": 141,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.Integer: java.lang.String toHexString(int)>",
+                    "children": [],
+                    "uid": 143,
+                    "summary": ""
+                }
+            ],
+            "uid": 122,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                {
+                    "function": " <android.util.Log: int w(java.lang.String,java.lang.String)>",
+                    "children": [],
+                    "uid": 146,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+                    "children": [],
+                    "uid": 149,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: void <init>()>",
+                    "children": [],
+                    "uid": 151,
+                    "summary": ""
+                }
+            ],
+            "uid": 145,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onBackPressed()>",
+            "children": [],
+            "uid": 153,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>",
+            "children": [],
+            "uid": 154,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <android.support.v4.util.SparseArrayCompat: void <clinit>()>",
+                    "children": [],
+                    "uid": 156,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.util.SparseArrayCompat: void put(int,java.lang.Object)>",
+                    "children": [
+                        {
+                            "function": " <android.support.v4.util.SparseArrayCompat: void gc()>",
+                            "children": [],
+                            "uid": 162,
+                            "summary": ""
+                        },
+                        {
+                            "function": " <android.support.v4.util.ContainerHelpers: int binarySearch(int[],int,int)>",
+                            "children": [],
+                            "uid": 167,
+                            "summary": ""
+                        },
+                        {
+                            "function": " <android.support.v4.util.ContainerHelpers: int binarySearch(int[],int,int)>",
+                            "children": [],
+                            "uid": 168,
+                            "summary": ""
+                        },
+                        {
+                            "function": " <android.support.v4.util.ContainerHelpers: int idealIntArraySize(int)>",
+                            "children": [
+                                {
+                                    "function": " <android.support.v4.util.ContainerHelpers: int idealByteArraySize(int)>",
+                                    "children": [],
+                                    "uid": 171,
+                                    "summary": ""
+                                }
+                            ],
+                            "uid": 169,
+                            "summary": ""
+                        }
+                    ],
+                    "uid": 159,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.util.ContainerHelpers: void <clinit>()>",
+                    "children": [
+                        {
+                            "function": " <android.support.v4.util.ContainerHelpers: int idealIntArraySize(int)>",
+                            "children": [],
+                            "uid": 180,
+                            "summary": ""
+                        }
+                    ],
+                    "uid": 177,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.util.SparseArrayCompat: void <init>(int)>",
+                    "children": [],
+                    "uid": 182,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.util.Log: int w(java.lang.String,java.lang.String)>",
+                    "children": [],
+                    "uid": 184,
+                    "summary": ""
+                }
+            ],
+            "uid": 155,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>",
+            "children": [
+                {
+                    "function": " <android.os.Build$VERSION: void <clinit>()>",
+                    "children": [],
+                    "uid": 186,
+                    "summary": ""
+                }
+            ],
+            "uid": 185,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>",
+            "children": [],
+            "uid": 187,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>",
+            "children": [],
+            "uid": 188,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onDestroy()>",
+            "children": [],
+            "uid": 189,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: boolean onKeyDown(int,android.view.KeyEvent)>",
+            "children": [
+                {
+                    "function": " <android.os.Build$VERSION: void <clinit>()>",
+                    "children": [],
+                    "uid": 191,
+                    "summary": ""
+                }
+            ],
+            "uid": 190,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onLowMemory()>",
+            "children": [],
+            "uid": 192,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>",
+            "children": [],
+            "uid": 193,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>",
+            "children": [],
+            "uid": 194,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>",
+            "children": [],
+            "uid": 195,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>",
+            "children": [],
+            "uid": 196,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onPause()>",
+            "children": [],
+            "uid": 197,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>",
+            "children": [],
+            "uid": 198,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onPostResume()>",
+            "children": [],
+            "uid": 199,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>",
+            "children": [],
+            "uid": 200,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>",
+            "children": [
+                {
+                    "function": " <android.util.Log: int w(java.lang.String,java.lang.String)>",
+                    "children": [],
+                    "uid": 202,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+                    "children": [],
+                    "uid": 204,
+                    "summary": ""
+                },
+                {
+                    "function": " <java.lang.StringBuilder: void <init>()>",
+                    "children": [],
+                    "uid": 206,
+                    "summary": ""
+                }
+            ],
+            "uid": 201,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onResume()>",
+            "children": [],
+            "uid": 208,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>",
+            "children": [
+                {
+                    "function": " <android.support.v4.app.FragmentActivity$NonConfigurationInstances: void <init>()>",
+                    "children": [],
+                    "uid": 210,
+                    "summary": ""
+                }
+            ],
+            "uid": 209,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <java.lang.String: void <clinit>()>",
+                    "children": [],
+                    "uid": 213,
+                    "summary": ""
+                }
+            ],
+            "uid": 212,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onStart()>",
+            "children": [],
+            "uid": 215,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onStateNotSaved()>",
+            "children": [],
+            "uid": 216,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void onStop()>",
+            "children": [],
+            "uid": 217,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>",
+            "children": [
+                {
+                    "function": " <android.app.Activity: void <clinit>()>",
+                    "children": [],
+                    "uid": 219,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>",
+                    "children": [],
+                    "uid": 221,
+                    "summary": ""
+                }
+            ],
+            "uid": 218,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [],
+            "uid": 227,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [],
+            "uid": 228,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [],
+            "uid": 229,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityJB: void <init>()>",
+            "children": [],
+            "uid": 230,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityJB: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <android.app.Activity: void <clinit>()>",
+                    "children": [],
+                    "uid": 232,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>",
+                    "children": [],
+                    "uid": 233,
+                    "summary": ""
+                }
+            ],
+            "uid": 231,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityJB: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <android.app.Activity: void <clinit>()>",
+                    "children": [],
+                    "uid": 235,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>",
+                    "children": [],
+                    "uid": 236,
+                    "summary": ""
+                }
+            ],
+            "uid": 234,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityHoneycomb: void <init>()>",
+            "children": [],
+            "uid": 237,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityHoneycomb: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>",
+            "children": [
+                {
+                    "function": " <android.os.Build$VERSION: void <clinit>()>",
+                    "children": [],
+                    "uid": 239,
+                    "summary": ""
+                }
+            ],
+            "uid": 238,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityEclair: void <init>()>",
+            "children": [],
+            "uid": 240,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityEclair: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>",
+            "children": [
+                {
+                    "function": " <android.app.Activity: void <clinit>()>",
+                    "children": [],
+                    "uid": 242,
+                    "summary": ""
+                },
+                {
+                    "function": " <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>",
+                    "children": [],
+                    "uid": 243,
+                    "summary": ""
+                }
+            ],
+            "uid": 241,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityDonut: void <init>()>",
+            "children": [],
+            "uid": 244,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityDonut: void onCreate(android.os.Bundle)>",
+            "children": [
+                {
+                    "function": " <android.os.Build$VERSION: void <clinit>()>",
+                    "children": [],
+                    "uid": 246,
+                    "summary": ""
+                }
+            ],
+            "uid": 245,
+            "summary": ""
+        },
+        {
+            "entry_point": "<android.support.v4.app.BaseFragmentActivityDonut: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>",
+            "children": [],
+            "uid": 247,
+            "summary": ""
+        },
+        {
+            "entry_point": "<com.google.android.gms.common.api.GoogleApiActivity: void <init>()>",
+            "children": [],
+            "uid": 248,
+            "summary": ""
+        },
+        {
+            "entry_point": "<com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>",
+            "children": [
+                {
+                    "function": " <com.google.android.gms.internal.zzqh: void <clinit>()>",
+                    "children": [],
+                    "uid": 250,
+                    "summary": ""
+                },
+                {
+                    "function": " <com.google.android.gms.internal.zzqh: com.google.android.gms.internal.zzqh zzaqa()>",
+                    "children": [],
+                    "uid": 253,
+                    "summary": ""
+                }
+            ],
+            "uid": 249,
+            "summary": ""
+        },
+        {
+            "entry_point": "<com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>",
+            "children": [],
+            "uid": 255,
+            "summary": ""
+        },
+        {
+            "entry_point": "<com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>",
+            "children": [],
+            "uid": 256,
+            "summary": ""
+        }
+    ],
+    "functions": [
+        "15_<example.awarnessapi.ActivityFanceApiDemo: void onCreate(android.os.Bundle)>  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_fence_api_demo);\n        this.mActivityFenceStatusTv = (TextView) findViewById(R.id.activity_fence_status);\n        buildApiClient();\n    }",
+        "16_<example.awarnessapi.ActivityFanceApiDemo: void onStart()>  {\n        super.onStart();\n        registerReceiver(this.mActivityFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+        "22_<example.awarnessapi.ActivityFanceApiDemo: void onStop()>  {\n        super.onStop();\n        unregisterReceiver(this.mActivityFenceReceiver);\n        unregisterActivityFence();\n    }",
+        "26_<example.awarnessapi.CombineFenceApiActivity: void onCreate(android.os.Bundle)>  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_combine_fence_api);\n        this.mStatusTv = (TextView) findViewById(R.id.fence_status);\n        buildApiClient();\n    }",
+        "27_<example.awarnessapi.CombineFenceApiActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>  {\n        super.onRequestPermissionsResult(requestCode, permissions, grantResults);\n        if (grantResults[0] == 0) {\n            switch (requestCode) {\n                case LOCATION_PERMISSION_REQUEST_CODE /* 12345678 */:\n                    registerFence();\n                    return;\n                default:\n                    return;\n            }\n        }\n    }",
+        "28_<example.awarnessapi.CombineFenceApiActivity: void onStart()>  {\n        super.onStart();\n        registerReceiver(this.mFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+        "31_<example.awarnessapi.CombineFenceApiActivity: void onStop()>  {\n        super.onStop();\n        unregisterReceiver(this.mFenceReceiver);\n        unregisterFence();\n    }",
+        "35_<example.awarnessapi.HeadphoneFenceApiActivity: void onCreate(android.os.Bundle)>  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_fence_api);\n        this.mHeadPhoneStatusTv = (TextView) findViewById(R.id.fence_status);\n        buildApiClient();\n    }",
+        "36_<example.awarnessapi.HeadphoneFenceApiActivity: void onStart()>  {\n        super.onStart();\n        registerReceiver(this.mHeadPhoneFenceReceiver, new IntentFilter(FENCE_RECEIVER_ACTION));\n    }",
+        "39_<example.awarnessapi.HeadphoneFenceApiActivity: void onStop()>  {\n        super.onStop();\n        unregisterReceiver(this.mHeadPhoneFenceReceiver);\n        unregisterHeadPhoneFence();\n    }",
+        "41_<example.awarnessapi.LaunchActivity: void onCreate(android.os.Bundle)>  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_launch);\n        findViewById(R.id.snap_shot_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.1\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, SnapshotApiActivity.class));\n            }\n        });\n        findViewById(R.id.headphone_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.2\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, HeadphoneFenceApiActivity.class));\n            }\n        });\n        findViewById(R.id.activity_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.3\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, ActivityFanceApiDemo.class));\n            }\n        });\n        findViewById(R.id.combine_fence_api_demo).setOnClickListener(new View.OnClickListener() { // from class: example.awarnessapi.LaunchActivity.4\n            @Override // android.view.View.OnClickListener\n            public void onClick(View view) {\n                LaunchActivity.this.startActivity(new Intent(LaunchActivity.this, CombineFenceApiActivity.class));\n            }\n        });\n    }",
+        "51_<example.awarnessapi.SnapshotApiActivity: void onCreate(android.os.Bundle)>  {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_snapshot);\n        buildApiClient();\n    }",
+        "52_<example.awarnessapi.SnapshotApiActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>  {\n        super.onRequestPermissionsResult(requestCode, permissions, grantResults);\n        if (grantResults[0] == 0) {\n            switch (requestCode) {\n                case GET_LOCATION_PERMISSION_REQUEST_CODE /* 12345 */:\n                    getLocation();\n                    return;\n                case GET_PLACE_PERMISSION_REQUEST_CODE /* 123456 */:\n                    getPlace();\n                    return;\n                case GET_WEATHER_PERMISSION_REQUEST_CODE /* 1234567 */:\n                    getWeather();\n                    return;\n                default:\n                    return;\n            }\n        }\n    }",
+        "54_<android.support.v7.app.AppCompatActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)>  {\n        getDelegate().addContentView(view, params);\n    }",
+        "55_<android.support.v7.app.AppCompatActivity: boolean dispatchKeyEvent(android.view.KeyEvent)>  {\n        if (KeyEventCompat.isCtrlPressed(event) && event.getUnicodeChar(event.getMetaState() & (-28673)) == 60) {\n            int action = event.getAction();\n            if (action == 0) {\n                ActionBar actionBar = getSupportActionBar();\n                if (actionBar != null && actionBar.isShowing() && actionBar.requestFocus()) {\n                    this.mEatKeyUpEvent = true;\n                    return true;\n                }\n            } else if (action == 1 && this.mEatKeyUpEvent) {\n                this.mEatKeyUpEvent = false;\n                return true;\n            }\n        }\n        return super.dispatchKeyEvent(event);\n    }",
+        "69_ <android.support.v4.view.KeyEventCompatHoneycomb: boolean isCtrlPressed(android.view.KeyEvent)>  {\n        return event.isCtrlPressed();\n    }",
+        "71_<android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>  {\n        return getDelegate().findViewById(id);\n    }",
+        "72_<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>  {\n        return getDelegate().getMenuInflater();\n    }",
+        "73_<android.support.v7.app.AppCompatActivity: void invalidateOptionsMenu()>  {\n        getDelegate().invalidateOptionsMenu();\n    }",
+        "74_<android.support.v7.app.AppCompatActivity: void onConfigurationChanged(android.content.res.Configuration)>  {\n        super.onConfigurationChanged(newConfig);\n        getDelegate().onConfigurationChanged(newConfig);\n        if (this.mResources != null) {\n            DisplayMetrics newMetrics = super.getResources().getDisplayMetrics();\n            this.mResources.updateConfiguration(newConfig, newMetrics);\n        }\n    }",
+        "75_<android.support.v7.app.AppCompatActivity: void onContentChanged()>  {\n        onSupportContentChanged();\n    }",
+        "76_<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>  {\n        AppCompatDelegate delegate = getDelegate();\n        delegate.installViewFactory();\n        delegate.onCreate(savedInstanceState);\n        if (delegate.applyDayNight() && this.mThemeId != 0) {\n            if (Build.VERSION.SDK_INT >= 23) {\n                onApplyThemeResource(getTheme(), this.mThemeId, false);\n            } else {\n                setTheme(this.mThemeId);\n            }\n        }\n        super.onCreate(savedInstanceState);\n    }",
+        "78_<android.support.v7.app.AppCompatActivity: void onDestroy()>  {\n        super.onDestroy();\n        getDelegate().onDestroy();\n    }",
+        "79_<android.support.v7.app.AppCompatActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        ActionBar ab = getSupportActionBar();\n        if (item.getItemId() == 16908332 && ab != null && (ab.getDisplayOptions() & 4) != 0) {\n            return onSupportNavigateUp();\n        }\n        return false;\n    }",
+        "80_<android.support.v7.app.AppCompatActivity: boolean onMenuOpened(int,android.view.Menu)>  {\n        return super.onMenuOpened(featureId, menu);\n    }",
+        "81_<android.support.v7.app.AppCompatActivity: void onPanelClosed(int,android.view.Menu)>  {\n        super.onPanelClosed(featureId, menu);\n    }",
+        "82_<android.support.v7.app.AppCompatActivity: void onPostCreate(android.os.Bundle)>  {\n        super.onPostCreate(savedInstanceState);\n        getDelegate().onPostCreate(savedInstanceState);\n    }",
+        "83_<android.support.v7.app.AppCompatActivity: void onPostResume()>  {\n        super.onPostResume();\n        getDelegate().onPostResume();\n    }",
+        "84_<android.support.v7.app.AppCompatActivity: void onSaveInstanceState(android.os.Bundle)>  {\n        super.onSaveInstanceState(outState);\n        getDelegate().onSaveInstanceState(outState);\n    }",
+        "85_<android.support.v7.app.AppCompatActivity: void onStop()>  {\n        super.onStop();\n        getDelegate().onStop();\n    }",
+        "86_<android.support.v7.app.AppCompatActivity: void onTitleChanged(java.lang.CharSequence,int)>  {\n        super.onTitleChanged(title, color);\n        getDelegate().setTitle(title);\n    }",
+        "87_<android.support.v7.app.AppCompatActivity: void setContentView(int)>  {\n        getDelegate().setContentView(layoutResID);\n    }",
+        "88_<android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)>  {\n        getDelegate().setContentView(layoutResID);\n    }",
+        "89_<android.support.v7.app.AppCompatActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>  {\n        getDelegate().setContentView(layoutResID);\n    }",
+        "90_<android.support.v7.app.AppCompatActivity: void setTheme(int)>  {\n        super.setTheme(resid);\n        this.mThemeId = resid;\n    }",
+        "92_ <android.support.v4.app.FragmentController: android.support.v4.app.FragmentController createController(android.support.v4.app.FragmentHostCallback)>  {\n        return new FragmentController(callbacks);\n    }",
+        "122_<android.support.v4.app.FragmentActivity: void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])>  {\n        if (Build.VERSION.SDK_INT >= 11) {\n        }\n        writer.print(prefix);\n        writer.print(\"Local FragmentActivity \");\n        writer.print(Integer.toHexString(System.identityHashCode(this)));\n        writer.println(\" State:\");\n        String innerPrefix = prefix + \"  \";\n        writer.print(innerPrefix);\n        writer.print(\"mCreated=\");\n        writer.print(this.mCreated);\n        writer.print(\"mResumed=\");\n        writer.print(this.mResumed);\n        writer.print(\" mStopped=\");\n        writer.print(this.mStopped);\n        writer.print(\" mReallyStopped=\");\n        writer.println(this.mReallyStopped);\n        this.mFragments.dumpLoaders(innerPrefix, fd, writer, args);\n        this.mFragments.getSupportFragmentManager().dump(prefix, fd, writer, args);\n        writer.print(prefix);\n        writer.println(\"View Hierarchy:\");\n        dumpViewHierarchy(prefix + \"  \", writer, getWindow().getDecorView());\n    }",
+        "135_ <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>  None",
+        "143_ <java.lang.Integer: java.lang.String toHexString(int)>  None",
+        "145_<android.support.v4.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)>  {\n        this.mFragments.noteStateNotSaved();\n        int requestIndex = requestCode >> 16;\n        if (requestIndex != 0) {\n            int requestIndex2 = requestIndex - 1;\n            String who = this.mPendingFragmentActivityResults.get(requestIndex2);\n            this.mPendingFragmentActivityResults.remove(requestIndex2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment targetFragment = this.mFragments.findFragmentByWho(who);\n            if (targetFragment == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n                return;\n            } else {\n                targetFragment.onActivityResult(65535 & requestCode, resultCode, data);\n                return;\n            }\n        }\n        super.onActivityResult(requestCode, resultCode, data);\n    }",
+        "146_ <android.util.Log: int w(java.lang.String,java.lang.String)>  None",
+        "149_ <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>  None",
+        "153_<android.support.v4.app.FragmentActivity: void onBackPressed()>  {\n        if (!this.mFragments.getSupportFragmentManager().popBackStackImmediate()) {\n            onBackPressedNotHandled();\n        }\n    }",
+        "154_<android.support.v4.app.FragmentActivity: void onConfigurationChanged(android.content.res.Configuration)>  {\n        super.onConfigurationChanged(newConfig);\n        this.mFragments.dispatchConfigurationChanged(newConfig);\n    }",
+        "155_<android.support.v4.app.FragmentActivity: void onCreate(android.os.Bundle)>  {\n        this.mFragments.attachHost(null);\n        super.onCreate(savedInstanceState);\n        NonConfigurationInstances nc = (NonConfigurationInstances) getLastNonConfigurationInstance();\n        if (nc != null) {\n            this.mFragments.restoreLoaderNonConfig(nc.loaders);\n        }\n        if (savedInstanceState != null) {\n            Parcelable p = savedInstanceState.getParcelable(FRAGMENTS_TAG);\n            this.mFragments.restoreAllState(p, nc != null ? nc.fragments : null);\n            if (savedInstanceState.containsKey(NEXT_CANDIDATE_REQUEST_INDEX_TAG)) {\n                this.mNextCandidateRequestIndex = savedInstanceState.getInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG);\n                int[] requestCodes = savedInstanceState.getIntArray(ALLOCATED_REQUEST_INDICIES_TAG);\n                String[] fragmentWhos = savedInstanceState.getStringArray(REQUEST_FRAGMENT_WHO_TAG);\n                if (requestCodes == null || fragmentWhos == null || requestCodes.length != fragmentWhos.length) {\n                    Log.w(TAG, \"Invalid requestCode mapping in savedInstanceState.\");\n                } else {\n                    this.mPendingFragmentActivityResults = new SparseArrayCompat<>(requestCodes.length);\n                    for (int i = 0; i < requestCodes.length; i++) {\n                        this.mPendingFragmentActivityResults.put(requestCodes[i], fragmentWhos[i]);\n                    }\n                }\n            }\n        }\n        if (this.mPendingFragmentActivityResults == null) {\n            this.mPendingFragmentActivityResults = new SparseArrayCompat<>();\n            this.mNextCandidateRequestIndex = 0;\n        }\n        this.mFragments.dispatchCreate();\n    }",
+        "159_ <android.support.v4.util.SparseArrayCompat: void put(int,java.lang.Object)>  {\n        int i = ContainerHelpers.binarySearch(this.mKeys, this.mSize, key);\n        if (i >= 0) {\n            this.mValues[i] = value;\n            return;\n        }\n        int i2 = i ^ (-1);\n        if (i2 < this.mSize && this.mValues[i2] == DELETED) {\n            this.mKeys[i2] = key;\n            this.mValues[i2] = value;\n            return;\n        }\n        if (this.mGarbage && this.mSize >= this.mKeys.length) {\n            gc();\n            i2 = ContainerHelpers.binarySearch(this.mKeys, this.mSize, key) ^ (-1);\n        }\n        if (this.mSize >= this.mKeys.length) {\n            int n = ContainerHelpers.idealIntArraySize(this.mSize + 1);\n            int[] nkeys = new int[n];\n            Object[] nvalues = new Object[n];\n            System.arraycopy(this.mKeys, 0, nkeys, 0, this.mKeys.length);\n            System.arraycopy(this.mValues, 0, nvalues, 0, this.mValues.length);\n            this.mKeys = nkeys;\n            this.mValues = nvalues;\n        }\n        if (this.mSize - i2 != 0) {\n            System.arraycopy(this.mKeys, i2, this.mKeys, i2 + 1, this.mSize - i2);\n            System.arraycopy(this.mValues, i2, this.mValues, i2 + 1, this.mSize - i2);\n        }\n        this.mKeys[i2] = key;\n        this.mValues[i2] = value;\n        this.mSize++;\n    }",
+        "162_ <android.support.v4.util.SparseArrayCompat: void gc()>  {\n        int n = this.mSize;\n        int o = 0;\n        int[] keys = this.mKeys;\n        Object[] values = this.mValues;\n        for (int i = 0; i < n; i++) {\n            Object val = values[i];\n            if (val != DELETED) {\n                if (i != o) {\n                    keys[o] = keys[i];\n                    values[o] = val;\n                    values[i] = null;\n                }\n                o++;\n            }\n        }\n        this.mGarbage = false;\n        this.mSize = o;\n    }",
+        "167_ <android.support.v4.util.ContainerHelpers: int binarySearch(int[],int,int)>  {\n        int lo = 0;\n        int hi = size - 1;\n        while (lo <= hi) {\n            int mid = (lo + hi) >>> 1;\n            int midVal = array[mid];\n            if (midVal < value) {\n                lo = mid + 1;\n            } else if (midVal <= value) {\n                return mid;\n            } else {\n                hi = mid - 1;\n            }\n        }\n        return lo ^ (-1);\n    }",
+        "168_ <android.support.v4.util.ContainerHelpers: int binarySearch(int[],int,int)>  {\n        int lo = 0;\n        int hi = size - 1;\n        while (lo <= hi) {\n            int mid = (lo + hi) >>> 1;\n            int midVal = array[mid];\n            if (midVal < value) {\n                lo = mid + 1;\n            } else if (midVal <= value) {\n                return mid;\n            } else {\n                hi = mid - 1;\n            }\n        }\n        return lo ^ (-1);\n    }",
+        "169_ <android.support.v4.util.ContainerHelpers: int idealIntArraySize(int)>  {\n        return idealByteArraySize(need * 4) / 4;\n    }",
+        "171_ <android.support.v4.util.ContainerHelpers: int idealByteArraySize(int)>  {\n        for (int i = 4; i < 32; i++) {\n            if (need <= (1 << i) - 12) {\n                return (1 << i) - 12;\n            }\n        }\n        return need;\n    }",
+        "180_ <android.support.v4.util.ContainerHelpers: int idealIntArraySize(int)>  {\n        return idealByteArraySize(need * 4) / 4;\n    }",
+        "184_ <android.util.Log: int w(java.lang.String,java.lang.String)>  None",
+        "185_<android.support.v4.app.FragmentActivity: boolean onCreatePanelMenu(int,android.view.Menu)>  {\n        if (featureId == 0) {\n            boolean show = super.onCreatePanelMenu(featureId, menu);\n            boolean show2 = show | this.mFragments.dispatchCreateOptionsMenu(menu, getMenuInflater());\n            if (Build.VERSION.SDK_INT < 11) {\n                return true;\n            }\n            return show2;\n        }\n        boolean show3 = super.onCreatePanelMenu(featureId, menu);\n        return show3;\n    }",
+        "187_<android.support.v4.app.FragmentActivity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>  {\n        return super.onCreateView(x0, x1, x2, x3);\n    }",
+        "188_<android.support.v4.app.FragmentActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>  {\n        return super.onCreateView(x0, x1, x2, x3);\n    }",
+        "189_<android.support.v4.app.FragmentActivity: void onDestroy()>  {\n        super.onDestroy();\n        doReallyStop(false);\n        this.mFragments.dispatchDestroy();\n        this.mFragments.doLoaderDestroy();\n    }",
+        "190_<android.support.v4.app.FragmentActivity: boolean onKeyDown(int,android.view.KeyEvent)>  {\n        if (Build.VERSION.SDK_INT < 5 && keyCode == 4 && event.getRepeatCount() == 0) {\n            onBackPressed();\n            return true;\n        }\n        return super.onKeyDown(keyCode, event);\n    }",
+        "192_<android.support.v4.app.FragmentActivity: void onLowMemory()>  {\n        super.onLowMemory();\n        this.mFragments.dispatchLowMemory();\n    }",
+        "193_<android.support.v4.app.FragmentActivity: boolean onMenuItemSelected(int,android.view.MenuItem)>  {\n        if (super.onMenuItemSelected(featureId, item)) {\n            return true;\n        }\n        switch (featureId) {\n            case 0:\n                return this.mFragments.dispatchOptionsItemSelected(item);\n            case 6:\n                return this.mFragments.dispatchContextItemSelected(item);\n            default:\n                return false;\n        }\n    }",
+        "194_<android.support.v4.app.FragmentActivity: void onMultiWindowModeChanged(boolean)>  {\n        this.mFragments.dispatchMultiWindowModeChanged(isInMultiWindowMode);\n    }",
+        "195_<android.support.v4.app.FragmentActivity: void onNewIntent(android.content.Intent)>  {\n        super.onNewIntent(intent);\n        this.mFragments.noteStateNotSaved();\n    }",
+        "196_<android.support.v4.app.FragmentActivity: void onPanelClosed(int,android.view.Menu)>  {\n        switch (featureId) {\n            case 0:\n                this.mFragments.dispatchOptionsMenuClosed(menu);\n                break;\n        }\n        super.onPanelClosed(featureId, menu);\n    }",
+        "197_<android.support.v4.app.FragmentActivity: void onPause()>  {\n        super.onPause();\n        this.mResumed = false;\n        if (this.mHandler.hasMessages(2)) {\n            this.mHandler.removeMessages(2);\n            onResumeFragments();\n        }\n        this.mFragments.dispatchPause();\n    }",
+        "198_<android.support.v4.app.FragmentActivity: void onPictureInPictureModeChanged(boolean)>  {\n        this.mFragments.dispatchPictureInPictureModeChanged(isInPictureInPictureMode);\n    }",
+        "199_<android.support.v4.app.FragmentActivity: void onPostResume()>  {\n        super.onPostResume();\n        this.mHandler.removeMessages(2);\n        onResumeFragments();\n        this.mFragments.execPendingActions();\n    }",
+        "200_<android.support.v4.app.FragmentActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)>  {\n        if (featureId == 0 && menu != null) {\n            if (this.mOptionsMenuInvalidated) {\n                this.mOptionsMenuInvalidated = false;\n                menu.clear();\n                onCreatePanelMenu(featureId, menu);\n            }\n            boolean goforit = onPrepareOptionsPanel(view, menu);\n            return goforit | this.mFragments.dispatchPrepareOptionsMenu(menu);\n        }\n        boolean goforit2 = super.onPreparePanel(featureId, view, menu);\n        return goforit2;\n    }",
+        "201_<android.support.v4.app.FragmentActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>  {\n        int index = (requestCode >> 16) & SupportMenu.USER_MASK;\n        if (index != 0) {\n            int index2 = index - 1;\n            String who = this.mPendingFragmentActivityResults.get(index2);\n            this.mPendingFragmentActivityResults.remove(index2);\n            if (who == null) {\n                Log.w(TAG, \"Activity result delivered for unknown Fragment.\");\n                return;\n            }\n            Fragment frag = this.mFragments.findFragmentByWho(who);\n            if (frag == null) {\n                Log.w(TAG, \"Activity result no fragment exists for who: \" + who);\n            } else {\n                frag.onRequestPermissionsResult(requestCode & SupportMenu.USER_MASK, permissions, grantResults);\n            }\n        }\n    }",
+        "202_ <android.util.Log: int w(java.lang.String,java.lang.String)>  None",
+        "204_ <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>  None",
+        "208_<android.support.v4.app.FragmentActivity: void onResume()>  {\n        super.onResume();\n        this.mHandler.sendEmptyMessage(2);\n        this.mResumed = true;\n        this.mFragments.execPendingActions();\n    }",
+        "209_<android.support.v4.app.FragmentActivity: java.lang.Object onRetainNonConfigurationInstance()>  {\n        if (this.mStopped) {\n            doReallyStop(true);\n        }\n        Object custom = onRetainCustomNonConfigurationInstance();\n        FragmentManagerNonConfig fragments = this.mFragments.retainNestedNonConfig();\n        SimpleArrayMap<String, LoaderManager> loaders = this.mFragments.retainLoaderNonConfig();\n        if (fragments == null && loaders == null && custom == null) {\n            return null;\n        }\n        NonConfigurationInstances nci = new NonConfigurationInstances();\n        nci.custom = custom;\n        nci.fragments = fragments;\n        nci.loaders = loaders;\n        return nci;\n    }",
+        "212_<android.support.v4.app.FragmentActivity: void onSaveInstanceState(android.os.Bundle)>  {\n        super.onSaveInstanceState(outState);\n        Parcelable p = this.mFragments.saveAllState();\n        if (p != null) {\n            outState.putParcelable(FRAGMENTS_TAG, p);\n        }\n        if (this.mPendingFragmentActivityResults.size() > 0) {\n            outState.putInt(NEXT_CANDIDATE_REQUEST_INDEX_TAG, this.mNextCandidateRequestIndex);\n            int[] requestCodes = new int[this.mPendingFragmentActivityResults.size()];\n            String[] fragmentWhos = new String[this.mPendingFragmentActivityResults.size()];\n            for (int i = 0; i < this.mPendingFragmentActivityResults.size(); i++) {\n                requestCodes[i] = this.mPendingFragmentActivityResults.keyAt(i);\n                fragmentWhos[i] = this.mPendingFragmentActivityResults.valueAt(i);\n            }\n            outState.putIntArray(ALLOCATED_REQUEST_INDICIES_TAG, requestCodes);\n            outState.putStringArray(REQUEST_FRAGMENT_WHO_TAG, fragmentWhos);\n        }\n    }",
+        "215_<android.support.v4.app.FragmentActivity: void onStart()>  {\n        super.onStart();\n        this.mStopped = false;\n        this.mReallyStopped = false;\n        this.mHandler.removeMessages(1);\n        if (!this.mCreated) {\n            this.mCreated = true;\n            this.mFragments.dispatchActivityCreated();\n        }\n        this.mFragments.noteStateNotSaved();\n        this.mFragments.execPendingActions();\n        this.mFragments.doLoaderStart();\n        this.mFragments.dispatchStart();\n        this.mFragments.reportLoaderStart();\n    }",
+        "216_<android.support.v4.app.FragmentActivity: void onStateNotSaved()>  {\n        this.mFragments.noteStateNotSaved();\n    }",
+        "217_<android.support.v4.app.FragmentActivity: void onStop()>  {\n        super.onStop();\n        this.mStopped = true;\n        this.mHandler.sendEmptyMessage(1);\n        this.mFragments.dispatchStop();\n    }",
+        "218_<android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int)>  {\n        super.startActivityForResult(intent, i, bundle);\n    }",
+        "221_ <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>  {\n        if (((-65536) & requestCode) != 0) {\n            throw new IllegalArgumentException(\"Can only use lower 16 bits for requestCode\");\n        }\n    }",
+        "227_<android.support.v4.app.FragmentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>  {\n        super.startActivityForResult(intent, i, bundle);\n    }",
+        "228_<android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>  {\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+        "229_<android.support.v4.app.FragmentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>  {\n        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);\n    }",
+        "231_<android.support.v4.app.BaseFragmentActivityJB: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>  {\n        if (!this.mStartedActivityFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startActivityForResult(intent, requestCode, options);\n    }",
+        "233_ <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>  {\n        if (((-65536) & requestCode) != 0) {\n            throw new IllegalArgumentException(\"Can only use lower 16 bits for requestCode\");\n        }\n    }",
+        "234_<android.support.v4.app.BaseFragmentActivityJB: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags, options);\n    }",
+        "236_ <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>  {\n        if (((-65536) & requestCode) != 0) {\n            throw new IllegalArgumentException(\"Can only use lower 16 bits for requestCode\");\n        }\n    }",
+        "238_<android.support.v4.app.BaseFragmentActivityHoneycomb: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>  {\n        View v = dispatchFragmentsOnCreateView(parent, name, context, attrs);\n        if (v == null && Build.VERSION.SDK_INT >= 11) {\n            return super.onCreateView(parent, name, context, attrs);\n        }\n        return v;\n    }",
+        "241_<android.support.v4.app.BaseFragmentActivityEclair: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>  {\n        if (!this.mStartedIntentSenderFromFragment && requestCode != -1) {\n            checkForValidRequestCode(requestCode);\n        }\n        super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);\n    }",
+        "243_ <android.support.v4.app.BaseFragmentActivityEclair: void checkForValidRequestCode(int)>  {\n        if (((-65536) & requestCode) != 0) {\n            throw new IllegalArgumentException(\"Can only use lower 16 bits for requestCode\");\n        }\n    }",
+        "245_<android.support.v4.app.BaseFragmentActivityDonut: void onCreate(android.os.Bundle)>  {\n        if (Build.VERSION.SDK_INT < 11 && getLayoutInflater().getFactory() == null) {\n            getLayoutInflater().setFactory(this);\n        }\n        super.onCreate(savedInstanceState);\n    }",
+        "247_<android.support.v4.app.BaseFragmentActivityDonut: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)>  {\n        View v = dispatchFragmentsOnCreateView(null, name, context, attrs);\n        if (v == null) {\n            return super.onCreateView(name, context, attrs);\n        }\n        return v;\n    }",
+        "249_<com.google.android.gms.common.api.GoogleApiActivity: void onActivityResult(int,int,android.content.Intent)>  {\n        super.onActivityResult(i, i2, intent);\n        if (i == 1) {\n            boolean booleanExtra = getIntent().getBooleanExtra(\"notify_manager\", true);\n            this.rL = 0;\n            zzqh zzaqa = zzqh.zzaqa();\n            setResultCode(i2);\n            if (booleanExtra) {\n                zza(i2, zzaqa);\n            }\n        } else if (i == 2) {\n            this.rL = 0;\n            setResultCode(i2);\n        }\n        finish();\n    }",
+        "253_ <com.google.android.gms.internal.zzqh: com.google.android.gms.internal.zzqh zzaqa()>  {\n        zzqh zzqhVar;\n        synchronized (zzamp) {\n            zzqhVar = uw;\n        }\n        return zzqhVar;\n    }",
+        "255_<com.google.android.gms.common.api.GoogleApiActivity: void onCreate(android.os.Bundle)>  {\n        super.onCreate(bundle);\n        if (bundle != null) {\n            this.rL = bundle.getInt(\"resolution\");\n        }\n        if (this.rL != 1) {\n            zzaoa();\n        }\n    }",
+        "256_<com.google.android.gms.common.api.GoogleApiActivity: void onSaveInstanceState(android.os.Bundle)>  {\n        bundle.putInt(\"resolution\", this.rL);\n        super.onSaveInstanceState(bundle);\n    }"
+    ]
+}

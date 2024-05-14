@@ -1,6 +1,6 @@
 {
   "1": {
-    "question": "Please explain what the given snippet of code does in two to three sentences using the context of its successor function summaries if provided.",
+    "question": "Please explain what the given snippet of code does in one sentence using the context of its successor function summaries if provided.",
     "answers": {
       "1": "test"
     }

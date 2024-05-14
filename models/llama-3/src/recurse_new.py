@@ -2,6 +2,8 @@ import requests
 import json
 import os
 from rouge_score import rouge_scorer
+from nltk.translate import bleu_score
+from sentence_transformers import SentenceTransformer, util
 
 HOST = "localhost"
 PORT = "8000"
@@ -59,9 +61,8 @@ class APK:
         return func_name
 
     def ask_llm(self, prompt_key, question, host=HOST, port=PORT, headers=HEADERS, instruction_key=INSTRUCTION_KEY):
-        full_prompt = instruction_key + prompt_key + question
         data = {
-            "inputs": full_prompt,
+            "inputs": prompt_key,
             "parameters": {
                 "max_new_tokens": 2000,
             },
@@ -69,7 +70,12 @@ class APK:
 
         print("Sending request to server...")
         response = requests.post(f"http://{host}:{port}/generate", headers=headers, json=data)
-        llm_response = response.json()["generated_text"]
+        if "error" in response.json().keys() and self.count < 3:
+            print("Error in response, retrying...")
+            self.count += 1
+            return self.ask_llm(prompt_key, question)
+        else:
+            llm_response = response.json()["generated_text"].rstrip()
 
         if len(llm_response) == 0 and self.count < 3:
             print("Empty response received, retrying...")
@@ -79,6 +85,13 @@ class APK:
             print("Empty response received after 3 retries, skipping...")
             return "No summary generated for this function"
         print("Response received!")
+        eot_index = llm_response.find(".assistant")
+        if eot_index != -1:
+            trimmed_response = llm_response[:eot_index].strip()
+            print(trimmed_response)
+            llm_response = trimmed_response
+        else:
+            print("No 'EOT: true' found in the response.")
 
         return llm_response
 
@@ -151,17 +164,25 @@ class APK_Recurse(APK):
         self.raw = apk_data['Raw']
         self.funcs = apk_data['Functions']
     
-    def get_prompt_key(self, code, sum_length="short", success_sums=None):
+    def get_prompt_key(self, chat, sum_length="short", success_sums=None):
         # TODO: How do we format this?
-        long_sum = "\n\nSummarize the following code in one paragraph:\n"
-        short_sum = "\n\nSummarize the following code in one sentence:\n"
-        header = "Given the following summaries of the current code's sucessors:\n"
-        if sum_length == "short" and success_sums is not None:
-            return f"{header}\n{success_sums}\n{short_sum}\n\n[CODE]\n{code}\n[/CODE]"
-        elif sum_length == "long" and success_sums is not None:
-            return f"{header}\n{success_sums}\n{long_sum}\n\n[CODE]\n{code}\n[/CODE]"
-        else:
-            return f"{short_sum}\n[CODE]\n{code}\n[/CODE]\n\n"
+        output = "<s>"
+        for m in chat:
+            output += f"Source: {m['role']}\n\n {m['content']}"
+            output += " <step> "
+        output += "Source: assistant\nDestination: user\n\n "
+        return output
+        
+        # # TODO: How do we format this?
+        # long_sum = "\n\nSummarize the following code in one paragraph:\n"
+        # short_sum = "\n\nSummarize the following code in one sentence:\n"
+        # header = "Given the following summaries of the current code's sucessors:\n"
+        # if sum_length == "short" and success_sums is not None:
+        #     return f"{header}\n{success_sums}\n{short_sum}\n\n[CODE]\n{code}\n[/CODE]"
+        # elif sum_length == "long" and success_sums is not None:
+        #     return f"{header}\n{success_sums}\n{long_sum}\n\n[CODE]\n{code}\n[/CODE]"
+        # else:
+        #     return f"{short_sum}\n[CODE]\n{code}\n[/CODE]\n\n"
 
     def get_func_code(self, func_uid):
         for func in self.funcs:
@@ -236,7 +257,11 @@ class APK_Recurse(APK):
                 print("No children nodes found, summarizing current function...")
 
                 # Craft prompt key using code from current node
-                prompt_key = self.get_prompt_key(node_code)
+                chat = [
+                    {"role": "system", "content": INSTRUCTION_KEY},
+                    {"role": "user", "content": node_code}
+                ]
+                prompt_key = self.get_prompt_key(chat)
                 print(f"Prompt key with no successors:\n{prompt_key}")
 
                 # Summarize current node
@@ -250,8 +275,13 @@ class APK_Recurse(APK):
                 # Traverse children nodes and grab successor summaries
                 success_sums = self.traverse_recursive(node)
 
+                success_chat = f"Given the following summaries of the current code's sucessors:\n{success_sums}\n\nSummarize the following code in one paragraph:\n{node_code}\n"
+                chat = [
+                    {"role": "system", "content": INSTRUCTION_KEY},
+                    {"role": "user", "content": success_chat}
+                ]
                 # Craft prompt key using successor summaries and code from current node
-                prompt_key = self.get_prompt_key(node_code, sum_length="short", success_sums=success_sums)
+                prompt_key = self.get_prompt_key(chat)
                 print(f"Prompt key with successors:\n{prompt_key}")
 
                 # Summarize current node
@@ -291,10 +321,11 @@ class APK_Recurse(APK):
             outfile.write(text)
             outfile.close()
 
-    def evaluate_rouge(self):
+    def evaluate_model(self):
         # Initialize RougeScorer
         scorer = rouge_scorer.RougeScorer(['rouge1', 'rougeL'], use_stemmer=True)
         scores = {}
+        model = SentenceTransformer('all-MiniLM-L6-v2')
 
         # Parse completed summaries
         for node in self.funcs:
@@ -306,7 +337,26 @@ class APK_Recurse(APK):
                 score_result = scorer.score(ground_truth, summary)
                 rouge1_score = score_result["rouge1"][0]
                 rougeL_score = score_result["rougeL"][0]
-                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score}
+                
+
+                # Tokenize summaries and ground truths
+                summary_tokens = summary.split()
+                ground_truth_tokens = ground_truth.split()
+
+                # Calculate BLEU score
+                bleu_score_value = bleu_score.sentence_bleu([ground_truth_tokens], summary_tokens)
+
+                # Calulate sentence embeddings
+                summary_embedding = model.encode(summary, convert_to_tensor=True)
+                ground_truth_embedding = model.encode(ground_truth, convert_to_tensor=True)
+
+                # Calculate cosine similarity
+                cosine_score = util.cos_sim(summary_embedding, ground_truth_embedding)
+
+                # Convert from Tensor to float
+                cosine_score = cosine_score.item()
+
+                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score, "BLEU": bleu_score_value, "Cosine": cosine_score}
 
                 # Print scores
                 print(f"Scores for {node['method_name']} at {node['UID']}:\n{scores[node['UID']]}")
@@ -330,7 +380,7 @@ class APK_Recurse(APK):
         for key in avg_scores.keys():
             avg_scores[key] = avg_scores[key] / len(scores)
         
-        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}")
+        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}\nBLEU Avg Score {avg_scores['BLEU']}\nCosine Avg Score {avg_scores['Cosine']}")
         return scores
             
 
@@ -348,8 +398,8 @@ if __name__ == "__main__":
 
         print("Summarization complete!\n")
 
-        print("Evaluating results...")
-        scores = curr_apk.evaluate_rouge()
+        print("Evaluating Rouge results...")
+        scores = curr_apk.evaluate_model()
 
         print("Writing the results...")
         print(curr_apk.write_json(OUTPUT_DIR + apk_filename))

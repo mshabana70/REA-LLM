@@ -2,9 +2,11 @@ import requests
 import json
 import os
 from rouge_score import rouge_scorer
+from nltk.translate import bleu_score
+from sentence_transformers import SentenceTransformer, util
 
 HOST = "localhost"
-PORT = "8000"
+PORT = "22000"
 HEADERS = {"Content-Type": "application/json",}
 
 BASE_DIR = "/scratch/ms9761/rea-llm/deepseek-33b/"
@@ -63,13 +65,18 @@ class APK:
         data = {
             "inputs": full_prompt,
             "parameters": {
-                "max_new_tokens": 2000,
+                "max_new_tokens": 1900,
             },
         }
 
         print("Sending request to server...")
         response = requests.post(f"http://{host}:{port}/generate", headers=headers, json=data)
-        llm_response = response.json()["generated_text"]
+        if "error" in response.json().keys() and self.count < 3:
+            print("Error in response, retrying...")
+            self.count += 1
+            return self.ask_llm(prompt_key, question)
+        else:
+            llm_response = response.json()["generated_text"].rstrip()
 
         # Check if response is full of newline characters
         # Get count of newline characters
@@ -309,10 +316,11 @@ class APK_Recurse(APK):
             outfile.write(text)
             outfile.close()
 
-    def evaluate_rouge(self):
+    def evaluate_model(self):
         # Initialize RougeScorer
         scorer = rouge_scorer.RougeScorer(['rouge1', 'rougeL'], use_stemmer=True)
         scores = {}
+        model = SentenceTransformer('all-MiniLM-L6-v2')
 
         # Parse completed summaries
         for node in self.funcs:
@@ -324,7 +332,26 @@ class APK_Recurse(APK):
                 score_result = scorer.score(ground_truth, summary)
                 rouge1_score = score_result["rouge1"][0]
                 rougeL_score = score_result["rougeL"][0]
-                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score}
+                
+
+                # Tokenize summaries and ground truths
+                summary_tokens = summary.split()
+                ground_truth_tokens = ground_truth.split()
+
+                # Calculate BLEU score
+                bleu_score_value = bleu_score.sentence_bleu([ground_truth_tokens], summary_tokens)
+
+                # Calulate sentence embeddings
+                summary_embedding = model.encode(summary, convert_to_tensor=True)
+                ground_truth_embedding = model.encode(ground_truth, convert_to_tensor=True)
+
+                # Calculate cosine similarity
+                cosine_score = util.cos_sim(summary_embedding, ground_truth_embedding)
+
+                # Convert from Tensor to float
+                cosine_score = cosine_score.item()
+
+                scores[node["UID"]] = {"rouge1": rouge1_score, "rougeL": rougeL_score, "BLEU": bleu_score_value, "Cosine": cosine_score}
 
                 # Print scores
                 print(f"Scores for {node['method_name']} at {node['UID']}:\n{scores[node['UID']]}")
@@ -348,7 +375,7 @@ class APK_Recurse(APK):
         for key in avg_scores.keys():
             avg_scores[key] = avg_scores[key] / len(scores)
         
-        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}")
+        print(f"Average scores across {len(scores)} nodes for APK:\nRouge1 Avg Score {avg_scores['rouge1']}\nRougeL Avg Score {avg_scores['rougeL']}\nBLEU Avg Score {avg_scores['BLEU']}\nCosine Avg Score {avg_scores['Cosine']}")
         return scores
             
 
@@ -367,14 +394,12 @@ if __name__ == "__main__":
         print("Summarization complete!\n")
 
         print("Evaluating results...")
-        scores = curr_apk.evaluate_rouge()
-
+        scores = curr_apk.evaluate_model()
+        
         print("Writing the results...")
         print(curr_apk.write_json(OUTPUT_DIR + apk_filename))
-        exit()
         
         print("Parsing complete!\n")
-        print(f"Results: {curr_apk.results}")
         print("Saving output...")
         curr_apk.save_as_text(OUTPUT_DIR + apk_filename, apk_filename)
         print(f"Output saved at {OUTPUT_DIR + apk_filename}!")
